@@ -1,0 +1,7 @@
+# example config file for Twitter API access
+
+app_name: "name_of_twitter_app"
+consumer_key: "XXXXXXXXXXXXXXXXXX"
+consumer_secret: "XXXXXXXXXXXXXXXXXX"
+access_token: "XXXXXXXXXXXXXXXXXX"
+access_secret: "XXXXXXXXXXXXXXXXXX"

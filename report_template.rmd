@@ -1,0 +1,780 @@
+---
+params: 
+  title: "placeholder"
+  abstract: ""
+  doi: ""
+  article_full_url: "https://biorxiv.altmetric.com/details/52355933"
+title: "`r params$title`"
+output: 
+  html_document:
+    theme: flatly
+    highlight: zenburn
+    toc: true
+    toc_float: true
+---
+
+<style type="text/css">
+div.main-container {
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+### Published in `r paste0(article_df$journal, " on ", anydate(as.integer(article_df$published_on)))`
+
+```{r, results="asis", echo=FALSE}
+tg <- function (link, text){
+  paste0("<a href='", link, "'>", text, "</a>")
+}
+
+cat(tg(paste0("https://dx.doi.org/", doi[2]), "View paper on journal site"))
+cat("<br>")
+cat(tg(article_full_url, "View paper on Altmetric"))
+```
+
+# Abstract
+
+`r params$abstract`
+
+```{r load_libs, echo=FALSE, message=FALSE, warning=FALSE}
+
+datadir <- rprojroot::find_root(".here")
+
+library(devtools)
+
+# devtools::install_github("pablobarbera/twitter_ideology/pkg/tweetscores")
+# devtools::install_github("geoffjentry/twitteR")
+# devtools::install_github("mkearney/rtweet")
+# devtools::install_github("ropensci/rAltmetric")
+
+library(tidyverse)
+
+# API stuff
+library(rAltmetric)
+library(rvest)
+
+# Analysis
+library(umap)
+library(dbscan)
+library(tidytext)
+library(topicmodels)
+library(ldatuning)
+library(tm)
+library(qlcMatrix)
+
+# plotting stuff
+library(ggrepel)
+library(ggridges)
+library(RColorBrewer)
+library(htmlwidgets)
+library(plotly)
+library(ggdendro)
+library(dendextend)
+```
+
+# Get Altmetric follower lists
+
+The code below will scrape data from Altmetric and Twitter to generate a data frame where each row contains the twitter handle of an account that has tweeted or RTed the specified article, and a vector of all accounts that follow that user.
+
+Due to API restrictions this can be very time-consuming, so a .rds file containing these follower lists will be stored to disk enabling analyses to be repeated without needing to re-scrape the data.
+
+```{r fetch_am_data, warning=FALSE, message=FALSE, error=FALSE}
+#-----------------------------------------------------------------------------
+# get data from Altmetric
+
+summary_page <- read_html(article_full_url)
+doi <- summary_page %>% 
+  html_nodes("div.document-details-table tr:nth-child(3) :nth-child(1)") %>% 
+  html_text()
+
+article_doi <- doi[2]
+
+if(grepl("biorxiv", article_full_url)){
+  # biorxiv_page <- read_html(paste0("https://www.biorxiv.org/content/", article_doi, "v1"))
+  abstract <- biorxiv_page %>% html_nodes("div.abstract #p-2") %>% html_text()  
+} else {
+  abstract1 <- summary_page %>% html_nodes("div.content-wrapper tr:nth-child(6) :nth-child(1)") %>% html_text()
+  abstract <- gsub("\n", "", abstract1[2])
+}
+
+# altmetric metadata from API
+article_am <- altmetrics(doi = article_doi)
+article_df <- altmetric_data(article_am)
+
+# id <- article_df$altmetric_id
+# url <- paste0(article_base_url, id, "/twitter/page:1")
+
+twitter_url <- paste0(article_full_url, "/twitter")
+twitter_page <- read_html(twitter_url)
+
+# number of pages is the ceiling of total tweets/100
+totals <- twitter_page %>% html_nodes("div.text strong") %>% html_text()
+npages <- ceiling(as.integer(totals[1])/100)
+
+# loop through pages of tweets on altmetric to get handles of tweeting users
+
+# if(!exists("user_data")){
+handles <- c()
+ts_df <- data.frame()
+for(page in 1:npages){
+  # url <- paste0(article_base_url, id, "/twitter/page:", page)
+  page_url <- paste0(twitter_url, "/page:", page)
+  page <- read_html(page_url)
+  
+  # get div objects containing handles of tweeting users
+  names <- gsub("@", "", html_nodes(page, "div.handle") %>% html_text())
+  tweets <- gsub("\n", "", html_nodes(page, "div.content") %>% html_text())
+  timestamps <- html_nodes(page, "time") %>% html_attrs() %>% unlist()
+  
+  ts_df <- bind_rows(ts_df, data.frame(names, timestamps, tweets))
+  
+  # append to list, removing duplicates and stripping "@"
+  handles <- unique(c(handles, gsub("@", "", names)))
+}
+
+original <- ts_df %>%
+  mutate(tweets=gsub("\"", "", tweets)) %>%
+  dplyr::filter(!grepl("RT @", tweets)) %>%
+  mutate(tweets=paste0("@", names, ": ", tweets)) %>%
+  mutate(tweets=substr(tweets, 1, 100)) %>%
+  dplyr::select(tweets) %>%
+  dplyr::group_by(tweets) %>%
+  count()
+
+rts <- ts_df %>% 
+  mutate(tweets=gsub("\"", "", tweets)) %>%
+  dplyr::filter(grepl("RT @", tweets)) %>%
+  mutate(tweets=gsub("RT ", "", tweets)) %>%
+  # mutate(tweets=gsub("RT @[^:]*: ", "", tweets)) %>%
+  mutate(tweets=substr(tweets, 1, 100)) %>%
+  group_by(tweets) %>% 
+  count() %>% 
+  arrange(desc(n))
+
+# get user metadata from Twitter API
+user_data <- lookup_users(handles)
+# }
+
+#-----------------------------------------------------------------------------
+# Get follower lists for users
+# due to Twitter API limits, this will take at least N minutes, 
+# where N is the number of unique users that have tweeted about an article
+#
+# users with >5,000 followers will require multiple API calls to scrape their
+# full follower lists, so a user with 75,000 followers will take 
+# the same amount of time to process as 15 users with <5,000 followers each 
+# (~15 minutes)
+#-----------------------------------------------------------------------------
+
+# altmetric_data_full_fh <- paste0(datadir, "altmetric_data_full.rds")
+altmetric_data_full_fh <- paste0(datadir, "/article_data/altmetric_data_full_", article_id, ".rds")
+
+if(file.exists(altmetric_data_full_fh)){
+  altmetric_data_full <- readRDS(altmetric_data_full_fh)
+} else {
+
+  # get follower metadata from Twitter API
+  # sleep interval--if more than 15 API calls will be required, use one call per minute to 
+  # minimize weird timeout issues
+  fc_mod <- ceiling(user_data$followers_count/5000)
+  sleep <- ifelse(sum(fc_mod)>15, 60, 0)
+  reset <- TRUE
+  
+  if(!exists("altmetric_data_full") | reset){
+    altmetric_data_full <- tibble(account=character(), followers=list())
+  }
+  for(user in (nrow(altmetric_data_full)+1):nrow(user_data)){
+    
+    # refresh OAuth handshake
+    # if(user %% 20 == 0){
+    #   twitteR::setup_twitter_oauth(consumer_key, consumer_secret, access_token, access_secret)
+    # }
+    
+    if(user_data[user,]$protected){
+      cat(paste0("User ", user_data[user,]$screen_name, " is protected--skipping\n"))
+    } else {
+      cat(paste0("Getting follower list for: ", user_data[user,]$screen_name, 
+       " (", user, " of ", nrow(user_data), ")...\n"))
+    
+      altmetric_data_user <- user_data[user,] %>%
+        dplyr::select(account=screen_name) %>% #head
+        mutate(followers = getFollowers(screen_name=account, oauth=my_oauth, sleep=sleep) %>% 
+                 data.frame %>% 
+                 as.list)
+        
+      altmetric_data_full <- bind_rows(list(altmetric_data_full, altmetric_data_user))
+    }
+  }
+  
+  saveRDS(altmetric_data_full, altmetric_data_full_fh)
+}
+```
+
+# LDA Topic Modeling
+
+This code scrapes the bios and account names of the followers for each account (up to 10,000), compiling the bios into a single "document" for each account that has tweeted/RTed a reference to the article. Then the frequencies of each term per document are calculated and used to generate a document term matrix, which serves as the input for the LDA model in the next section.
+
+Terms include emoji and hashtags, but exclude common terms in the stop_words dataset as well as words in a custom stop word list that are frequently seen in bios and are uninformative.
+
+```{r get_follower_bios, warning=FALSE, message=FALSE, error=FALSE}
+
+altmetric_follower_fh <- paste0(datadir, "/article_data/follower_bios_", article_id, ".rds")
+
+reset <- TRUE
+
+if(file.exists(altmetric_follower_fh)){
+  out_df <- readRDS(altmetric_follower_fh)
+} else {
+  
+  if(!exists("out_df") | reset){
+    out_df <- data.frame(account=character(), bios=character())
+  }
+
+  for(i in (length(unique(out_df$account))+1):nrow(altmetric_data_full)){
+
+    cat(paste0("Getting follower bios for: ", altmetric_data_full[i,]$account, 
+           " (", i, " of ", nrow(altmetric_data_full), ")...\n"))
+        
+    if(length(unlist(altmetric_data_full[i,]$followers)) > 0){
+      bios <- try(get_follower_bios(followers=altmetric_data_full[i,]$followers))
+  
+      if(!inherits(bios, "try-error")){
+        acct_follower_bios <- data.frame(account=altmetric_data_full[i,]$account, bios)
+    
+        out_df <- bind_rows(list(out_df, acct_follower_bios))  
+      } else {
+        cat(paste0("Encountered error for user--results will not be included\n"))
+      }
+    
+      Sys.sleep(10)
+    }
+
+  }
+  
+  saveRDS(out_df, altmetric_follower_fh)
+}
+
+# convert emoji and hashtags to text, collapse follower bios
+bios <- out_df %>%
+  dplyr::filter(account_lang=="en") %>%
+  dplyr::select(account, bio=description, name) %>%
+  # mutate(bio=ifelse(nchar(bio)!=0, bio, "missingbio")) %>%
+  # unite(description, c(name, bio), sep=" ") %>%
+  mutate(description= paste0(name, " ", bio)) %>%
+  mutate(description = emoji_to_text(description)) %>%
+  mutate(description = gsub("-", "", description)) %>%
+  mutate(description = gsub("#", "hashtag", description)) %>%
+  group_by(account) %>%
+  summarise(doc=paste(description, collapse = " ")) %>%
+  mutate(doc=iconv(doc, 'utf-8', 'ascii', sub=''))
+
+# define stopwords
+custom_stopwords <- c("https", "http", "t.co", "gmail.com", "views", "love", "lover", "tweets",
+                      "rts", "follow", "twitter", "endorsement", "fan", "james", "michael",
+                      "andrew", "ryan", "chris", "matt", "och", "rt", "opinions", "paul",
+                      "endorsements", "account", "life", "john", "david", "social", "retweets",
+                      stopwords(kind="en"), stopwords(kind="danish"), stopwords(kind="dutch"), 
+                      stopwords(kind="finnish"), stopwords(kind="french"), stopwords(kind="german"),
+                      stopwords(kind="hungarian"), stopwords(kind="italian"), stopwords(kind="norwegian"),
+                      stopwords(kind="portuguese"), stopwords(kind="russian"), stopwords(kind="spanish"),
+                      stopwords(kind="swedish"))
+
+# tokenize, dropping stopwords
+bios_tokenized <- bios %>%
+  unnest_tokens(word, doc) %>%
+  dplyr::filter(!(word %in% custom_stopwords))
+
+# apply default stopword list and count frequencies
+word_counts <- bios_tokenized %>%
+  anti_join(stop_words) %>%
+  count(account, word, sort = TRUE) %>%
+  dplyr::filter(n>=10)
+
+#-----------------------------------------------------------------------------
+# TESTING use 2-word tokens?
+#-----------------------------------------------------------------------------
+# bios_tokenized2 <- bios %>%
+#   unnest_tokens(ngram, doc, token = "ngrams", n = 2) %>%
+#   dplyr::filter(!(grepl(paste(custom_stopwords, collapse="|"), ngram)))
+# 
+# ngram_counts <- bios_tokenized2 %>%
+#   count(account, ngram, sort = TRUE) %>%
+#   dplyr::filter(n>=5) %>%
+#   separate(ngram, c("word", "word2"), sep = " ") %>%
+#   anti_join(stop_words) %>%
+#   dplyr::rename(word1=word, word=word2) %>%
+#   anti_join(stop_words) %>%
+#   unite(word, c("word1", "word"), sep=" ")
+
+#-----------------------------------------------------------------------------
+# run over entire dataset
+#-----------------------------------------------------------------------------
+bios_dtm <- word_counts %>%
+  cast_dtm(account, word, n)
+
+# 2-word tokens only
+# bios_dtm <- ngram_counts %>%
+#   cast_dtm(account, word, n)
+
+# single words + 2-word tokens
+# bios_dtm <- bind_rows(word_counts, ngram_counts) %>%
+#   cast_dtm(account, word, n)
+
+```
+
+## Run LDA Model
+
+This code runs the LDA model to represent the corpus of documents as a mixture of K "topics." Each topic is represented by a different set of words/terms that frequently co-occur. The gamma values are interpreted as the fraction of each document corresponding to each of the K topics. 
+
+```{r run_lda, warning=FALSE, message=FALSE, error=FALSE}
+
+bios_lda6 <- LDA(bios_dtm, k = 12, control = list(alpha=0.1, seed = 5678), method="VEM")
+bios_lda_td <- tidy(bios_lda6)
+
+top_terms <- bios_lda_td %>%
+  group_by(topic) %>%
+  top_n(30, beta) %>%
+  ungroup() %>%
+  arrange(topic, -beta) %>% 
+  mutate(term = text_to_emoji(term)) %>%
+  mutate(term = gsub("hashtag", "#", term))
+
+topics_terms <- top_terms %>% 
+  dplyr::select(-beta) %>% 
+  # mutate(topic=paste0("t", topic)) %>%
+  group_by(topic) %>% 
+  summarise(top_10=paste(term, collapse=", ")) %>% 
+  ungroup()
+
+bios_lda_gamma <- tidy(bios_lda6, matrix = "gamma") %>%
+  rowwise() %>%
+  mutate(gamma=gamma+runif(1,0,0.0001))
+
+docs_order <- bios_lda_gamma %>%
+  group_by(document) %>%
+  arrange(topic, -gamma) %>%
+  top_n(1, gamma) %>%
+  rename(topic_group = topic) %>%
+  dplyr::select(-gamma)
+
+```
+
+## Plot topic breakdown by user
+
+This code plots the topic breakdowns of each account's follower base, similar to how Structure displays the inferred mixture of ancestries.
+
+```{r plot_topic_structure, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
+
+cols <- c(brewer.pal(9, "Set1"), brewer.pal(9, "Set3"))
+
+p <- bios_lda_gamma %>%
+  mutate(document=factor(document, levels=docs_order$document)) %>%
+  left_join(topics_terms, by="topic") %>%
+  mutate(topic=paste0(topic, ": ", top_10)) %>%
+  mutate(topic=factor(topic, levels=unique(topic))) %>%
+  ggplot(aes(x=document, y=gamma, fill=topic))+
+  geom_bar(stat="identity", position="stack")+
+  scale_fill_manual(values=cols)+
+  scale_y_continuous(expand = c(0,0))+
+  scale_x_discrete(position = "top")+ 
+  xlab("Account")+
+  theme(legend.position="bottom",
+        axis.title.y=element_blank(),
+        axis.text.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank())+
+  guides(fill=guide_legend(ncol=1))
+
+p2 <- ggplotly(p) %>%
+  layout(legend = list(orientation = "v",   # show entries horizontally
+                     xanchor = "center",  # use center of legend as anchor
+                     yanchor = "bottom",
+                     x = 0, y=-1))
+
+htmlwidgets::saveWidget(p2, 
+                        file=paste0(datadir, "/figs/topic_breakdown_by_user_", article_id, ".html"),
+                        title=paste0("topic_breakdown_by_user_", article_id))
+
+p2
+
+```
+
+# Network Homophily Analysis
+
+Many of the papers analyzed have a non-trivial fraction of users whose inferred audience topics are strongly suggestive of affiliation with white nationalism and other right-wing ideologies. According to the principle of network homophily, we would expect these users' followers to substantially overlap the follower bases of prominent white nationalists. 
+
+We curated a set of 20 white nationalist accounts and 20 scientist accounts, and for each user calculated the network homophily with each of the 40 accounts. We then applied PCA+UMAP to get 2D embedding of accounts according to homophily with reference data.
+
+These results show that most papers exhibit a continuous gradient between their affiliation with academic communities and their affiliation with white nationalist communities. Some users have up to 40% of their followers who also follow prominent white nationalist accounts and <1% who follow prominent scientist accounts, corresponding to a ~100-fold enrichment of white nationalists among their follower base.
+
+```{r homophily_umap, warning=FALSE, message=FALSE, error=FALSE}
+#-----------------------------------------------------------------------------
+# Generate follower overlap matrix: 
+# 1 row per test account, i, 1 column per reference account, j
+# each cell contains fraction of i's followers that also follow j
+#-----------------------------------------------------------------------------
+sim_matrix <- altmetric_data_full %>%
+  dplyr::filter(length(followers)>=10) %>%
+  group_by(account) %>%
+  nest() %>% 
+  mutate(test=map(data, ~match_followers(.$followers))) %>% unnest(test)
+
+saveRDS(sim_matrix, paste0(datadir, "/article_data/sim_matrix_", article_id, ".rds"))
+
+# apply PCA to count matrix
+sim_matrix_pca <- sim_matrix %>%
+  dplyr::select(-data) %>%
+  mutate(sum = rowSums(.[2:41])) %>% 
+  dplyr::filter(sum!=0) %>%
+  dplyr::select(-sum) %>%
+  nest() %>%
+  mutate(pca = purrr::map(data, ~prcomp(.x %>% dplyr::select(-account), center = TRUE, scale = TRUE)), 
+         pca_tidy = purrr::map2(pca, data, ~broom::augment(.x, data = .y)))
+
+# apply UMAP to PCA data
+sim_matrix_umap <- sim_matrix_pca[[3]][[1]] %>% 
+  dplyr::select(.fittedPC1:.fittedPC40) %>%
+  data.frame() %>%
+  umap(n_neighbors=30, random_state=36262643)
+
+```
+
+
+## Plot UMAP homophily embedding
+
+```{r homophily_umap_plot, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
+
+umap_plotdat <- bind_cols(sim_matrix_pca[[3]][[1]], data.frame(sim_matrix_umap$layout)) %>%
+  left_join(user_data %>% dplyr::rename(account=screen_name),
+            by="account") %>%
+  mutate(wn_mean=rowMeans(dplyr::select(.,vdare:NewRightAmerica), na.rm = TRUE),
+         sc_mean=rowMeans(dplyr::select(.,pastramimachine:girlscientist), na.rm = TRUE)) %>%
+  mutate(affiliation=log10(wn_mean/(sc_mean+0.001))) %>%
+  dplyr::filter(sc_mean != 0 & wn_mean != 0) %>%
+  mutate(urls=paste0("https://twitter.com/", account))
+
+# plotdat2 <- plotdat
+hdb_clust <- umap_plotdat %>%
+  dplyr::select(X1:X2) %>%
+  as.matrix() %>%
+  hdbscan(x=., minPts=10)
+
+umap_plotdat$cluster <- as.character(hdb_clust$cluster)
+
+lda_gammas <- bios_lda_gamma %>%
+  mutate(document=factor(document, levels=docs_order$document)) %>%
+  left_join(topics_terms, by="topic") %>%
+  mutate(topic=paste0(topic, ": ", top_10)) %>%
+  mutate(topic=factor(topic, levels=unique(topic))) %>%
+  group_by(document) %>%
+  arrange(topic, -gamma) %>%
+  top_n(1, gamma) %>%
+  rename(account=document)
+
+plot_embedding <- function(plotdat){
+  
+  p <- plotdat %>% # merge with user_data to get followers_count + other info
+    ggplot(aes(x=X1, y=X2, label=account, colour=affiliation))+
+    geom_point(aes(size=log(followers_count)), alpha=0.8)+
+    scale_colour_gradientn("WN:Scientist Follower Ratio", 
+                           colors=rev(brewer.pal(9, "RdBu")), 
+                           breaks=seq(-3,3),
+                           labels=c("1:1000", "1:100", "1:10","1:1","10:1","100:1","1000:1"),
+                           limits=c(-3,3))+
+    theme_dark()+
+    theme(legend.position="bottom")
+  
+  ply <- ggplotly(p)
+  
+  # Clickable points link to profile URL using onRender: https://stackoverflow.com/questions/51681079
+  ply$x$data[[1]]$customdata <- plotdat$urls
+  #pp  <- add_markers(pp, customdata = ~url)
+  plyout <- onRender(ply, "
+                     function(el, x) {
+                     el.on('plotly_click', function(d) {
+                     var url = d.points[0].customdata;
+                     //url
+                     window.open(url);
+                     });
+                     }
+                     ")
+
+  plyout
+}
+
+htmlwidgets::saveWidget(plot_embedding(umap_plotdat), 
+                        file=paste0(datadir, "/figs/homophily_ratio_", article_id, ".html"),
+                        title=paste0("homophily_ratio_", article_id))
+
+plot_embedding(umap_plotdat)
+
+```
+
+# Cosine similarity analysis
+
+As a sanity-check for the LDA model, we can also examine how users cluster in other ways. Here we calculate the cosine similarity between the follower bios of each pair of users and apply hierarchical clustering and PCA+UMAP to explore these relationships.
+
+## Hierarchical clustering by cosine similarity
+
+```{r hclust_cosine, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
+m <- as.matrix(bios_dtm)
+# distMatrix <- dist(m, method="euclidean")
+
+sim <- m / sqrt(rowSums(m * m))
+sim <- sim %*% t(sim)
+distMatrix <- as.dist(1 - sim)
+
+groups <- hclust(distMatrix,method="ward.D")
+dend <- as.dendrogram(groups)
+dend_data <- dendro_data(dend, type = "rectangle")
+label_order <- dend_data$labels %>%
+  dplyr::rename("account"="label")
+
+# coldf <- data.frame(topic=c(1,10:12,2:9), col=cols[c(1,10:12,2:9)])
+coldf <- data.frame(topic=c(1,10:12,2:9), col=cols[1:12])
+
+lgo <- lda_gammas %>% 
+  mutate(topic=as.numeric(gsub(":.*", "", topic))) %>% 
+  left_join(coldf, by="topic") %>% 
+  ungroup() %>% 
+  left_join(label_order, by="account") %>% 
+  arrange(x)
+
+p_dend <- dend %>% 
+   set("labels", "") %>%    # change labels
+  # set("labels_col", lgo$col) %>% set("labels_cex", 1) %>%
+  set("leaves_pch", 19) %>% set("leaves_cex", 1) %>% set("leaves_col", lgo$col) %>%
+  plot
+
+ggsave(paste0(datadir, "/figs/cosine_hclust_dend_", article_id, ".png"), 
+       plot=p_dend, width = 12, height=12)
+```
+
+## UMAP embedding by cosine similarity
+
+This is analogous to performing PCA on SNPs within a population—it tells us how closely "related" different groups of users are, according to pairwise similarity between their followers' bios. 
+
+```{r umap_cosine, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
+dmp <- prcomp(as.matrix(distMatrix), center=TRUE, scale=TRUE)
+
+dmp_df <- dmp$x %>%
+  as_tibble(rownames="account") %>%
+  inner_join(lda_gammas, by="account")
+
+dmp_umap <- dmp$x %>% as.data.frame() %>%
+    umap(n_neighbors=20, random_state=36262643)
+
+dmp_df2 <- dmp_umap$layout %>%
+  as_tibble(rownames="account") %>%
+  inner_join(lda_gammas, by="account") %>%
+  left_join(umap_plotdat, by="account")
+
+p2 <- dmp_df2 %>% 
+  ggplot(aes(x=V1, y=V2, label=account, colour=topic))+
+  geom_point(aes(size=wn_mean), alpha=0.7)+
+  scale_colour_manual(values=cols)+
+  theme_dark()+
+  theme(legend.position="none")#+
+  # guides(colour=guide_legend(ncol=1))
+
+htmlwidgets::saveWidget(ggplotly(p2), 
+                        file=paste0(datadir, "/figs/cosine_umap_", article_id, ".html"),
+                        title=paste0("cosine_umap_", article_id))
+
+ggplotly(p2)
+
+# plot PCA
+# p5 <- dmp_df %>%
+#   # mutate(topic_num=gsub(":.*", "", topic)) %>%
+#   ggplot(aes(x=PC1, y=PC2, colour=topic, label=account))+
+#   geom_point()+
+#   scale_colour_manual(values=cols)+
+#   theme(legend.position="none")+
+#   guides(colour=guide_legend(ncol=1))
+# 
+# p5_ply <- ggplotly(p5) %>%
+#   layout(legend = list(orientation = "v",   # show entries horizontally
+#                      xanchor = "center",  # use center of legend as anchor
+#                      yanchor = "bottom",
+#                      x = 0, y=-1))
+# 
+# htmlwidgets::saveWidget(p5_ply, 
+#                         file=paste0(datadir, "/figs/cosine_pca_", article_id, ".html"),
+#                         title=paste0("cosine_pca_", article_id))
+# 
+# p5_ply
+
+```
+
+# Missing data analysis
+
+The LDA topic model described above is applied to the Twitter biographies of each user's followers. However, having a biography is not mandatory and many users opt to leave their bio blank. Here we explore if these patterns of missingness systematically differ among the topic groups.
+
+```{r missing_data, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
+bios_m <- out_df %>%
+  # dplyr::filter(account_lang=="en") %>%
+  dplyr::select(account, bio=description, name) %>%
+  mutate(bio=ifelse(nchar(bio)!=0, 0, 1)) %>% 
+  # unite(description, c(name, bio), sep=" ") %>%
+  group_by(account) %>%
+  summarise(tot=n(), nmissing=sum(bio), pct=nmissing/tot) %>% #dim
+  # dplyr::rename("document"="account") %>%
+  inner_join(lda_gammas, by="account") %>%
+  inner_join(umap_plotdat, by="account")
+
+
+p4 <- bios_m %>%
+  mutate(topic_num=gsub(":.*", "", topic)) %>%
+  ggplot(aes(x=topic_num, y=pct, colour=topic, label=account))+
+  geom_jitter(size=3, alpha=0.6)+
+  geom_boxplot(outlier.shape=NA)+
+  scale_colour_manual(values=cols)+
+  theme(legend.position="bottom",
+        axis.title.y=element_blank(),
+        axis.text.x=element_blank())+
+  guides(colour=guide_legend(ncol=1))
+
+p4_ply <- ggplotly(p4) %>%
+  layout(legend = list(orientation = "v",   # show entries horizontally
+                     xanchor = "center",  # use center of legend as anchor
+                     yanchor = "bottom",
+                     x = 0, y=-1))
+
+htmlwidgets::saveWidget(p4_ply, 
+                        file=paste0(datadir, "/figs/missing_dist_", article_id, ".html"),
+                        title=paste0("missing_dist_", article_id))
+
+p4_ply
+
+```
+
+## Correlation between missing data and WN homophily
+
+This plot investigates how patterns of missingness among follower bios are associated with patterns of white nationalist homophily described above. In many of the papers analyzed, we often see a positive correlation between proportion of followers with missing bios and homophily with prominent white nationalists, but only within a subset of topical groups inferred by the LDA model. This suggests that missingness within bios is itself a common feature of WN communities or WN-adjacent communities on Twitter. This also explains why some users have strong network homophily with known white nationalists, but do not show a strong topical association in the LDA model—essentially, the followers that drive WN network homophily are systematically contributing less information to the LDA model and skewing some users to look more like other topics.
+
+```{r missing_data_homophily, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
+p4a <- bios_m %>%
+  mutate(topic_num=gsub(":.*", "", topic)) %>%
+  dplyr::filter(pct<0.5) %>%
+  ggplot(aes(x=pct, y=wn_mean, group=topic_num, colour=topic, label=account))+
+  geom_point()+
+  geom_smooth(method="lm", se=F)+
+  scale_colour_manual(values=cols)+
+  # facet_wrap(~topic_num, scales="free")+
+  xlab("Fraction of followers with missing bios")+
+  ylab("WN Homophily")+
+  theme(legend.position="bottom")+
+  guides(colour=guide_legend(ncol=1))
+
+p4a_ply <- ggplotly(p4a) %>%
+  layout(legend = list(orientation = "v",   # show entries horizontally
+                     xanchor = "center",  # use center of legend as anchor
+                     yanchor = "bottom",
+                     x = 0, y=-1))
+
+htmlwidgets::saveWidget(p4a_ply, 
+                        file=paste0(datadir, "/figs/missing_homophily_cor_", article_id, ".html"),
+                        title=paste0("missing_homophily_cor_", article_id))
+
+p4a_ply
+
+```
+
+
+# Timeline plot
+
+One of the most difficult questions to address is how a paper's exposure originates in or is transmitted into particular networks. Here we attempt to trace a paper's path through these inferred networks by examining the history of retweets that reference the paper. Some tweets may only be retweeted by users within relatively tight networks, whereas others may have a much more diverse exposure.
+
+```{r timeline, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
+p_times <- ts_df %>% 
+  rename(account=names) %>% 
+  left_join(dmp_df2, by="account") %>% 
+  group_by(tweets) %>% 
+  arrange(timestamps) %>% 
+  mutate(order=row_number(), n=n()) %>% 
+  dplyr::filter(n>3) %>%
+  ungroup() %>%
+  ggplot(aes(x=timestamps, y=order, group=tweets, label=account))+
+  geom_line(colour="grey80")+
+  geom_point(aes(colour=topic, size=wn_mean), alpha=0.5)+
+  scale_colour_manual(values=cols)+
+  scale_y_log10()+
+  scale_x_discrete(breaks=ts_df$timestamps[seq(1, nrow(ts_df), 10)])+
+  ylab("Retweet Number")+
+  theme_classic()+
+  theme(axis.title.x=element_blank(),
+    axis.text.x=element_text(size=6, angle=45, hjust=1),
+        legend.position="none")
+
+htmlwidgets::saveWidget(ggplotly(p_times), 
+                        file=paste0(datadir, "/figs/timeline_", article_id, ".html"),
+                        title=paste0("timeline_", article_id))
+
+ggplotly(p_times)
+
+```
+
+# Title similarity (experimental)
+
+Not only are we interested in who is tweeting about a paper, but how they are tweeting about a paper. Is a paper's title or abstract sufficient to garner attention? Do different networks tend to editorialize or comment on a paper when they tweet about it?
+
+To address this, we examine the cosine similarity between the text of each tweet and the text of the paper's title and abstract. Tweets that simply restate the title or snippet of the abstract will have very high cosine similarity ~1, and tweets that use very dissimilar language will have a cosine similarity ~0.
+
+```{r title_sim, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
+
+title_sim <- ts_df %>% 
+  # dplyr::filter(!grepl("RT @", tweets)) %>%
+  mutate(tweets=gsub("http.*", "", tweets)) %>%
+  mutate(tweets=gsub("\"", "", tweets)) %>%
+  mutate(description = emoji_to_text(tweets)) %>%
+  rename("account"="names") %>% 
+  mutate(title_match_score=sim.strings(tweets, article_df$title)) %>% 
+  mutate(abstract_match_score=sim.strings(tweets, abstract)) %>% 
+  gather(group, value=sim_score, title_match_score:abstract_match_score) %>% #head
+  left_join(lda_gammas, by="account") #%>% 
+  # group_by(topic) %>% 
+  # summarise(tot=mean(title_match)) 
+
+
+p_title <- title_sim %>% 
+  # ggplot(aes(x=topic, y=sim_score, colour=topic, label=tweets))+
+  ggplot(aes(x=sim_score, y=topic, fill=topic, label=tweets))+
+  # geom_line(colour="grey80")+
+  geom_density_ridges(aes(point_color = topic), scale = 4, alpha = .6, jittered_points = TRUE)+ 
+  #theme_ridges() +
+  # geom_boxplot()+
+  # geom_jitter()+
+  facet_wrap(~group)+
+  # geom_point(aes(colour=topic, size=wn_mean), alpha=0.5)+
+  scale_fill_manual(values=cols)+
+  scale_colour_manual(values=cols, aesthetics = "point_color")+
+  theme_classic()+
+  theme(axis.text.y=element_blank(),
+    # axis.text.x=element_text(size=6, angle=45, hjust=1),
+        legend.position="none")
+
+p_title
+
+ggsave(paste0(datadir, "/figs/title_sim_ridges_", article_id, ".png"), 
+       plot=p_title, width = 12, height=12)
+
+p_title <- title_sim %>% 
+  ggplot(aes(x=topic, y=sim_score, colour=topic, label=tweets))+
+  geom_boxplot()+
+  geom_jitter()+
+  facet_wrap(~group)+
+  scale_colour_manual(values=cols)+
+  theme_classic()+
+  theme(axis.text.x=element_blank(),
+    # axis.text.x=element_text(size=6, angle=45, hjust=1),
+        legend.position="none")
+
+
+htmlwidgets::saveWidget(ggplotly(p_title), 
+                        file=paste0(datadir, "/figs/title_sim_", article_id, ".html"),
+                        title=paste0("title_sim_", article_id))
+
+ggplotly(p_title) 
+
+```
