@@ -7,10 +7,11 @@ params:
 title: "`r params$title`"
 output: 
   html_document:
+    # keep_md: true
     theme: flatly
     highlight: zenburn
     toc: true
-    toc_float: true
+    # toc_float: true
 ---
 
 <style type="text/css">
@@ -21,27 +22,12 @@ div.main-container {
 }
 </style>
 
-### Published in `r paste0(article_df$journal, " on ", anydate(as.integer(article_df$published_on)))`
-
-```{r, results="asis", echo=FALSE}
-tg <- function (link, text){
-  paste0("<a href='", link, "'>", text, "</a>")
-}
-
-cat(tg(paste0("https://dx.doi.org/", doi[2]), "View paper on journal site"))
-cat("<br>")
-cat(tg(article_full_url, "View paper on Altmetric"))
-```
-
-# Abstract
-
-`r params$abstract`
-
 ```{r load_libs, echo=FALSE, message=FALSE, warning=FALSE}
 
 datadir <- rprojroot::find_root(".here")
 
 library(devtools)
+library(anytime)
 
 # devtools::install_github("pablobarbera/twitter_ideology/pkg/tweetscores")
 # devtools::install_github("geoffjentry/twitteR")
@@ -73,7 +59,22 @@ library(ggdendro)
 library(dendextend)
 ```
 
-# Get Altmetric follower lists
+```{r, results="asis", echo=FALSE}
+tg <- function (link, text){
+  paste0("<a href='", link, "'>", text, "</a>")
+}
+
+cat(tg(paste0("https://dx.doi.org/", doi[2]), "View paper on journal site"))
+cat("<br>")
+cat(tg(article_full_url, "View paper on Altmetric"))
+cat("<br>")
+```
+
+## Abstract
+
+`r params$abstract`
+
+# Scraping data from Altmetric and Twitter
 
 The code below will scrape data from Altmetric and Twitter to generate a data frame where each row contains the twitter handle of an account that has tweeted or RTed the specified article, and a vector of all accounts that follow that user.
 
@@ -194,8 +195,8 @@ if(file.exists(altmetric_data_full_fh)){
     if(user_data[user,]$protected){
       cat(paste0("User ", user_data[user,]$screen_name, " is protected--skipping\n"))
     } else {
-      cat(paste0("Getting follower list for: ", user_data[user,]$screen_name, 
-       " (", user, " of ", nrow(user_data), ")...\n"))
+      # cat(paste0("Getting follower list for: ", user_data[user,]$screen_name, 
+      #  " (", user, " of ", nrow(user_data), ")...\n"))
     
       altmetric_data_user <- user_data[user,] %>%
         dplyr::select(account=screen_name) %>% #head
@@ -233,8 +234,8 @@ if(file.exists(altmetric_follower_fh)){
 
   for(i in (length(unique(out_df$account))+1):nrow(altmetric_data_full)){
 
-    cat(paste0("Getting follower bios for: ", altmetric_data_full[i,]$account, 
-           " (", i, " of ", nrow(altmetric_data_full), ")...\n"))
+    # cat(paste0("Getting follower bios for: ", altmetric_data_full[i,]$account, 
+    #        " (", i, " of ", nrow(altmetric_data_full), ")...\n"))
         
     if(length(unlist(altmetric_data_full[i,]$followers)) > 0){
       bios <- try(get_follower_bios(followers=altmetric_data_full[i,]$followers))
@@ -244,7 +245,7 @@ if(file.exists(altmetric_follower_fh)){
     
         out_df <- bind_rows(list(out_df, acct_follower_bios))  
       } else {
-        cat(paste0("Encountered error for user--results will not be included\n"))
+        # cat(paste0("Encountered error for user--results will not be included\n"))
       }
     
       Sys.sleep(10)
@@ -682,7 +683,7 @@ p4a_ply
 ```
 
 
-# Timeline plot
+# Retweet timeline analysis
 
 One of the most difficult questions to address is how a paper's exposure originates in or is transmitted into particular networks. Here we attempt to trace a paper's path through these inferred networks by examining the history of retweets that reference the paper. Some tweets may only be retweeted by users within relatively tight networks, whereas others may have a much more diverse exposure.
 
@@ -715,7 +716,7 @@ ggplotly(p_times)
 
 ```
 
-# Title similarity (experimental)
+# Title similarity analysis (experimental)
 
 Not only are we interested in who is tweeting about a paper, but how they are tweeting about a paper. Is a paper's title or abstract sufficient to garner attention? Do different networks tend to editorialize or comment on a paper when they tweet about it?
 

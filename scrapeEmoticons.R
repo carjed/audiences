@@ -1,13 +1,14 @@
-# taken from https://raw.githubusercontent.com/today-is-a-good-day/emojis/master/scrapeEmoticons.R
-
-# Disclaimer: ugly yet woking code :)
+# modified from https://raw.githubusercontent.com/today-is-a-good-day/emojis/master/scrapeEmoticons.R
 
 library(rvest)
 library(magrittr)
 library(dplyr)
 
 # reference website
-url <- "http://apps.timwhitlock.info/emoji/tables/unicode"
+# url <- "http://apps.timwhitlock.info/emoji/tables/unicode"
+
+# using a local copy due to connection issues with the above url
+url <- paste0(datadir, "/Emoji unicode characters for use on the web.html")
 
 # get emoticons
 emoticons <- url %>%
