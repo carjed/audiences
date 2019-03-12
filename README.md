@@ -2,6 +2,10 @@
 
 ![](_docs/audiences.gif)
 
+> Thy various works, imperial queen, we see, <br />
+    How bright their forms! how deck'd with pomp by thee!
+
+_(from 'On Imagination' by Phillis Wheatley [1753–1784])_
 
 # Introduction
 
