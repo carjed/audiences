@@ -1,16 +1,19 @@
 ---
 params: 
-  title: "placeholder"
+  title: ""
   abstract: ""
   doi: ""
   article_full_url: "https://biorxiv.altmetric.com/details/52355933"
 title: "`r params$title`"
 output: 
   html_document:
-    # keep_md: true
     theme: flatly
     highlight: zenburn
     toc: true
+    code_folding: "hide"
+    includes:
+      before_body: header.html
+      after_body: footer.html
     # toc_float: true
 ---
 
@@ -20,6 +23,11 @@ div.main-container {
   margin-left: auto;
   margin-right: auto;
 }
+
+h1, .h1, {
+    margin-top: 84px;
+}
+
 </style>
 
 ```{r load_libs, echo=FALSE, message=FALSE, warning=FALSE}
@@ -59,6 +67,8 @@ library(ggdendro)
 library(dendextend)
 ```
 
+# Paper Abstract
+
 ```{r, results="asis", echo=FALSE}
 tg <- function (link, text){
   paste0("<a href='", link, "'>", text, "</a>")
@@ -70,15 +80,23 @@ cat(tg(article_full_url, "View paper on Altmetric"))
 cat("<br>")
 ```
 
-## Abstract
-
 `r params$abstract`
 
-# Scraping data from Altmetric and Twitter
+# LDA topic modeling analysis {.tabset .tabset-fade .tabset-pills}
 
-The code below will scrape data from Altmetric and Twitter to generate a data frame where each row contains the twitter handle of an account that has tweeted or RTed the specified article, and a vector of all accounts that follow that user.
+One of the challenges in altmetrics audience analysis is detailed classification of the various groups of users who are interested in a paper on social media. This is due to the limited information available about each user—Twitter limits user biographies to 160 characters.
 
-Due to API restrictions this can be very time-consuming, so a .rds file containing these follower lists will be stored to disk enabling analyses to be repeated without needing to re-scrape the data.
+Our approach is to understand user characteristics not by looking at the information supplied by each user, but the information supplied by that user's followers.
+
+Each user that tweets about an article exposes the article to their own unique audience of followers. Under the principle of network homophily, we expect that each user shares similar characteristics to the users within their network, e.g., biologists tend to be followed by biologists and other users interested in biology.
+
+## Code
+
+### Scrape follower lists and bios
+
+The code below will scrape data from Altmetric and Twitter to get information about each user that has tweeted or RTed the specified article, and the handles of each user's followers.
+
+Due to API restrictions this can be very time-consuming, so a .rds file containing these data will be stored to disk enabling analyses to be repeated without needing to re-scrape the data.
 
 ```{r fetch_am_data, warning=FALSE, message=FALSE, error=FALSE}
 #-----------------------------------------------------------------------------
@@ -212,11 +230,9 @@ if(file.exists(altmetric_data_full_fh)){
 }
 ```
 
-# LDA Topic Modeling
+Next, we scrape the bios of the followers (limited to the 10,000 most recent followers) for each account that has tweeted/RTed a reference to the article and compile these bios into a single "document" per account. We calculate the frequencies of every term that occurs 10 or more times in each document, excluding common stop words. Note that because emoji and hashtags are commonly used to convey semantic meaning in a user's bio, we include these as unique "words".
 
-This code scrapes the bios and account names of the followers for each account (up to 10,000), compiling the bios into a single "document" for each account that has tweeted/RTed a reference to the article. Then the frequencies of each term per document are calculated and used to generate a document term matrix, which serves as the input for the LDA model in the next section.
-
-Terms include emoji and hashtags, but exclude common terms in the stop_words dataset as well as words in a custom stop word list that are frequently seen in bios and are uninformative.
+From the word frequency data, we then generate a document term matrix, which serves as the input for the LDA model.
 
 ```{r get_follower_bios, warning=FALSE, message=FALSE, error=FALSE}
 
@@ -286,11 +302,17 @@ bios_tokenized <- bios %>%
   unnest_tokens(word, doc) %>%
   dplyr::filter(!(word %in% custom_stopwords))
 
+rm(bios)
+
 # apply default stopword list and count frequencies
 word_counts <- bios_tokenized %>%
   anti_join(stop_words) %>%
   count(account, word, sort = TRUE) %>%
   dplyr::filter(n>=10)
+
+rm(bios_tokenized)
+
+gc()
 
 #-----------------------------------------------------------------------------
 # TESTING use 2-word tokens?
@@ -324,9 +346,9 @@ bios_dtm <- word_counts %>%
 
 ```
 
-## Run LDA Model
+### Run LDA model
 
-This code runs the LDA model to represent the corpus of documents as a mixture of K "topics." Each topic is represented by a different set of words/terms that frequently co-occur. The gamma values are interpreted as the fraction of each document corresponding to each of the K topics. 
+This code runs the Latent Dirichlet Allocation (LDA) model to represent the corpus of documents as a mixture of K "topics." Each topic is represented by a different set of words/terms that frequently co-occur. The gamma values are interpreted as the fraction of each document corresponding to each of the K topics. 
 
 ```{r run_lda, warning=FALSE, message=FALSE, error=FALSE}
 
@@ -361,9 +383,11 @@ docs_order <- bios_lda_gamma %>%
 
 ```
 
-## Plot topic breakdown by user
+## Results
 
-This code plots the topic breakdowns of each account's follower base, similar to how Structure displays the inferred mixture of ancestries.
+### Plot topic breakdown by user
+
+This plot shows the topic breakdowns of each account according to the frequencies of each of the K topics expressed in the bios of their followers.
 
 ```{r plot_topic_structure, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
 
@@ -393,6 +417,14 @@ p2 <- ggplotly(p) %>%
                      yanchor = "bottom",
                      x = 0, y=-1))
 
+wrapper <- function(x, ...) paste(strwrap(x, ...), collapse = "\n")
+p_thumb <- p+
+  ggplot2::annotate("text", x=0, y=0.5, hjust=0, label=wrapper(article_df$title, width = 30), size=6)+
+  theme(legend.position="none", axis.ticks.x=element_blank(), axis.title.x=element_blank())
+
+ggsave(paste0(datadir, "/static/figures/", gsub(".html", ".png", nb_file)), 
+       plot=p_thumb, width = 4, height=2, dpi=125)
+
 htmlwidgets::saveWidget(p2, 
                         file=paste0(datadir, "/figs/topic_breakdown_by_user_", article_id, ".html"),
                         title=paste0("topic_breakdown_by_user_", article_id))
@@ -401,13 +433,17 @@ p2
 
 ```
 
-# Network Homophily Analysis
+# Network homophily analysis {.tabset .tabset-fade .tabset-pills}
 
 Many of the papers analyzed have a non-trivial fraction of users whose inferred audience topics are strongly suggestive of affiliation with white nationalism and other right-wing ideologies. According to the principle of network homophily, we would expect these users' followers to substantially overlap the follower bases of prominent white nationalists. 
 
-We curated a set of 20 white nationalist accounts and 20 scientist accounts, and for each user calculated the network homophily with each of the 40 accounts. We then applied PCA+UMAP to get 2D embedding of accounts according to homophily with reference data.
-
 These results show that most papers exhibit a continuous gradient between their affiliation with academic communities and their affiliation with white nationalist communities. Some users have up to 40% of their followers who also follow prominent white nationalist accounts and <1% who follow prominent scientist accounts, corresponding to a ~100-fold enrichment of white nationalists among their follower base.
+
+## Code
+
+Using a curated a set of 20 white nationalist accounts and 20 scientist accounts, we calculated the network homophily between each of these 40 accounts and each of the N users that have tweeted the paper, producing an Nx40 similarity matrix. We then applied PCA+UMAP to this matrix to reduce the dimensionality to Nx2.
+
+### Generate similarity matrix
 
 ```{r homophily_umap, warning=FALSE, message=FALSE, error=FALSE}
 #-----------------------------------------------------------------------------
@@ -441,8 +477,11 @@ sim_matrix_umap <- sim_matrix_pca[[3]][[1]] %>%
 
 ```
 
+## Results
 
-## Plot UMAP homophily embedding
+### Plot UMAP homophily embedding
+
+This plot shows the 2D embedding of accounts according to their homophily with the two reference groups. We typically see a gradient from strong scientist homophily (blue) to strong white nationalist homophily (red), but the extent of these differences can vary. A paper that is exposed primarily to academic audiences will have mostly blue points, papers exposed to white nationalist audiences will have more red points.
 
 ```{r homophily_umap_plot, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
 
@@ -512,13 +551,15 @@ plot_embedding(umap_plotdat)
 
 ```
 
-# Cosine similarity analysis
+# Cosine similarity analysis {.tabset .tabset-fade .tabset-pills}
 
 As a sanity-check for the LDA model, we can also examine how users cluster in other ways. Here we calculate the cosine similarity between the follower bios of each pair of users and apply hierarchical clustering and PCA+UMAP to explore these relationships.
 
-## Hierarchical clustering by cosine similarity
+## Code
 
-```{r hclust_cosine, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
+This code uses the document term matrix to calculate a distance matrix between each pair of users, where the M_i,j entry indicates the cosine similarity score (ranging from 0-1) between the follower bios of user i and user j.
+
+```{r dtm_cosine, error=FALSE, message=FALSE, warning=FALSE}
 m <- as.matrix(bios_dtm)
 # distMatrix <- dist(m, method="euclidean")
 
@@ -526,6 +567,17 @@ sim <- m / sqrt(rowSums(m * m))
 sim <- sim %*% t(sim)
 distMatrix <- as.dist(1 - sim)
 
+rm(m)
+gc()
+```
+
+## Results
+
+### Hierarchical clustering by cosine similarity
+
+A typical way to visualize the patterns of "relatedness" among a sample is to perform agglomerative hierarchical clustering. The relatedness of this sample (i.e., similarity in content of follower bios) is displayed in the dendrogram below.
+
+```{r hclust_cosine, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
 groups <- hclust(distMatrix,method="ward.D")
 dend <- as.dendrogram(groups)
 dend_data <- dendro_data(dend, type = "rectangle")
@@ -552,7 +604,7 @@ ggsave(paste0(datadir, "/figs/cosine_hclust_dend_", article_id, ".png"),
        plot=p_dend, width = 12, height=12)
 ```
 
-## UMAP embedding by cosine similarity
+### UMAP embedding by cosine similarity
 
 This is analogous to performing PCA on SNPs within a population—it tells us how closely "related" different groups of users are, according to pairwise similarity between their followers' bios. 
 
@@ -608,11 +660,15 @@ ggplotly(p2)
 
 ```
 
-# Missing data analysis
+# Missing data analysis {.tabset .tabset-fade .tabset-pills}
 
 The LDA topic model described above is applied to the Twitter biographies of each user's followers. However, having a biography is not mandatory and many users opt to leave their bio blank. Here we explore if these patterns of missingness systematically differ among the topic groups.
 
-```{r missing_data, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
+## Code
+
+The code below calculates the fraction of each user's followers that have empty bios.
+
+```{r calc_missing, error=FALSE, warning=FALSE, message=FALSE}
 bios_m <- out_df %>%
   # dplyr::filter(account_lang=="en") %>%
   dplyr::select(account, bio=description, name) %>%
@@ -623,6 +679,18 @@ bios_m <- out_df %>%
   # dplyr::rename("document"="account") %>%
   inner_join(lda_gammas, by="account") %>%
   inner_join(umap_plotdat, by="account")
+
+rm(out_df)
+gc()
+```
+
+## Results
+
+### Plot missingness distributions by group
+
+This plot shows the distribution of fraction of missing bios for each of the K topics.
+
+```{r missing_data, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
 
 
 p4 <- bios_m %>%
@@ -650,7 +718,7 @@ p4_ply
 
 ```
 
-## Correlation between missing data and WN homophily
+### Correlation between missing data and WN homophily
 
 This plot investigates how patterns of missingness among follower bios are associated with patterns of white nationalist homophily described above. In many of the papers analyzed, we often see a positive correlation between proportion of followers with missing bios and homophily with prominent white nationalists, but only within a subset of topical groups inferred by the LDA model. This suggests that missingness within bios is itself a common feature of WN communities or WN-adjacent communities on Twitter. This also explains why some users have strong network homophily with known white nationalists, but do not show a strong topical association in the LDA model—essentially, the followers that drive WN network homophily are systematically contributing less information to the LDA model and skewing some users to look more like other topics.
 
@@ -682,10 +750,15 @@ p4a_ply
 
 ```
 
-
-# Retweet timeline analysis
+# Retweet timeline analysis {.tabset .tabset-fade .tabset-pills}
 
 One of the most difficult questions to address is how a paper's exposure originates in or is transmitted into particular networks. Here we attempt to trace a paper's path through these inferred networks by examining the history of retweets that reference the paper. Some tweets may only be retweeted by users within relatively tight networks, whereas others may have a much more diverse exposure.
+
+## Code
+
+## Results
+
+Timeline plot
 
 ```{r timeline, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
 p_times <- ts_df %>% 
@@ -716,14 +789,17 @@ ggplotly(p_times)
 
 ```
 
-# Title similarity analysis (experimental)
+# Title similarity analysis (experimental) {.tabset .tabset-fade .tabset-pills}
 
 Not only are we interested in who is tweeting about a paper, but how they are tweeting about a paper. Is a paper's title or abstract sufficient to garner attention? Do different networks tend to editorialize or comment on a paper when they tweet about it?
 
 To address this, we examine the cosine similarity between the text of each tweet and the text of the paper's title and abstract. Tweets that simply restate the title or snippet of the abstract will have very high cosine similarity ~1, and tweets that use very dissimilar language will have a cosine similarity ~0.
 
-```{r title_sim, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
+## Code
 
+The code below calculates the cosine similarity scores (using the `sim.strings` function from the `qlcMatrix` package) between each tweet referencing the article and the title/abstract of the article itself.
+
+```{r title_sim, error=FALSE, warning=FALSE, message=FALSE}
 title_sim <- ts_df %>% 
   # dplyr::filter(!grepl("RT @", tweets)) %>%
   mutate(tweets=gsub("http.*", "", tweets)) %>%
@@ -737,6 +813,15 @@ title_sim <- ts_df %>%
   # group_by(topic) %>% 
   # summarise(tot=mean(title_match)) 
 
+```
+
+## Results
+
+### Ridgeplots
+
+Groupwise distributions of tweet~title/abstract cosine similarity scores, displayed as ridgeplots.
+
+```{r title_sim_ridge, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
 
 p_title <- title_sim %>% 
   # ggplot(aes(x=topic, y=sim_score, colour=topic, label=tweets))+
@@ -760,6 +845,13 @@ p_title
 ggsave(paste0(datadir, "/figs/title_sim_ridges_", article_id, ".png"), 
        plot=p_title, width = 12, height=12)
 
+```
+
+### Boxplots
+
+Interactive boxplots of groupwise distributions for tweet~title/abstract cosine similarity scores (based on identical data displayed in the Ridgeplots above).
+
+```{r title_sim_box, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
 p_title <- title_sim %>% 
   ggplot(aes(x=topic, y=sim_score, colour=topic, label=tweets))+
   geom_boxplot()+
@@ -777,5 +869,4 @@ htmlwidgets::saveWidget(ggplotly(p_title),
                         title=paste0("title_sim_", article_id))
 
 ggplotly(p_title) 
-
 ```

@@ -1,0 +1,32 @@
+---
+title: "index"
+output: html_document
+---
+
+This site contains the analyses for the twitter audiences of N papers and preprints in genetics and genomics.
+
+carjed.github.io/audiences
+
+links to: 
+
+carjed.github.io/audiences/reports/authors-title_ID.html
+
+```{r, results="asis", echo=FALSE}
+tg <- function (link, text){
+  paste0("<a href='", link, "'>", text, "</a>")
+}
+
+reports <- list.files("audiences/reports")
+
+for(report in reports){
+  authors <- gsub("_", " ", gsub("et_al-.*", "", report))
+  title <- gsub(" [0-9]{6,10}.html", "", gsub("_", " ", gsub(".*et_al-", "", report)))
+  
+  cat(tg(paste0("carjed.github.io/audiences/reports/", report), paste0(authors, "et al. '", title, "'")))
+  cat("<br>")
+  cat(tg(article_full_url, "View paper on Altmetric"))
+  cat("<br>")
+}
+
+
+```

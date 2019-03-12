@@ -1,0 +1,31 @@
+# Site settings
+baseurl = "https://carjed.github.io/audiences/"
+#baseurl = "/"
+languageCode = "en-us"
+title = "Twitter Audience Analysis"
+theme = "hugrid"
+# Enter your tracking code to enable Google Analytics
+googleAnalytics = "UA-XXXXXXXX-Y"
+
+contentdir = "content"
+datadir = "data"
+layoutdir = "layouts"
+publishdir = "docs"
+
+[params]
+    # Meta
+    title = "Twitter Audience Analysis"
+    subtitle = "An exploration of the communities engaging with genetics and genomics research papers on Twitter. Click on a tile to view a detailed report. [source](https://github.com/carjed/audiences/)"
+    author = "Jedidiah Carlson"
+    description = "Twitter Audience Analysis"
+    keywords = "Twitter, genetics, nlp, genomics"
+
+    # Body background color
+    bodybgcolor = "#f9f9f9"
+
+    # Preview container button text
+    buttontext = "View Report"
+
+    # Footer text
+    footertext = "Made by [Jedidiah Carlson](https://www.jedidiahcarlson.com) using the [hugrid theme](https://github.com/aerohub/hugrid)"
+

@@ -121,8 +121,8 @@ if(file.exists(training_data_full_fh)){
 # Define list of articles
 #-----------------------------------------------------------------------------
 article_urls <- c(
-                  # "https://biorxiv.altmetric.com/details/52355933", # Ragsdale et al (ghost admixture) XX
                   "https://cell.altmetric.com/details/34376150",    # Browning et al (denisovan admixture) XX
+                  "https://biorxiv.altmetric.com/details/52355933", # Ragsdale et al (ghost admixture) XX
                   "https://biorxiv.altmetric.com/details/34668368", # # Durvasula et al (ghost admixture) XX
                   "https://biorxiv.altmetric.com/details/52608959", # Jensen et al (Stone Age chewing gum) XX
                   "https://biorxiv.altmetric.com/details/43592322", # Villanea & Schraiber (ghost admixture) XX
@@ -150,7 +150,7 @@ article_urls <- c(
                   "https://biorxiv.altmetric.com/details/49534330", # Martin et al (PRS risk) XX
                   "https://biorxiv.altmetric.com/details/48265719", # Albers & McVean (dating variants) XX
                   "https://biorxiv.altmetric.com/details/10104753", # Lawson et al (STRUCTURE tutorial biorxiv version) XX
-                  "https://www.altmetric.com/details/46498440"     # Lawson et al (STRUCTURE tutorial Nat Comm version) XX
+                  "https://www.altmetric.com/details/46498440"      # Lawson et al (STRUCTURE tutorial Nat Comm version) XX
                   )     
 
 #-----------------------------------------------------------------------------
@@ -185,7 +185,7 @@ for (article_full_url in article_urls){
   article_df <- altmetric_data(article_am)
   
   nb_file <- gsub(" ", "_", paste0(gsub(",.*", "", article_df$authors1), " et al-", 
-                    gsub("\"", "", article_df$title), "_", article_id, ".html"))
+                    gsub("\"|/", "", article_df$title), "_", article_id, ".html"))
   nb_title <- paste0("Twitter Audience Analysis of '", article_df$title, 
                      "' by ", gsub(",.*", "", article_df$authors1), " et al., published in ",
                      article_df$journal, " on ", anydate(as.integer(article_df$added_on)))
@@ -194,7 +194,7 @@ for (article_full_url in article_urls){
   rmarkdown::render(paste0(datadir, "/report_template.rmd"),  # file 2
                     # output_file =  paste0(nb_file, '_', Sys.Date(), ".html"), 
                     output_file =  nb_file, 
-                    output_dir = paste0(datadir, "/reports"),
+                    output_dir = paste0(datadir, "/static/reports"),
                     params = list(title=nb_title, 
                                   abstract=abstract,
                                   doi=article_doi))

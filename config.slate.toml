@@ -1,0 +1,17 @@
+baseURL = "https://www.jedidiahcarlson.com/"
+languageCode = "en-us"
+title = "Audiences"
+theme = "slate"
+publishDir = "docs"
+
+[ params ]
+BackgroundStyle = "#000000;"
+OpenLinksInNewWindow = true
+Favicon = "favicon.ico"
+custom_css = ["css/tiles.css"]
+
+# list of nav tags
+[[ params.nav ]]
+name = "favorites"
+tag = "favorite"
+icon = "star"
