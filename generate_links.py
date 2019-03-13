@@ -35,6 +35,9 @@ for report in listdir("static/reports"):
     title = re.sub("_[0-9]{6,10}.html", "", title)
     title = re.sub("_", " ", title)
     
+    if len(title) > 97:
+        title = title[0:96]+"..."
+        
     # article_id = title = re.sub("^.*?[0-9]{6,10", "", title)
     # print(article_id)
     

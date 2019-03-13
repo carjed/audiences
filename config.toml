@@ -1,6 +1,6 @@
 # Site settings
-baseurl = "https://carjed.github.io/audiences/"
-#baseurl = "/"
+#baseurl = "https://carjed.github.io/audiences/"
+baseurl = "/static/"
 languageCode = "en-us"
 title = "Twitter Audience Analysis"
 theme = "hugrid"
@@ -10,12 +10,12 @@ googleAnalytics = "UA-XXXXXXXX-Y"
 contentdir = "content"
 datadir = "data"
 layoutdir = "layouts"
-publishdir = "docs"
+publishdir = "docs/static"
 
 [params]
     # Meta
     title = "Twitter Audience Analysis"
-    subtitle = "An exploration of the communities engaging with genetics and genomics research papers on Twitter. Click on a tile to view a detailed report. [source](https://github.com/carjed/audiences/)"
+    subtitle = "An exploration of the communities engaging with genetics and genomics research papers on Twitter. Click on a tile to view a detailed report."
     author = "Jedidiah Carlson"
     description = "Twitter Audience Analysis"
     keywords = "Twitter, genetics, nlp, genomics"
@@ -27,5 +27,5 @@ publishdir = "docs"
     buttontext = "View Report"
 
     # Footer text
-    footertext = "Made by [Jedidiah Carlson](https://www.jedidiahcarlson.com) using the [hugrid theme](https://github.com/aerohub/hugrid)"
+    footertext = "This page was generated using [Hugo](https://gohugo.io/) with the [hugrid theme](https://github.com/aerohub/hugrid)"
 

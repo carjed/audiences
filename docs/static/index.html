@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+			<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Twitter Audience Analysis</title>
+		<meta name="description" content="Twitter Audience Analysis" />
+		<meta name="keywords" content="Twitter, genetics, nlp, genomics" />
+		<meta name="author" content="Jedidiah Carlson" />
+		<link rel="icon" href="favicon.ico" />
+		<meta name="generator" content="Hugo 0.47.1" />
+		<style>
+		body {
+		background: #f9f9f9;
+		color: ;
+		}
+		</style>
+		<link rel="stylesheet" type="text/css" href="/static/css/default.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/component.css" />
+		
+		<script src="/static/js/modernizr.custom.js"></script>
+
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-XXXXXXXX-Y', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+	</head>
+	<body>
+		<div class="container">	
+							<header class="clearfix">
+				<h1>Twitter Audience Analysis<span>An exploration of the communities engaging with genetics and genomics research papers on Twitter. Click on a tile to view a detailed report.</span></h1>
+			</header>
+			<div class="main">
+				<ul id="og-grid" class="og-grid">
+					
+					<li>
+						<a href="reports/Fernando_A_Villanea_et_al-Spectrum_of_Neandertal_introgression_across_modern-day_humans_indicates_multiple_episodes_of_human-Neandertal_interbreeding_43592322.html" data-largesrc="figures/Fernando_A_Villanea_et_al-Spectrum_of_Neandertal_introgression_across_modern-day_humans_indicates_multiple_episodes_of_human-Neandertal_interbreeding_43592322.png" data-title="Spectrum of Neandertal introgression across modern-day humans indicates multiple episodes of hum..." data-description="by Fernando A Villanea " data-buttontext="">
+							<img src="figures/Fernando_A_Villanea_et_al-Spectrum_of_Neandertal_introgression_across_modern-day_humans_indicates_multiple_episodes_of_human-Neandertal_interbreeding_43592322.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Rachel_M._Sherman_et_al-Assembly_of_a_pan-genome_from_deep_sequencing_of_910_humans_of_African_descent_51402455.html" data-largesrc="figures/Rachel_M._Sherman_et_al-Assembly_of_a_pan-genome_from_deep_sequencing_of_910_humans_of_African_descent_51402455.png" data-title="Assembly of a pan-genome from deep sequencing of 910 humans of African descent" data-description="by Rachel M. Sherman " data-buttontext="">
+							<img src="figures/Rachel_M._Sherman_et_al-Assembly_of_a_pan-genome_from_deep_sequencing_of_910_humans_of_African_descent_51402455.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/James_J._Lee_et_al-Gene_discovery_and_polygenic_prediction_from_a_genome-wide_association_study_of_educational_attainment_in_1.1_million_individuals_45430386.html" data-largesrc="figures/James_J._Lee_et_al-Gene_discovery_and_polygenic_prediction_from_a_genome-wide_association_study_of_educational_attainment_in_1.1_million_individuals_45430386.png" data-title="Gene discovery and polygenic prediction from a genome-wide association study of educational atta..." data-description="by James J. Lee " data-buttontext="">
+							<img src="figures/James_J._Lee_et_al-Gene_discovery_and_polygenic_prediction_from_a_genome-wide_association_study_of_educational_attainment_in_1.1_million_individuals_45430386.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Ragsdale_et_al-Models_of_archaic_admixture_and_recent_history_from_two-locus_statistics_52355933.html" data-largesrc="figures/Ragsdale_et_al-Models_of_archaic_admixture_and_recent_history_from_two-locus_statistics_52355933.png" data-title="Models of archaic admixture and recent history from two-locus statistics" data-description="by Ragsdale " data-buttontext="">
+							<img src="figures/Ragsdale_et_al-Models_of_archaic_admixture_and_recent_history_from_two-locus_statistics_52355933.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Durvasula_et_al-Recovering_signals_of_ghost_archaic_introgression_in_African_populations_34668368.html" data-largesrc="figures/Durvasula_et_al-Recovering_signals_of_ghost_archaic_introgression_in_African_populations_34668368.png" data-title="Recovering signals of ghost archaic introgression in African populations" data-description="by Durvasula " data-buttontext="">
+							<img src="figures/Durvasula_et_al-Recovering_signals_of_ghost_archaic_introgression_in_African_populations_34668368.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/John_Novembre_et_al-Genes_mirror_geography_within_Europe_115659.html" data-largesrc="figures/John_Novembre_et_al-Genes_mirror_geography_within_Europe_115659.png" data-title="Genes mirror geography within Europe" data-description="by John Novembre " data-buttontext="">
+							<img src="figures/John_Novembre_et_al-Genes_mirror_geography_within_Europe_115659.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Junyue_Cao_et_al-The_single-cell_transcriptional_landscape_of_mammalian_organogenesis_55811639.html" data-largesrc="figures/Junyue_Cao_et_al-The_single-cell_transcriptional_landscape_of_mammalian_organogenesis_55811639.png" data-title="The single-cell transcriptional landscape of mammalian organogenesis" data-description="by Junyue Cao " data-buttontext="">
+							<img src="figures/Junyue_Cao_et_al-The_single-cell_transcriptional_landscape_of_mammalian_organogenesis_55811639.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Jaehee_Kim_et_al-Statistical_Detection_of_Relatives_Typed_with_Disjoint_Forensic_and_Biomedical_Loci_49530208.html" data-largesrc="figures/Jaehee_Kim_et_al-Statistical_Detection_of_Relatives_Typed_with_Disjoint_Forensic_and_Biomedical_Loci_49530208.png" data-title="Statistical Detection of Relatives Typed with Disjoint Forensic and Biomedical Loci" data-description="by Jaehee Kim " data-buttontext="">
+							<img src="figures/Jaehee_Kim_et_al-Statistical_Detection_of_Relatives_Typed_with_Disjoint_Forensic_and_Biomedical_Loci_49530208.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Albers_et_al-Dating_genomic_variants_and_shared_ancestry_in_population-scale_sequencing_data_48265719.html" data-largesrc="figures/Albers_et_al-Dating_genomic_variants_and_shared_ancestry_in_population-scale_sequencing_data_48265719.png" data-title="Dating genomic variants and shared ancestry in population-scale sequencing data" data-description="by Albers " data-buttontext="">
+							<img src="figures/Albers_et_al-Dating_genomic_variants_and_shared_ancestry_in_population-scale_sequencing_data_48265719.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Yaniv_Erlich_et_al-Identity_inference_of_genomic_data_using_long-range_familial_searches_49530141.html" data-largesrc="figures/Yaniv_Erlich_et_al-Identity_inference_of_genomic_data_using_long-range_familial_searches_49530141.png" data-title="Identity inference of genomic data using long-range familial searches" data-description="by Yaniv Erlich " data-buttontext="">
+							<img src="figures/Yaniv_Erlich_et_al-Identity_inference_of_genomic_data_using_long-range_familial_searches_49530141.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Chirag_M._Lakhani_et_al-Repurposing_large_health_insurance_claims_data_to_estimate_genetic_and_environmental_contributions_in_560_phenotypes_53917059.html" data-largesrc="figures/Chirag_M._Lakhani_et_al-Repurposing_large_health_insurance_claims_data_to_estimate_genetic_and_environmental_contributions_in_560_phenotypes_53917059.png" data-title="Repurposing large health insurance claims data to estimate genetic and environmental contributio..." data-description="by Chirag M. Lakhani " data-buttontext="">
+							<img src="figures/Chirag_M._Lakhani_et_al-Repurposing_large_health_insurance_claims_data_to_estimate_genetic_and_environmental_contributions_in_560_phenotypes_53917059.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Jensen_et_al-Stone_Age_chewing_gum_yields_5,700_year-old_human_genome_and_oral_microbiome_52608959.html" data-largesrc="figures/Jensen_et_al-Stone_Age_chewing_gum_yields_5,700_year-old_human_genome_and_oral_microbiome_52608959.png" data-title="Stone Age chewing gum yields 5,700 year-old human genome and oral microbiome" data-description="by Jensen " data-buttontext="">
+							<img src="figures/Jensen_et_al-Stone_Age_chewing_gum_yields_5,700_year-old_human_genome_and_oral_microbiome_52608959.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/_et_al-ASHG_Denounces_Attempts_to_Link_Genetics_and_Racial_Supremacy_49945431.html" data-largesrc="figures/_et_al-ASHG_Denounces_Attempts_to_Link_Genetics_and_Racial_Supremacy_49945431.png" data-title="ASHG Denounces Attempts to Link Genetics and Racial Supremacy" data-description="by  " data-buttontext="">
+							<img src="figures/_et_al-ASHG_Denounces_Attempts_to_Link_Genetics_and_Racial_Supremacy_49945431.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Bridavsky_et_al-Crowdfunded_whole-genome_sequencing_of_the_celebrity_cat_Lil_BUB_identifies_causal_mutations_for_her_osteopetrosis_and_polydactyly_55925121.html" data-largesrc="figures/Bridavsky_et_al-Crowdfunded_whole-genome_sequencing_of_the_celebrity_cat_Lil_BUB_identifies_causal_mutations_for_her_osteopetrosis_and_polydactyly_55925121.png" data-title="Crowdfunded whole-genome sequencing of the celebrity cat Lil BUB identifies causal mutations for..." data-description="by Bridavsky " data-buttontext="">
+							<img src="figures/Bridavsky_et_al-Crowdfunded_whole-genome_sequencing_of_the_celebrity_cat_Lil_BUB_identifies_causal_mutations_for_her_osteopetrosis_and_polydactyly_55925121.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/A._Seguin-Orlando_et_al-Genomic_structure_in_Europeans_dating_back_at_least_36,200_years_2858415.html" data-largesrc="figures/A._Seguin-Orlando_et_al-Genomic_structure_in_Europeans_dating_back_at_least_36,200_years_2858415.png" data-title="Genomic structure in Europeans dating back at least 36,200 years" data-description="by A. Seguin-Orlando " data-buttontext="">
+							<img src="figures/A._Seguin-Orlando_et_al-Genomic_structure_in_Europeans_dating_back_at_least_36,200_years_2858415.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Sharon_R._Browning_et_al-Analysis_of_Human_Sequence_Data_Reveals_Two_Pulses_of_Archaic_Denisovan_Admixture_34376150.html" data-largesrc="figures/Sharon_R._Browning_et_al-Analysis_of_Human_Sequence_Data_Reveals_Two_Pulses_of_Archaic_Denisovan_Admixture_34376150.png" data-title="Analysis of Human Sequence Data Reveals Two Pulses of Archaic Denisovan Admixture" data-description="by Sharon R. Browning " data-buttontext="">
+							<img src="figures/Sharon_R._Browning_et_al-Analysis_of_Human_Sequence_Data_Reveals_Two_Pulses_of_Archaic_Denisovan_Admixture_34376150.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/MacLean_et_al-Highly_Heritable_and_Functionally_Relevant_Breed_Differences_in_Dog_Behavior:_supplemental_information_53351163.html" data-largesrc="figures/MacLean_et_al-Highly_Heritable_and_Functionally_Relevant_Breed_Differences_in_Dog_Behavior:_supplemental_information_53351163.png" data-title="Highly Heritable and Functionally Relevant Breed Differences in Dog Behavior: supplemental infor..." data-description="by MacLean " data-buttontext="">
+							<img src="figures/MacLean_et_al-Highly_Heritable_and_Functionally_Relevant_Breed_Differences_in_Dog_Behavior:_supplemental_information_53351163.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Yair_Field_et_al-Detection_of_human_adaptation_during_the_past_2000_years_12603108.html" data-largesrc="figures/Yair_Field_et_al-Detection_of_human_adaptation_during_the_past_2000_years_12603108.png" data-title="Detection of human adaptation during the past 2000 years" data-description="by Yair Field " data-buttontext="">
+							<img src="figures/Yair_Field_et_al-Detection_of_human_adaptation_during_the_past_2000_years_12603108.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/W._David_Hill_et_al-Genomic_analysis_of_family_data_reveals_additional_genetic_effects_on_intelligence_and_personality_31492953.html" data-largesrc="figures/W._David_Hill_et_al-Genomic_analysis_of_family_data_reveals_additional_genetic_effects_on_intelligence_and_personality_31492953.png" data-title="Genomic analysis of family data reveals additional genetic effects on intelligence and personali..." data-description="by W. David Hill " data-buttontext="">
+							<img src="figures/W._David_Hill_et_al-Genomic_analysis_of_family_data_reveals_additional_genetic_effects_on_intelligence_and_personality_31492953.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Abdellaoui_et_al-Genetic_Consequences_of_Social_Stratification_in_Great_Britain_50501527.html" data-largesrc="figures/Abdellaoui_et_al-Genetic_Consequences_of_Social_Stratification_in_Great_Britain_50501527.png" data-title="Genetic Consequences of Social Stratification in Great Britain" data-description="by Abdellaoui " data-buttontext="">
+							<img src="figures/Abdellaoui_et_al-Genetic_Consequences_of_Social_Stratification_in_Great_Britain_50501527.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/G._Hellenthal_et_al-A_Genetic_Atlas_of_Human_Admixture_History_2118810.html" data-largesrc="figures/G._Hellenthal_et_al-A_Genetic_Atlas_of_Human_Admixture_History_2118810.png" data-title="A Genetic Atlas of Human Admixture History" data-description="by G. Hellenthal " data-buttontext="">
+							<img src="figures/G._Hellenthal_et_al-A_Genetic_Atlas_of_Human_Admixture_History_2118810.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Bycroft_et_al-Patterns_of_genetic_differentiation_and_the_footprints_of_historical_migrations_in_the_Iberian_Peninsula_34262871.html" data-largesrc="figures/Bycroft_et_al-Patterns_of_genetic_differentiation_and_the_footprints_of_historical_migrations_in_the_Iberian_Peninsula_34262871.png" data-title="Patterns of genetic differentiation and the footprints of historical migrations in the Iberian P..." data-description="by Bycroft " data-buttontext="">
+							<img src="figures/Bycroft_et_al-Patterns_of_genetic_differentiation_and_the_footprints_of_historical_migrations_in_the_Iberian_Peninsula_34262871.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Lawson_et_al-A_tutorial_on_how_%28not%29_to_over-interpret_STRUCTUREADMIXTURE_bar_plots_10104753.html" data-largesrc="figures/Lawson_et_al-A_tutorial_on_how_%28not%29_to_over-interpret_STRUCTUREADMIXTURE_bar_plots_10104753.png" data-title="A tutorial on how (not) to over-interpret STRUCTUREADMIXTURE bar plots" data-description="by Lawson " data-buttontext="">
+							<img src="figures/Lawson_et_al-A_tutorial_on_how_%28not%29_to_over-interpret_STRUCTUREADMIXTURE_bar_plots_10104753.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Daniel_J._Lawson_et_al-A_tutorial_on_how_not_to_over-interpret_STRUCTURE_and_ADMIXTURE_bar_plots_46498440.html" data-largesrc="figures/Daniel_J._Lawson_et_al-A_tutorial_on_how_not_to_over-interpret_STRUCTURE_and_ADMIXTURE_bar_plots_46498440.png" data-title="A tutorial on how not to over-interpret STRUCTURE and ADMIXTURE bar plots" data-description="by Daniel J. Lawson " data-buttontext="">
+							<img src="figures/Daniel_J._Lawson_et_al-A_tutorial_on_how_not_to_over-interpret_STRUCTURE_and_ADMIXTURE_bar_plots_46498440.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Viviane_Slon_et_al-The_genome_of_the_offspring_of_a_Neanderthal_mother_and_a_Denisovan_father_46833965.html" data-largesrc="figures/Viviane_Slon_et_al-The_genome_of_the_offspring_of_a_Neanderthal_mother_and_a_Denisovan_father_46833965.png" data-title="The genome of the offspring of a Neanderthal mother and a Denisovan father" data-description="by Viviane Slon " data-buttontext="">
+							<img src="figures/Viviane_Slon_et_al-The_genome_of_the_offspring_of_a_Neanderthal_mother_and_a_Denisovan_father_46833965.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Doron_M._Behar_et_al-The_genome-wide_structure_of_the_Jewish_people_443774.html" data-largesrc="figures/Doron_M._Behar_et_al-The_genome-wide_structure_of_the_Jewish_people_443774.png" data-title="The genome-wide structure of the Jewish people" data-description="by Doron M. Behar " data-buttontext="">
+							<img src="figures/Doron_M._Behar_et_al-The_genome-wide_structure_of_the_Jewish_people_443774.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Martin_et_al-Current_clinical_use_of_polygenic_scores_will_risk_exacerbating_health_disparities_49534330.html" data-largesrc="figures/Martin_et_al-Current_clinical_use_of_polygenic_scores_will_risk_exacerbating_health_disparities_49534330.png" data-title="Current clinical use of polygenic scores will risk exacerbating health disparities" data-description="by Martin " data-buttontext="">
+							<img src="figures/Martin_et_al-Current_clinical_use_of_polygenic_scores_will_risk_exacerbating_health_disparities_49534330.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Hill_et_al-Genomic_analysis_of_family_data_reveals_additional_genetic_effects_on_intelligence_and_personality_16179150.html" data-largesrc="figures/Hill_et_al-Genomic_analysis_of_family_data_reveals_additional_genetic_effects_on_intelligence_and_personality_16179150.png" data-title="Genomic analysis of family data reveals additional genetic effects on intelligence and personali..." data-description="by Hill " data-buttontext="">
+							<img src="figures/Hill_et_al-Genomic_analysis_of_family_data_reveals_additional_genetic_effects_on_intelligence_and_personality_16179150.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Augustine_Kong_et_al-Selection_against_variants_in_the_genome_associated_with_educational_attainment_15551866.html" data-largesrc="figures/Augustine_Kong_et_al-Selection_against_variants_in_the_genome_associated_with_educational_attainment_15551866.png" data-title="Selection against variants in the genome associated with educational attainment" data-description="by Augustine Kong " data-buttontext="">
+							<img src="figures/Augustine_Kong_et_al-Selection_against_variants_in_the_genome_associated_with_educational_attainment_15551866.png" alt=""/>
+						</a>
+					</li>
+					
+					<li>
+						<a href="reports/Nicholas_G._Crawford_et_al-Loci_associated_with_skin_pigmentation_identified_in_African_populations_27367975.html" data-largesrc="figures/Nicholas_G._Crawford_et_al-Loci_associated_with_skin_pigmentation_identified_in_African_populations_27367975.png" data-title="Loci associated with skin pigmentation identified in African populations" data-description="by Nicholas G. Crawford " data-buttontext="">
+							<img src="figures/Nicholas_G._Crawford_et_al-Loci_associated_with_skin_pigmentation_identified_in_African_populations_27367975.png" alt=""/>
+						</a>
+					</li>
+					
+				</ul>
+				<footer>			
+	This page was generated using <a href="https://gohugo.io/">Hugo</a> with the <a href="https://github.com/aerohub/hugrid">hugrid theme</a>
+</footer>
+			</div>
+		</div>
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>
+			var $event = $.event,
+			$special,
+			resizeTimeout;
+
+			$special = $event.special.debouncedresize = {
+				setup: function() {
+					$( this ).on( "resize", $special.handler );
+				},
+				teardown: function() {
+					$( this ).off( "resize", $special.handler );
+				},
+				handler: function( event, execAsap ) {
+					var context = this,
+						args = arguments,
+						dispatch = function() {
+							event.type = "debouncedresize";
+							$event.dispatch.apply( context, args );
+						};
+
+					if ( resizeTimeout ) {
+						clearTimeout( resizeTimeout );
+					}
+
+					execAsap ?
+						dispatch() :
+						resizeTimeout = setTimeout( dispatch, $special.threshold );
+				},
+				threshold: 250
+			};
+
+			var BLANK = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
+
+			$.fn.imagesLoaded = function( callback ) {
+				var $this = this,
+					deferred = $.isFunction($.Deferred) ? $.Deferred() : 0,
+					hasNotify = $.isFunction(deferred.notify),
+					$images = $this.find('img').add( $this.filter('img') ),
+					loaded = [],
+					proper = [],
+					broken = [];
+
+				if ($.isPlainObject(callback)) {
+					$.each(callback, function (key, value) {
+						if (key === 'callback') {
+							callback = value;
+						} else if (deferred) {
+							deferred[key](value);
+						}
+					});
+				}
+
+				function doneLoading() {
+					var $proper = $(proper),
+						$broken = $(broken);
+
+					if ( deferred ) {
+						if ( broken.length ) {
+							deferred.reject( $images, $proper, $broken );
+						} else {
+							deferred.resolve( $images );
+						}
+					}
+
+					if ( $.isFunction( callback ) ) {
+						callback.call( $this, $images, $proper, $broken );
+					}
+				}
+
+				function imgLoaded( img, isBroken ) {
+					if ( img.src === BLANK || $.inArray( img, loaded ) !== -1 ) {
+						return;
+					}
+
+					loaded.push( img );
+
+					if ( isBroken ) {
+						broken.push( img );
+					} else {
+						proper.push( img );
+					}
+
+					$.data( img, 'imagesLoaded', { isBroken: isBroken, src: img.src } );
+
+					if ( hasNotify ) {
+						deferred.notifyWith( $(img), [ isBroken, $images, $(proper), $(broken) ] );
+					}
+
+					if ( $images.length === loaded.length ){
+						setTimeout( doneLoading );
+						$images.unbind( '.imagesLoaded' );
+					}
+				}
+
+				if ( !$images.length ) {
+					doneLoading();
+				} else {
+					$images.bind( 'load.imagesLoaded error.imagesLoaded', function( event ){
+						imgLoaded( event.target, event.type === 'error' );
+					}).each( function( i, el ) {
+						var src = el.src;
+
+						var cached = $.data( el, 'imagesLoaded' );
+						if ( cached && cached.src === src ) {
+							imgLoaded( el, cached.isBroken );
+							return;
+						}
+
+						if ( el.complete && el.naturalWidth !== undefined ) {
+							imgLoaded( el, el.naturalWidth === 0 || el.naturalHeight === 0 );
+							return;
+						}
+
+						if ( el.readyState || el.complete ) {
+							el.src = BLANK;
+							el.src = src;
+						}
+					});
+				}
+
+				return deferred ? deferred.promise( $this ) : $this;
+			};
+
+			var Grid = (function() {
+
+				var $grid = $( '*#og-grid' ),
+					$items = $grid.children( 'li' ),
+					current = -1,
+					previewPos = -1,
+					scrollExtra = 0,
+					marginExpanded = 10,
+					$window = $( window ), winsize,
+					$body = $( 'html, body' ),
+					transEndEventNames = {
+						'WebkitTransition' : 'webkitTransitionEnd',
+						'MozTransition' : 'transitionend',
+						'OTransition' : 'oTransitionEnd',
+						'msTransition' : 'MSTransitionEnd',
+						'transition' : 'transitionend'
+					},
+					transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
+					support = Modernizr.csstransitions,
+					settings = {
+						minHeight : 500,
+						speed : 350,
+						easing : 'ease'
+					};
+
+				function init( config ) {
+					
+					settings = $.extend( true, {}, settings, config );
+
+					$grid.imagesLoaded( function() {
+
+						saveItemInfo( true );
+						getWinSize();
+						initEvents();
+
+					} );
+
+				}
+
+				function addItems( $newitems ) {
+
+					$items = $items.add( $newitems );
+
+					$newitems.each( function() {
+						var $item = $( this );
+						$item.data( {
+							offsetTop : $item.offset().top,
+							height : $item.height()
+						} );
+					} );
+
+					initItemsEvents( $newitems );
+
+				}
+
+				function saveItemInfo( saveheight ) {
+					$items.each( function() {
+						var $item = $( this );
+						$item.data( 'offsetTop', $item.offset().top );
+						if( saveheight ) {
+							$item.data( 'height', $item.height() );
+						}
+					} );
+				}
+
+				function initEvents() {
+					
+					initItemsEvents( $items );
+					
+					$window.on( 'debouncedresize', function() {
+						
+						scrollExtra = 0;
+						previewPos = -1;
+						saveItemInfo();
+						getWinSize();
+						var preview = $.data( this, 'preview' );
+						if( typeof preview != 'undefined' ) {
+							hidePreview();
+						}
+
+					} );
+
+				}
+
+				function initItemsEvents( $items ) {
+					$items.on( 'click', 'span.og-close', function() {
+						hidePreview();
+						return false;
+					} ).children( 'a' ).on( 'click', function(e) {
+
+						var $item = $( this ).parent();
+						current === Array.from($items).findIndex(d => d == $item[0]) ? hidePreview() : showPreview( $item );
+						return false;
+
+					} );
+				}
+
+				function getWinSize() {
+					winsize = { width : $window.width(), height : $window.height() };
+				}
+
+				function showPreview( $item ) {
+
+					var preview = $.data( this, 'preview' ),
+						position = $item.data( 'offsetTop' );
+
+					scrollExtra = 0;
+
+					if( typeof preview != 'undefined' ) {
+
+						if( previewPos !== position ) {
+							if( position > previewPos ) {
+								scrollExtra = preview.height;
+							}
+							hidePreview();
+						}
+						else {
+							preview.update( $item );
+							return false;
+						}
+						
+					}
+
+					previewPos = position;
+					preview = $.data( this, 'preview', new Preview( $item ) );
+					preview.open();
+
+				}
+
+				function hidePreview() {
+					current = -1;
+					var preview = $.data( this, 'preview' );
+					preview.close();
+					$.removeData( this, 'preview' );
+				}
+
+				function Preview( $item ) {
+					this.$item = $item;
+					this.expandedIdx = Array.from($items).findIndex(d => d == this.$item[0]);
+					this.create();
+					this.update();
+				}
+
+				Preview.prototype = {
+					create : function() {
+						this.$title = $( '<h3></h3>' );
+						this.$description = $( '<p></p>' );
+						this.$href = $( '<a href="#" target="_blank">View Report</a>' );
+						this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$description, this.$href );
+						this.$loading = $( '<div class="og-loading"></div>' );
+						this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
+						this.$closePreview = $( '<span class="og-close"></span>' );
+						this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
+						this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
+						this.$item.append( this.getEl() );
+						if( support ) {
+							this.setTransition();
+						}
+					},
+					update : function( $item ) {
+
+						if( $item ) {
+							this.$item = $item;
+						}
+						
+						if( current !== -1 ) {
+							var $currentItem = $items.eq( current );
+							$currentItem.removeClass( 'og-expanded' );
+							this.$item.addClass( 'og-expanded' );
+							this.positionPreview();
+						}
+
+						current = this.$item.index();
+
+						var $itemEl = this.$item.children( 'a' ),
+							eldata = {
+								href : $itemEl.attr( 'href' ),
+								largesrc : $itemEl.data( 'largesrc' ),
+								title : $itemEl.data( 'title' ),
+								description : $itemEl.data( 'description' ),
+								buttontext : $itemEl.data( 'buttontext' )
+							};
+
+						this.$title.html( eldata.title );
+						this.$description.html( eldata.description );
+						if(eldata.buttontext) this.$href.text(eldata.buttontext);
+						else this.$href.text("View Report")
+
+						if (eldata.href) {
+							this.$href.attr( 'href', eldata.href );
+							this.$href.show();
+						}
+						else {
+							this.$href.hide();
+						}
+
+						var self = this;
+						
+						if( typeof self.$largeImg != 'undefined' ) {
+							self.$largeImg.remove();
+						}
+
+						if( self.$fullimage.is( ':visible' ) ) {
+							this.$loading.show();
+							$( '<img/>' ).load( function() {
+								var $img = $( this );
+								if( $img.attr( 'src' ) === self.$item.children('a').data( 'largesrc' ) ) {
+									self.$loading.hide();
+									self.$fullimage.find( 'img' ).remove();
+									self.$largeImg = $img.fadeIn( 350 );
+									self.$fullimage.append( self.$largeImg );
+								}
+							} ).attr( 'src', eldata.largesrc );	
+						}
+
+					},
+					open : function() {
+
+						setTimeout( $.proxy( function() {	
+							this.setHeights();
+							this.positionPreview();
+						}, this ), 25 );
+
+					},
+					close : function() {
+
+						var self = this,
+							onEndFn = function() {
+								if( support ) {
+									$( this ).off( transEndEventName );
+								}
+								self.$item.removeClass( 'og-expanded' );
+								self.$previewEl.remove();
+							};
+
+						setTimeout( $.proxy( function() {
+
+							if( typeof this.$largeImg !== 'undefined' ) {
+								this.$largeImg.fadeOut( 'fast' );
+							}
+							this.$previewEl.css( 'height', 0 );
+							var $expandedItem = $items.eq( this.expandedIdx );
+							$expandedItem.css( 'height', $expandedItem.data( 'height' ) ).on( transEndEventName, onEndFn );
+
+							if( !support ) {
+								onEndFn.call();
+							}
+
+						}, this ), 25 );
+						
+						return false;
+
+					},
+					calcHeight : function() {
+
+						var heightPreview = winsize.height - this.$item.data( 'height' ) - marginExpanded,
+							itemHeight = winsize.height;
+
+						if( heightPreview < settings.minHeight ) {
+							heightPreview = settings.minHeight;
+							itemHeight = settings.minHeight + this.$item.data( 'height' ) + marginExpanded;
+						}
+
+						this.height = heightPreview;
+						this.itemHeight = itemHeight;
+
+					},
+					setHeights : function() {
+
+						var self = this,
+							onEndFn = function() {
+								if( support ) {
+									self.$item.off( transEndEventName );
+								}
+								self.$item.addClass( 'og-expanded' );
+							};
+
+						this.calcHeight();
+						this.$previewEl.css( 'height', this.height );
+						this.$item.css( 'height', this.itemHeight ).on( transEndEventName, onEndFn );
+
+						if( !support ) {
+							onEndFn.call();
+						}
+
+					},
+					positionPreview : function() {
+
+						var position = this.$item.data( 'offsetTop' ),
+							previewOffsetT = this.$previewEl.offset().top - scrollExtra,
+							scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
+						
+						$body.animate( { scrollTop : scrollVal }, settings.speed );
+
+					},
+					setTransition  : function() {
+						this.$previewEl.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
+						this.$item.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
+					},
+					getEl : function() {
+						return this.$previewEl;
+					}
+				}
+
+				return { 
+					init : init,
+					addItems : addItems
+				};
+
+			})();
+		</script>
+		<script>
+			$(function() {
+				Grid.init();
+			});
+		</script>
+
+	</body>
+</html>
