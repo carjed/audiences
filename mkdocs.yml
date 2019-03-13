@@ -1,7 +1,7 @@
 site_name: audiences
 site_url: https://github.com/carjed/audiences
 repo_url: https://github.com/carjed/audiences
-docs_dir: docs
+docs_dir: _docs
 nav:
   - Home: index.md
   - Usage: usage.md
