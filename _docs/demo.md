@@ -21,4 +21,4 @@ div.col-md-9 {
 
 </style>
 
-<iframe width="100%" height=1000 name="iframe" src="/static/index.html"></iframe>
+<iframe width="100%" height=1000 name="iframe" src="/audiences/static/index.html"></iframe>
