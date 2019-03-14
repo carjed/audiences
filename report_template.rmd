@@ -422,7 +422,7 @@ p_thumb <- p+
   ggplot2::annotate("text", x=0, y=0.5, hjust=0, label=wrapper(article_df$title, width = 30), size=6)+
   theme(legend.position="none", axis.ticks.x=element_blank(), axis.title.x=element_blank())
 
-ggsave(paste0(datadir, "/static/figures/", gsub(".html", ".png", nb_file)), 
+ggsave(paste0(datadir, "/output/figures/", gsub(".html", ".png", nb_file)), 
        plot=p_thumb, width = 4, height=2, dpi=125)
 
 htmlwidgets::saveWidget(p2, 

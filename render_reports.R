@@ -194,7 +194,7 @@ for (article_full_url in article_urls){
   rmarkdown::render(paste0(datadir, "/report_template.rmd"),  # file 2
                     # output_file =  paste0(nb_file, '_', Sys.Date(), ".html"), 
                     output_file =  nb_file, 
-                    output_dir = paste0(datadir, "/static/reports"),
+                    output_dir = paste0(datadir, "/output/reports"),
                     params = list(title=nb_title, 
                                   abstract=abstract,
                                   doi=article_doi))
