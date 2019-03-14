@@ -1,6 +1,7 @@
 # Site settings
 #baseurl = "https://carjed.github.io/audiences/"
-baseurl = "/static/"
+#baseurl = "https://carjed.github.io/audiences/docs/static/"
+#baseurl = "/"
 languageCode = "en-us"
 title = "Twitter Audience Analysis"
 theme = "hugrid"
@@ -10,7 +11,7 @@ googleAnalytics = "UA-XXXXXXXX-Y"
 contentdir = "content"
 datadir = "data"
 layoutdir = "layouts"
-publishdir = "docs/static"
+publishdir = "_docs/static"
 
 [params]
     # Meta

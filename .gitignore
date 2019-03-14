@@ -4,6 +4,6 @@ twitter_token.rds
 *.nb.html
 .ipynb_checkpoints/**
 archive/**
-static/**
+static1/**
 article_data/**
 figs/**
