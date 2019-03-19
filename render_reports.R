@@ -7,6 +7,7 @@ library(markdown)
 library(rmarkdown)
 library(rAltmetric)
 library(rvest)
+library(rcrossref)
 library(tidyverse)
 library(yaml)
 library(anytime)
@@ -118,74 +119,43 @@ if(file.exists(training_data_full_fh)){
 }
 
 #-----------------------------------------------------------------------------
-# Define list of articles
+# Read list of article DOIs and Altmetric URLs
+# - in the future, this will be purely DOI-based
+# - can also pull in list of popular bioRxiv papers using the Rxivist API
 #-----------------------------------------------------------------------------
-article_urls <- c(
-                  "https://cell.altmetric.com/details/34376150",    # Browning et al (denisovan admixture) XX
-                  "https://biorxiv.altmetric.com/details/52355933", # Ragsdale et al (ghost admixture) XX
-                  "https://biorxiv.altmetric.com/details/34668368", # # Durvasula et al (ghost admixture) XX
-                  "https://biorxiv.altmetric.com/details/52608959", # Jensen et al (Stone Age chewing gum) XX
-                  "https://biorxiv.altmetric.com/details/43592322", # Villanea & Schraiber (ghost admixture) XX
-                  "https://www.altmetric.com/details/46833965",     # Slon et al (Neanderthal/Denisovan offspring) XX
-                  "https://www.altmetric.com/details/45430386",     # Lee et al (educational attainment) XX
-                  "https://biorxiv.altmetric.com/details/16179150", # Hill et al (family intelligence biorxiv version) XX
-                  "https://www.altmetric.com/details/31492953",     # Hill et al (family intelligence Mol Psych version) XX
-                  "https://biorxiv.altmetric.com/details/50501527", # Abdellaoui et al (social strat~genetics) XX [nice UMAP structure; shows WN-affiliated psych/econ/philosophy/polisci]
-                  "https://pnas.altmetric.com/details/15551866",    # Kong et al (selection for educational attainment vars) XX [nice UMAP structure; shows WN-affiliated psych/econ/philosophy/polisci]
-                  "https://biorxiv.altmetric.com/details/53351163", # MacLean et al (dog behavior) XX [example of non-human]
-                  "https://cell.altmetric.com/details/49945431",    # ASHG statement XX [heavily polarized]
-                  "https://www.altmetric.com/details/53917059",     # Lakhani et al (health insurance claims) XX
-                  "https://www.altmetric.com/details/55811639",     # Cao et al (organogenesis) XX
-                  "https://www.altmetric.com/details/51402455",     # Sherman et al (African pan genome) XX
-                  "https://biorxiv.altmetric.com/details/55925121", # Bridavsky et al (Lil Bub genome) XX
-                  "https://www.altmetric.com/details/49530141",     # Erlich et al (DNA id) XX
-                  "https://cell.altmetric.com/details/49530208",    # Kim et al (DNA id 2) XX
-                  "https://www.altmetric.com/details/12603108",     # Field et al (human adaptation) XX
-                  "https://www.altmetric.com/details/443774",       # Behar et al (Jewish genetics) XX [virtually no sci clusters]
-                  "https://www.altmetric.com/details/2118810",      # Hellenthal et al (Global admixture) XX
-                  "https://www.altmetric.com/details/2858415",      # Seguin-Orlando et al (Euro history) XX
-                  "https://biorxiv.altmetric.com/details/34262871", # Bycroft et al (Spanish pop struct) XX [good UMAP cosine structure]
-                  "https://www.altmetric.com/details/115659",       # Novembre et al (genes mirror geography) XX
-                  "https://www.altmetric.com/details/27367975",     # Crawford et al (skin pigmentation) XX # [suprisingly few wn clusters]
-                  "https://biorxiv.altmetric.com/details/49534330", # Martin et al (PRS risk) XX
-                  "https://biorxiv.altmetric.com/details/48265719", # Albers & McVean (dating variants) XX
-                  "https://biorxiv.altmetric.com/details/10104753", # Lawson et al (STRUCTURE tutorial biorxiv version) XX
-                  "https://www.altmetric.com/details/46498440"      # Lawson et al (STRUCTURE tutorial Nat Comm version) XX
-                  )     
+dois <- scan(paste0(datadir, "/papers.txt"), what="", sep="\n")
+# article_urls <- scan(paste0(datadir, "/papers_altmetric.txt"), what="", sep="\n")
 
 #-----------------------------------------------------------------------------
 # Generate reports
 #-----------------------------------------------------------------------------
-for (article_full_url in article_urls){
-  
-  # scrape doi and abstract
-  article_id <- gsub(".*.details/", "", article_full_url)
-  
-  summary_page <- read_html(article_full_url)
-  doi <- summary_page %>% 
-    html_nodes("div.document-details-table tr:nth-child(3) :nth-child(1)") %>% 
-    html_text()
-  
-  article_doi <- doi[2]
-  
-  if(grepl("biorxiv", article_full_url)){
-    biorxiv_page <- read_html(paste0("https://www.biorxiv.org/content/", article_doi, "v1"))
-    abstract <- biorxiv_page %>% 
-      html_nodes("div.abstract #p-2") %>% 
-      html_text()  
-  } else {
-    abstract1 <- summary_page %>% 
-      html_nodes("div.content-wrapper tr:nth-child(6) :nth-child(1)") %>% 
-      html_text()
-    abstract <- gsub("\n", "", abstract1[2])
-  }
+for (doi in dois){
+  # metadata <- cr_works(dois = doi)
   
   # altmetric metadata from API
-  article_am <- altmetrics(doi = article_doi)
+  article_am <- altmetrics(doi = doi)
   article_df <- altmetric_data(article_am)
+  article_id <- article_df$altmetric_id
+  
+  # get Altmetric URL, specifying journal-specific subdomain if needed
+  if(grepl("10.1101", doi)){
+    subdomain <- "biorxiv"
+  } else if(grepl("10.1016", doi)){
+    subdomain <- "cell"
+  } else {
+    subdomain <- "www"
+  }
+  
+  article_full_url <- paste0("https://", subdomain, ".altmetric.com/details/", article_id)
+  
+  # get abstract if it's available in Crossref metadata
+  abstract <- try(cr_abstract(doi))
+  if(inherits(abstract, "try-error")){
+    abstract <- "" 
+  }
   
   nb_file <- gsub(" ", "_", paste0(gsub(",.*", "", article_df$authors1), " et al-", 
-                    gsub("\"|/", "", article_df$title), "_", article_id, ".html"))
+                                   gsub("\"|/", "", article_df$title), "_", article_id, ".html"))
   nb_title <- paste0("Twitter Audience Analysis of '", article_df$title, 
                      "' by ", gsub(",.*", "", article_df$authors1), " et al., published in ",
                      article_df$journal, " on ", anydate(as.integer(article_df$added_on)))
@@ -197,6 +167,7 @@ for (article_full_url in article_urls){
                     output_dir = paste0(datadir, "/output/reports"),
                     params = list(title=nb_title, 
                                   abstract=abstract,
-                                  doi=article_doi))
+                                  datadir=datadir,
+                                  doi=doi))
   
 }

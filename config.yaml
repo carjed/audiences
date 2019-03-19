@@ -1,5 +1,5 @@
 # example config file for Twitter API access
-
+email: "your email address"
 app_name: "name_of_twitter_app"
 consumer_key: "XXXXXXXXXXXXXXXXXX"
 consumer_secret: "XXXXXXXXXXXXXXXXXX"

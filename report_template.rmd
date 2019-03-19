@@ -3,7 +3,7 @@ params:
   title: ""
   abstract: ""
   doi: ""
-  article_full_url: "https://biorxiv.altmetric.com/details/52355933"
+  datadir: ""
 title: "`r params$title`"
 output: 
   html_document:
@@ -32,7 +32,7 @@ h1, .h1, {
 
 ```{r load_libs, echo=FALSE, message=FALSE, warning=FALSE}
 
-datadir <- rprojroot::find_root(".here")
+datadir <- params$datadir
 
 library(devtools)
 library(anytime)
@@ -47,6 +47,7 @@ library(tidyverse)
 # API stuff
 library(rAltmetric)
 library(rvest)
+library(crevents)
 
 # Analysis
 library(umap)
@@ -92,89 +93,91 @@ Each user that tweets about an article exposes the article to their own unique a
 
 ## Code
 
-### Scrape follower lists and bios
+### Scrape tweets referencing paper
 
-The code below will scrape data from Altmetric and Twitter to get information about each user that has tweeted or RTed the specified article, and the handles of each user's followers.
+The code below will first query the Crossref Event Data API to get a list of tweets/RTs referencing the specified article. Only the status IDs (not full tweets) are stored in Crossref, so we rehydrate the full text of the tweets using the Twitter API.
 
-Due to API restrictions this can be very time-consuming, so a .rds file containing these data will be stored to disk enabling analyses to be repeated without needing to re-scrape the data.
+In some cases, Crossref may be missing many of the tweets documented on Altmetric for the same paper. When this happens, the code below will fall back to scraping handles and tweet IDs from the corresponding Altmetric page.
 
-```{r fetch_am_data, warning=FALSE, message=FALSE, error=FALSE}
-#-----------------------------------------------------------------------------
-# get data from Altmetric
+```{r scrape_ref_tweets, warning=FALSE, message=FALSE, error=FALSE}
 
-summary_page <- read_html(article_full_url)
-doi <- summary_page %>% 
-  html_nodes("div.document-details-table tr:nth-child(3) :nth-child(1)") %>% 
-  html_text()
+# query and clean event data gathered from Crossref API
+events <- crev_query(obj_id=params$doi, source="twitter")$message$events %>%
+  dplyr::select(names=subj.author.url, timestamps=timestamp, status = subj_id) %>%
+  mutate(names=gsub("http://www.twitter.com/", "", names),
+         status=gsub("http://twitter.com/.*statuses/", "", status)) %>%
+  mutate(names=gsub("twitter://user\\?screen_name=", "", names),
+         status=gsub("twitter://status\\?id=", "", status))
 
-article_doi <- doi[2]
+# get user metadata
+handles <- unique(events$names)
 
-if(grepl("biorxiv", article_full_url)){
-  # biorxiv_page <- read_html(paste0("https://www.biorxiv.org/content/", article_doi, "v1"))
-  abstract <- biorxiv_page %>% html_nodes("div.abstract #p-2") %>% html_text()  
-} else {
-  abstract1 <- summary_page %>% html_nodes("div.content-wrapper tr:nth-child(6) :nth-child(1)") %>% html_text()
-  abstract <- gsub("\n", "", abstract1[2])
+# For papers where Crossref is missing >50% of tweets, fall back to
+# scraping from Altmetric
+if(length(handles)/as.numeric(article_df$cited_by_tweeters_count) < 0.5){
+  
+  summary_page <- read_html(article_full_url)
+  twitter_url <- paste0(article_full_url, "/twitter")
+  twitter_page <- read_html(twitter_url)
+  
+  # number of pages is the ceiling of total tweets/100
+  totals <- twitter_page %>% html_nodes("div.text strong") %>% html_text()
+  npages <- ceiling(as.integer(totals[1])/100)
+  
+  # loop through pages of tweets on altmetric to get handles of tweeting users
+  events <- data.frame()
+  for(page in 1:npages){
+    # url <- paste0(article_base_url, id, "/twitter/page:", page)
+    page_url <- paste0(twitter_url, "/page:", page)
+    page <- read_html(page_url)
+    
+    names <- gsub("@", "", html_nodes(page, "div.handle") %>% html_text())
+
+    status <- gsub(".*tweet_id=", "", html_nodes(page, "a.favorite") %>% 
+                     html_attr("href"))
+
+    timestamps <- html_nodes(page, "time") %>% html_attrs() %>% unlist()
+    
+    events <- bind_rows(events, data.frame(names, timestamps, status))
+  }
+  
+  handles <- unique(events$names)
 }
-
-# altmetric metadata from API
-article_am <- altmetrics(doi = article_doi)
-article_df <- altmetric_data(article_am)
-
-# id <- article_df$altmetric_id
-# url <- paste0(article_base_url, id, "/twitter/page:1")
-
-twitter_url <- paste0(article_full_url, "/twitter")
-twitter_page <- read_html(twitter_url)
-
-# number of pages is the ceiling of total tweets/100
-totals <- twitter_page %>% html_nodes("div.text strong") %>% html_text()
-npages <- ceiling(as.integer(totals[1])/100)
-
-# loop through pages of tweets on altmetric to get handles of tweeting users
-
-# if(!exists("user_data")){
-handles <- c()
-ts_df <- data.frame()
-for(page in 1:npages){
-  # url <- paste0(article_base_url, id, "/twitter/page:", page)
-  page_url <- paste0(twitter_url, "/page:", page)
-  page <- read_html(page_url)
-  
-  # get div objects containing handles of tweeting users
-  names <- gsub("@", "", html_nodes(page, "div.handle") %>% html_text())
-  tweets <- gsub("\n", "", html_nodes(page, "div.content") %>% html_text())
-  timestamps <- html_nodes(page, "time") %>% html_attrs() %>% unlist()
-  
-  ts_df <- bind_rows(ts_df, data.frame(names, timestamps, tweets))
-  
-  # append to list, removing duplicates and stripping "@"
-  handles <- unique(c(handles, gsub("@", "", names)))
-}
-
-original <- ts_df %>%
-  mutate(tweets=gsub("\"", "", tweets)) %>%
-  dplyr::filter(!grepl("RT @", tweets)) %>%
-  mutate(tweets=paste0("@", names, ": ", tweets)) %>%
-  mutate(tweets=substr(tweets, 1, 100)) %>%
-  dplyr::select(tweets) %>%
-  dplyr::group_by(tweets) %>%
-  count()
-
-rts <- ts_df %>% 
-  mutate(tweets=gsub("\"", "", tweets)) %>%
-  dplyr::filter(grepl("RT @", tweets)) %>%
-  mutate(tweets=gsub("RT ", "", tweets)) %>%
-  # mutate(tweets=gsub("RT @[^:]*: ", "", tweets)) %>%
-  mutate(tweets=substr(tweets, 1, 100)) %>%
-  group_by(tweets) %>% 
-  count() %>% 
-  arrange(desc(n))
 
 # get user metadata from Twitter API
 user_data <- lookup_users(handles)
-# }
+  
+tweets <- lookup_tweets(events$status) %>%
+  dplyr::select(names=screen_name, 
+                tweets=text, 
+                retweet_screen_name, 
+                status=status_id)
 
+events <- events %>%
+  left_join(tweets)
+
+# separate data by original tweets and RTs
+original <- events %>% 
+  dplyr::filter(is.na(retweet_screen_name)) %>% 
+  group_by(names, tweets) %>% 
+  count %>% 
+  arrange(desc(n))
+
+rts <- events %>% 
+  dplyr::filter(!is.na(retweet_screen_name)) %>% 
+  group_by(retweet_screen_name, tweets) %>% 
+  count %>% 
+  arrange(desc(n))
+
+```
+
+### Scrape follower lists
+
+For each unique user that has (re-)tweeted the article, we then collect the handles of their followers using the Twitter API.
+
+Due to API restrictions this can be very time-consuming, so a .rds file containing these data will be stored to disk enabling analyses to be repeated without needing to re-scrape the data.
+
+```{r scrape_follower_ids, warning=FALSE, message=FALSE, error=FALSE}
 #-----------------------------------------------------------------------------
 # Get follower lists for users
 # due to Twitter API limits, this will take at least N minutes, 
@@ -230,11 +233,13 @@ if(file.exists(altmetric_data_full_fh)){
 }
 ```
 
-Next, we scrape the bios of the followers (limited to the 10,000 most recent followers) for each account that has tweeted/RTed a reference to the article and compile these bios into a single "document" per account. We calculate the frequencies of every term that occurs 10 or more times in each document, excluding common stop words. Note that because emoji and hashtags are commonly used to convey semantic meaning in a user's bio, we include these as unique "words".
+### Scrape follower bios
 
-From the word frequency data, we then generate a document term matrix, which serves as the input for the LDA model.
+Next, we scrape the bios of the followers (limited to the 10,000 most recent followers) for each account that has (re-)tweeted the article and compile these bios into a single "document" per account.
 
-```{r get_follower_bios, warning=FALSE, message=FALSE, error=FALSE}
+Due to API restrictions this can be very time-consuming, so a .rds file containing these data will be stored to disk enabling analyses to be repeated without needing to re-scrape the data.
+
+```{r scrape_follower_bios, warning=FALSE, message=FALSE, error=FALSE}
 
 altmetric_follower_fh <- paste0(datadir, "/article_data/follower_bios_", article_id, ".rds")
 
@@ -271,7 +276,13 @@ if(file.exists(altmetric_follower_fh)){
   
   saveRDS(out_df, altmetric_follower_fh)
 }
+```
 
+### Prepare data for LDA model
+
+We calculate the frequencies of every term that occurs 10 or more times in each document, excluding common stop words. Note that because emoji and hashtags are commonly used to convey semantic meaning in a user's bio, we include these as unique "words". From the word frequency data, we then generate a document term matrix, which serves as the input for the LDA model.
+
+```{r clean_follower_bios, warning=FALSE, message=FALSE, error=FALSE}
 # convert emoji and hashtags to text, collapse follower bios
 bios <- out_df %>%
   dplyr::filter(account_lang=="en") %>%
@@ -758,13 +769,15 @@ One of the most difficult questions to address is how a paper's exposure origina
 
 ## Results
 
-Timeline plot
+### Timeline plot
 
 ```{r timeline, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
-p_times <- ts_df %>% 
-  rename(account=names) %>% 
+# p_times <- ts_df %>% 
+p_times <- events %>% 
+  rename(account=names, rt=retweet_screen_name) %>% 
   left_join(dmp_df2, by="account") %>% 
-  group_by(tweets) %>% 
+  mutate(rt=ifelse(is.na(rt), account, rt)) %>%
+  group_by(rt, tweets) %>% 
   arrange(timestamps) %>% 
   mutate(order=row_number(), n=n()) %>% 
   dplyr::filter(n>3) %>%
@@ -789,6 +802,58 @@ ggplotly(p_times)
 
 ```
 
+### Distribution of tweet counts by group
+```{r original, error=FALSE, warning=FALSE, fig.height=9, fig.width=18, eval=FALSE}
+p_oneoff <- events %>% 
+  rename(account=names, rt=retweet_screen_name) %>% 
+  left_join(dmp_df2, by="account") %>% 
+  dplyr::filter(is.na(retweet_screen_name)) %>%
+  # mutate(rt=ifelse(is.na(rt), account, rt)) %>%
+  group_by(topic) %>%
+  arrange(timestamps) %>% 
+  mutate(order=row_number(), n=n()) %>% 
+  # dplyr::filter(n==1) %>%
+  ungroup() %>%
+  # group_by(topic) %>%
+  # count %>%
+  dplyr::filter(!is.na(topic)) %>%
+  ggplot(aes(x=timestamps, y=order, group=topic, label=account))+
+  # geom_line(colour="grey80")+
+  geom_point(aes(colour=topic, size=wn_mean), alpha=0.5)+
+  scale_colour_manual(values=cols)+
+  scale_y_log10()+
+  scale_x_discrete(breaks=ts_df$timestamps[seq(1, nrow(ts_df), 10)])+
+  ylab("Retweet Number")+
+  theme_classic()+
+  theme(axis.title.x=element_blank(),
+    axis.text.x=element_text(size=6, angle=45, hjust=1),
+        legend.position="none")
+
+p_balance <- events %>% 
+  rename(account=names, rt=retweet_screen_name) %>% 
+  left_join(dmp_df2, by="account") %>% 
+  mutate(isrt=ifelse(is.na(rt), FALSE, TRUE)) %>%
+  group_by(topic, isrt) %>%
+  count() %>%
+  ungroup() %>%
+  # mutate(topic=gsub(":.*", "", topic)) %>%
+  mutate(n=ifelse(isrt==TRUE, -n, n)) %>%
+  # mutate(topic=as.numeric(topic)) %>%
+  # mutate(topic_gp=ifelse(isrt==TRUE, -topic, topic)) %>%
+  # ggplot(aes(x=factor(topic), y=n, fill=factor(topic)))+
+  ggplot(aes(x=topic, y=n))+
+  geom_col(aes(fill=topic))+
+  geom_hline(yintercept = 0, linetype="dashed")+
+  scale_fill_manual(values=cols)+
+  coord_flip()+
+  theme_classic()+
+  theme(axis.title.x=element_blank(),
+    axis.text.y=element_blank(),
+    legend.position = "none")
+
+```
+
+
 # Title similarity analysis (experimental) {.tabset .tabset-fade .tabset-pills}
 
 Not only are we interested in who is tweeting about a paper, but how they are tweeting about a paper. Is a paper's title or abstract sufficient to garner attention? Do different networks tend to editorialize or comment on a paper when they tweet about it?
@@ -800,7 +865,8 @@ To address this, we examine the cosine similarity between the text of each tweet
 The code below calculates the cosine similarity scores (using the `sim.strings` function from the `qlcMatrix` package) between each tweet referencing the article and the title/abstract of the article itself.
 
 ```{r title_sim, error=FALSE, warning=FALSE, message=FALSE}
-title_sim <- ts_df %>% 
+# title_sim <- ts_df %>% 
+title_sim <- events %>% 
   # dplyr::filter(!grepl("RT @", tweets)) %>%
   mutate(tweets=gsub("http.*", "", tweets)) %>%
   mutate(tweets=gsub("\"", "", tweets)) %>%
