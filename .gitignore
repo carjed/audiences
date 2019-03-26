@@ -2,6 +2,7 @@ _config.yaml
 .httr-oauth
 twitter_token.rds
 *.nb.html
+*.fuse*
 .ipynb_checkpoints/**
 archive/**
 output/**

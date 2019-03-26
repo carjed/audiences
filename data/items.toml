@@ -53,6 +53,12 @@ thumb = "figures/Albers_et_al-Dating_genomic_variants_and_shared_ancestry_in_pop
 description = "by Albers "
 url = "reports/Albers_et_al-Dating_genomic_variants_and_shared_ancestry_in_population-scale_sequencing_data_48265719.html"
 [[items]]
+title = "Genome-wide association meta-analysis of 78,308 individuals identifies new loci and genes influe..."
+image = "figures/Suzanne_Sniekers_et_al-Genome-wide_association_meta-analysis_of_78,308_individuals_identifies_new_loci_and_genes_influencing_human_intelligence_20384578.png"
+thumb = "figures/Suzanne_Sniekers_et_al-Genome-wide_association_meta-analysis_of_78,308_individuals_identifies_new_loci_and_genes_influencing_human_intelligence_20384578.png"
+description = "by Suzanne Sniekers "
+url = "reports/Suzanne_Sniekers_et_al-Genome-wide_association_meta-analysis_of_78,308_individuals_identifies_new_loci_and_genes_influencing_human_intelligence_20384578.html"
+[[items]]
 title = "Identity inference of genomic data using long-range familial searches"
 image = "figures/Yaniv_Erlich_et_al-Identity_inference_of_genomic_data_using_long-range_familial_searches_49530141.png"
 thumb = "figures/Yaniv_Erlich_et_al-Identity_inference_of_genomic_data_using_long-range_familial_searches_49530141.png"
@@ -124,6 +130,12 @@ image = "figures/G._Hellenthal_et_al-A_Genetic_Atlas_of_Human_Admixture_History_
 thumb = "figures/G._Hellenthal_et_al-A_Genetic_Atlas_of_Human_Admixture_History_2118810.png"
 description = "by G. Hellenthal "
 url = "reports/G._Hellenthal_et_al-A_Genetic_Atlas_of_Human_Admixture_History_2118810.html"
+[[items]]
+title = ".fuse hidden0003d2de00000005"
+image = "figures/.fuse_hidden0003d2de00000005.png"
+thumb = "figures/.fuse_hidden0003d2de00000005.png"
+description = "by .fuse hidden0003d2de00000005"
+url = "reports/.fuse_hidden0003d2de00000005"
 [[items]]
 title = "Patterns of genetic differentiation and the footprints of historical migrations in the Iberian P..."
 image = "figures/Bycroft_et_al-Patterns_of_genetic_differentiation_and_the_footprints_of_historical_migrations_in_the_Iberian_Peninsula_34262871.png"

@@ -18,7 +18,8 @@ library(here)
 # To use the Twitter API, [sign up for a developer account and obtain the necessary API tokens](https://cran.r-project.org/web/packages/rtweet/vignettes/auth.html). For security, these are stored in a separate `_config.yaml` file.
 #-----------------------------------------------------------------------------
 # set relative path for calling external files from within this script
-datadir <- dirname(sys.frame(1)$ofile)
+# datadir <- dirname(sys.frame(1)$ofile)
+datadir <- paste0(getwd(), "/audiences")
 
 keys <- yaml.load_file(paste0(datadir, "/_config.yaml"))
 
@@ -129,7 +130,9 @@ dois <- scan(paste0(datadir, "/papers.txt"), what="", sep="\n")
 #-----------------------------------------------------------------------------
 # Generate reports
 #-----------------------------------------------------------------------------
+# for (doi in dois[length(dois)]){
 for (doi in dois){
+  
   # metadata <- cr_works(dois = doi)
   
   # altmetric metadata from API

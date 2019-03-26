@@ -33,6 +33,7 @@ h1, .h1, {
 ```{r load_libs, echo=FALSE, message=FALSE, warning=FALSE}
 
 datadir <- params$datadir
+# datadir <- "."
 
 library(devtools)
 library(anytime)
@@ -145,7 +146,8 @@ if(length(handles)/as.numeric(article_df$cited_by_tweeters_count) < 0.5){
 }
 
 # get user metadata from Twitter API
-user_data <- lookup_users(handles)
+user_data <- lookup_users(handles) %>%
+  dplyr::filter(!(account_lang %in% c("ar", "ja", "zh-CN", "ko")) & protected==FALSE)
   
 tweets <- lookup_tweets(events$status) %>%
   dplyr::select(names=screen_name, 
@@ -213,20 +215,22 @@ if(file.exists(altmetric_data_full_fh)){
     #   twitteR::setup_twitter_oauth(consumer_key, consumer_secret, access_token, access_secret)
     # }
     
-    if(user_data[user,]$protected){
-      cat(paste0("User ", user_data[user,]$screen_name, " is protected--skipping\n"))
-    } else {
+    # if(user_data[user,]$protected){
+    #   cat(paste0("User ", user_data[user,]$screen_name, " is protected—skipping\n"))
+    # } else if (user_data[user,]$lang != "en"){
+    #   cat(paste0("User profile for ", user_data[user,]$screen_name, " is not in English—skipping\n"))
+    # } else {
       # cat(paste0("Getting follower list for: ", user_data[user,]$screen_name, 
       #  " (", user, " of ", nrow(user_data), ")...\n"))
     
-      altmetric_data_user <- user_data[user,] %>%
-        dplyr::select(account=screen_name) %>% #head
-        mutate(followers = getFollowers(screen_name=account, oauth=my_oauth, sleep=sleep) %>% 
-                 data.frame %>% 
-                 as.list)
-        
-      altmetric_data_full <- bind_rows(list(altmetric_data_full, altmetric_data_user))
-    }
+    altmetric_data_user <- user_data[user,] %>%
+      dplyr::select(account=screen_name) %>% #head
+      mutate(followers = getFollowers(screen_name=account, oauth=my_oauth, sleep=sleep) %>% 
+               data.frame %>% 
+               as.list)
+      
+    altmetric_data_full <- bind_rows(list(altmetric_data_full, altmetric_data_user))
+    # }
   }
   
   saveRDS(altmetric_data_full, altmetric_data_full_fh)
@@ -429,16 +433,17 @@ p2 <- ggplotly(p) %>%
                      x = 0, y=-1))
 
 wrapper <- function(x, ...) paste(strwrap(x, ...), collapse = "\n")
-p_thumb <- p+
+
+p_thumb <- p +
   ggplot2::annotate("text", x=0, y=0.5, hjust=0, label=wrapper(article_df$title, width = 30), size=6)+
   theme(legend.position="none", axis.ticks.x=element_blank(), axis.title.x=element_blank())
 
 ggsave(paste0(datadir, "/output/figures/", gsub(".html", ".png", nb_file)), 
        plot=p_thumb, width = 4, height=2, dpi=125)
 
-htmlwidgets::saveWidget(p2, 
-                        file=paste0(datadir, "/figs/topic_breakdown_by_user_", article_id, ".html"),
-                        title=paste0("topic_breakdown_by_user_", article_id))
+# htmlwidgets::saveWidget(p2, 
+#                         file=paste0(datadir, "/figs/topic_breakdown_by_user_", article_id, ".html"),
+#                         title=paste0("topic_breakdown_by_user_", article_id))
 
 p2
 
@@ -554,9 +559,9 @@ plot_embedding <- function(plotdat){
   plyout
 }
 
-htmlwidgets::saveWidget(plot_embedding(umap_plotdat), 
-                        file=paste0(datadir, "/figs/homophily_ratio_", article_id, ".html"),
-                        title=paste0("homophily_ratio_", article_id))
+# htmlwidgets::saveWidget(plot_embedding(umap_plotdat), 
+#                         file=paste0(datadir, "/figs/homophily_ratio_", article_id, ".html"),
+#                         title=paste0("homophily_ratio_", article_id))
 
 plot_embedding(umap_plotdat)
 
@@ -611,8 +616,8 @@ p_dend <- dend %>%
   set("leaves_pch", 19) %>% set("leaves_cex", 1) %>% set("leaves_col", lgo$col) %>%
   plot
 
-ggsave(paste0(datadir, "/figs/cosine_hclust_dend_", article_id, ".png"), 
-       plot=p_dend, width = 12, height=12)
+# ggsave(paste0(datadir, "/figs/cosine_hclust_dend_", article_id, ".png"), 
+#        plot=p_dend, width = 12, height=12)
 ```
 
 ### UMAP embedding by cosine similarity
@@ -642,9 +647,9 @@ p2 <- dmp_df2 %>%
   theme(legend.position="none")#+
   # guides(colour=guide_legend(ncol=1))
 
-htmlwidgets::saveWidget(ggplotly(p2), 
-                        file=paste0(datadir, "/figs/cosine_umap_", article_id, ".html"),
-                        title=paste0("cosine_umap_", article_id))
+# htmlwidgets::saveWidget(ggplotly(p2), 
+#                         file=paste0(datadir, "/figs/cosine_umap_", article_id, ".html"),
+#                         title=paste0("cosine_umap_", article_id))
 
 ggplotly(p2)
 
@@ -721,9 +726,9 @@ p4_ply <- ggplotly(p4) %>%
                      yanchor = "bottom",
                      x = 0, y=-1))
 
-htmlwidgets::saveWidget(p4_ply, 
-                        file=paste0(datadir, "/figs/missing_dist_", article_id, ".html"),
-                        title=paste0("missing_dist_", article_id))
+# htmlwidgets::saveWidget(p4_ply, 
+#                         file=paste0(datadir, "/figs/missing_dist_", article_id, ".html"),
+#                         title=paste0("missing_dist_", article_id))
 
 p4_ply
 
@@ -753,9 +758,9 @@ p4a_ply <- ggplotly(p4a) %>%
                      yanchor = "bottom",
                      x = 0, y=-1))
 
-htmlwidgets::saveWidget(p4a_ply, 
-                        file=paste0(datadir, "/figs/missing_homophily_cor_", article_id, ".html"),
-                        title=paste0("missing_homophily_cor_", article_id))
+# htmlwidgets::saveWidget(p4a_ply, 
+#                         file=paste0(datadir, "/figs/missing_homophily_cor_", article_id, ".html"),
+#                         title=paste0("missing_homophily_cor_", article_id))
 
 p4a_ply
 
@@ -794,16 +799,18 @@ p_times <- events %>%
     axis.text.x=element_text(size=6, angle=45, hjust=1),
         legend.position="none")
 
-htmlwidgets::saveWidget(ggplotly(p_times), 
-                        file=paste0(datadir, "/figs/timeline_", article_id, ".html"),
-                        title=paste0("timeline_", article_id))
+# htmlwidgets::saveWidget(ggplotly(p_times), 
+#                         file=paste0(datadir, "/figs/timeline_", article_id, ".html"),
+#                         title=paste0("timeline_", article_id))
 
 ggplotly(p_times)
 
 ```
 
 ### Distribution of tweet counts by group
+
 ```{r original, error=FALSE, warning=FALSE, fig.height=9, fig.width=18, eval=FALSE}
+
 p_oneoff <- events %>% 
   rename(account=names, rt=retweet_screen_name) %>% 
   left_join(dmp_df2, by="account") %>% 
@@ -908,8 +915,8 @@ p_title <- title_sim %>%
 
 p_title
 
-ggsave(paste0(datadir, "/figs/title_sim_ridges_", article_id, ".png"), 
-       plot=p_title, width = 12, height=12)
+# ggsave(paste0(datadir, "/figs/title_sim_ridges_", article_id, ".png"), 
+#        plot=p_title, width = 12, height=12)
 
 ```
 
@@ -929,10 +936,9 @@ p_title <- title_sim %>%
     # axis.text.x=element_text(size=6, angle=45, hjust=1),
         legend.position="none")
 
-
-htmlwidgets::saveWidget(ggplotly(p_title), 
-                        file=paste0(datadir, "/figs/title_sim_", article_id, ".html"),
-                        title=paste0("title_sim_", article_id))
+# htmlwidgets::saveWidget(ggplotly(p_title), 
+#                         file=paste0(datadir, "/figs/title_sim_", article_id, ".html"),
+#                         title=paste0("title_sim_", article_id))
 
 ggplotly(p_title) 
 ```

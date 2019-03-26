@@ -12,6 +12,7 @@ contentdir = "content"
 datadir = "data"
 layoutdir = "layouts"
 publishdir = "_docs/static"
+ignoreFiles = [ "data/README.md", "content/README.md" ]
 
 [params]
     # Meta

@@ -23,6 +23,8 @@ Reports will be written to `output/reports` and thumbnail images for each report
 
 # Build site
 
+A custom landing page for the reports, hosted on Github Pages, can be generated with the following commands. Note that this requires [Hugo](https://gohugo.io/) and [MkDocs](https://www.mkdocs.org/) with the [cinder](https://sourcefoundry.org/cinder/) theme are installed on your system.
+
 ```
 # generate data/items.toml, containing the links to reports to include in landing page
 python generate_links.py
