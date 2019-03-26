@@ -1,1 +1,0 @@
-This directory contains the reports and thumbnails from running `render_reports.R`. Files in this directory must be synced into `docs/static/` after the hugo and mkdocs build commands to be accessed through the web portal. These files are ignored by git.
