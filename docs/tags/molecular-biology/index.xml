@@ -2,264 +2,264 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Molecular Biology on audiences</title>
-    <link>/tags/molecular-biology/</link>
+    <link>https://carjed.github.io/audiences/tags/molecular-biology/</link>
     <description>Recent content in Molecular Biology on audiences</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 22 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/molecular-biology/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://carjed.github.io/audiences/tags/molecular-biology/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Super-resolution Imaging Reveals 3D Structure and Organizing Mechanism of Accessible Chromatin, bioRxiv, 2019-06-22</title>
-      <link>/reports/super-resolution_imaging_reveals_3d_structure_and_organizing_mechanism_of_accessible_chromatin_62523093/</link>
+      <link>https://carjed.github.io/audiences/reports/super-resolution_imaging_reveals_3d_structure_and_organizing_mechanism_of_accessible_chromatin_62523093/</link>
       <pubDate>Sat, 22 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/super-resolution_imaging_reveals_3d_structure_and_organizing_mechanism_of_accessible_chromatin_62523093/</guid>
+      <guid>https://carjed.github.io/audiences/reports/super-resolution_imaging_reveals_3d_structure_and_organizing_mechanism_of_accessible_chromatin_62523093/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Enabling high-accuracy long-read amplicon sequences using unique molecular identifiers and Nanopore sequencing, bioRxiv, 2019-05-24</title>
-      <link>/reports/enabling_high-accuracy_long-read_amplicon_sequences_using_unique_molecular_identifiers_and_nanopore_sequencing_61024590/</link>
+      <link>https://carjed.github.io/audiences/reports/enabling_high-accuracy_long-read_amplicon_sequences_using_unique_molecular_identifiers_and_nanopore_sequencing_61024590/</link>
       <pubDate>Fri, 24 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/enabling_high-accuracy_long-read_amplicon_sequences_using_unique_molecular_identifiers_and_nanopore_sequencing_61024590/</guid>
+      <guid>https://carjed.github.io/audiences/reports/enabling_high-accuracy_long-read_amplicon_sequences_using_unique_molecular_identifiers_and_nanopore_sequencing_61024590/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Cryo-EM structure of the ClpXP protein degradation machinery, bioRxiv, 2019-05-15</title>
-      <link>/reports/cryo-em_structure_of_the_clpxp_protein_degradation_machinery_60489906/</link>
+      <link>https://carjed.github.io/audiences/reports/cryo-em_structure_of_the_clpxp_protein_degradation_machinery_60489906/</link>
       <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/cryo-em_structure_of_the_clpxp_protein_degradation_machinery_60489906/</guid>
+      <guid>https://carjed.github.io/audiences/reports/cryo-em_structure_of_the_clpxp_protein_degradation_machinery_60489906/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Structural and Functional Characterization of G Protein-Coupled Receptors with Deep Mutational Scanning, bioRxiv, 2019-04-30</title>
-      <link>/reports/structural_and_functional_characterization_of_g_protein-coupled_receptors_with_deep_mutational_scanning_59714625/</link>
+      <link>https://carjed.github.io/audiences/reports/structural_and_functional_characterization_of_g_protein-coupled_receptors_with_deep_mutational_scanning_59714625/</link>
       <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/structural_and_functional_characterization_of_g_protein-coupled_receptors_with_deep_mutational_scanning_59714625/</guid>
+      <guid>https://carjed.github.io/audiences/reports/structural_and_functional_characterization_of_g_protein-coupled_receptors_with_deep_mutational_scanning_59714625/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Native molecule sequencing by nano-ID reveals synthesis and stability of RNA isoforms, bioRxiv, 2019-04-08</title>
-      <link>/reports/native_molecule_sequencing_by_nano-id_reveals_synthesis_and_stability_of_rna_isoforms_58710054/</link>
+      <link>https://carjed.github.io/audiences/reports/native_molecule_sequencing_by_nano-id_reveals_synthesis_and_stability_of_rna_isoforms_58710054/</link>
       <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/native_molecule_sequencing_by_nano-id_reveals_synthesis_and_stability_of_rna_isoforms_58710054/</guid>
+      <guid>https://carjed.github.io/audiences/reports/native_molecule_sequencing_by_nano-id_reveals_synthesis_and_stability_of_rna_isoforms_58710054/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Suppression of unwanted CRISPRCas9 editing by co-administration of catalytically inactivating truncated guide RNAs, bioRxiv, 2019-04-04</title>
-      <link>/reports/suppression_of_unwanted_crisprcas9_editing_by_co-administration_of_catalytically_inactivating_truncated_guide_rnas_58453110/</link>
+      <link>https://carjed.github.io/audiences/reports/suppression_of_unwanted_crisprcas9_editing_by_co-administration_of_catalytically_inactivating_truncated_guide_rnas_58453110/</link>
       <pubDate>Thu, 04 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/suppression_of_unwanted_crisprcas9_editing_by_co-administration_of_catalytically_inactivating_truncated_guide_rnas_58453110/</guid>
+      <guid>https://carjed.github.io/audiences/reports/suppression_of_unwanted_crisprcas9_editing_by_co-administration_of_catalytically_inactivating_truncated_guide_rnas_58453110/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>A heterochromatin-specific RNA export pathway facilitates piRNA production, bioRxiv, 2019-04-02</title>
-      <link>/reports/a_heterochromatin-specific_rna_export_pathway_facilitates_pirna_production_58354059/</link>
+      <link>https://carjed.github.io/audiences/reports/a_heterochromatin-specific_rna_export_pathway_facilitates_pirna_production_58354059/</link>
       <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/a_heterochromatin-specific_rna_export_pathway_facilitates_pirna_production_58354059/</guid>
+      <guid>https://carjed.github.io/audiences/reports/a_heterochromatin-specific_rna_export_pathway_facilitates_pirna_production_58354059/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Muscle fiber hypertrophy in response to 6 weeks of high-volume resistance training in trained young men is largely attributed to sarcoplasmic hypertrophy, bioRxiv, 2019-04-02</title>
-      <link>/reports/muscle_fiber_hypertrophy_in_response_to_6_weeks_of_high-volume_resistance_training_in_trained_young_men_is_largely_attributed_to_sarcoplasmic_hypertrophy_58360274/</link>
+      <link>https://carjed.github.io/audiences/reports/muscle_fiber_hypertrophy_in_response_to_6_weeks_of_high-volume_resistance_training_in_trained_young_men_is_largely_attributed_to_sarcoplasmic_hypertrophy_58360274/</link>
       <pubDate>Tue, 02 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/muscle_fiber_hypertrophy_in_response_to_6_weeks_of_high-volume_resistance_training_in_trained_young_men_is_largely_attributed_to_sarcoplasmic_hypertrophy_58360274/</guid>
+      <guid>https://carjed.github.io/audiences/reports/muscle_fiber_hypertrophy_in_response_to_6_weeks_of_high-volume_resistance_training_in_trained_young_men_is_largely_attributed_to_sarcoplasmic_hypertrophy_58360274/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>CRISPRCas9-based mutagenesis frequently provokes on-target mRNA misregulation, bioRxiv, 2019-03-20</title>
-      <link>/reports/crisprcas9-based_mutagenesis_frequently_provokes_on-target_mrna_misregulation_57333383/</link>
+      <link>https://carjed.github.io/audiences/reports/crisprcas9-based_mutagenesis_frequently_provokes_on-target_mrna_misregulation_57333383/</link>
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/crisprcas9-based_mutagenesis_frequently_provokes_on-target_mrna_misregulation_57333383/</guid>
+      <guid>https://carjed.github.io/audiences/reports/crisprcas9-based_mutagenesis_frequently_provokes_on-target_mrna_misregulation_57333383/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>A comparison of DNA stains and staining methods for Agarose Gel Electrophoresis, bioRxiv, 2019-03-07</title>
-      <link>/reports/a_comparison_of_dna_stains_and_staining_methods_for_agarose_gel_electrophoresis_56625796/</link>
+      <link>https://carjed.github.io/audiences/reports/a_comparison_of_dna_stains_and_staining_methods_for_agarose_gel_electrophoresis_56625796/</link>
       <pubDate>Thu, 07 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/a_comparison_of_dna_stains_and_staining_methods_for_agarose_gel_electrophoresis_56625796/</guid>
+      <guid>https://carjed.github.io/audiences/reports/a_comparison_of_dna_stains_and_staining_methods_for_agarose_gel_electrophoresis_56625796/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>A mechanism to minimize errors during non-homologous end joining, bioRxiv, 2019-03-01</title>
-      <link>/reports/a_mechanism_to_minimize_errors_during_non-homologous_end_joining_56200760/</link>
+      <link>https://carjed.github.io/audiences/reports/a_mechanism_to_minimize_errors_during_non-homologous_end_joining_56200760/</link>
       <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/a_mechanism_to_minimize_errors_during_non-homologous_end_joining_56200760/</guid>
+      <guid>https://carjed.github.io/audiences/reports/a_mechanism_to_minimize_errors_during_non-homologous_end_joining_56200760/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Localization microscopy at doubled precision with patterned illumination, bioRxiv, 2019-02-20</title>
-      <link>/reports/localization_microscopy_at_doubled_precision_with_patterned_illumination_55804298/</link>
+      <link>https://carjed.github.io/audiences/reports/localization_microscopy_at_doubled_precision_with_patterned_illumination_55804298/</link>
       <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/localization_microscopy_at_doubled_precision_with_patterned_illumination_55804298/</guid>
+      <guid>https://carjed.github.io/audiences/reports/localization_microscopy_at_doubled_precision_with_patterned_illumination_55804298/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Exercise twice-a-day potentiates skeletal muscle signalling responses associated with mitochondrial biogenesis in humans, which are independent of lowered muscle glycogen content, bioRxiv, 2019-02-12</title>
-      <link>/reports/exercise_twice-a-day_potentiates_skeletal_muscle_signalling_responses_associated_with_mitochondrial_biogenesis_in_humans_which_are_independent_of_lowered_muscle_glycogen_content_55355158/</link>
+      <link>https://carjed.github.io/audiences/reports/exercise_twice-a-day_potentiates_skeletal_muscle_signalling_responses_associated_with_mitochondrial_biogenesis_in_humans_which_are_independent_of_lowered_muscle_glycogen_content_55355158/</link>
       <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/exercise_twice-a-day_potentiates_skeletal_muscle_signalling_responses_associated_with_mitochondrial_biogenesis_in_humans_which_are_independent_of_lowered_muscle_glycogen_content_55355158/</guid>
+      <guid>https://carjed.github.io/audiences/reports/exercise_twice-a-day_potentiates_skeletal_muscle_signalling_responses_associated_with_mitochondrial_biogenesis_in_humans_which_are_independent_of_lowered_muscle_glycogen_content_55355158/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Ensuring meiotic DNA break formation in the mouse pseudoautosomal region Data File S1, bioRxiv, 2019-01-31</title>
-      <link>/reports/ensuring_meiotic_dna_break_formation_in_the_mouse_pseudoautosomal_region_data_file_s1_54765040/</link>
+      <link>https://carjed.github.io/audiences/reports/ensuring_meiotic_dna_break_formation_in_the_mouse_pseudoautosomal_region_data_file_s1_54765040/</link>
       <pubDate>Thu, 31 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/ensuring_meiotic_dna_break_formation_in_the_mouse_pseudoautosomal_region_data_file_s1_54765040/</guid>
+      <guid>https://carjed.github.io/audiences/reports/ensuring_meiotic_dna_break_formation_in_the_mouse_pseudoautosomal_region_data_file_s1_54765040/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>RNA interactions with CTCF are essential for its proper function Supplemental Figures 1-5, bioRxiv, 2019-01-25</title>
-      <link>/reports/rna_interactions_with_ctcf_are_essential_for_its_proper_function_supplemental_figures_1-5_54452778/</link>
+      <link>https://carjed.github.io/audiences/reports/rna_interactions_with_ctcf_are_essential_for_its_proper_function_supplemental_figures_1-5_54452778/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/rna_interactions_with_ctcf_are_essential_for_its_proper_function_supplemental_figures_1-5_54452778/</guid>
+      <guid>https://carjed.github.io/audiences/reports/rna_interactions_with_ctcf_are_essential_for_its_proper_function_supplemental_figures_1-5_54452778/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Simultaneous quantification of protein-DNA contacts and transcriptomes in single cells Supplemental Figures, bioRxiv, 2019-01-25</title>
-      <link>/reports/simultaneous_quantification_of_protein-dna_contacts_and_transcriptomes_in_single_cells_supplemental_figures_54446601/</link>
+      <link>https://carjed.github.io/audiences/reports/simultaneous_quantification_of_protein-dna_contacts_and_transcriptomes_in_single_cells_supplemental_figures_54446601/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/simultaneous_quantification_of_protein-dna_contacts_and_transcriptomes_in_single_cells_supplemental_figures_54446601/</guid>
+      <guid>https://carjed.github.io/audiences/reports/simultaneous_quantification_of_protein-dna_contacts_and_transcriptomes_in_single_cells_supplemental_figures_54446601/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Accurate detection of m6A RNA modifications in native RNA sequences, bioRxiv, 2019-01-21</title>
-      <link>/reports/accurate_detection_of_m6a_rna_modifications_in_native_rna_sequences_54225106/</link>
+      <link>https://carjed.github.io/audiences/reports/accurate_detection_of_m6a_rna_modifications_in_native_rna_sequences_54225106/</link>
       <pubDate>Mon, 21 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/accurate_detection_of_m6a_rna_modifications_in_native_rna_sequences_54225106/</guid>
+      <guid>https://carjed.github.io/audiences/reports/accurate_detection_of_m6a_rna_modifications_in_native_rna_sequences_54225106/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>TADs pair homologous chromosomes to promote interchromosomal gene regulation, bioRxiv, 2018-10-17</title>
-      <link>/reports/tads_pair_homologous_chromosomes_to_promote_interchromosomal_gene_regulation_49824201/</link>
+      <link>https://carjed.github.io/audiences/reports/tads_pair_homologous_chromosomes_to_promote_interchromosomal_gene_regulation_49824201/</link>
       <pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/reports/tads_pair_homologous_chromosomes_to_promote_interchromosomal_gene_regulation_49824201/</guid>
+      <guid>https://carjed.github.io/audiences/reports/tads_pair_homologous_chromosomes_to_promote_interchromosomal_gene_regulation_49824201/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Principles of Meiotic Chromosome Assembly, bioRxiv, 2018-10-13</title>
-      <link>/reports/principles_of_meiotic_chromosome_assembly_49623064/</link>
+      <link>https://carjed.github.io/audiences/reports/principles_of_meiotic_chromosome_assembly_49623064/</link>
       <pubDate>Sat, 13 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/reports/principles_of_meiotic_chromosome_assembly_49623064/</guid>
+      <guid>https://carjed.github.io/audiences/reports/principles_of_meiotic_chromosome_assembly_49623064/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Altered chromatin localization of hybrid lethality proteins in Drosophila, bioRxiv, 2018-10-09</title>
-      <link>/reports/altered_chromatin_localization_of_hybrid_lethality_proteins_in_drosophila_49389027/</link>
+      <link>https://carjed.github.io/audiences/reports/altered_chromatin_localization_of_hybrid_lethality_proteins_in_drosophila_49389027/</link>
       <pubDate>Tue, 09 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/reports/altered_chromatin_localization_of_hybrid_lethality_proteins_in_drosophila_49389027/</guid>
+      <guid>https://carjed.github.io/audiences/reports/altered_chromatin_localization_of_hybrid_lethality_proteins_in_drosophila_49389027/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Slow transcriptional elongation causes embryonic lethality and perturbs kinetic coupling of long neural genes, bioRxiv, 2018-09-26</title>
-      <link>/reports/slow_transcriptional_elongation_causes_embryonic_lethality_and_perturbs_kinetic_coupling_of_long_neural_genes_48912400/</link>
+      <link>https://carjed.github.io/audiences/reports/slow_transcriptional_elongation_causes_embryonic_lethality_and_perturbs_kinetic_coupling_of_long_neural_genes_48912400/</link>
       <pubDate>Wed, 26 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/reports/slow_transcriptional_elongation_causes_embryonic_lethality_and_perturbs_kinetic_coupling_of_long_neural_genes_48912400/</guid>
+      <guid>https://carjed.github.io/audiences/reports/slow_transcriptional_elongation_causes_embryonic_lethality_and_perturbs_kinetic_coupling_of_long_neural_genes_48912400/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>MITO-Tag Mice enable rapid isolation and multimodal profiling of mitochondria from specific cell types in vivo, bioRxiv, 2018-09-24</title>
-      <link>/reports/mito-tag_mice_enable_rapid_isolation_and_multimodal_profiling_of_mitochondria_from_specific_cell_types_in_vivo_48845489/</link>
+      <link>https://carjed.github.io/audiences/reports/mito-tag_mice_enable_rapid_isolation_and_multimodal_profiling_of_mitochondria_from_specific_cell_types_in_vivo_48845489/</link>
       <pubDate>Mon, 24 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/reports/mito-tag_mice_enable_rapid_isolation_and_multimodal_profiling_of_mitochondria_from_specific_cell_types_in_vivo_48845489/</guid>
+      <guid>https://carjed.github.io/audiences/reports/mito-tag_mice_enable_rapid_isolation_and_multimodal_profiling_of_mitochondria_from_specific_cell_types_in_vivo_48845489/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Bio-On-Magnetic-Beads (BOMB) Open platform for high-throughput nucleic acid extraction and manipulation, bioRxiv, 2018-09-13</title>
-      <link>/reports/bio-on-magnetic-beads_bomb_open_platform_for_high-throughput_nucleic_acid_extraction_and_manipulation_48184997/</link>
+      <link>https://carjed.github.io/audiences/reports/bio-on-magnetic-beads_bomb_open_platform_for_high-throughput_nucleic_acid_extraction_and_manipulation_48184997/</link>
       <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/reports/bio-on-magnetic-beads_bomb_open_platform_for_high-throughput_nucleic_acid_extraction_and_manipulation_48184997/</guid>
+      <guid>https://carjed.github.io/audiences/reports/bio-on-magnetic-beads_bomb_open_platform_for_high-throughput_nucleic_acid_extraction_and_manipulation_48184997/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Precise temporal regulation of alternative splicing during neural development, bioRxiv, 2018-01-15</title>
-      <link>/reports/precise_temporal_regulation_of_alternative_splicing_during_neural_development_31667630/</link>
+      <link>https://carjed.github.io/audiences/reports/precise_temporal_regulation_of_alternative_splicing_during_neural_development_31667630/</link>
       <pubDate>Mon, 15 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/reports/precise_temporal_regulation_of_alternative_splicing_during_neural_development_31667630/</guid>
+      <guid>https://carjed.github.io/audiences/reports/precise_temporal_regulation_of_alternative_splicing_during_neural_development_31667630/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Long-read sequencing of nascent RNA reveals coupling among RNA processing events, bioRxiv, 2017-12-19</title>
-      <link>/reports/long-read_sequencing_of_nascent_rna_reveals_coupling_among_rna_processing_events_30642254/</link>
+      <link>https://carjed.github.io/audiences/reports/long-read_sequencing_of_nascent_rna_reveals_coupling_among_rna_processing_events_30642254/</link>
       <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/reports/long-read_sequencing_of_nascent_rna_reveals_coupling_among_rna_processing_events_30642254/</guid>
+      <guid>https://carjed.github.io/audiences/reports/long-read_sequencing_of_nascent_rna_reveals_coupling_among_rna_processing_events_30642254/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Isolation of nucleic acids from low biomass samples detection and removal of sRNA contaminants, bioRxiv, 2017-12-15</title>
-      <link>/reports/isolation_of_nucleic_acids_from_low_biomass_samples_detection_and_removal_of_srna_contaminants_30453286/</link>
+      <link>https://carjed.github.io/audiences/reports/isolation_of_nucleic_acids_from_low_biomass_samples_detection_and_removal_of_srna_contaminants_30453286/</link>
       <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/reports/isolation_of_nucleic_acids_from_low_biomass_samples_detection_and_removal_of_srna_contaminants_30453286/</guid>
+      <guid>https://carjed.github.io/audiences/reports/isolation_of_nucleic_acids_from_low_biomass_samples_detection_and_removal_of_srna_contaminants_30453286/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Spliceosome profiling visualizes the operations of a dynamic RNP in vivo at nucleotide resolution, bioRxiv, 2017-11-23</title>
-      <link>/reports/spliceosome_profiling_visualizes_the_operations_of_a_dynamic_rnp_in_vivo_at_nucleotide_resolution_29308669/</link>
+      <link>https://carjed.github.io/audiences/reports/spliceosome_profiling_visualizes_the_operations_of_a_dynamic_rnp_in_vivo_at_nucleotide_resolution_29308669/</link>
       <pubDate>Thu, 23 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>/reports/spliceosome_profiling_visualizes_the_operations_of_a_dynamic_rnp_in_vivo_at_nucleotide_resolution_29308669/</guid>
+      <guid>https://carjed.github.io/audiences/reports/spliceosome_profiling_visualizes_the_operations_of_a_dynamic_rnp_in_vivo_at_nucleotide_resolution_29308669/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Epigenetic maintenance of DNA methylation after evolutionary loss of the de novo methyltransferase, bioRxiv, 2017-06-14</title>
-      <link>/reports/epigenetic_maintenance_of_dna_methylation_after_evolutionary_loss_of_the_de_novo_methyltransferase_21035193/</link>
+      <link>https://carjed.github.io/audiences/reports/epigenetic_maintenance_of_dna_methylation_after_evolutionary_loss_of_the_de_novo_methyltransferase_21035193/</link>
       <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>/reports/epigenetic_maintenance_of_dna_methylation_after_evolutionary_loss_of_the_de_novo_methyltransferase_21035193/</guid>
+      <guid>https://carjed.github.io/audiences/reports/epigenetic_maintenance_of_dna_methylation_after_evolutionary_loss_of_the_de_novo_methyltransferase_21035193/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     

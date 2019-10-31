@@ -1,4 +1,4 @@
-# baseURL = "http://example.org/"
+baseURL = "https://carjed.github.io/audiences/"
 languageCode = "en"
 title = "audiences"
 theme = "mondrian"

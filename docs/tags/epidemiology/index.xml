@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Epidemiology on audiences</title>
-    <link>/tags/epidemiology/</link>
+    <link>https://carjed.github.io/audiences/tags/epidemiology/</link>
     <description>Recent content in Epidemiology on audiences</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 24 Mar 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/epidemiology/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://carjed.github.io/audiences/tags/epidemiology/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>The ability of single genes vs full genomes to resolve time and space in outbreak analysis, bioRxiv, 2019-03-24</title>
-      <link>/reports/the_ability_of_single_genes_vs_full_genomes_to_resolve_time_and_space_in_outbreak_analysis_57504868/</link>
+      <link>https://carjed.github.io/audiences/reports/the_ability_of_single_genes_vs_full_genomes_to_resolve_time_and_space_in_outbreak_analysis_57504868/</link>
       <pubDate>Sun, 24 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/the_ability_of_single_genes_vs_full_genomes_to_resolve_time_and_space_in_outbreak_analysis_57504868/</guid>
+      <guid>https://carjed.github.io/audiences/reports/the_ability_of_single_genes_vs_full_genomes_to_resolve_time_and_space_in_outbreak_analysis_57504868/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Dosing Time Matters, bioRxiv, 2019-03-16</title>
-      <link>/reports/dosing_time_matters_57093657/</link>
+      <link>https://carjed.github.io/audiences/reports/dosing_time_matters_57093657/</link>
       <pubDate>Sat, 16 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/dosing_time_matters_57093657/</guid>
+      <guid>https://carjed.github.io/audiences/reports/dosing_time_matters_57093657/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Causal relationships between obesity and the leading causes of death in women and men, bioRxiv, 2019-01-26</title>
-      <link>/reports/causal_relationships_between_obesity_and_the_leading_causes_of_death_in_women_and_men_54531769/</link>
+      <link>https://carjed.github.io/audiences/reports/causal_relationships_between_obesity_and_the_leading_causes_of_death_in_women_and_men_54531769/</link>
       <pubDate>Sat, 26 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/causal_relationships_between_obesity_and_the_leading_causes_of_death_in_women_and_men_54531769/</guid>
+      <guid>https://carjed.github.io/audiences/reports/causal_relationships_between_obesity_and_the_leading_causes_of_death_in_women_and_men_54531769/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Investigating causal relationships between sleep traits and risk of breast cancer a Mendelian randomization study, bioRxiv, 2018-11-06</title>
-      <link>/reports/investigating_causal_relationships_between_sleep_traits_and_risk_of_breast_cancer_a_mendelian_randomization_study_50836751/</link>
+      <link>https://carjed.github.io/audiences/reports/investigating_causal_relationships_between_sleep_traits_and_risk_of_breast_cancer_a_mendelian_randomization_study_50836751/</link>
       <pubDate>Tue, 06 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/reports/investigating_causal_relationships_between_sleep_traits_and_risk_of_breast_cancer_a_mendelian_randomization_study_50836751/</guid>
+      <guid>https://carjed.github.io/audiences/reports/investigating_causal_relationships_between_sleep_traits_and_risk_of_breast_cancer_a_mendelian_randomization_study_50836751/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Increased frequency of travel in the presence of cross-immunity may act to decrease the chance of a global pandemic, bioRxiv, 2018-08-31</title>
-      <link>/reports/increased_frequency_of_travel_in_the_presence_of_cross-immunity_may_act_to_decrease_the_chance_of_a_global_pandemic_47444563/</link>
+      <link>https://carjed.github.io/audiences/reports/increased_frequency_of_travel_in_the_presence_of_cross-immunity_may_act_to_decrease_the_chance_of_a_global_pandemic_47444563/</link>
       <pubDate>Fri, 31 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/reports/increased_frequency_of_travel_in_the_presence_of_cross-immunity_may_act_to_decrease_the_chance_of_a_global_pandemic_47444563/</guid>
+      <guid>https://carjed.github.io/audiences/reports/increased_frequency_of_travel_in_the_presence_of_cross-immunity_may_act_to_decrease_the_chance_of_a_global_pandemic_47444563/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Searching for the causal effects of BMI in over 300 000 individuals, using Mendelian randomization, bioRxiv, 2017-12-20</title>
-      <link>/reports/searching_for_the_causal_effects_of_bmi_in_over_300_000_individuals_using_mendelian_randomization_30664575/</link>
+      <link>https://carjed.github.io/audiences/reports/searching_for_the_causal_effects_of_bmi_in_over_300_000_individuals_using_mendelian_randomization_30664575/</link>
       <pubDate>Wed, 20 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>/reports/searching_for_the_causal_effects_of_bmi_in_over_300_000_individuals_using_mendelian_randomization_30664575/</guid>
+      <guid>https://carjed.github.io/audiences/reports/searching_for_the_causal_effects_of_bmi_in_over_300_000_individuals_using_mendelian_randomization_30664575/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     

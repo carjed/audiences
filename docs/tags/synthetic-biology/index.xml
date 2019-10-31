@@ -2,93 +2,93 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Synthetic Biology on audiences</title>
-    <link>/tags/synthetic-biology/</link>
+    <link>https://carjed.github.io/audiences/tags/synthetic-biology/</link>
     <description>Recent content in Synthetic Biology on audiences</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 30 Apr 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/synthetic-biology/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://carjed.github.io/audiences/tags/synthetic-biology/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences, bioRxiv, 2019-04-30</title>
-      <link>/reports/biological_structure_and_function_emerge_from_scaling_unsupervised_learning_to_250_million_protein_sequences_59705484/</link>
+      <link>https://carjed.github.io/audiences/reports/biological_structure_and_function_emerge_from_scaling_unsupervised_learning_to_250_million_protein_sequences_59705484/</link>
       <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/biological_structure_and_function_emerge_from_scaling_unsupervised_learning_to_250_million_protein_sequences_59705484/</guid>
+      <guid>https://carjed.github.io/audiences/reports/biological_structure_and_function_emerge_from_scaling_unsupervised_learning_to_250_million_protein_sequences_59705484/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Rapid, Low-Cost Detection of Water Contaminants Using Regulated In Vitro Transcription, bioRxiv, 2019-04-26</title>
-      <link>/reports/rapid_low-cost_detection_of_water_contaminants_using_regulated_in_vitro_transcription_59548555/</link>
+      <link>https://carjed.github.io/audiences/reports/rapid_low-cost_detection_of_water_contaminants_using_regulated_in_vitro_transcription_59548555/</link>
       <pubDate>Fri, 26 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/rapid_low-cost_detection_of_water_contaminants_using_regulated_in_vitro_transcription_59548555/</guid>
+      <guid>https://carjed.github.io/audiences/reports/rapid_low-cost_detection_of_water_contaminants_using_regulated_in_vitro_transcription_59548555/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Unified rational protein engineering with sequence-only deep representation learning, bioRxiv, 2019-03-26</title>
-      <link>/reports/unified_rational_protein_engineering_with_sequence-only_deep_representation_learning_57770558/</link>
+      <link>https://carjed.github.io/audiences/reports/unified_rational_protein_engineering_with_sequence-only_deep_representation_learning_57770558/</link>
       <pubDate>Tue, 26 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/unified_rational_protein_engineering_with_sequence-only_deep_representation_learning_57770558/</guid>
+      <guid>https://carjed.github.io/audiences/reports/unified_rational_protein_engineering_with_sequence-only_deep_representation_learning_57770558/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Enabling large-scale genome editing by reducing DNA nicking, bioRxiv, 2019-03-15</title>
-      <link>/reports/enabling_large-scale_genome_editing_by_reducing_dna_nicking_57066785/</link>
+      <link>https://carjed.github.io/audiences/reports/enabling_large-scale_genome_editing_by_reducing_dna_nicking_57066785/</link>
       <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/reports/enabling_large-scale_genome_editing_by_reducing_dna_nicking_57066785/</guid>
+      <guid>https://carjed.github.io/audiences/reports/enabling_large-scale_genome_editing_by_reducing_dna_nicking_57066785/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Engineering Brain Parasites for Intracellular Delivery of Therapeutic Proteins, bioRxiv, 2018-12-03</title>
-      <link>/reports/engineering_brain_parasites_for_intracellular_delivery_of_therapeutic_proteins_52143740/</link>
+      <link>https://carjed.github.io/audiences/reports/engineering_brain_parasites_for_intracellular_delivery_of_therapeutic_proteins_52143740/</link>
       <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>/reports/engineering_brain_parasites_for_intracellular_delivery_of_therapeutic_proteins_52143740/</guid>
+      <guid>https://carjed.github.io/audiences/reports/engineering_brain_parasites_for_intracellular_delivery_of_therapeutic_proteins_52143740/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Variability of bacterial behavior in the mammalian gut captured using a growth-linked single-cell synthetic gene oscillator, bioRxiv, 2018-11-17</title>
-      <link>/reports/variability_of_bacterial_behavior_in_the_mammalian_gut_captured_using_a_growth-linked_single-cell_synthetic_gene_oscillator_51342001/</link>
+      <link>https://carjed.github.io/audiences/reports/variability_of_bacterial_behavior_in_the_mammalian_gut_captured_using_a_growth-linked_single-cell_synthetic_gene_oscillator_51342001/</link>
       <pubDate>Sat, 17 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/reports/variability_of_bacterial_behavior_in_the_mammalian_gut_captured_using_a_growth-linked_single-cell_synthetic_gene_oscillator_51342001/</guid>
+      <guid>https://carjed.github.io/audiences/reports/variability_of_bacterial_behavior_in_the_mammalian_gut_captured_using_a_growth-linked_single-cell_synthetic_gene_oscillator_51342001/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>beditor A computational workflow for designing libraries of guide RNAs for CRISPR-mediated base editing, bioRxiv, 2018-09-26</title>
-      <link>/reports/beditor_a_computational_workflow_for_designing_libraries_of_guide_rnas_for_crispr-mediated_base_editing_48898720/</link>
+      <link>https://carjed.github.io/audiences/reports/beditor_a_computational_workflow_for_designing_libraries_of_guide_rnas_for_crispr-mediated_base_editing_48898720/</link>
       <pubDate>Wed, 26 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/reports/beditor_a_computational_workflow_for_designing_libraries_of_guide_rnas_for_crispr-mediated_base_editing_48898720/</guid>
+      <guid>https://carjed.github.io/audiences/reports/beditor_a_computational_workflow_for_designing_libraries_of_guide_rnas_for_crispr-mediated_base_editing_48898720/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Prokaryotic nanocompartments form synthetic organelles in a eukaryote, bioRxiv, 2018-01-07</title>
-      <link>/reports/prokaryotic_nanocompartments_form_synthetic_organelles_in_a_eukaryote_31345805/</link>
+      <link>https://carjed.github.io/audiences/reports/prokaryotic_nanocompartments_form_synthetic_organelles_in_a_eukaryote_31345805/</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>/reports/prokaryotic_nanocompartments_form_synthetic_organelles_in_a_eukaryote_31345805/</guid>
+      <guid>https://carjed.github.io/audiences/reports/prokaryotic_nanocompartments_form_synthetic_organelles_in_a_eukaryote_31345805/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>
       <title>Resetting the yeast epigenome with human nucleosomes, bioRxiv, 2017-06-08</title>
-      <link>/reports/resetting_the_yeast_epigenome_with_human_nucleosomes_20896431/</link>
+      <link>https://carjed.github.io/audiences/reports/resetting_the_yeast_epigenome_with_human_nucleosomes_20896431/</link>
       <pubDate>Thu, 08 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>/reports/resetting_the_yeast_epigenome_with_human_nucleosomes_20896431/</guid>
+      <guid>https://carjed.github.io/audiences/reports/resetting_the_yeast_epigenome_with_human_nucleosomes_20896431/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
