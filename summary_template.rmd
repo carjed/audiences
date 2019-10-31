@@ -38,7 +38,8 @@ library(rcrossref)
 library(ggbeeswarm)
 library(shiny)
 
-base_url <- "http://192.168.2.22:1315"
+# base_url <- "http://192.168.2.22:1315"
+base_url <- "https://carjed.github.io/audiences"
 
 datadir <- "/mnt/norbert/home/jedidiah/projects/audiences"
 
@@ -58,6 +59,10 @@ doi <- unlist(lapply(summary_data, function(x) x$doi))
 categories <- unlist(lapply(summary_data, function(x) x$categories))
 id_score <- unlist(lapply(summary_data, function(x) x$id_score))
 
+topics <- lapply(summary_data, function(x) x$topic)
+names(topics) <- title
+
+topics_df <- bind_rows(topics, .id = "title")
 # pct_acad_am <- unlist(lapply(summary_data, function(x) (sum(as.numeric(x$am_cohorts))
 # -as.numeric(x$am_cohorts$cohorts.pub))/sum(as.numeric(x$am_cohorts))
 # ))
@@ -85,6 +90,27 @@ wn_means_10 <- unlist(lapply(summary_data, function(x) sum(x$homophily$wn_mean>0
 wn_means_20 <- unlist(lapply(summary_data, function(x) sum(x$homophily$wn_mean>0.20)/nrow(x$homophily)))
 
 summary_data_df <- data.frame(title, doi, categories_trim=categories, id_score, pct_acad_am, pct_acad_aud, wn_means_02, wn_means_05, wn_means_10, wn_means_20, n_users)
+
+sddf2 <- left_join(topics_df, summary_data_df, by="title")
+
+category_counts <- summary_data_df %>% group_by(categories_trim) %>% summarise(tot_tweets=sum(n_users), n_papers=n())
+
+nat_counts <- sddf2 %>%
+  dplyr::filter(grepl("#resist|#maga", top_10)) %>% 
+  dplyr::mutate(pol=ifelse(grepl("#maga", top_10), "cons", "lib")) %>%
+  group_by(categories_trim, pol) %>% 
+  summarise(tot=sum(n)) %>% 
+  ungroup() %>% 
+  base::merge(category_counts, by="categories_trim") %>% mutate(prop=tot/tot_tweets) %>%
+  dplyr::filter(n_papers>=10) %>%
+  group_by(categories_trim) %>%
+  dplyr::select(pol, prop) %>%
+  spread(pol, prop) %>%
+  mutate(ratio=log(cons/lib)) %>%
+  arrange(desc(ratio))
+
+sddf2 %>% dplyr::filter(grepl("socialist", top_10)) %>% summarise(tot=sum(n))
+sddf2 %>% dplyr::filter(grepl("nationalist", top_10) & grepl("white", top_10)) %>% summarise(tot=sum(n))
 
 n_acad_higher <- summary_data_df %>% dplyr::filter(pct_acad_aud>pct_acad_am) %>% nrow()
 pct_acad_higher <- n_acad_higher/nrow(summary_data_df)
