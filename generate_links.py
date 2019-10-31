@@ -1,41 +1,27 @@
 from os import listdir
 import re
 
-# file = open("data/links.yml", "w") 
-file = open("data/items.toml", "w") 
+file = open("hugo_data/items.toml", "w")
 
 for report in listdir("output/reports"):
-    
+
     authors = re.sub("et_al-.*", "", report)
     authors = re.sub("_", " ", authors)
-    
+
     title = re.sub(".*et_al-", "", report)
     title = re.sub("_[0-9]{6,10}.html", "", title)
     title = re.sub("_", " ", title)
-    
+
+    # shorten title to fit
     if len(title) > 97:
         title = title[0:96]+"..."
-        
-    # article_id = title = re.sub("^.*?[0-9]{6,10", "", title)
-    # print(article_id)
-    
-    file.write("[[items]]\n")
-    file.write("title = \"" + title + "\"\n")
-    file.write("image = \"figures/" + re.sub(".html", "", report) + ".png\"\n")
-    file.write("thumb = \"figures/" + re.sub(".html", "", report) + ".png\"\n")
-    file.write("description = \"by " + authors + "\"\n")
-    # file.write("description = \"abc\"\n")
-    file.write("url = \"reports/" + report + "\"\n")
-    
-    
-    # file.write("-\n")
-    # file.write("  name: '" + title + "'\n")
-    # file.write("  url: 'reports/" + report + "'\n")
-    # # file.write("\timg: '", img, "'\n")
-    # # file.write("  img: 'img.svg'\n")
-    
-    # file.write("  bg_color: '#005483'\n")
-    # file.write("  txt_color: '#ffffff'\n")
-    # file.write("  tags: ['music']\n")
 
-file.close() 
+    file.write("[[items]]\n")
+    file.write("title = \"%s\"\n" % title)
+    file.write("image = \"figures/%s.png\"\n" % re.sub(".html", "", report))
+    file.write("thumb = \"figures/%s.png\"\n" % re.sub(".html", "", report))
+    file.write("description = \"by %s\"\n" % authors)
+    # file.write("description = \"abc\"\n")
+    file.write("url = \"reports/%s\"\n" % report)
+
+file.close()

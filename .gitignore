@@ -5,6 +5,7 @@ twitter_token.rds
 *.fuse*
 .ipynb_checkpoints/**
 archive/**
+content/**
 output/**
 resources/**
 resources1/**

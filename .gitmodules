@@ -1,0 +1,3 @@
+[submodule "themes/mondrian"]
+	path = themes/mondrian
+	url = https://github.com/redraw/hugo-mondrian-theme.git

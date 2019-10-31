@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pathology on audiences</title>
+    <link>/tags/pathology/</link>
+    <description>Recent content in Pathology on audiences</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 07 Jun 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/pathology/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Adversarial childhood events are associated with Sudden Infant Death Syndrome (SIDS) an ecological study, bioRxiv, 2018-06-07</title>
+      <link>/reports/adversarial_childhood_events_are_associated_with_sudden_infant_death_syndrome_sids_an_ecological_study_43429589/</link>
+      <pubDate>Thu, 07 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/reports/adversarial_childhood_events_are_associated_with_sudden_infant_death_syndrome_sids_an_ecological_study_43429589/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Pediatric Bone Age Assessment Using Deep Convolutional Neural Networks, bioRxiv, 2017-12-15</title>
+      <link>/reports/pediatric_bone_age_assessment_using_deep_convolutional_neural_networks_30444746/</link>
+      <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/reports/pediatric_bone_age_assessment_using_deep_convolutional_neural_networks_30444746/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+  </channel>
+</rss>

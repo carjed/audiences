@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2015 on audiences</title>
+    <link>/tags/2015/</link>
+    <description>Recent content in 2015 on audiences</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 07 Oct 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/2015/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>TP53 copy number expansion is associated with the evolution of increased body size and an enhanced DNA damage response in elephants, bioRxiv, 2015-10-07</title>
+      <link>/reports/tp53_copy_number_expansion_is_associated_with_the_evolution_of_increased_body_size_and_an_enhanced_dna_damage_response_in_elephants_4593338/</link>
+      <pubDate>Wed, 07 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/reports/tp53_copy_number_expansion_is_associated_with_the_evolution_of_increased_body_size_and_an_enhanced_dna_damage_response_in_elephants_4593338/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Meta-analysis of the heritability of human traits based on fifty years of twin studies, Nature Genetics, 2015-05-18</title>
+      <link>/reports/meta-analysis_of_the_heritability_of_human_traits_based_on_fifty_years_of_twin_studies_4007017/</link>
+      <pubDate>Mon, 18 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/reports/meta-analysis_of_the_heritability_of_human_traits_based_on_fifty_years_of_twin_studies_4007017/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+  </channel>
+</rss>
