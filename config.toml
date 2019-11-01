@@ -25,11 +25,11 @@ ignoreFiles = [ "reports/_.*" ]
 [menu]
   [[menu.main]]
     name= "reports"
-    url = "/reports"
+    url = "reports"
     weight = 2
   [[menu.main]]
     name = "search"
-    url = "/search"
+    url = "search"
     weight = 3
  # [[menu.main]]
  #   name = "test"
