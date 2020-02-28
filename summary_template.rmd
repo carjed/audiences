@@ -156,9 +156,9 @@ Click on the tabs above to view various summaries of the preprints analyzed.
 
 ### Citation
 
-These analyses are described in detail in the following paper:
+These analyses are described in detail in the following preprint:
 
-> Carlson J, Harris K. {Title}. *Journal.* 2019. [`doi:10.1186/s12864-018-5264-y`](http://dx.doi.org/10.1186/s12864-018-5264-y)
+> Carlson J, Harris K. The mismeasure of tweets: quantifying and contextualizing the societal impact of bioRxiv preprints through social media audience segmentation. *Journal.* 2020. [`doi:10.1186/s12864-018-5264-y`](http://dx.doi.org/10.1186/s12864-018-5264-y)
 
 </div>
 

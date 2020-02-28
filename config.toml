@@ -6,6 +6,8 @@ pygmentsCodeFences = true   # Enable triple backtick 'code fence' markdown
 pygmentsUseClasses = false  # Add inline styles, no need to compile extra CSS
 Paginate = 6
 publishDir = "docs"
+RelativeURLs = true
+CanonifyURLs = true
 # ignoreFiles = [ "reports/_.*" ]
 # ignorefiles = [ "reports/*" ]
 
