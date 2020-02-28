@@ -6,9 +6,9 @@ pygmentsCodeFences = true   # Enable triple backtick 'code fence' markdown
 pygmentsUseClasses = false  # Add inline styles, no need to compile extra CSS
 Paginate = 6
 publishDir = "docs"
-RelativeURLs = true
+# RelativeURLs = true
 CanonifyURLs = true
-# ignoreFiles = [ "reports/_.*" ]
+ignoreFiles = [ "reports/_.*" ]
 # ignorefiles = [ "reports/*" ]
 
 
@@ -28,11 +28,11 @@ CanonifyURLs = true
 [menu]
   [[menu.main]]
     name= "reports"
-    url = "reports"
+    url = "https://carjed.github.io/audiences/reports"
     weight = 2
   [[menu.main]]
     name = "search"
-    url = "search"
+     url = "https://carjed.github.io/audiences/search"
     weight = 3
  # [[menu.main]]
  #   name = "test"
