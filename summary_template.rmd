@@ -13,6 +13,8 @@ output:
       # before_body: header.html
       # after_body: themes/mondrian/layouts/partials/footer.html
     # toc_float: true
+editor_options: 
+  chunk_output_type: console
 ---
 
 <style type="text/css">
@@ -89,7 +91,9 @@ wn_means_05 <- unlist(lapply(summary_data, function(x) sum(x$homophily$wn_mean>0
 wn_means_10 <- unlist(lapply(summary_data, function(x) sum(x$homophily$wn_mean>0.10)/nrow(x$homophily)))
 wn_means_20 <- unlist(lapply(summary_data, function(x) sum(x$homophily$wn_mean>0.20)/nrow(x$homophily)))
 
-summary_data_df <- data.frame(title, doi, categories_trim=categories, id_score, pct_acad_am, pct_acad_aud, wn_means_02, wn_means_05, wn_means_10, wn_means_20, n_users)
+summary_data_df <- data.frame(title, doi, categories_trim=categories, id_score, pct_acad_am, pct_acad_aud, wn_means_02, wn_means_05, wn_means_10, wn_means_20, n_users) %>%
+  dplyr::filter(grepl("10.1101", doi)) %>%
+  dplyr::filter(n_users >= 50)
 
 sddf2 <- left_join(topics_df, summary_data_df, by="title")
 
@@ -109,8 +113,10 @@ nat_counts <- sddf2 %>%
   mutate(ratio=log(cons/lib)) %>%
   arrange(desc(ratio))
 
-sddf2 %>% dplyr::filter(grepl("socialist", top_10)) %>% summarise(tot=sum(n))
-sddf2 %>% dplyr::filter(grepl("nationalist", top_10) & grepl("white", top_10)) %>% summarise(tot=sum(n))
+nsoc <- sddf2 %>% dplyr::filter(grepl("10.1101", doi)) %>% dplyr::filter(grepl("socialist", top_10)) %>% summarise(tot=sum(n))
+nnat <- sddf2 %>% dplyr::filter(grepl("10.1101", doi)) %>% dplyr::filter(grepl("nationalist", top_10) & grepl("white", top_10)) %>% summarise(tot=sum(n))
+
+cat_pal <- c("#EC7063", "#AF7AC5", "#A569BD", "#5499C7", "#5DADE2", "#48C9B0", "#45B39D", "#52BE80", "#58D68D", "#F4D03F", "#F5B041", "#EB984E", "#DC7633", "#F9E79F", "#AAB7B8", "#99A3A4", "#F1C40F", "#52BE80", "#C0392B", "#E74C3C", "#9B59B6", "#8E44AD", "#2980B9", "#3498DB", "#1ABC9C", "#16A085", "#27AE60")
 
 n_acad_higher <- summary_data_df %>% dplyr::filter(pct_acad_aud>pct_acad_am) %>% nrow()
 pct_acad_higher <- n_acad_higher/nrow(summary_data_df)
@@ -136,13 +142,13 @@ tot_bios <- sum(unlist(lapply(summary_data, function(x){
 <div class = "row">
 <div class = "col-md-4">
 
-**Audiences** analyzes the various communities and networks that are discussing scientific papers on Twitter. Our goal is to help authors better understand who is engaging with their work.
+**Audiences** analyzes the various communities and networks that are discussing [bioRxiv](https://biorxiv.org) preprints on Twitter. Our goal is to help authors better understand who is engaging with their work.
 
-Click on the tabs above to view various summaries of the papers analyzed.
+Click on the tabs above to view various summaries of the preprints analyzed.
 
 -------
 
-- Number of papers indexed: **`r nrow(summary_data_df)`**
+- Number of preprints indexed: **`r nrow(summary_data_df)`**
 
 - Total events (tweets and retweets) analyzed: **`r format(sum(unlist(lapply(summary_data, function(x) nrow(x$homophily)))), big.mark=",")`**
 
@@ -173,9 +179,10 @@ categories_trim <- c("animal-behavior-and-cognition",
                      "scientific-communication-and-education",
                      "synthetic-biology", "systems-biology", "zoology")
 
+cat_pal_df <- data.frame(categories_trim, cat_pal)
+
 # biorxiv category colors from 
 # https://github.com/blekhmanlab/rxivist_web/blob/master/static/categories.css
-cat_pal <- c("#EC7063", "#AF7AC5", "#A569BD", "#5499C7", "#5DADE2", "#48C9B0", "#45B39D", "#52BE80", "#58D68D", "#F4D03F", "#F5B041", "#EB984E", "#DC7633", "#F9E79F", "#AAB7B8", "#99A3A4", "#F1C40F", "#52BE80", "#C0392B", "#E74C3C", "#9B59B6", "#8E44AD", "#2980B9", "#3498DB", "#1ABC9C", "#16A085", "#27AE60")
 
 cat_df1 <- data.frame(categories_trim, cat_pal) %>%
   mutate(categories_html = cell_spec(categories_trim, "html", 
@@ -204,6 +211,7 @@ cat_df_count <- summary_data_df %>%
   group_by(categories_trim, Journal) %>% 
   summarise(npapers=n(),
             id_score=median(id_score),
+            acad_pct=mean(pct_acad_aud),
             wn_means_02=mean(wn_means_02),
             wn_means_05=mean(wn_means_05),
             wn_means_10=mean(wn_means_10),
@@ -215,17 +223,20 @@ cat_df_count <- summary_data_df %>%
   mutate(npapers=color_bar("lightgreen")(npapers)) %>%
   # mutate(id_score=color_tile("white", "orange")(round(id_score, 2))) %>%
   mutate(id_score = round(id_score, 2)) %>%
+  mutate(acad_pct = round(acad_pct, 2)) %>%
   mutate(id_score = cell_spec(
     id_score, color = "white", bold = T, align="c",
     background = spec_color(id_score, end = 1, option = "D", direction = -1))) %>%
+  mutate(acad_pct = cell_spec(
+    acad_pct, color = "white", bold = T, align="c",
+    background = spec_color(acad_pct, end = 1, option = "D", direction = -1))) %>%
   # mutate(Journal="biorxiv") %>%
   mutate(Journal = cell_spec(Journal, "html", 
                                    color = "white",
                                    bold = TRUE,
                                    background = "black",
                                    link = paste0(base_url, "/tags/", Journal))) %>%
-  mutate(`Median \n Interdisciplinary Score`=id_score,
-         `h=2%`=round(wn_means_02, 2),
+  mutate(`h=2%`=round(wn_means_02, 2),
          `h=5%`=round(wn_means_05, 2),
          `h=10%`=round(wn_means_10, 2),
          `h=20%`=round(wn_means_20, 2)) %>%
@@ -242,8 +253,10 @@ cat_df_count <- summary_data_df %>%
   # }) %>%
   dplyr::select(Journal,
                 Category=categories_html, 
-                `Papers Analyzed`=npapers, 
-                `Median \n Interdisciplinary Score`,
+                `Preprints Analyzed`=npapers, 
+                # `Median \n Interdisciplinary Score`,
+                # `Median \n Interdisciplinary Score`=id_score,
+                `Mean fraction of \n audience estimated to be academics`=acad_pct,
                 `h=2%`,
                 `h=5%`,
                 `h=10%`,
@@ -264,16 +277,16 @@ knitr::kable(cat_df_count, format="html", escape=F, align="l") %>%
 <div class = "row">
 <div class = "col-md-4">
 
-Of the **`r nrow(summary_data_df)`** papers analyzed, our method estimates a higher fraction of the audiences are scientists than the Altmetric demographics for **`r n_acad_higher`** **(`r paste0(round((n_acad_higher/nrow(summary_data_df))*100), "%")`)** of these. 
+Of the **`r nrow(summary_data_df)`** preprints analyzed, our method estimates a higher fraction of the audiences are scientists than the Altmetric demographics for **`r n_acad_higher`** **(`r paste0(round((n_acad_higher/nrow(summary_data_df))*100), "%")`)** of these. 
 
-According to the Altmetric demographics, **`r n_am_50`** of these papers **(`r paste0(round((n_am_50/nrow(summary_data_df))*100), "%")`)** are tweeted primarily by non-scientist audiences; our method estimates only **`r n_aud_50`** papers **(`r paste0(round((n_aud_50/nrow(summary_data_df))*100), "%")`)** are primarily tweeted by non-scientist audiences.
+According to the Altmetric demographics, **`r n_am_50`** of these preprints **(`r paste0(round((n_am_50/nrow(summary_data_df))*100), "%")`)** are tweeted primarily by non-scientist audiences; our method estimates only **`r n_aud_50`** papers **(`r paste0(round((n_aud_50/nrow(summary_data_df))*100), "%")`)** are primarily tweeted by non-scientist audiences.
 
 These audience demographic comparisons are summarized in the plot to the right. Points are colored according to their bioRxiv category, and the size is relative to the number of tweets/retweets referencing the paper. Click on a point to open the individual report.
 </div>
 
 <div class = "col-md-8">
 
-```{r plot_acad_pct, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=6, fig.width=12}
+```{r plot_acad_pct, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=8, fig.width=12}
 # summary_data_doi <- try(cr_works(doi=summary_data_df$doi)$data)
 # summary_data_doi <- tibble()
 # for(doi in summary_data_df$doi){
@@ -299,18 +312,18 @@ plot_embedding <- function(plotdat){
 
   p <- plotdat %>%
     ggplot(aes(x=pct_acad_am, y=pct_acad_aud, label=title))+
-    geom_smooth(method="lm", se=FALSE)+
     geom_point(aes(size=n_users, colour=category), alpha=0.5)+
+    geom_smooth(method="lm", se=FALSE, colour="black")+
     scale_x_continuous(limits=c(0,0.8))+
     scale_y_continuous(limits=c(0,1))+
     # geom_smooth(method="lm")+
     scale_colour_manual(values=cat_pal)+
-    geom_abline(intercept = 0, slope = 1, linetype="dashed")+
+    geom_abline(intercept = 0, slope = 1, linetype="dashed", colour="grey80")+
     # annotate("text", x = 0.8, y = 0.1, label = paste0("r=", round(sci_cor, 2)))+
     xlab("Fraction of audience that are scientists (Altmetric estimate)")+
     ylab("Fraction of audience that are scientists (Our estimate)")+
     theme_classic()+
-    theme(legend.title = element_blank())
+    theme(legend.title = element_blank(), legend.position="none")
   
   ply <- ggplotly(p)
   
@@ -340,6 +353,28 @@ plot_embedding <- function(plotdat){
 
 plot_embedding(acad_pct_dat)
 
+
+apd_grouped <- acad_pct_dat %>%
+    group_by(category) %>% filter(n() >= 10)
+
+apd_grouped_cols <- cat_pal_df %>% dplyr::filter(categories_trim %in% apd_grouped$category) %>% pull(cat_pal) 
+
+p <- apd_grouped %>%
+    ggplot(aes(x=pct_acad_am, y=pct_acad_aud, label=title))+
+    geom_point(aes(size=n_users, colour=category), alpha=0.5)+
+    geom_smooth(aes(colour=category), method="lm", se=FALSE)+
+    scale_x_continuous(limits=c(0,1))+
+    scale_y_continuous(limits=c(0,1))+
+    # geom_smooth(method="lm")+
+    scale_colour_manual(values=apd_grouped_cols)+
+    facet_wrap(~category, nrow=5)+
+    geom_abline(intercept = 0, slope = 1, linetype="dashed", colour="grey80")+
+    # annotate("text", x = 0.8, y = 0.1, label = paste0("r=", round(sci_cor, 2)))+
+    xlab("Fraction of audience that are scientists (Altmetric estimate)")+
+    ylab("Fraction of audience that are scientists (Our estimate)")+
+    theme_classic()+
+    theme(legend.title = element_blank(), legend.position="none")
+
 ```
 
 
@@ -359,11 +394,11 @@ t1 <- pairwise.t.test(ddf2$pct_acad_am, ddf2$category, p.adj="fdr")
 
 t2 <- pairwise.t.test(ddf2$pct_acad_aud, ddf2$category, p.adj="fdr")
 
-knitr::kable(t1$p.value, format="html", escape=F, align="l", caption = "t-tests for differences in academic audience fraction based on Altmetric estimates (FDR-adjusted p-values)") %>%
-  kable_styling("striped", full_width = F, position = "float_left")
-
-knitr::kable(t2$p.value, format="html", escape=F, align="l", caption = "t-tests for differences in academic audience fraction based on our estimates (FDR-adjusted p-values)") %>%
-  kable_styling("striped", full_width = F, position = "float_right")
+# knitr::kable(t1$p.value, format="html", escape=F, align="l", caption = "t-tests for differences in academic audience fraction based on Altmetric estimates (FDR-adjusted p-values)") %>%
+#   kable_styling("striped", full_width = F, position = "float_left")
+# 
+# knitr::kable(t2$p.value, format="html", escape=F, align="l", caption = "t-tests for differences in academic audience fraction based on our estimates (FDR-adjusted p-values)") %>%
+#   kable_styling("striped", full_width = F, position = "float_right")
 
 
 ```
@@ -380,13 +415,13 @@ For each paper, we calculated the cosine similarity between each of the academic
 
 $ID_{score} = 1- \sum_{d \in D} w_d \times cos(\vec{d}, \vec{d}_{home})$
 
-We then normalized these scores to range from 0 to 1, thus, papers with $ID_{score} \simeq 1$ have the most interdisciplinary academic audiences, and papers with $ID_{score} \simeq 0$ have the most domain-specific academic audiences.
+We then normalized these scores to range from 0 to 1, thus, preprints with $ID_{score} \simeq 1$ have the most interdisciplinary academic audiences, and papers with $ID_{score} \simeq 0$ have the most domain-specific academic audiences.
 
 </div>
 
 <div class = "col-md-8">
 
-```{r beeswarm, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=6, fig.width=12}
+```{r beeswarm, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=8, fig.width=12}
 plotdat <- summary_data_df %>%
   full_join(cat_df1, by="categories_trim") %>%
 # plotdat <- left_join(summary_data_df, summary_data_doi) %>%
@@ -404,18 +439,23 @@ plot_embedding <- function(plotdat){
     geom_quasirandom(varwidth = TRUE, alpha=0.5)+
     # geom_smooth(method="lm", se=FALSE)+
     # geom_point(aes(size=n_users, colour=category), alpha=0.5)+
-    # scale_x_continuous(limits=c(0,1))+
-    # scale_y_continuous(limits=c(0,1))+
+    #scale_x_continuous(expand=c(0,0))+
+    scale_y_continuous(expand=c(0,0))+
     # # geom_smooth(method="lm")+
     scale_colour_manual(values=cat_pal)+
     # geom_abline(intercept = 0, slope = 1, linetype="dashed")+
     # xlab("Fraction of audience that are scientists (Altmetric estimate)")+
     ylab("Interdisciplinary score")+
     theme_classic()+
-    theme(axis.text.x=element_blank(),
+    theme(#axis.text.x=element_blank(),
           axis.ticks.x=element_blank(),
-          legend.title=element_blank(),
-          axis.title.x=element_blank())
+          #legend.title=element_blank(),
+          #axis.title.x=element_blank(),
+          legend.position = "none",    
+          axis.text.x=element_text(angle=45, hjust=1),
+        #legend.title=element_blank(),
+        # strip.background = element_blank(),
+        axis.title.x=element_blank())
   
   ply <- ggplotly(p) %>%
     plotly::style(hoverinfo = "none", traces = 1:26)
@@ -457,13 +497,14 @@ plot_embedding(plotdat)
 <!-- <div class = "row"> -->
 <!-- <div class = "col-md-4"> -->
 
-Many papers were found to have audience topics aligned with white nationalist rhetoric, reinforcing the qualitative observations made by [scientific organizations](), [science journalists](), and [scientists themselves](). To systematically quantify this trend, for each paper, we calculated the degree of network homophily (i.e., % overlap in followers) between each user and a curated set of prominent white nationalist accounts on Twitter. These plots show the distribution of white nationalist network homophily fraction ($h$) for the analyzed papers at four different thresholds ($h=2\%$, $h=5\%$, $h=10\%$, and $h=20\%$).
+Many preprints were found to have audience topics aligned with white nationalist rhetoric, reinforcing the qualitative observations made by [scientific organizations](), [science journalists](), and [scientists themselves](). To systematically quantify this trend, for each preprint, we calculated the degree of network homophily (i.e., % overlap in followers) between each user and a curated set of prominent white nationalist accounts on Twitter. These plots show the distribution of white nationalist network homophily fraction ($h$) for the analyzed preprints at four different thresholds ($h=2\%$, $h=5\%$, $h=10\%$, and $h=20\%$).
 
 <!-- </div> -->
 
 <!-- <div class = "col-md-8"> -->
 
 ```{r get_wn_dat, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE}
+
 wn_dat <- summary_data_df %>%
   full_join(cat_df1, by="categories_trim") %>%
   gather(wn_means, h, wn_means_02:wn_means_20) %>%
@@ -476,18 +517,20 @@ wn_dat <- summary_data_df %>%
   mutate(wn_means=factor(wn_means, levels=c("h=2%", "h=5%", "h=10%", "h=20%"))) %>%
   mutate(categories_trim=factor(categories_trim)) 
 
-wn_plotfun <- function(x){
+wn_plotfun <- function(x, h){
   p <- ggplot(x, aes(y=h, x=categories_trim, colour=categories_trim, label=title))+
   geom_boxplot(outlier.shape=NA, outlier.colour="white", fill=NA)+
   geom_quasirandom(varwidth = TRUE,  groupOnX=TRUE, alpha=0.6)+
   # scale_fill_manual(values=cat_pal)+
   scale_colour_manual(values=cat_pal)+
+  # scale_y_log10(breaks=c(0.1, 0.2, 0.3, 0.4, 0.5))+
   # scale_y_continuous(breaks=seq(0, 0.6, 0.05), limits=c(-0.1,0.6))+
   # facet_wrap(~wn_means, ncol=1, strip.position="right")+
-  ylab("Fraction of users with >h% \n white nationalist follower homophily \n \n")+
+  ylab(paste0("Fraction of users with >", h, "% \n white nationalist follower homophily \n \n"))+
   theme_classic()+
   theme(#axis.text.x=element_text(angle=-45, hjust=1, size=10),
-        axis.text.x=element_blank(),
+    legend.position = "none",    
+    axis.text.x=element_text(angle=45, hjust=1),
         axis.ticks.x=element_blank(),
         legend.title=element_blank(),
         # strip.background = element_blank(),
@@ -564,39 +607,154 @@ bsselect(plots, type = "iframe")
 
 #### h=2%
 
-```{r plot_h2, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=4, fig.width=16}
+```{r plot_h2, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=8, fig.width=12}
 wn_dat %>%
   dplyr::filter(wn_means=="h=2%") %>%
-  wn_plotfun()
+  wn_plotfun(h=2)
 
 ```
 
 #### h=5%
 
-```{r plot_h5, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=4, fig.width=16}
+```{r plot_h5, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=8, fig.width=12}
 wn_dat %>%
   dplyr::filter(wn_means=="h=5%") %>%
-  wn_plotfun()
+  wn_plotfun(h=5)
 
 ```
 
 #### h=10%
 
-```{r plot_h10, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=4, fig.width=16}
+```{r plot_h10, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=8, fig.width=12}
 wn_dat %>%
   dplyr::filter(wn_means=="h=10%") %>%
-  wn_plotfun()
+  wn_plotfun(h=10)
 
 ```
 
 #### h=20%
 
-```{r plot_h20, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=4, fig.width=16}
+```{r plot_h20, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=8, fig.width=12}
 wn_dat %>%
   dplyr::filter(wn_means=="h=20%") %>%
-  wn_plotfun()
+  wn_plotfun(h=20)
 
 ```
+
+#### Political polarization
+
+```{r plot_polar, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=6, fig.width=12}
+# nat_counts %>% 
+
+tweet_dist <- summary_data_df %>% ggplot(aes(x=n_users))+geom_histogram(fill="blue", binwidth=20)+theme_bw()+xlab("number of tweets per preprint")
+
+wn_dist_zoom <- summary_data_df %>% dplyr::filter(wn_means_02>0) %>% ggplot(aes(x=wn_means_02))+geom_histogram(fill="red", binwidth=0.005)+theme_bw()+xlab("Fraction of users with >2% white nationalist follower homophily")
+
+wn_dist_all <- summary_data_df %>% ggplot(aes(x=wn_means_02))+geom_histogram(fill="red", binwidth=0.005)+theme_bw()+xlab("Fraction of users with >2% white nationalist follower homophily")
+
+nc1 <- sddf2 %>%
+  dplyr::filter(grepl("#resist|#maga", top_10)) %>% 
+  dplyr::mutate(pol=ifelse(grepl("#maga", top_10), "cons", "lib")) %>%
+  group_by(categories_trim, pol) %>% 
+  summarise(tot=sum(n)) %>% 
+  ungroup() %>% 
+  base::merge(category_counts, by="categories_trim") %>% mutate(prop=tot/tot_tweets) %>%
+  dplyr::filter(n_papers>=10) %>%
+  dplyr::select(categories_trim, pol, tot, tot_tweets) %>%
+  group_by(categories_trim, tot_tweets) %>%
+  spread(pol, tot) %>%
+  mutate(ratio=log(cons/lib)) %>%
+  arrange(desc(ratio)) %>% 
+  dplyr::filter(!is.na(cons) & !is.na(lib)) %>%
+  mutate(pval=prop.test(c(cons, lib), c(tot_tweets, tot_tweets))$p.value) %>%
+  full_join(data.frame("categories_trim"=categories_trim), by="categories_trim") %>%
+  mutate(prop=(cons+lib)/tot_tweets)
+
+p <- ggplot(nc1, aes(x=log10(cons/lib), y=-log10(pval), label=categories_trim, fill=categories_trim))+
+    ggplot2::annotate("rect", xmin = -Inf, xmax = 0, ymin = -log10(0.05/nrow(nc1)), ymax = Inf, fill="blue", alpha = 0.2)+
+  ggplot2::annotate("rect", xmin = 0, xmax = Inf, ymin = -log10(0.05/nrow(nc1)), ymax = Inf, fill="red", alpha = 0.2)+
+  # geom_abline(intercept=0, slope=1, linetype="dashed")+
+  geom_hline(yintercept=-log10(0.05/nrow(nc1)), linetype="dashed")+
+  geom_vline(xintercept=0)+
+  geom_point(aes(colour=categories_trim, size=prop))+
+  geom_label_repel(data=subset(nc1, pval<0.05/nrow(nc1) & log10(cons/lib)<0), size=6, box.padding=1, ylim=c(-log10(0.05/nrow(nc1)), NA), xlim=c(-1.5,0), force=10)+
+  geom_label_repel(data=subset(nc1, pval<0.05/nrow(nc1) & log10(cons/lib)>0), size=6, box.padding=1, ylim=c(-log10(0.05/nrow(nc1)), NA), xlim=c(0,1.5), force=10)+
+  scale_fill_manual(values=cat_pal)+
+  scale_colour_manual(values=cat_pal)+
+  theme_bw()+
+  theme(legend.position="none",
+        axis.text.x=element_text(size=12),
+        axis.text.y=element_text(size=12),
+        axis.title.x=element_text(size=16),
+        axis.title.y=element_text(size=16))+
+  scale_x_continuous(expand=c(0,0), limits=c(-1.5,1.5))+
+  # scale_y_continuous(expand=c(0,0), limits=c(0,0.05))+
+  # scale_x_continuous(limits=c(0,0.04))+
+  # scale_y_continuous(limits=c(0,0.03))+
+  xlab(expression("log"[10]*"(fold difference)"))+
+  ylab(expression("-log"[10]*"(P value)"))
+
+p
+
+# p <- full_join(nat_counts, data.frame("categories_trim"=categories_trim), by="categories_trim") %>%
+#   ggplot(aes(x=cons, y=lib, label=categories_trim, colour=categories_trim))+
+#   geom_abline(intercept=0, slope=1, linetype="dashed")+
+#   geom_point(size=3)+
+#   geom_label_repel(size=6)+
+#   scale_colour_manual(values=cat_pal)+
+#   theme_bw()+
+#   theme(legend.position="none",
+#         axis.text.x=element_text(size=12),
+#         axis.text.y=element_text(size=12),
+#         axis.title.x=element_text(size=16),
+#         axis.title.y=element_text(size=16))+
+#   scale_x_continuous(expand=c(0,0), limits=c(0,0.05))+
+#   scale_y_continuous(expand=c(0,0), limits=c(0,0.05))+
+#   # scale_x_continuous(limits=c(0,0.04))+
+#   # scale_y_continuous(limits=c(0,0.03))+
+#   xlab("Fraction of audience associated with right-wing sectors")+
+#   ylab("Fraction of audience associated with left-wing sectors")
+
+# ply <- ggplotly(p) %>%
+#     plotly::style(hoverinfo = "none", traces = 1:26)
+# 
+# 
+# p
+
+```
+
+```{r plot_timeline, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE, fig.height=6, fig.width=12}
+
+summary_data_df %>% 
+    dplyr::filter(grepl("20", title)) %>% 
+    mutate(group=ifelse(wn_means_02<0.05, "preprints where <5% of users have >2% homophily with white nationalists", "preprints where >5% of users have >2% homophily with white nationalists")) %>%
+  # mutate(group=ifelse(wn_means_02>0.05, "reg", "wn")) %>%
+    rowwise() %>% 
+    mutate(date=as.Date(tail(unlist(strsplit(title, ", ")), 1))) %>% 
+    ggplot(aes(x=date, fill=group))+
+    geom_histogram(alpha=0.5, position="identity", bins=50)+
+  scale_fill_manual(values=c("grey20", "red"))+
+  scale_x_date(date_breaks="3 months")+
+  theme_classic()+
+  theme(axis.text.x=element_text(angle=45, hjust=1), legend.title=element_blank(), legend.position="bottom")+
+  guides(fill = guide_legend(ncol = 1))
+
+summary_data_df %>% 
+  dplyr::filter(wn_means_02>0.05 & grepl("20", title)) %>% 
+  rowwise() %>% 
+  mutate(date=as.Date(tail(unlist(strsplit(title, ", ")), 1))) %>% 
+  ggplot(aes(x=date, y=wn_means_02))+
+  geom_point()+
+  geom_smooth()+
+  geom_segment(aes(x=date, xend=date, y=0, yend=wn_means_02))+
+  scale_x_date(date_breaks="3 months")+
+  theme_classic()+
+  theme(axis.text.x=element_text(angle=45, hjust=1))+
+  ylab(paste0("Fraction of users with >", 2, "% \n white nationalist follower homophily"))
+
+
+```
+
 
 <!-- </div> -->
 <!-- </div> -->

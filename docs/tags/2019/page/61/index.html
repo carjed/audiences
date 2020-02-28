@@ -43,7 +43,7 @@
 
 
 
-<script src="https://carjed.github.io/audiences/js/bundle.min.04bd3499e23e665b761954011cfb58a5988ae72a56495d664077f360ae1c92545ea2a31eb009c0215fd62914601dd0a6fcc660a502754b40526292d8429fcdbc.js" integrity="sha512-BL00meI&#43;Zlt2GVQBHPtYpZiK5ypWSV1mQHfzYK4cklReoqMesAnAIV/WKRRgHdCm/MZgpQJ1S0BSYpLYQp/NvA=="></script>
+<script src="https://carjed.github.io/audiences/js/bundle.min.f25ff27688046eb318bdc22977150cde493b69297eb61c33d467745adf840d358a2427ed01d7dc1e0bd54c4d5831f1ed5e9bc1e1f7187533a24e36d63659607f.js" integrity="sha512-8l/ydogEbrMYvcIpdxUM3kk7aSl&#43;thwz1Gd0Wt&#43;EDTWKJCftAdfcHgvVTE1YMfHtXpvB4fcYdTOiTjbWNllgfw=="></script>
 
   <style></style>
   
@@ -58,11 +58,11 @@
     </li>
     
       <li class="p-2">
-        <a class="text-light" href="/audiences/reports" title="">reports</a>
+        <a class="text-light" href="reports" title="">reports</a>
       </li>
     
       <li class="p-2">
-        <a class="text-light" href="/audiences/search" title="">search</a>
+        <a class="text-light" href="search" title="">search</a>
       </li>
     
   </nav>
@@ -72,55 +72,15 @@
   
     <div class="list-item d-flex lead justify-content-center align-items-center reports">
       <div>
-        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/a_comparison_of_three_programming_languages_for_a_full-fledged_next-generation_sequencing_tool_55926319/">
-          <h4 class="font-weight-bold">A comparison of three programming languages for a full-fledged next-generation sequencing tool, bioRxiv, 2019-02-23</h4>
-          <p>Background elPrep is an established multi-threaded framework for preparing SAM and BAM files in sequencing pipelines. To achieve good performance, its software architecture makes only a single pass through a SAMBAM file for multiple preparation steps, and keeps sequencing data as much as possible in main memory. Similar to other SAMBAM tools, management of heap memory is a complex task in elPrep, and it became a serious productivity bottleneck in its original implementation language during recent further development of elPrep. We therefore investigated three alternative programming languages Go and Java using a concurrent, parallel garbage collector on the one hand, and C&#43;&#43;17 using reference counting on the other hand for handling large amounts of heap objects. We reimplemented elPrep in all three languages and benchmarked their runtime performance and memory use.Results The Go implementation performs best, yielding the best balance between runtime performance and memory use. While the Java benchmarks report a somewhat faster runtime than the Go benchmarks, the memory use of the Java runs is significantly higher. The C&#43;&#43;17 benchmarks run significantly slower than both Go and Java, while using somewhat more memory than the Go runs. Our analysis shows that concurrent, parallel garbage collection is better at managing a large heap of objects than reference counting in our case.Conclusions Based on our benchmark results, we selected Go as our new implementation language for elPrep, and recommend considering Go as a good candidate for developing other bioinformatics tools for processing SAMBAM data as well.</p>
+        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/ultrastructure_of_the_axonal_periodic_scaffold_reveals_a_braid-like_organization_of_actin_rings_60400156/">
+          <h4 class="font-weight-bold">Ultrastructure of the axonal periodic scaffold reveals a braid-like organization of actin rings, bioRxiv, 2019-05-13</h4>
+          <p>AbstractRecent super-resolution microscopy studies have unveiled a periodic scaffold of actin rings regularly spaced by spectrins under the plasma membrane of axons. However, ultrastructural details are unknown, limiting a molecular and mechanistic understanding of these enigmatic structures. Here, we combine platinum-replica electron and optical super-resolution micros-copy to investigate the cortical cytoskeleton of axons at the ultrastructural level. We resolve actin rings as braids made of two long, intertwined actin filaments connected by a dense mesh of aligned spectrins. This molecular arrangement contrasts with the currently assumed model of actin rings made of short, capped actin filaments. We propose that braided rings explain the stability of the actin-spectrin scaffold and ultimately help preserving the axon integrity.</p>
         </a>
         
           
             <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/biorxiv">biorxiv</a>
           
-            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/bioinformatics">bioinformatics</a>
-          
-            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/100-200-users">100-200-users</a>
-          
-            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/2019">2019</a>
-          
-        
-      </div>
-    </div>
-  
-    <div class="list-item d-flex lead justify-content-center align-items-center reports">
-      <div>
-        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/cooler_scalable_storage_for_hi-c_data_and_other_genomically-labeled_arrays_55927091/">
-          <h4 class="font-weight-bold">Cooler scalable storage for Hi-C data and other genomically-labeled arrays, bioRxiv, 2019-02-23</h4>
-          <p>Most existing coverage-based (epi)genomic datasets are one-dimensional, but newer technologies probing interactions (physical, genetic, etc.) produce quantitative maps with two-dimensional genomic coordinate systems. Storage and computational costs mount sharply with data resolution when such maps are stored in dense form. Hence, there is a pressing need to develop data storage strategies that handle the full range of useful resolutions in multidimensional genomic datasets by taking advantage of their sparse nature, while supporting efficient compression and providing fast random access to facilitate development of scalable algorithms for data analysis. We developed a file format called cooler, based on a sparse data model, that can support genomically-labeled matrices at any resolution. It has the flexibility to accommodate various descriptions of the data axes (genomic coordinates, tracks and bin annotations), resolutions, data density patterns, and metadata. Cooler is based on HDF5 and is supported by a Python library and command line suite to create, read, inspect and manipulate cooler data collections. The format has been adopted as a standard by the NIH 4D Nucleome Consortium. Cooler is cross-platform, BSD-licensed, and can be installed from the Python Package Index or the bioconda repository. The source code is maintained on Github at httpsgithub.commirnylabcooler.</p>
-        </a>
-        
-          
-            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/biorxiv">biorxiv</a>
-          
-            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/bioinformatics">bioinformatics</a>
-          
-            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/0-100-users">0-100-users</a>
-          
-            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/2019">2019</a>
-          
-        
-      </div>
-    </div>
-  
-    <div class="list-item d-flex lead justify-content-center align-items-center reports">
-      <div>
-        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/crowdfunded_whole-genome_sequencing_of_the_celebrity_cat_lil_bub_identifies_causal_mutations_for_her_osteopetrosis_and_polydactyly_55925121/">
-          <h4 class="font-weight-bold">Crowdfunded whole-genome sequencing of the celebrity cat Lil BUB identifies causal mutations for her osteopetrosis and polydactyly, bioRxiv, 2019-02-23</h4>
-          <p>Rare diseases and their underlying molecular causes are often poorly studied, posing challenges for patient diagnosis and prognosis. The development of next-generation sequencing and its decreasing costs promises to alleviate such issues by supplying personal genomic information at a moderate price. Here, we used crowdfunding as an alternative funding source to sequence the genome of Lil BUB, a celebrity cat affected by rare disease phenotypes characterized by supernumerary digits, osteopetrosis and dwarfism, all phenotypic traits that also occur in human patients. We discovered that Lil BUB is affected by two distinct mutations a heterozygous mutation in the limb enhancer of the Sonic hedgehog gene, previously associated with polydactyly in Hemingway cats; and a novel homozygous frameshift deletion affecting the TNFRSF11A (RANK) gene, which has been linked to osteopetrosis in humans. We communicated the progress of this project to a large online audience, detailing the &#39;inner workings&#39; of personalized whole genome sequencing with the aim of improving genetic literacy. Our results highlight the importance of genomic analysis in the identification of disease-causing mutations and support crowdfunding as a means to fund low-budget projects and as a platform for scientific communication.</p>
-        </a>
-        
-          
-            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/biorxiv">biorxiv</a>
-          
-            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/genetics">genetics</a>
+            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/cell-biology">cell-biology</a>
           
             <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/200-500-users">200-500-users</a>
           
@@ -132,9 +92,29 @@
   
     <div class="list-item d-flex lead justify-content-center align-items-center reports">
       <div>
-        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/genomic_analysis_reveals_a_functional_role_for_myocardial_trabeculae_in_adults_55925127/">
-          <h4 class="font-weight-bold">Genomic analysis reveals a functional role for myocardial trabeculae in adults, bioRxiv, 2019-02-23</h4>
-          <p>Since being first described by Leonardo da Vinci in 1513 it has remained an enigma why the endocardial surfaces of the adult heart retain a complex network of muscular trabeculae - with their persistence thought to be a vestige of embryonic development. For causative physiological inference we harness population genomics, image-based intermediate phenotyping and in silico modelling to determine the effect of this complex cardiovascular trait on function. Using deep learning-based image analysis we identified genetic associations with trabecular complexity in 18,097 UK Biobank participants which were replicated in an independently measured cohort of 1,129 healthy adults. Genes in these associated regions are enriched for expression in the fetal heart or vasculature and implicate loci associated with haemodynamic phenotypes and developmental pathways. A causal relationship between increasing trabecular complexity and both ventricular performance and electrical activity are supported by complementary biomechanical simulations and Mendelian randomisation studies. These findings show that myocardial trabeculae are a previously-unrecognised determinant of cardiovascular physiology in adult humans.</p>
+        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/a_comparison_of_edna_to_camera_trapping_for_assessment_of_terrestrial_mammal_diversity_60254828/">
+          <h4 class="font-weight-bold">A comparison of eDNA to camera trapping for assessment of terrestrial mammal diversity, bioRxiv, 2019-05-11</h4>
+          <p>AbstractEnvironmental DNA (eDNA) is one of the most promising approaches to meet the demand for the fast and frequent monitoring of ecosystems needed to tackle the current decline in biodiversity. However, before eDNA can establish itself as a robust alternative for mammal monitoring, comparison with existing approaches is necessary, yet has not been done. Moreover, much is unknown regarding the nature, spread and persistence of DNA shed by animals into terrestrial environments, or the optimal experimental design for understanding these potential biases.To address some of these challenges, we compared the detection of terrestrial mammals using eDNA analysis of soil samples against confirmed species observations from a long-term (∼9-yr) camera trapping study. At the same time, we considered multiple experimental parameters, including two sampling designs, two DNA extraction kits and two metabarcodes of different sizes.All mammals consistently recorded with cameras were detected in eDNA. In addition, eDNA reported many small mammals not recorded by camera traps, but whose presence in the study area is otherwise documented. A long metabarcode (≈220bp) offering a high taxonomic resolution, achieved a similar efficiency as a shorter one (≈70bp) and a phosphate buffer-based extraction gave similar results as a total DNA extraction method for a fraction of the price. Our results support that eDNA-based monitoring should become a valuable part of terrestrial mammal surveys. Yet, the lack of coverage of mammal mitochondrial genomes in public databases must be addressed before eDNA can be used to its full potential.</p>
+        </a>
+        
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/biorxiv">biorxiv</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/ecology">ecology</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/200-500-users">200-500-users</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/2019">2019</a>
+          
+        
+      </div>
+    </div>
+  
+    <div class="list-item d-flex lead justify-content-center align-items-center reports">
+      <div>
+        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/dsuite_-_fast_d-statistics_and_related_admixture_evidence_from_vcf_files_60277124/">
+          <h4 class="font-weight-bold">Dsuite - fast D-statistics and related admixture evidence from VCF files, bioRxiv, 2019-05-11</h4>
+          <p>AbstractSummaryThe D-statistic, also known as the ABBA-BABA statistic, and related statistics are commonly used to assess evidence of gene flow between populations or closely related species. While the calculations are not computationally intensive, currently available implementations require custom file formats and are impractical to evaluate all gene flow hypotheses across datasets that include many populations or species. Dsuite is a fast C&#43;&#43; implementation, allowing genome scale calculations of the D-statistic across all combinations of tens or even hundreds of populations or species directly from a variant call format (VCF) file. Furthermore, the program can estimate the admixture fraction and provide evidence of whether introgression is confined to specific loci. Thus Dsuite facilitates assessment of gene flow across large genomic datasets.Availability and implementationSource code and documentation are available at &lt;jatsext-link xmlnsxlink=httpwww.w3.org1999xlink ext-link-type=uri xlinkhref=httpsgithub.commillanekDsuite&gt;httpsgithub.commillanekDsuite&lt;jatsext-link&gt;</p>
         </a>
         
           
@@ -152,17 +132,17 @@
   
     <div class="list-item d-flex lead justify-content-center align-items-center reports">
       <div>
-        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/ion_beam_subcellular_tomography_55924043/">
-          <h4 class="font-weight-bold">Ion beam subcellular tomography, bioRxiv, 2019-02-23</h4>
-          <p>Multiplexed ion beam imaging (MIBI) has been previously used to profile multiple parameters in two dimensions in single cells within tissue slices. Here, a mathematical and technical framework for three-dimensional subcellular MIBI is presented. We term the approach ion beam tomography (IBT) wherein ion beam images are acquired iteratively across successive, multiple scans and later compiled into a 3D format. For IBT, cells were imaged at 0.2-4 pA ion current across 1,000 axial scans. Consecutive subsets of ion beam images were binned over 3 to 20 slices (above and below) to create a resolved image, wherein binning was incremented one slice at a time to yield an enhanced multi-depth data without loss of depth resolution. Algorithmic deconvolution, tailored for ion beams, was then applied to the transformed ion image series using a hybrid deblurring algorithm and an ion beam current-dependent point-spread function. Three-dimensional processing was implemented by segmentation, mesh, molecular neighborhoods, and association maps. In cultured cancer cells and tissues, IBT enabled accessible visualization of three-dimensional volumetric distributions of genomic regions, RNA transcripts, and protein factors with 65-nm lateral and 5-nm axial resolution. IBT also enabled label-free elemental mapping of cells, allowing point of source cellular component measurements not possible for most optical microscopy targets. Detailed multiparameter imaging of subcellular features at near macromolecular resolution should now be made possible by the IBT tools and reagents provided here to open novel venues for interrogating subcellular biology.</p>
+        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/fine-scale_haplotype_structure_reveals_strong_signatures_of_positive_selection_in_a_recombining_bacterial_pathogen_60279815/">
+          <h4 class="font-weight-bold">Fine-scale haplotype structure reveals strong signatures of positive selection in a recombining bacterial pathogen, bioRxiv, 2019-05-11</h4>
+          <p>ABSTRACTIdentifying the forces that create and shape ecologically meaningful variation in bacteria remains an important challenge. For recombining bacteria, the sign and strength of linkage provide a unique lens into ongoing selection. We show derived alleles less than 300bp apart in Neisseria gonorrhoeae exhibit more coupling linkage than repulsion linkage, a pattern that cannot be explained by limited recombination or neutrality as these couplings are significantly stronger for nonsynonymous alleles compared to synonymous alleles. While linkage is shaped by many evolutionary processes, extensive simulations show only two distinct forms of positive selection can drive an excess of coupling linkage between neighboring nonsynonymous alleles directional selection on introgressed alleles or selection that maintains distinct haplotypes in the presence of recombination. Our results establish a framework for identifying patterns of selection in fine-scale haplotype structure that indicate specific ecological processes in species that recombine with distantly related lineages or possess coexisting adaptive haplotypes.</p>
         </a>
         
           
             <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/biorxiv">biorxiv</a>
           
-            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/systems-biology">systems-biology</a>
+            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/evolutionary-biology">evolutionary-biology</a>
           
-            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/100-200-users">100-200-users</a>
+            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/0-100-users">0-100-users</a>
           
             <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/2019">2019</a>
           
@@ -172,17 +152,37 @@
   
     <div class="list-item d-flex lead justify-content-center align-items-center reports">
       <div>
-        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/necrotizing_enterocolitis_is_preceded_by_increased_gut_bacterial_replication_klebsiella_and_fimbriae-encoding_bacteria_that_may_stimulate_tlr4_receptors_55933703/">
-          <h4 class="font-weight-bold">Necrotizing enterocolitis is preceded by increased gut bacterial replication, Klebsiella, and fimbriae-encoding bacteria that may stimulate TLR4 receptors, bioRxiv, 2019-02-23</h4>
-          <p>Necrotizing enterocolitis (NEC) is a devastating intestinal disease that occurs primarily in premature infants. We performed genome-resolved metagenomic analysis of 1,163 fecal samples from premature infants to identify microbial features predictive of NEC. Features considered include genes, bacterial strain types, eukaryotes, bacteriophages, plasmids and growth rates. A machine learning classifier found that samples collected prior to NEC diagnosis harbored significantly more Klebsiella, bacteria encoding fimbriae, and bacteria encoding secondary metabolite gene clusters related to quorum sensing and bacteriocin production. Notably, replication rates of all bacteria, especially Enterobacteriaceae, were significantly higher two days before NEC diagnosis. The findings uncover biomarkers that could lead to early detection of NEC and targets for microbiome-based therapeutics.</p>
+        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/improved_assembly_and_variant_detection_of_a_haploid_human_genome_using_single-molecule_high-fidelity_long_reads_60279858/">
+          <h4 class="font-weight-bold">Improved assembly and variant detection of a haploid human genome using single-molecule, high-fidelity long reads, bioRxiv, 2019-05-11</h4>
+          <p>AbstractThe sequence and assembly of human genomes using long-read sequencing technologies has revolutionized our understanding of structural variation and genome organization. We compared the accuracy, continuity, and gene annotation of genome assemblies generated from either high-fidelity (HiFi) or continuous long-read (CLR) datasets from the same complete hydatidiform mole human genome. We find that the HiFi sequence data assemble an additional 10% of duplicated regions and more accurately represent the structure of tandem repeats, as validated with orthogonal analyses. As a result, an additional 5 Mbp of pericentromeric sequences are recovered in the HiFi assembly, resulting in a 2.5-fold increase in the NG50 within 1 Mbp of the centromere (HiFi 480.6 kbp, CLR 191.5 kbp). Additionally, the HiFi genome assembly was generated in significantly less time with fewer computational resources than the CLR assembly. Although the HiFi assembly has significantly improved continuity and accuracy in many complex regions of the genome, it still falls short of the assembly of centromeric DNA and the largest regions of segmental duplication using existing assemblers. Despite these shortcomings, our results suggest that HiFi may be the most effective stand-alone technology for de novo assembly of human genomes.</p>
         </a>
         
           
             <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/biorxiv">biorxiv</a>
           
-            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/microbiology">microbiology</a>
+            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/genomics">genomics</a>
           
-            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/200-500-users">200-500-users</a>
+            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/0-100-users">0-100-users</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/2019">2019</a>
+          
+        
+      </div>
+    </div>
+  
+    <div class="list-item d-flex lead justify-content-center align-items-center reports">
+      <div>
+        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/jumping_to_conclusions_general_intelligence_and_psychosis_liability_findings_from_the_multi-centre_eu-gei_case-control_study_60365531/">
+          <h4 class="font-weight-bold">Jumping To Conclusions, General Intelligence, And Psychosis Liability Findings From The Multi-Centre EU-GEI Case-Control Study, bioRxiv, 2019-05-11</h4>
+          <p>AbstractBackgroundThe “jumping to conclusions” (JTC) bias is associated with both psychosis and general cognition but their relationship is unclear. In this study, we set out to clarify the relationship between the JTC bias, IQ, psychosis and polygenic liability to schizophrenia and IQ.Methods817 FEP patients and 1294 population-based controls completed assessments of general intelligence (IQ), and JTC (assessed by the number of beads drawn on the probabilistic reasoning “beads” task) and provided blood or saliva samples from which we extracted DNA and computed polygenic risk scores for IQ and schizophrenia.ResultsThe estimated proportion of the total effect of casecontrol differences on JTC mediated by IQ was 79%. Schizophrenia Polygenic Risk Score (SZ PRS) was non-significantly associated with a higher number of beads drawn (B= 0.47, 95% CI −0.21 to 1.16, p=0.17); whereas IQ PRS (B=0.51, 95% CI 0.25 to 0.76, p&amp;lt;0.001) significantly predicted the number of beads drawn, and was thus associated with reduced JTC bias. The JTC was more strongly associated with higher level of psychotic-like experiences (PLE) in controls, including after controlling for IQ (B= −1.7, 95% CI −2.8 to −0.5, p=0.006), but did not relate to delusions in patients.Conclusionsthe JTC reasoning bias in psychosis is not a specific cognitive deficit but is rather a manifestation or consequence, of general cognitive impairment. Whereas, in the general population, the JTC bias is related to psychotic-like experiences, independent of IQ. The work has potential to inform interventions targeting cognitive biases in early psychosis.</p>
+        </a>
+        
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/biorxiv">biorxiv</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/neuroscience">neuroscience</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/0-100-users">0-100-users</a>
           
             <a class="text-body text-decoration-none border-bottom border-dark" href="/tags/2019">2019</a>
           
@@ -414,6 +414,102 @@
         
             
         
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
 
         
         <li class="page-item"><a href="/audiences/tags/2019/page/62/" rel="next" class="page-link">Next ›</a></li>
@@ -421,7 +517,7 @@
 
         
         
-        <li class="page-item"><a href="/audiences/tags/2019/page/87/" rel="last" class="page-link">Last »</a></li>
+        <li class="page-item"><a href="/audiences/tags/2019/page/135/" rel="last" class="page-link">Last »</a></li>
         
     </ul>
 </nav>
@@ -439,7 +535,6 @@
 
 <p style="text-align: center;">
     <a href="https://twitter.com/JedMSP?lang=en" class="fa fa-twitter"></a>
-    <a href="https://www.linkedin.com/in/jedidiah/" class="fa fa-linkedin"></a>
     <a href="https://github.com/carjed/" class="fa fa-github"></a>
 </p>
 

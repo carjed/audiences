@@ -6,10 +6,28 @@
     <description>Recent content in Pathology on audiences</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 07 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://carjed.github.io/audiences/tags/pathology/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Complete genome characterisation of a novel coronavirus associated with severe human respiratory disease in Wuhan, China, bioRxiv, 2020-01-26</title>
+      <link>https://carjed.github.io/audiences/reports/complete_genome_characterisation_of_a_novel_coronavirus_associated_with_severe_human_respiratory_disease_in_wuhan_china_74813373/</link>
+      <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/complete_genome_characterisation_of_a_novel_coronavirus_associated_with_severe_human_respiratory_disease_in_wuhan_china_74813373/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Interpretable multimodal deep learning for real-time pan-tissue pan-disease pathology search on social media, bioRxiv, 2018-08-21</title>
+      <link>https://carjed.github.io/audiences/reports/interpretable_multimodal_deep_learning_for_real-time_pan-tissue_pan-disease_pathology_search_on_social_media_46797097/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/interpretable_multimodal_deep_learning_for_real-time_pan-tissue_pan-disease_pathology_search_on_social_media_46797097/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
     
     <item>
       <title>Adversarial childhood events are associated with Sudden Infant Death Syndrome (SIDS) an ecological study, bioRxiv, 2018-06-07</title>
@@ -21,11 +39,29 @@
     </item>
     
     <item>
+      <title>Deep Convolutional Neural Networks for Breast Cancer Histology Image Analysis, bioRxiv, 2018-02-08</title>
+      <link>https://carjed.github.io/audiences/reports/deep_convolutional_neural_networks_for_breast_cancer_histology_image_analysis_32702437/</link>
+      <pubDate>Thu, 08 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/deep_convolutional_neural_networks_for_breast_cancer_histology_image_analysis_32702437/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
       <title>Pediatric Bone Age Assessment Using Deep Convolutional Neural Networks, bioRxiv, 2017-12-15</title>
       <link>https://carjed.github.io/audiences/reports/pediatric_bone_age_assessment_using_deep_convolutional_neural_networks_30444746/</link>
       <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://carjed.github.io/audiences/reports/pediatric_bone_age_assessment_using_deep_convolutional_neural_networks_30444746/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>H&amp;E-stained Whole Slide Image Deep Learning Predicts SPOP Mutation State in Prostate Cancer, bioRxiv, 2016-07-18</title>
+      <link>https://carjed.github.io/audiences/reports/he-stained_whole_slide_image_deep_learning_predicts_spop_mutation_state_in_prostate_cancer_9796478/</link>
+      <pubDate>Mon, 18 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/he-stained_whole_slide_image_deep_learning_predicts_spop_mutation_state_in_prostate_cancer_9796478/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     

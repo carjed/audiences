@@ -18,7 +18,7 @@ var searchTerm = getQueryVariable('query');
 // Initialize lunrjs using our generated index file
 function initLunr() {
     // First retrieve the index file
-    $.getJSON("/index.json")
+    $.getJSON("index.json")
         .done(function (index) {
             pagesIndex = index;
             lunrIndex = lunr(function () {

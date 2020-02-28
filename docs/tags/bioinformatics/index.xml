@@ -6,10 +6,343 @@
     <description>Recent content in Bioinformatics on audiences</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 25 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://carjed.github.io/audiences/tags/bioinformatics/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HASLR Fast Hybrid Assembly of Long Reads, bioRxiv, 2020-01-28</title>
+      <link>https://carjed.github.io/audiences/reports/haslr_fast_hybrid_assembly_of_long_reads_75551180/</link>
+      <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/haslr_fast_hybrid_assembly_of_long_reads_75551180/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Comparison of visualisation tools for single-cell RNAseq data, bioRxiv, 2020-01-26</title>
+      <link>https://carjed.github.io/audiences/reports/comparison_of_visualisation_tools_for_single-cell_rnaseq_data_75084974/</link>
+      <pubDate>Sun, 26 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/comparison_of_visualisation_tools_for_single-cell_rnaseq_data_75084974/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>BlastFrost Fast querying of 100,000s of bacterial genomes in Bifrost graphs, bioRxiv, 2020-01-23</title>
+      <link>https://carjed.github.io/audiences/reports/blastfrost_fast_querying_of_100000s_of_bacterial_genomes_in_bifrost_graphs_75110087/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/blastfrost_fast_querying_of_100000s_of_bacterial_genomes_in_bifrost_graphs_75110087/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Post-prediction Inference, bioRxiv, 2020-01-23</title>
+      <link>https://carjed.github.io/audiences/reports/post-prediction_inference_75011808/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/post-prediction_inference_75011808/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Algorithmic Learning for Auto-deconvolution of GC-MS Data to Enable Molecular Networking within GNPS, bioRxiv, 2020-01-15</title>
+      <link>https://carjed.github.io/audiences/reports/algorithmic_learning_for_auto-deconvolution_of_gc-ms_data_to_enable_molecular_networking_within_gnps_74033548/</link>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/algorithmic_learning_for_auto-deconvolution_of_gc-ms_data_to_enable_molecular_networking_within_gnps_74033548/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Gapless assembly of maize chromosomes using long read technologies, bioRxiv, 2020-01-15</title>
+      <link>https://carjed.github.io/audiences/reports/gapless_assembly_of_maize_chromosomes_using_long_read_technologies_74057430/</link>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/gapless_assembly_of_maize_chromosomes_using_long_read_technologies_74057430/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>URMAP, an ultra-fast read mapper, bioRxiv, 2020-01-14</title>
+      <link>https://carjed.github.io/audiences/reports/urmap_an_ultra-fast_read_mapper_74008302/</link>
+      <pubDate>Tue, 14 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/urmap_an_ultra-fast_read_mapper_74008302/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Using Natural Language Processing to Learn the Grammar of Glycans, bioRxiv, 2020-01-12</title>
+      <link>https://carjed.github.io/audiences/reports/using_natural_language_processing_to_learn_the_grammar_of_glycans_73910354/</link>
+      <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/using_natural_language_processing_to_learn_the_grammar_of_glycans_73910354/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>The predictive power of the microbiome exceeds that of genome-wide association studies in the discrimination of complex human disease, bioRxiv, 2020-01-02</title>
+      <link>https://carjed.github.io/audiences/reports/the_predictive_power_of_the_microbiome_exceeds_that_of_genome-wide_association_studies_in_the_discrimination_of_complex_human_disease_73521460/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/the_predictive_power_of_the_microbiome_exceeds_that_of_genome-wide_association_studies_in_the_discrimination_of_complex_human_disease_73521460/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Data structures based on k-mers for querying large collections of sequencing datasets, bioRxiv, 2019-12-06</title>
+      <link>https://carjed.github.io/audiences/reports/data_structures_based_on_k-mers_for_querying_large_collections_of_sequencing_datasets_72333733/</link>
+      <pubDate>Fri, 06 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/data_structures_based_on_k-mers_for_querying_large_collections_of_sequencing_datasets_72333733/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Another look at microbe–metabolite interactions how scale invariant correlations can outperform a neural network, bioRxiv, 2019-12-02</title>
+      <link>https://carjed.github.io/audiences/reports/another_look_at_microbemetabolite_interactions_how_scale_invariant_correlations_can_outperform_a_neural_network_71403215/</link>
+      <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/another_look_at_microbemetabolite_interactions_how_scale_invariant_correlations_can_outperform_a_neural_network_71403215/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>SparK A Publication-quality NGS Visualization Tool, bioRxiv, 2019-11-17</title>
+      <link>https://carjed.github.io/audiences/reports/spark_a_publication-quality_ngs_visualization_tool_70542468/</link>
+      <pubDate>Sun, 17 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/spark_a_publication-quality_ngs_visualization_tool_70542468/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Generalizing RNA velocity to transient cell states through dynamical modeling, bioRxiv, 2019-10-29</title>
+      <link>https://carjed.github.io/audiences/reports/generalizing_rna_velocity_to_transient_cell_states_through_dynamical_modeling_69439202/</link>
+      <pubDate>Tue, 29 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/generalizing_rna_velocity_to_transient_cell_states_through_dynamical_modeling_69439202/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Pan-cancer computational histopathology reveals mutations, tumor composition and prognosis, bioRxiv, 2019-10-26</title>
+      <link>https://carjed.github.io/audiences/reports/pan-cancer_computational_histopathology_reveals_mutations_tumor_composition_and_prognosis_69291077/</link>
+      <pubDate>Sat, 26 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/pan-cancer_computational_histopathology_reveals_mutations_tumor_composition_and_prognosis_69291077/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Molecular Cross-Validation for Single-Cell RNA-seq, bioRxiv, 2019-10-01</title>
+      <link>https://carjed.github.io/audiences/reports/molecular_cross-validation_for_single-cell_rna-seq_67491356/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/molecular_cross-validation_for_single-cell_rna-seq_67491356/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>GeneRax A tool for species tree-aware maximum likelihood based gene tree inference under gene duplication, transfer, and loss, bioRxiv, 2019-09-27</title>
+      <link>https://carjed.github.io/audiences/reports/generax_a_tool_for_species_tree-aware_maximum_likelihood_based_gene_tree_inference_under_gene_duplication_transfer_and_loss_67227081/</link>
+      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/generax_a_tool_for_species_tree-aware_maximum_likelihood_based_gene_tree_inference_under_gene_duplication_transfer_and_loss_67227081/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Tximeta reference sequence checksums for provenance identification in RNA-seq, bioRxiv, 2019-09-26</title>
+      <link>https://carjed.github.io/audiences/reports/tximeta_reference_sequence_checksums_for_provenance_identification_in_rna-seq_67129524/</link>
+      <pubDate>Thu, 26 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/tximeta_reference_sequence_checksums_for_provenance_identification_in_rna-seq_67129524/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>centroFlye Assembling Centromeres with Long Error-Prone Reads, bioRxiv, 2019-09-17</title>
+      <link>https://carjed.github.io/audiences/reports/centroflye_assembling_centromeres_with_long_error-prone_reads_66711806/</link>
+      <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/centroflye_assembling_centromeres_with_long_error-prone_reads_66711806/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Improved metagenomic analysis with Kraken 2, bioRxiv, 2019-09-08</title>
+      <link>https://carjed.github.io/audiences/reports/improved_metagenomic_analysis_with_kraken_2_66207460/</link>
+      <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/improved_metagenomic_analysis_with_kraken_2_66207460/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>immuneSIM tunable multi-feature simulation of B- and T-cell receptor repertoires for immunoinformatics benchmarking, bioRxiv, 2019-09-07</title>
+      <link>https://carjed.github.io/audiences/reports/immunesim_tunable_multi-feature_simulation_of_b-_and_t-cell_receptor_repertoires_for_immunoinformatics_benchmarking_66162749/</link>
+      <pubDate>Sat, 07 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/immunesim_tunable_multi-feature_simulation_of_b-_and_t-cell_receptor_repertoires_for_immunoinformatics_benchmarking_66162749/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Deep learning for brains? Different linear and nonlinear scaling in UK Biobank brain images vs. machine-learning datasets, bioRxiv, 2019-09-06</title>
+      <link>https://carjed.github.io/audiences/reports/deep_learning_for_brains_different_linear_and_nonlinear_scaling_in_uk_biobank_brain_images_vs._machine-learning_datasets_66074752/</link>
+      <pubDate>Fri, 06 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/deep_learning_for_brains_different_linear_and_nonlinear_scaling_in_uk_biobank_brain_images_vs._machine-learning_datasets_66074752/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>GeneWalk identifies relevant gene functions for a biological context using network representation learning, bioRxiv, 2019-09-05</title>
+      <link>https://carjed.github.io/audiences/reports/genewalk_identifies_relevant_gene_functions_for_a_biological_context_using_network_representation_learning_65971626/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/genewalk_identifies_relevant_gene_functions_for_a_biological_context_using_network_representation_learning_65971626/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Robustness and applicability of functional genomics tools on scRNA-seq data, bioRxiv, 2019-09-01</title>
+      <link>https://carjed.github.io/audiences/reports/robustness_and_applicability_of_functional_genomics_tools_on_scrna-seq_data_65762100/</link>
+      <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/robustness_and_applicability_of_functional_genomics_tools_on_scrna-seq_data_65762100/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>GenomeScope 2.0 and Smudgeplots Reference-free profiling of polyploid genomes, bioRxiv, 2019-08-27</title>
+      <link>https://carjed.github.io/audiences/reports/genomescope_2.0_and_smudgeplots_reference-free_profiling_of_polyploid_genomes_65479920/</link>
+      <pubDate>Tue, 27 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/genomescope_2.0_and_smudgeplots_reference-free_profiling_of_polyploid_genomes_65479920/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Deep Learning-Based Point-Scanning Super-Resolution Imaging, bioRxiv, 2019-08-22</title>
+      <link>https://carjed.github.io/audiences/reports/deep_learning-based_point-scanning_super-resolution_imaging_65273568/</link>
+      <pubDate>Thu, 22 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/deep_learning-based_point-scanning_super-resolution_imaging_65273568/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>ATLAS a Snakemake workflow for assembly, annotation, and genomic binning of metagenome sequence data, bioRxiv, 2019-08-20</title>
+      <link>https://carjed.github.io/audiences/reports/atlas_a_snakemake_workflow_for_assembly_annotation_and_genomic_binning_of_metagenome_sequence_data_65212890/</link>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/atlas_a_snakemake_workflow_for_assembly_annotation_and_genomic_binning_of_metagenome_sequence_data_65212890/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Assessment of computational methods for the analysis of single-cell ATAC-seq data, bioRxiv, 2019-08-18</title>
+      <link>https://carjed.github.io/audiences/reports/assessment_of_computational_methods_for_the_analysis_of_single-cell_atac-seq_data_65127630/</link>
+      <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/assessment_of_computational_methods_for_the_analysis_of_single-cell_atac-seq_data_65127630/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Telomere-to-telomere assembly of a complete human X chromosome, bioRxiv, 2019-08-17</title>
+      <link>https://carjed.github.io/audiences/reports/telomere-to-telomere_assembly_of_a_complete_human_x_chromosome_65059256/</link>
+      <pubDate>Sat, 17 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/telomere-to-telomere_assembly_of_a_complete_human_x_chromosome_65059256/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Predicting antigen-specificity of single T-cells based on TCR CDR3 regions, bioRxiv, 2019-08-14</title>
+      <link>https://carjed.github.io/audiences/reports/predicting_antigen-specificity_of_single_t-cells_based_on_tcr_cdr3_regions_64972376/</link>
+      <pubDate>Wed, 14 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/predicting_antigen-specificity_of_single_t-cells_based_on_tcr_cdr3_regions_64972376/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Assembly methods for nanopore-based metagenomic sequencing a comparative study, bioRxiv, 2019-08-02</title>
+      <link>https://carjed.github.io/audiences/reports/assembly_methods_for_nanopore-based_metagenomic_sequencing_a_comparative_study_64434008/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/assembly_methods_for_nanopore-based_metagenomic_sequencing_a_comparative_study_64434008/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Graphmap2 - splice-aware RNA-seq mapper for long reads, bioRxiv, 2019-07-31</title>
+      <link>https://carjed.github.io/audiences/reports/graphmap2_-_splice-aware_rna-seq_mapper_for_long_reads_64339959/</link>
+      <pubDate>Wed, 31 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/graphmap2_-_splice-aware_rna-seq_mapper_for_long_reads_64339959/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Efficient de novo assembly of eleven human genomes using PromethION sequencing and a novel nanopore toolkit, bioRxiv, 2019-07-26</title>
+      <link>https://carjed.github.io/audiences/reports/efficient_de_novo_assembly_of_eleven_human_genomes_using_promethion_sequencing_and_a_novel_nanopore_toolkit_64131544/</link>
+      <pubDate>Fri, 26 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/efficient_de_novo_assembly_of_eleven_human_genomes_using_promethion_sequencing_and_a_novel_nanopore_toolkit_64131544/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>On the discovery of population-specific state transitions from multi-sample multi-condition single-cell RNA sequencing data, bioRxiv, 2019-07-26</title>
+      <link>https://carjed.github.io/audiences/reports/on_the_discovery_of_population-specific_state_transitions_from_multi-sample_multi-condition_single-cell_rna_sequencing_data_64126984/</link>
+      <pubDate>Fri, 26 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/on_the_discovery_of_population-specific_state_transitions_from_multi-sample_multi-condition_single-cell_rna_sequencing_data_64126984/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>RootNav 2.0 Deep Learning for Automatic Navigation of Complex Plant Root Architectures, bioRxiv, 2019-07-20</title>
+      <link>https://carjed.github.io/audiences/reports/rootnav_2.0_deep_learning_for_automatic_navigation_of_complex_plant_root_architectures_63809339/</link>
+      <pubDate>Sat, 20 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/rootnav_2.0_deep_learning_for_automatic_navigation_of_complex_plant_root_architectures_63809339/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Human Genome Assembly in 100 Minutes, bioRxiv, 2019-07-17</title>
+      <link>https://carjed.github.io/audiences/reports/human_genome_assembly_in_100_minutes_63670565/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/human_genome_assembly_in_100_minutes_63670565/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Evaluating probabilistic programming and fast variational Bayesian inference in phylogenetics, bioRxiv, 2019-07-15</title>
+      <link>https://carjed.github.io/audiences/reports/evaluating_probabilistic_programming_and_fast_variational_bayesian_inference_in_phylogenetics_63580147/</link>
+      <pubDate>Mon, 15 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/evaluating_probabilistic_programming_and_fast_variational_bayesian_inference_in_phylogenetics_63580147/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>souporcell Robust clustering of single cell RNAseq by genotype and ambient RNA inference without reference genotypes, bioRxiv, 2019-07-14</title>
+      <link>https://carjed.github.io/audiences/reports/souporcell_robust_clustering_of_single_cell_rnaseq_by_genotype_and_ambient_rna_inference_without_reference_genotypes_63541294/</link>
+      <pubDate>Sun, 14 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/souporcell_robust_clustering_of_single_cell_rnaseq_by_genotype_and_ambient_rna_inference_without_reference_genotypes_63541294/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
     
     <item>
       <title>Increasing the efficiency of long-read sequencing for hybrid assembly with k-mer-based multiplexing, bioRxiv, 2019-06-25</title>
@@ -39,11 +372,11 @@
     </item>
     
     <item>
-      <title>CLIJ Enabling GPU-accelerated image processing in Fiji, bioRxiv, 2019-06-09</title>
-      <link>https://carjed.github.io/audiences/reports/clij_enabling_gpu-accelerated_image_processing_in_fiji_61880256/</link>
+      <title>CLIJ GPU-accelerated image processing for everyone, bioRxiv, 2019-06-09</title>
+      <link>https://carjed.github.io/audiences/reports/clij_gpu-accelerated_image_processing_for_everyone_61880256/</link>
       <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://carjed.github.io/audiences/reports/clij_enabling_gpu-accelerated_image_processing_in_fiji_61880256/</guid>
+      <guid>https://carjed.github.io/audiences/reports/clij_gpu-accelerated_image_processing_for_everyone_61880256/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
@@ -80,6 +413,15 @@
       <pubDate>Sun, 02 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://carjed.github.io/audiences/reports/minimum_epistasis_interpolation_for_sequence-function_relationships_61425320/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>3D RNA-seq - a powerful and flexible tool for rapid and accurate differential expression and alternative splicing analysis of RNA-seq data for biologists, bioRxiv, 2019-06-01</title>
+      <link>https://carjed.github.io/audiences/reports/3d_rna-seq_-_a_powerful_and_flexible_tool_for_rapid_and_accurate_differential_expression_and_alternative_splicing_analysis_of_rna-seq_data_for_biologists_61367532/</link>
+      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/3d_rna-seq_-_a_powerful_and_flexible_tool_for_rapid_and_accurate_differential_expression_and_alternative_splicing_analysis_of_rna-seq_data_for_biologists_61367532/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
@@ -192,6 +534,15 @@
     </item>
     
     <item>
+      <title>A Fast and Flexible Algorithm for Solving the Lasso in Large-scale and Ultrahigh-dimensional Problems, bioRxiv, 2019-05-07</title>
+      <link>https://carjed.github.io/audiences/reports/a_fast_and_flexible_algorithm_for_solving_the_lasso_in_large-scale_and_ultrahigh-dimensional_problems_60037758/</link>
+      <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/a_fast_and_flexible_algorithm_for_solving_the_lasso_in_large-scale_and_ultrahigh-dimensional_problems_60037758/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
       <title>Using Deep Learning to Annotate the Protein Universe, bioRxiv, 2019-05-06</title>
       <link>https://carjed.github.io/audiences/reports/using_deep_learning_to_annotate_the_protein_universe_59887724/</link>
       <pubDate>Mon, 06 May 2019 00:00:00 +0000</pubDate>
@@ -300,6 +651,15 @@
     </item>
     
     <item>
+      <title>MASST A Web-based Basic Mass Spectrometry Search Tool for Molecules to Search Public Data, bioRxiv, 2019-03-28</title>
+      <link>https://carjed.github.io/audiences/reports/masst_a_web-based_basic_mass_spectrometry_search_tool_for_molecules_to_search_public_data_57938540/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/masst_a_web-based_basic_mass_spectrometry_search_tool_for_molecules_to_search_public_data_57938540/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
       <title>NanoDJ A Dockerized Jupyter Notebook for Interactive Oxford Nanopore MinION Sequence Manipulation and Genome Assembly, bioRxiv, 2019-03-28</title>
       <link>https://carjed.github.io/audiences/reports/nanodj_a_dockerized_jupyter_notebook_for_interactive_oxford_nanopore_minion_sequence_manipulation_and_genome_assembly_57935047/</link>
       <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
@@ -314,6 +674,15 @@
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://carjed.github.io/audiences/reports/a_systematic_evaluation_of_single_cell_rna-seq_analysis_pipelines_library_preparation_and_normalisation_methods_have_the_biggest_impact_on_the_performance_of_scrna-seq_studies_57311999/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>A Systematic Evaluation of Single Cell RNA-Seq Analysis Pipelines, bioRxiv, 2019-03-20</title>
+      <link>https://carjed.github.io/audiences/reports/a_systematic_evaluation_of_single_cell_rna-seq_analysis_pipelines_57311999/</link>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/a_systematic_evaluation_of_single_cell_rna-seq_analysis_pipelines_57311999/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
@@ -359,6 +728,15 @@
       <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://carjed.github.io/audiences/reports/a_comprehensive_examination_of_nanopore_native_rna_sequencing_for_characterization_of_complex_transcriptomes_56864682/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Deep learning of representations for transcriptomics-based phenotype prediction, bioRxiv, 2019-03-12</title>
+      <link>https://carjed.github.io/audiences/reports/deep_learning_of_representations_for_transcriptomics-based_phenotype_prediction_56908924/</link>
+      <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/deep_learning_of_representations_for_transcriptomics-based_phenotype_prediction_56908924/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
@@ -642,6 +1020,15 @@
     </item>
     
     <item>
+      <title>Generative modeling and latent space arithmetics predict single-cell perturbation response across cell types, studies and species, bioRxiv, 2018-11-30</title>
+      <link>https://carjed.github.io/audiences/reports/generative_modeling_and_latent_space_arithmetics_predict_single-cell_perturbation_response_across_cell_types_studies_and_species_51976732/</link>
+      <pubDate>Fri, 30 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/generative_modeling_and_latent_space_arithmetics_predict_single-cell_perturbation_response_across_cell_types_studies_and_species_51976732/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
       <title>Naught all zeros in sequence count data are the same, bioRxiv, 2018-11-27</title>
       <link>https://carjed.github.io/audiences/reports/naught_all_zeros_in_sequence_count_data_are_the_same_51782152/</link>
       <pubDate>Tue, 27 Nov 2018 00:00:00 +0000</pubDate>
@@ -728,6 +1115,24 @@
       <pubDate>Wed, 31 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://carjed.github.io/audiences/reports/a_practical_guide_to_methods_controlling_false_discoveries_in_computational_biology_50556898/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Data Denoising with transfer learning in single-cell transcriptomics, bioRxiv, 2018-10-31</title>
+      <link>https://carjed.github.io/audiences/reports/data_denoising_with_transfer_learning_in_single-cell_transcriptomics_50557229/</link>
+      <pubDate>Wed, 31 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/data_denoising_with_transfer_learning_in_single-cell_transcriptomics_50557229/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Personalized and graph genomes reveal missing signal in epigenomic data, bioRxiv, 2018-10-31</title>
+      <link>https://carjed.github.io/audiences/reports/personalized_and_graph_genomes_reveal_missing_signal_in_epigenomic_data_50557239/</link>
+      <pubDate>Wed, 31 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/personalized_and_graph_genomes_reveal_missing_signal_in_epigenomic_data_50557239/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
@@ -822,6 +1227,15 @@
     </item>
     
     <item>
+      <title>MetaCell analysis of single cell RNA-seq data using k-NN graph partitions, bioRxiv, 2018-10-09</title>
+      <link>https://carjed.github.io/audiences/reports/metacell_analysis_of_single_cell_rna-seq_data_using_k-nn_graph_partitions_49388870/</link>
+      <pubDate>Tue, 09 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/metacell_analysis_of_single_cell_rna-seq_data_using_k-nn_graph_partitions_49388870/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
       <title>Combining Gene Ontology with Deep Neural Networks to Enhance the Clustering of Single Cell RNA-Seq Data, bioRxiv, 2018-10-07</title>
       <link>https://carjed.github.io/audiences/reports/combining_gene_ontology_with_deep_neural_networks_to_enhance_the_clustering_of_single_cell_rna-seq_data_49343155/</link>
       <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
@@ -836,6 +1250,15 @@
       <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://carjed.github.io/audiences/reports/bazam_a_rapid_method_for_read_extraction_and_realignment_of_high_throughput_sequencing_data_49189297/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Structural variants identified by Oxford Nanopore PromethION sequencing of the human genome, bioRxiv, 2018-10-04</title>
+      <link>https://carjed.github.io/audiences/reports/structural_variants_identified_by_oxford_nanopore_promethion_sequencing_of_the_human_genome_49190759/</link>
+      <pubDate>Thu, 04 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/structural_variants_identified_by_oxford_nanopore_promethion_sequencing_of_the_human_genome_49190759/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
@@ -894,6 +1317,33 @@
     </item>
     
     <item>
+      <title>Rapid heuristic inference of antibiotic resistance and susceptibility by genomic neighbor typing, bioRxiv, 2018-08-29</title>
+      <link>https://carjed.github.io/audiences/reports/rapid_heuristic_inference_of_antibiotic_resistance_and_susceptibility_by_genomic_neighbor_typing_47237654/</link>
+      <pubDate>Wed, 29 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/rapid_heuristic_inference_of_antibiotic_resistance_and_susceptibility_by_genomic_neighbor_typing_47237654/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Fast Batch Alignment of Single Cell Transcriptomes Unifies Multiple Mouse Cell Atlases into an Integrated Landscape, bioRxiv, 2018-08-21</title>
+      <link>https://carjed.github.io/audiences/reports/fast_batch_alignment_of_single_cell_transcriptomes_unifies_multiple_mouse_cell_atlases_into_an_integrated_landscape_46797613/</link>
+      <pubDate>Tue, 21 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/fast_batch_alignment_of_single_cell_transcriptomes_unifies_multiple_mouse_cell_atlases_into_an_integrated_landscape_46797613/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>One read per cell per gene is optimal for single-cell RNA-Seq, bioRxiv, 2018-08-10</title>
+      <link>https://carjed.github.io/audiences/reports/one_read_per_cell_per_gene_is_optimal_for_single-cell_rna-seq_46348646/</link>
+      <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/one_read_per_cell_per_gene_is_optimal_for_single-cell_rna-seq_46348646/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
       <title>Parameter tuning is a key part of dimensionality reduction via deep variational autoencoders for single cell RNA transcriptomics, bioRxiv, 2018-08-06</title>
       <link>https://carjed.github.io/audiences/reports/parameter_tuning_is_a_key_part_of_dimensionality_reduction_via_deep_variational_autoencoders_for_single_cell_rna_transcriptomics_46095947/</link>
       <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
@@ -912,11 +1362,47 @@
     </item>
     
     <item>
+      <title>Panoramic stitching of heterogeneous single-cell transcriptomic data, bioRxiv, 2018-07-18</title>
+      <link>https://carjed.github.io/audiences/reports/panoramic_stitching_of_heterogeneous_single-cell_transcriptomic_data_45156682/</link>
+      <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/panoramic_stitching_of_heterogeneous_single-cell_transcriptomic_data_45156682/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>DoubletFinder Doublet detection in single-cell RNA sequencing data using artificial nearest neighbors, bioRxiv, 2018-06-20</title>
+      <link>https://carjed.github.io/audiences/reports/doubletfinder_doublet_detection_in_single-cell_rna_sequencing_data_using_artificial_nearest_neighbors_43932119/</link>
+      <pubDate>Wed, 20 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/doubletfinder_doublet_detection_in_single-cell_rna_sequencing_data_using_artificial_nearest_neighbors_43932119/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
       <title>Alevin efficiently estimates accurate gene abundances from dscRNA-seq data, bioRxiv, 2018-06-01</title>
       <link>https://carjed.github.io/audiences/reports/alevin_efficiently_estimates_accurate_gene_abundances_from_dscrna-seq_data_43138890/</link>
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://carjed.github.io/audiences/reports/alevin_efficiently_estimates_accurate_gene_abundances_from_dscrna-seq_data_43138890/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Evaluation of Deep Learning Strategies for Nucleus Segmentation in Fluorescence Images, bioRxiv, 2018-05-31</title>
+      <link>https://carjed.github.io/audiences/reports/evaluation_of_deep_learning_strategies_for_nucleus_segmentation_in_fluorescence_images_43071593/</link>
+      <pubDate>Thu, 31 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/evaluation_of_deep_learning_strategies_for_nucleus_segmentation_in_fluorescence_images_43071593/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Massive single-cell RNA-seq analysis and imputation via deep learning, bioRxiv, 2018-05-06</title>
+      <link>https://carjed.github.io/audiences/reports/massive_single-cell_rna-seq_analysis_and_imputation_via_deep_learning_40789711/</link>
+      <pubDate>Sun, 06 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/massive_single-cell_rna-seq_analysis_and_imputation_via_deep_learning_40789711/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
@@ -930,6 +1416,24 @@
     </item>
     
     <item>
+      <title>FMRIPrep a robust preprocessing pipeline for functional MRI, bioRxiv, 2018-04-26</title>
+      <link>https://carjed.github.io/audiences/reports/fmriprep_a_robust_preprocessing_pipeline_for_functional_mri_39314160/</link>
+      <pubDate>Thu, 26 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/fmriprep_a_robust_preprocessing_pipeline_for_functional_mri_39314160/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>SoupX removes ambient RNA contamination from droplet based single cell RNA sequencing data, bioRxiv, 2018-04-21</title>
+      <link>https://carjed.github.io/audiences/reports/soupx_removes_ambient_rna_contamination_from_droplet_based_single_cell_rna_sequencing_data_38490080/</link>
+      <pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/soupx_removes_ambient_rna_contamination_from_droplet_based_single_cell_rna_sequencing_data_38490080/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
       <title>Single cell RNA-seq denoising using a deep count autoencoder, bioRxiv, 2018-04-14</title>
       <link>https://carjed.github.io/audiences/reports/single_cell_rna-seq_denoising_using_a_deep_count_autoencoder_37070931/</link>
       <pubDate>Sat, 14 Apr 2018 00:00:00 +0000</pubDate>
@@ -939,11 +1443,92 @@
     </item>
     
     <item>
+      <title>Evaluation of UMAP as an alternative to t-SNE for single-cell data, bioRxiv, 2018-04-10</title>
+      <link>https://carjed.github.io/audiences/reports/evaluation_of_umap_as_an_alternative_to_t-sne_for_single-cell_data_36187448/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/evaluation_of_umap_as_an_alternative_to_t-sne_for_single-cell_data_36187448/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Bayesian Inference for a Generative Model of Transcriptome Profiles from Single-cell RNA Sequencing, bioRxiv, 2018-03-30</title>
+      <link>https://carjed.github.io/audiences/reports/bayesian_inference_for_a_generative_model_of_transcriptome_profiles_from_single-cell_rna_sequencing_35017347/</link>
+      <pubDate>Fri, 30 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/bayesian_inference_for_a_generative_model_of_transcriptome_profiles_from_single-cell_rna_sequencing_35017347/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>A comparison of single-cell trajectory inference methods towards more accurate and robust tools, bioRxiv, 2018-03-06</title>
+      <link>https://carjed.github.io/audiences/reports/a_comparison_of_single-cell_trajectory_inference_methods_towards_more_accurate_and_robust_tools_33972849/</link>
+      <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/a_comparison_of_single-cell_trajectory_inference_methods_towards_more_accurate_and_robust_tools_33972849/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>fastp an ultra-fast all-in-one FASTQ preprocessor, bioRxiv, 2018-03-02</title>
+      <link>https://carjed.github.io/audiences/reports/fastp_an_ultra-fast_all-in-one_fastq_preprocessor_33829378/</link>
+      <pubDate>Fri, 02 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/fastp_an_ultra-fast_all-in-one_fastq_preprocessor_33829378/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
       <title>Virtual ChIP-seq predicting transcription factor binding by learning from the transcriptome, bioRxiv, 2018-03-01</title>
       <link>https://carjed.github.io/audiences/reports/virtual_chip-seq_predicting_transcription_factor_binding_by_learning_from_the_transcriptome_33792172/</link>
       <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>https://carjed.github.io/audiences/reports/virtual_chip-seq_predicting_transcription_factor_binding_by_learning_from_the_transcriptome_33792172/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>End-to-end differentiable learning of protein structure, bioRxiv, 2018-02-15</title>
+      <link>https://carjed.github.io/audiences/reports/end-to-end_differentiable_learning_of_protein_structure_33208029/</link>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/end-to-end_differentiable_learning_of_protein_structure_33208029/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Identification of transcriptional signatures for cell types from single-cell RNA-Seq, bioRxiv, 2018-02-13</title>
+      <link>https://carjed.github.io/audiences/reports/identification_of_transcriptional_signatures_for_cell_types_from_single-cell_rna-seq_32539588/</link>
+      <pubDate>Tue, 13 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/identification_of_transcriptional_signatures_for_cell_types_from_single-cell_rna-seq_32539588/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Integrating Hi-C links with assembly graphs for chromosome-scale assembly, bioRxiv, 2018-02-08</title>
+      <link>https://carjed.github.io/audiences/reports/integrating_hi-c_links_with_assembly_graphs_for_chromosome-scale_assembly_32786495/</link>
+      <pubDate>Thu, 08 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/integrating_hi-c_links_with_assembly_graphs_for_chromosome-scale_assembly_32786495/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Inference of CRISPR Edits from Sanger Trace Data, bioRxiv, 2018-01-21</title>
+      <link>https://carjed.github.io/audiences/reports/inference_of_crispr_edits_from_sanger_trace_data_31983431/</link>
+      <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/inference_of_crispr_edits_from_sanger_trace_data_31983431/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Assembly of Long Error-Prone Reads Using Repeat Graphs, bioRxiv, 2018-01-13</title>
+      <link>https://carjed.github.io/audiences/reports/assembly_of_long_error-prone_reads_using_repeat_graphs_31594339/</link>
+      <pubDate>Sat, 13 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/assembly_of_long_error-prone_reads_using_repeat_graphs_31594339/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
@@ -1011,11 +1596,29 @@
     </item>
     
     <item>
+      <title>bioSyntax Syntax Highlighting For Computational Biology, bioRxiv, 2017-12-21</title>
+      <link>https://carjed.github.io/audiences/reports/biosyntax_syntax_highlighting_for_computational_biology_30704282/</link>
+      <pubDate>Thu, 21 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/biosyntax_syntax_highlighting_for_computational_biology_30704282/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
       <title>Content-Aware Image Restoration Pushing the Limits of Fluorescence Microscopy, bioRxiv, 2017-12-20</title>
       <link>https://carjed.github.io/audiences/reports/content-aware_image_restoration_pushing_the_limits_of_fluorescence_microscopy_30693461/</link>
       <pubDate>Wed, 20 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://carjed.github.io/audiences/reports/content-aware_image_restoration_pushing_the_limits_of_fluorescence_microscopy_30693461/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Exploring Single-Cell Data with Deep Multitasking Neural Networks, bioRxiv, 2017-12-20</title>
+      <link>https://carjed.github.io/audiences/reports/exploring_single-cell_data_with_deep_multitasking_neural_networks_30693460/</link>
+      <pubDate>Wed, 20 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/exploring_single-cell_data_with_deep_multitasking_neural_networks_30693460/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
@@ -1052,6 +1655,15 @@
       <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://carjed.github.io/audiences/reports/long_read_annotation_lorean_automated_eukaryotic_genome_annotation_based_on_long-read_cdna_sequencing_30167444/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>K-nearest neighbor smoothing for high-throughput single-cell RNA-Seq data, bioRxiv, 2017-12-06</title>
+      <link>https://carjed.github.io/audiences/reports/k-nearest_neighbor_smoothing_for_high-throughput_single-cell_rna-seq_data_29239734/</link>
+      <pubDate>Wed, 06 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/k-nearest_neighbor_smoothing_for_high-throughput_single-cell_rna-seq_data_29239734/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
@@ -1101,6 +1713,15 @@
     </item>
     
     <item>
+      <title>Recovery of gene haplotypes from a metagenome, bioRxiv, 2017-11-23</title>
+      <link>https://carjed.github.io/audiences/reports/recovery_of_gene_haplotypes_from_a_metagenome_29296843/</link>
+      <pubDate>Thu, 23 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/recovery_of_gene_haplotypes_from_a_metagenome_29296843/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
       <title>Comprehensive analysis of mobile genetic elements in the gut microbiome reveals phylum-level niche-adaptive gene pools, bioRxiv, 2017-11-14</title>
       <link>https://carjed.github.io/audiences/reports/comprehensive_analysis_of_mobile_genetic_elements_in_the_gut_microbiome_reveals_phylum-level_niche-adaptive_gene_pools_28507839/</link>
       <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
@@ -1115,6 +1736,177 @@
       <pubDate>Tue, 14 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>https://carjed.github.io/audiences/reports/multi-omics_factor_analysis_-_a_framework_for_unsupervised_integration_of_multi-omic_data_sets_28740061/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Graph abstraction reconciles clustering with trajectory inference through a topology preserving map of single cells, bioRxiv, 2017-10-26</title>
+      <link>https://carjed.github.io/audiences/reports/graph_abstraction_reconciles_clustering_with_trajectory_inference_through_a_topology_preserving_map_of_single_cells_27917567/</link>
+      <pubDate>Thu, 26 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/graph_abstraction_reconciles_clustering_with_trajectory_inference_through_a_topology_preserving_map_of_single_cells_27917567/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Bioconda A sustainable and comprehensive software distribution for the life sciences, bioRxiv, 2017-10-23</title>
+      <link>https://carjed.github.io/audiences/reports/bioconda_a_sustainable_and_comprehensive_software_distribution_for_the_life_sciences_27767479/</link>
+      <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/bioconda_a_sustainable_and_comprehensive_software_distribution_for_the_life_sciences_27767479/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Cluster Headache Comparing Clustering Tools for 10X Single Cell Sequencing Data, bioRxiv, 2017-10-17</title>
+      <link>https://carjed.github.io/audiences/reports/cluster_headache_comparing_clustering_tools_for_10x_single_cell_sequencing_data_27532943/</link>
+      <pubDate>Tue, 17 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/cluster_headache_comparing_clustering_tools_for_10x_single_cell_sequencing_data_27532943/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>A cancer pharmacogenomic screen powering crowd-sourced advancement of drug combination prediction, bioRxiv, 2017-10-10</title>
+      <link>https://carjed.github.io/audiences/reports/a_cancer_pharmacogenomic_screen_powering_crowd-sourced_advancement_of_drug_combination_prediction_27210407/</link>
+      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/a_cancer_pharmacogenomic_screen_powering_crowd-sourced_advancement_of_drug_combination_prediction_27210407/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Assessment of batch-correction methods for scRNA-seq data with a new test metric, bioRxiv, 2017-10-10</title>
+      <link>https://carjed.github.io/audiences/reports/assessment_of_batch-correction_methods_for_scrna-seq_data_with_a_new_test_metric_27199250/</link>
+      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/assessment_of_batch-correction_methods_for_scrna-seq_data_with_a_new_test_metric_27199250/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Fast and Accurate Genomic Analyses using Genome Graphs, bioRxiv, 2017-09-28</title>
+      <link>https://carjed.github.io/audiences/reports/fast_and_accurate_genomic_analyses_using_genome_graphs_26654308/</link>
+      <pubDate>Thu, 28 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/fast_and_accurate_genomic_analyses_using_genome_graphs_26654308/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Reconstruction of developmental landscapes by optimal-transport analysis of single-cell gene expression sheds light on cellular reprogramming, bioRxiv, 2017-09-28</title>
+      <link>https://carjed.github.io/audiences/reports/reconstruction_of_developmental_landscapes_by_optimal-transport_analysis_of_single-cell_gene_expression_sheds_light_on_cellular_reprogramming_26648405/</link>
+      <pubDate>Thu, 28 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/reconstruction_of_developmental_landscapes_by_optimal-transport_analysis_of_single-cell_gene_expression_sheds_light_on_cellular_reprogramming_26648405/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Strelka2 Fast and accurate variant calling for clinical sequencing applications, bioRxiv, 2017-09-24</title>
+      <link>https://carjed.github.io/audiences/reports/strelka2_fast_and_accurate_variant_calling_for_clinical_sequencing_applications_26489024/</link>
+      <pubDate>Sun, 24 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/strelka2_fast_and_accurate_variant_calling_for_clinical_sequencing_applications_26489024/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Updating the 97% identity threshold for 16S ribosomal RNA OTUs, bioRxiv, 2017-09-22</title>
+      <link>https://carjed.github.io/audiences/reports/updating_the_97_identity_threshold_for_16s_ribosomal_rna_otus_26415833/</link>
+      <pubDate>Fri, 22 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/updating_the_97_identity_threshold_for_16s_ribosomal_rna_otus_26415833/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Massive Mining of Publicly Available RNA-seq Data from Human and Mouse, bioRxiv, 2017-09-15</title>
+      <link>https://carjed.github.io/audiences/reports/massive_mining_of_publicly_available_rna-seq_data_from_human_and_mouse_25280819/</link>
+      <pubDate>Fri, 15 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/massive_mining_of_publicly_available_rna-seq_data_from_human_and_mouse_25280819/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Chiron Translating nanopore raw signal directly into nucleotide sequence using deep learning, bioRxiv, 2017-08-24</title>
+      <link>https://carjed.github.io/audiences/reports/chiron_translating_nanopore_raw_signal_directly_into_nucleotide_sequence_using_deep_learning_24227077/</link>
+      <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/chiron_translating_nanopore_raw_signal_directly_into_nucleotide_sequence_using_deep_learning_24227077/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Extracting a Biologically Relevant Latent Space from Cancer Transcriptomes with Variational Autoencoders, bioRxiv, 2017-08-12</title>
+      <link>https://carjed.github.io/audiences/reports/extracting_a_biologically_relevant_latent_space_from_cancer_transcriptomes_with_variational_autoencoders_23641575/</link>
+      <pubDate>Sat, 12 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/extracting_a_biologically_relevant_latent_space_from_cancer_transcriptomes_with_variational_autoencoders_23641575/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>MSPminer abundance-based reconstitution of microbial pan-genomes from shotgun meta-genomic data, bioRxiv, 2017-08-09</title>
+      <link>https://carjed.github.io/audiences/reports/mspminer_abundance-based_reconstitution_of_microbial_pan-genomes_from_shotgun_meta-genomic_data_23519793/</link>
+      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/mspminer_abundance-based_reconstitution_of_microbial_pan-genomes_from_shotgun_meta-genomic_data_23519793/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Bioinformatics Core Competencies for Undergraduate Life Sciences Education, bioRxiv, 2017-08-04</title>
+      <link>https://carjed.github.io/audiences/reports/bioinformatics_core_competencies_for_undergraduate_life_sciences_education_23391916/</link>
+      <pubDate>Fri, 04 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/bioinformatics_core_competencies_for_undergraduate_life_sciences_education_23391916/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Accurate detection of complex structural variations using single molecule sequencing, bioRxiv, 2017-07-29</title>
+      <link>https://carjed.github.io/audiences/reports/accurate_detection_of_complex_structural_variations_using_single_molecule_sequencing_22944546/</link>
+      <pubDate>Sat, 29 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/accurate_detection_of_complex_structural_variations_using_single_molecule_sequencing_22944546/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Correcting batch effects in single-cell RNA sequencing data by matching mutual nearest neighbours, bioRxiv, 2017-07-19</title>
+      <link>https://carjed.github.io/audiences/reports/correcting_batch_effects_in_single-cell_rna_sequencing_data_by_matching_mutual_nearest_neighbours_22107405/</link>
+      <pubDate>Wed, 19 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/correcting_batch_effects_in_single-cell_rna_sequencing_data_by_matching_mutual_nearest_neighbours_22107405/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Text mining of 15 million full-text scientific articles, bioRxiv, 2017-07-12</title>
+      <link>https://carjed.github.io/audiences/reports/text_mining_of_15_million_full-text_scientific_articles_21775080/</link>
+      <pubDate>Wed, 12 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/text_mining_of_15_million_full-text_scientific_articles_21775080/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Privacy-preserving generative deep neural networks support clinical data sharing, bioRxiv, 2017-07-06</title>
+      <link>https://carjed.github.io/audiences/reports/privacy-preserving_generative_deep_neural_networks_support_clinical_data_sharing_21529223/</link>
+      <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/privacy-preserving_generative_deep_neural_networks_support_clinical_data_sharing_21529223/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Evaluating Metagenome Assembly on a Simple Defined Community with Many Strain Variants, bioRxiv, 2017-06-26</title>
+      <link>https://carjed.github.io/audiences/reports/evaluating_metagenome_assembly_on_a_simple_defined_community_with_many_strain_variants_21339367/</link>
+      <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/evaluating_metagenome_assembly_on_a_simple_defined_community_with_many_strain_variants_21339367/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
@@ -1137,11 +1929,38 @@
     </item>
     
     <item>
+      <title>Integrating long-range connectivity information into de Bruijn graphs, bioRxiv, 2017-06-09</title>
+      <link>https://carjed.github.io/audiences/reports/integrating_long-range_connectivity_information_into_de_bruijn_graphs_20914627/</link>
+      <pubDate>Fri, 09 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/integrating_long-range_connectivity_information_into_de_bruijn_graphs_20914627/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
       <title>Improving the value of public RNA-seq expression data by phenotype prediction, bioRxiv, 2017-06-04</title>
       <link>https://carjed.github.io/audiences/reports/improving_the_value_of_public_rna-seq_expression_data_by_phenotype_prediction_20800178/</link>
       <pubDate>Sun, 04 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>https://carjed.github.io/audiences/reports/improving_the_value_of_public_rna-seq_expression_data_by_phenotype_prediction_20800178/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>SCENIC Single-cell regulatory network inference and clustering, bioRxiv, 2017-06-01</title>
+      <link>https://carjed.github.io/audiences/reports/scenic_single-cell_regulatory_network_inference_and_clustering_20742576/</link>
+      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/scenic_single-cell_regulatory_network_inference_and_clustering_20742576/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Bias, robustness and scalability in differential expression analysis of single-cell RNA-seq data, bioRxiv, 2017-05-29</title>
+      <link>https://carjed.github.io/audiences/reports/bias_robustness_and_scalability_in_differential_expression_analysis_of_single-cell_rna-seq_data_20672409/</link>
+      <pubDate>Mon, 29 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/bias_robustness_and_scalability_in_differential_expression_analysis_of_single-cell_rna-seq_data_20672409/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
@@ -1155,11 +1974,38 @@
     </item>
     
     <item>
+      <title>scImpute Accurate And Robust Imputation For Single Cell RNA-Seq Data, bioRxiv, 2017-05-25</title>
+      <link>https://carjed.github.io/audiences/reports/scimpute_accurate_and_robust_imputation_for_single_cell_rna-seq_data_20468125/</link>
+      <pubDate>Thu, 25 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/scimpute_accurate_and_robust_imputation_for_single_cell_rna-seq_data_20468125/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
       <title>Gene annotation bias impedes biomedical research, bioRxiv, 2017-05-03</title>
       <link>https://carjed.github.io/audiences/reports/gene_annotation_bias_impedes_biomedical_research_19792504/</link>
       <pubDate>Wed, 03 May 2017 00:00:00 +0000</pubDate>
       
       <guid>https://carjed.github.io/audiences/reports/gene_annotation_bias_impedes_biomedical_research_19792504/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Strain-resolved microbiome sequencing reveals mobile elements that drive bacterial competition on a clinical timescale, bioRxiv, 2017-04-08</title>
+      <link>https://carjed.github.io/audiences/reports/strain-resolved_microbiome_sequencing_reveals_mobile_elements_that_drive_bacterial_competition_on_a_clinical_timescale_18603083/</link>
+      <pubDate>Sat, 08 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/strain-resolved_microbiome_sequencing_reveals_mobile_elements_that_drive_bacterial_competition_on_a_clinical_timescale_18603083/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Machine Learning-based state-of-the-art methods for the classification of RNA-Seq data, bioRxiv, 2017-03-27</title>
+      <link>https://carjed.github.io/audiences/reports/machine_learning-based_state-of-the-art_methods_for_the_classification_of_rna-seq_data_18152899/</link>
+      <pubDate>Mon, 27 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/machine_learning-based_state-of-the-art_methods_for_the_classification_of_rna-seq_data_18152899/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
@@ -1182,11 +2028,65 @@
     </item>
     
     <item>
+      <title>STAR-Fusion Fast and Accurate Fusion Transcript Detection from RNA-Seq, bioRxiv, 2017-03-25</title>
+      <link>https://carjed.github.io/audiences/reports/star-fusion_fast_and_accurate_fusion_transcript_detection_from_rna-seq_18090802/</link>
+      <pubDate>Sat, 25 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/star-fusion_fast_and_accurate_fusion_transcript_detection_from_rna-seq_18090802/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Visualizing Structure and Transitions for Biological Data Exploration, bioRxiv, 2017-03-25</title>
+      <link>https://carjed.github.io/audiences/reports/visualizing_structure_and_transitions_for_biological_data_exploration_18090800/</link>
+      <pubDate>Sat, 25 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/visualizing_structure_and_transitions_for_biological_data_exploration_18090800/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Multiplexing droplet-based single cell RNA-sequencing using natural genetic barcodes, bioRxiv, 2017-03-21</title>
+      <link>https://carjed.github.io/audiences/reports/multiplexing_droplet-based_single_cell_rna-sequencing_using_natural_genetic_barcodes_17847670/</link>
+      <pubDate>Tue, 21 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/multiplexing_droplet-based_single_cell_rna-sequencing_using_natural_genetic_barcodes_17847670/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
       <title>xCell Digitally portraying the tissue cellular heterogeneity landscape, bioRxiv, 2017-03-07</title>
       <link>https://carjed.github.io/audiences/reports/xcell_digitally_portraying_the_tissue_cellular_heterogeneity_landscape_17064478/</link>
       <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://carjed.github.io/audiences/reports/xcell_digitally_portraying_the_tissue_cellular_heterogeneity_landscape_17064478/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Enabling cross-study analysis of RNA-Sequencing data, bioRxiv, 2017-02-28</title>
+      <link>https://carjed.github.io/audiences/reports/enabling_cross-study_analysis_of_rna-sequencing_data_16841354/</link>
+      <pubDate>Tue, 28 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/enabling_cross-study_analysis_of_rna-sequencing_data_16841354/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>MAGIC A diffusion-based imputation method reveals gene-gene interactions in single-cell RNA-sequencing data, bioRxiv, 2017-02-26</title>
+      <link>https://carjed.github.io/audiences/reports/magic_a_diffusion-based_imputation_method_reveals_gene-gene_interactions_in_single-cell_rna-sequencing_data_16752540/</link>
+      <pubDate>Sun, 26 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/magic_a_diffusion-based_imputation_method_reveals_gene-gene_interactions_in_single-cell_rna-sequencing_data_16752540/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Granatum a graphical single-cell RNA-Seq analysis pipeline for genomics scientists, bioRxiv, 2017-02-23</title>
+      <link>https://carjed.github.io/audiences/reports/granatum_a_graphical_single-cell_rna-seq_analysis_pipeline_for_genomics_scientists_16719892/</link>
+      <pubDate>Thu, 23 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/granatum_a_graphical_single-cell_rna-seq_analysis_pipeline_for_genomics_scientists_16719892/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
@@ -1200,6 +2100,141 @@
     </item>
     
     <item>
+      <title>mixOmics an R package for ‘omics feature selection and multiple data integration, bioRxiv, 2017-02-15</title>
+      <link>https://carjed.github.io/audiences/reports/mixomics_an_r_package_for_omics_feature_selection_and_multiple_data_integration_16408569/</link>
+      <pubDate>Wed, 15 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/mixomics_an_r_package_for_omics_feature_selection_and_multiple_data_integration_16408569/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>A Fast Approximate Algorithm for Mapping Long Reads to Large Reference Databases, bioRxiv, 2017-01-28</title>
+      <link>https://carjed.github.io/audiences/reports/a_fast_approximate_algorithm_for_mapping_long_reads_to_large_reference_databases_15882691/</link>
+      <pubDate>Sat, 28 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/a_fast_approximate_algorithm_for_mapping_long_reads_to_large_reference_databases_15882691/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Nucleotide sequence and DNaseI sensitivity are predictive of 3D chromatin architecture, bioRxiv, 2017-01-28</title>
+      <link>https://carjed.github.io/audiences/reports/nucleotide_sequence_and_dnasei_sensitivity_are_predictive_of_3d_chromatin_architecture_15876791/</link>
+      <pubDate>Sat, 28 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/nucleotide_sequence_and_dnasei_sensitivity_are_predictive_of_3d_chromatin_architecture_15876791/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Genome Graphs, bioRxiv, 2017-01-19</title>
+      <link>https://carjed.github.io/audiences/reports/genome_graphs_15578075/</link>
+      <pubDate>Thu, 19 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/genome_graphs_15578075/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Critical Assessment of Metagenome Interpretation – a benchmark of computational metagenomics software, bioRxiv, 2017-01-10</title>
+      <link>https://carjed.github.io/audiences/reports/critical_assessment_of_metagenome_interpretation__a_benchmark_of_computational_metagenomics_software_15342776/</link>
+      <pubDate>Tue, 10 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/critical_assessment_of_metagenome_interpretation__a_benchmark_of_computational_metagenomics_software_15342776/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>De novo Identification of DNA Modifications Enabled by Genome-Guided Nanopore Signal Processing, bioRxiv, 2016-12-16</title>
+      <link>https://carjed.github.io/audiences/reports/de_novo_identification_of_dna_modifications_enabled_by_genome-guided_nanopore_signal_processing_14782004/</link>
+      <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/de_novo_identification_of_dna_modifications_enabled_by_genome-guided_nanopore_signal_processing_14782004/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>SPRING a kinetic interface for visualizing high dimensional single-cell expression data, bioRxiv, 2016-11-30</title>
+      <link>https://carjed.github.io/audiences/reports/spring_a_kinetic_interface_for_visualizing_high_dimensional_single-cell_expression_data_14165909/</link>
+      <pubDate>Wed, 30 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/spring_a_kinetic_interface_for_visualizing_high_dimensional_single-cell_expression_data_14165909/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Predicting Enhancer-Promoter Interaction from Genomic Sequence with Deep Neural Networks, bioRxiv, 2016-11-03</title>
+      <link>https://carjed.github.io/audiences/reports/predicting_enhancer-promoter_interaction_from_genomic_sequence_with_deep_neural_networks_13288971/</link>
+      <pubDate>Thu, 03 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/predicting_enhancer-promoter_interaction_from_genomic_sequence_with_deep_neural_networks_13288971/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>WhatsHap fast and accurate read-based phasing, bioRxiv, 2016-11-03</title>
+      <link>https://carjed.github.io/audiences/reports/whatshap_fast_and_accurate_read-based_phasing_13282115/</link>
+      <pubDate>Thu, 03 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/whatshap_fast_and_accurate_read-based_phasing_13282115/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Pavian Interactive analysis of metagenomics data for microbiomics and pathogen identification, bioRxiv, 2016-11-01</title>
+      <link>https://carjed.github.io/audiences/reports/pavian_interactive_analysis_of_metagenomics_data_for_microbiomics_and_pathogen_identification_13208920/</link>
+      <pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/pavian_interactive_analysis_of_metagenomics_data_for_microbiomics_and_pathogen_identification_13208920/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Leveraging uncertainty information from deep neural networks for disease detection, bioRxiv, 2016-10-29</title>
+      <link>https://carjed.github.io/audiences/reports/leveraging_uncertainty_information_from_deep_neural_networks_for_disease_detection_13109055/</link>
+      <pubDate>Sat, 29 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/leveraging_uncertainty_information_from_deep_neural_networks_for_disease_detection_13109055/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>FIDDLE An integrative deep learning framework for functional genomic data inference, bioRxiv, 2016-10-19</title>
+      <link>https://carjed.github.io/audiences/reports/fiddle_an_integrative_deep_learning_framework_for_functional_genomic_data_inference_12689268/</link>
+      <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/fiddle_an_integrative_deep_learning_framework_for_functional_genomic_data_inference_12689268/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Reconstructing cell cycle and disease progression using deep learning, bioRxiv, 2016-10-19</title>
+      <link>https://carjed.github.io/audiences/reports/reconstructing_cell_cycle_and_disease_progression_using_deep_learning_12689216/</link>
+      <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/reconstructing_cell_cycle_and_disease_progression_using_deep_learning_12689216/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Canu scalable and accurate long-read assembly via adaptive k-mer weighting and repeat separation, bioRxiv, 2016-08-25</title>
+      <link>https://carjed.github.io/audiences/reports/canu_scalable_and_accurate_long-read_assembly_via_adaptive_k-mer_weighting_and_repeat_separation_10801136/</link>
+      <pubDate>Thu, 25 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/canu_scalable_and_accurate_long-read_assembly_via_adaptive_k-mer_weighting_and_repeat_separation_10801136/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>DeepAD Alzheimer’s Disease Classification via Deep Convolutional Neural Networks using MRI and fMRI, bioRxiv, 2016-08-22</title>
+      <link>https://carjed.github.io/audiences/reports/deepad_alzheimers_disease_classification_via_deep_convolutional_neural_networks_using_mri_and_fmri_10735970/</link>
+      <pubDate>Mon, 22 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/deepad_alzheimers_disease_classification_via_deep_convolutional_neural_networks_using_mri_and_fmri_10735970/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
       <title>Deep Learning and Association Rule Mining for Predicting Drug Response in Cancer. A Personalised Medicine Approach, bioRxiv, 2016-08-20</title>
       <link>https://carjed.github.io/audiences/reports/deep_learning_and_association_rule_mining_for_predicting_drug_response_in_cancer._a_personalised_medicine_approach_10708207/</link>
       <pubDate>Sat, 20 Aug 2016 00:00:00 +0000</pubDate>
@@ -1209,11 +2244,254 @@
     </item>
     
     <item>
+      <title>Hybrid assembly of the large and highly repetitive genome of Aegilops tauschii, a progenitor of bread wheat, with the mega-reads algorithm, bioRxiv, 2016-07-27</title>
+      <link>https://carjed.github.io/audiences/reports/hybrid_assembly_of_the_large_and_highly_repetitive_genome_of_aegilops_tauschii_a_progenitor_of_bread_wheat_with_the_mega-reads_algorithm_10058072/</link>
+      <pubDate>Wed, 27 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/hybrid_assembly_of_the_large_and_highly_repetitive_genome_of_aegilops_tauschii_a_progenitor_of_bread_wheat_with_the_mega-reads_algorithm_10058072/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Rapid and efficient analysis of 20,000 RNA-seq samples with Toil, bioRxiv, 2016-07-08</title>
+      <link>https://carjed.github.io/audiences/reports/rapid_and_efficient_analysis_of_20000_rna-seq_samples_with_toil_9426200/</link>
+      <pubDate>Fri, 08 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/rapid_and_efficient_analysis_of_20000_rna-seq_samples_with_toil_9426200/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Voodoo Machine Learning for Clinical Predictions, bioRxiv, 2016-06-20</title>
+      <link>https://carjed.github.io/audiences/reports/voodoo_machine_learning_for_clinical_predictions_8885167/</link>
+      <pubDate>Mon, 20 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/voodoo_machine_learning_for_clinical_predictions_8885167/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
       <title>A natural encoding of genetic variation in a Burrows-Wheeler Transform to enable mapping and genome inference, bioRxiv, 2016-06-16</title>
       <link>https://carjed.github.io/audiences/reports/a_natural_encoding_of_genetic_variation_in_a_burrows-wheeler_transform_to_enable_mapping_and_genome_inference_8777664/</link>
       <pubDate>Thu, 16 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>https://carjed.github.io/audiences/reports/a_natural_encoding_of_genetic_variation_in_a_burrows-wheeler_transform_to_enable_mapping_and_genome_inference_8777664/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Differential analysis of RNA-Seq incorporating quantification uncertainty, bioRxiv, 2016-06-11</title>
+      <link>https://carjed.github.io/audiences/reports/differential_analysis_of_rna-seq_incorporating_quantification_uncertainty_8650493/</link>
+      <pubDate>Sat, 11 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/differential_analysis_of_rna-seq_incorporating_quantification_uncertainty_8650493/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Phased Diploid Genome Assembly with Single Molecule Real-Time Sequencing, bioRxiv, 2016-06-04</title>
+      <link>https://carjed.github.io/audiences/reports/phased_diploid_genome_assembly_with_single_molecule_real-time_sequencing_8466253/</link>
+      <pubDate>Sat, 04 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/phased_diploid_genome_assembly_with_single_molecule_real-time_sequencing_8466253/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Accurate prediction of single-cell DNA methylation states using deep learning, bioRxiv, 2016-05-28</title>
+      <link>https://carjed.github.io/audiences/reports/accurate_prediction_of_single-cell_dna_methylation_states_using_deep_learning_8318038/</link>
+      <pubDate>Sat, 28 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/accurate_prediction_of_single-cell_dna_methylation_states_using_deep_learning_8318038/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>LD Hub a centralized database and web interface to perform LD score regression that maximizes the potential of summary level GWAS data for SNP heritability and genetic correlation analysis, bioRxiv, 2016-05-04</title>
+      <link>https://carjed.github.io/audiences/reports/ld_hub_a_centralized_database_and_web_interface_to_perform_ld_score_regression_that_maximizes_the_potential_of_summary_level_gwas_data_for_snp_heritability_and_genetic_correlation_analysis_7135656/</link>
+      <pubDate>Wed, 04 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/ld_hub_a_centralized_database_and_web_interface_to_perform_ld_score_regression_that_maximizes_the_potential_of_summary_level_gwas_data_for_snp_heritability_and_genetic_correlation_analysis_7135656/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Impact of knowledge accumulation on pathway enrichment analysis, bioRxiv, 2016-04-20</title>
+      <link>https://carjed.github.io/audiences/reports/impact_of_knowledge_accumulation_on_pathway_enrichment_analysis_6822372/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/impact_of_knowledge_accumulation_on_pathway_enrichment_analysis_6822372/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Ten Simple Rules for Taking Advantage of git and GitHub, bioRxiv, 2016-04-16</title>
+      <link>https://carjed.github.io/audiences/reports/ten_simple_rules_for_taking_advantage_of_git_and_github_6739181/</link>
+      <pubDate>Sat, 16 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/ten_simple_rules_for_taking_advantage_of_git_and_github_6739181/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>plasmidSPAdes Assembling Plasmids from Whole Genome Sequencing Data, bioRxiv, 2016-04-16</title>
+      <link>https://carjed.github.io/audiences/reports/plasmidspades_assembling_plasmids_from_whole_genome_sequencing_data_6748849/</link>
+      <pubDate>Sat, 16 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/plasmidspades_assembling_plasmids_from_whole_genome_sequencing_data_6748849/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Third-generation sequencing and the future of genomics, bioRxiv, 2016-04-14</title>
+      <link>https://carjed.github.io/audiences/reports/third-generation_sequencing_and_the_future_of_genomics_6661855/</link>
+      <pubDate>Thu, 14 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/third-generation_sequencing_and_the_future_of_genomics_6661855/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Exploring the phenotypic consequences of tissue specific gene expression variation inferred from GWAS summary statistics, bioRxiv, 2016-03-24</title>
+      <link>https://carjed.github.io/audiences/reports/exploring_the_phenotypic_consequences_of_tissue_specific_gene_expression_variation_inferred_from_gwas_summary_statistics_6293323/</link>
+      <pubDate>Thu, 24 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/exploring_the_phenotypic_consequences_of_tissue_specific_gene_expression_variation_inferred_from_gwas_summary_statistics_6293323/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>VcfR a package to manipulate and visualize VCF format data in R, bioRxiv, 2016-02-27</title>
+      <link>https://carjed.github.io/audiences/reports/vcfr_a_package_to_manipulate_and_visualize_vcf_format_data_in_r_6009315/</link>
+      <pubDate>Sat, 27 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/vcfr_a_package_to_manipulate_and_visualize_vcf_format_data_in_r_6009315/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Mash fast genome and metagenome distance estimation using MinHash, bioRxiv, 2015-10-27</title>
+      <link>https://carjed.github.io/audiences/reports/mash_fast_genome_and_metagenome_distance_estimation_using_minhash_4675375/</link>
+      <pubDate>Tue, 27 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/mash_fast_genome_and_metagenome_distance_estimation_using_minhash_4675375/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>RapMap A Rapid, Sensitive and Accurate Tool for Mapping RNA-seq Reads to Transcriptomes, bioRxiv, 2015-10-23</title>
+      <link>https://carjed.github.io/audiences/reports/rapmap_a_rapid_sensitive_and_accurate_tool_for_mapping_rna-seq_reads_to_transcriptomes_4663278/</link>
+      <pubDate>Fri, 23 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/rapmap_a_rapid_sensitive_and_accurate_tool_for_mapping_rna-seq_reads_to_transcriptomes_4663278/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Modeling of RNA-seq fragment sequence bias reduces systematic errors in transcript abundance estimation, bioRxiv, 2015-08-30</title>
+      <link>https://carjed.github.io/audiences/reports/modeling_of_rna-seq_fragment_sequence_bias_reduces_systematic_errors_in_transcript_abundance_estimation_4451233/</link>
+      <pubDate>Sun, 30 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/modeling_of_rna-seq_fragment_sequence_bias_reduces_systematic_errors_in_transcript_abundance_estimation_4451233/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Salmon provides accurate, fast, and bias-aware transcript expression estimates using dual-phase inference, bioRxiv, 2015-06-28</title>
+      <link>https://carjed.github.io/audiences/reports/salmon_provides_accurate_fast_and_bias-aware_transcript_expression_estimates_using_dual-phase_inference_4220410/</link>
+      <pubDate>Sun, 28 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/salmon_provides_accurate_fast_and_bias-aware_transcript_expression_estimates_using_dual-phase_inference_4220410/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>SAMBAM format v1.5 extensions for de novo assemblies, bioRxiv, 2015-05-30</title>
+      <link>https://carjed.github.io/audiences/reports/sambam_format_v1.5_extensions_for_de_novo_assemblies_4071857/</link>
+      <pubDate>Sat, 30 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/sambam_format_v1.5_extensions_for_de_novo_assemblies_4071857/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Streaming algorithms for identification of pathogens and antibiotic resistance potential from real-time MinIONTM sequencing, bioRxiv, 2015-05-16</title>
+      <link>https://carjed.github.io/audiences/reports/streaming_algorithms_for_identification_of_pathogens_and_antibiotic_resistance_potential_from_real-time_miniontm_sequencing_4001559/</link>
+      <pubDate>Sat, 16 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/streaming_algorithms_for_identification_of_pathogens_and_antibiotic_resistance_potential_from_real-time_miniontm_sequencing_4001559/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>An evaluation of the accuracy and speed of metagenome analysis tools, bioRxiv, 2015-04-10</title>
+      <link>https://carjed.github.io/audiences/reports/an_evaluation_of_the_accuracy_and_speed_of_metagenome_analysis_tools_3893958/</link>
+      <pubDate>Fri, 10 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/an_evaluation_of_the_accuracy_and_speed_of_metagenome_analysis_tools_3893958/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>A complete bacterial genome assembled de novo using only nanopore sequencing data, bioRxiv, 2015-02-20</title>
+      <link>https://carjed.github.io/audiences/reports/a_complete_bacterial_genome_assembled_de_novo_using_only_nanopore_sequencing_data_3718087/</link>
+      <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/a_complete_bacterial_genome_assembled_de_novo_using_only_nanopore_sequencing_data_3718087/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Oxford Nanopore Sequencing, Hybrid Error Correction, and de novo Assembly of a Eukaryotic Genome, bioRxiv, 2015-01-15</title>
+      <link>https://carjed.github.io/audiences/reports/oxford_nanopore_sequencing_hybrid_error_correction_and_de_novo_assembly_of_a_eukaryotic_genome_3040546/</link>
+      <pubDate>Thu, 15 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/oxford_nanopore_sequencing_hybrid_error_correction_and_de_novo_assembly_of_a_eukaryotic_genome_3040546/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>SpeedSeq Ultra-fast personal genome analysis and interpretation, bioRxiv, 2014-12-05</title>
+      <link>https://carjed.github.io/audiences/reports/speedseq_ultra-fast_personal_genome_analysis_and_interpretation_2951437/</link>
+      <pubDate>Fri, 05 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/speedseq_ultra-fast_personal_genome_analysis_and_interpretation_2951437/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Assembling Large Genomes with Single-Molecule Sequencing and Locality Sensitive Hashing, bioRxiv, 2014-08-15</title>
+      <link>https://carjed.github.io/audiences/reports/assembling_large_genomes_with_single-molecule_sequencing_and_locality_sensitive_hashing_2593946/</link>
+      <pubDate>Fri, 15 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/assembling_large_genomes_with_single-molecule_sequencing_and_locality_sensitive_hashing_2593946/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Poretools a toolkit for analyzing nanopore sequence data, bioRxiv, 2014-07-24</title>
+      <link>https://carjed.github.io/audiences/reports/poretools_a_toolkit_for_analyzing_nanopore_sequence_data_2532814/</link>
+      <pubDate>Thu, 24 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/poretools_a_toolkit_for_analyzing_nanopore_sequence_data_2532814/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Flexible analysis of transcriptome assemblies with Ballgown, bioRxiv, 2014-03-31</title>
+      <link>https://carjed.github.io/audiences/reports/flexible_analysis_of_transcriptome_assemblies_with_ballgown_2223226/</link>
+      <pubDate>Mon, 31 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/flexible_analysis_of_transcriptome_assemblies_with_ballgown_2223226/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2, bioRxiv, 2014-02-20</title>
+      <link>https://carjed.github.io/audiences/reports/moderated_estimation_of_fold_change_and_dispersion_for_rna-seq_data_with_deseq2_2131591/</link>
+      <pubDate>Thu, 20 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/moderated_estimation_of_fold_change_and_dispersion_for_rna-seq_data_with_deseq2_2131591/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     

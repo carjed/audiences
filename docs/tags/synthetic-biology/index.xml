@@ -6,10 +6,37 @@
     <description>Recent content in Synthetic Biology on audiences</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://carjed.github.io/audiences/tags/synthetic-biology/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Low-N protein engineering with data-efficient deep learning, bioRxiv, 2020-01-24</title>
+      <link>https://carjed.github.io/audiences/reports/low-n_protein_engineering_with_data-efficient_deep_learning_74988275/</link>
+      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/low-n_protein_engineering_with_data-efficient_deep_learning_74988275/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Engineering E. coli for magnetic control and the spatial localization of functions, bioRxiv, 2020-01-07</title>
+      <link>https://carjed.github.io/audiences/reports/engineering_e._coli_for_magnetic_control_and_the_spatial_localization_of_functions_73711135/</link>
+      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/engineering_e._coli_for_magnetic_control_and_the_spatial_localization_of_functions_73711135/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>A synthetic Calvin cycle enables autotrophic growth in yeast, bioRxiv, 2019-12-03</title>
+      <link>https://carjed.github.io/audiences/reports/a_synthetic_calvin_cycle_enables_autotrophic_growth_in_yeast_71810419/</link>
+      <pubDate>Tue, 03 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/a_synthetic_calvin_cycle_enables_autotrophic_growth_in_yeast_71810419/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
     
     <item>
       <title>Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences, bioRxiv, 2019-04-30</title>
@@ -48,6 +75,15 @@
     </item>
     
     <item>
+      <title>Programmable patterns in a DNA-based reaction-diffusion system, bioRxiv, 2019-02-21</title>
+      <link>https://carjed.github.io/audiences/reports/programmable_patterns_in_a_dna-based_reaction-diffusion_system_55854917/</link>
+      <pubDate>Thu, 21 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/programmable_patterns_in_a_dna-based_reaction-diffusion_system_55854917/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
       <title>Engineering Brain Parasites for Intracellular Delivery of Therapeutic Proteins, bioRxiv, 2018-12-03</title>
       <link>https://carjed.github.io/audiences/reports/engineering_brain_parasites_for_intracellular_delivery_of_therapeutic_proteins_52143740/</link>
       <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
@@ -75,6 +111,51 @@
     </item>
     
     <item>
+      <title>Enzymatic DNA synthesis for digital information storage, bioRxiv, 2018-06-16</title>
+      <link>https://carjed.github.io/audiences/reports/enzymatic_dna_synthesis_for_digital_information_storage_43786717/</link>
+      <pubDate>Sat, 16 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/enzymatic_dna_synthesis_for_digital_information_storage_43786717/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Toward machine-guided design of proteins, bioRxiv, 2018-06-02</title>
+      <link>https://carjed.github.io/audiences/reports/toward_machine-guided_design_of_proteins_43168022/</link>
+      <pubDate>Sat, 02 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/toward_machine-guided_design_of_proteins_43168022/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Optimization of Golden Gate assembly through application of ligation sequence-dependent fidelity and bias profiling, bioRxiv, 2018-05-15</title>
+      <link>https://carjed.github.io/audiences/reports/optimization_of_golden_gate_assembly_through_application_of_ligation_sequence-dependent_fidelity_and_bias_profiling_41531872/</link>
+      <pubDate>Tue, 15 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/optimization_of_golden_gate_assembly_through_application_of_ligation_sequence-dependent_fidelity_and_bias_profiling_41531872/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Human 5′ UTR design and variant effect prediction from a massively parallel translation assay, bioRxiv, 2018-04-29</title>
+      <link>https://carjed.github.io/audiences/reports/human_5_utr_design_and_variant_effect_prediction_from_a_massively_parallel_translation_assay_40005891/</link>
+      <pubDate>Sun, 29 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/human_5_utr_design_and_variant_effect_prediction_from_a_massively_parallel_translation_assay_40005891/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Marionette E. coli containing 12 highly-optimized small molecule sensors, bioRxiv, 2018-03-21</title>
+      <link>https://carjed.github.io/audiences/reports/marionette_e._coli_containing_12_highly-optimized_small_molecule_sensors_34648969/</link>
+      <pubDate>Wed, 21 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/marionette_e._coli_containing_12_highly-optimized_small_molecule_sensors_34648969/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
       <title>Prokaryotic nanocompartments form synthetic organelles in a eukaryote, bioRxiv, 2018-01-07</title>
       <link>https://carjed.github.io/audiences/reports/prokaryotic_nanocompartments_form_synthetic_organelles_in_a_eukaryote_31345805/</link>
       <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
@@ -84,11 +165,74 @@
     </item>
     
     <item>
+      <title>Current CRISPR gene drive systems are likely to be highly invasive in wild populations, bioRxiv, 2017-11-21</title>
+      <link>https://carjed.github.io/audiences/reports/current_crispr_gene_drive_systems_are_likely_to_be_highly_invasive_in_wild_populations_29020701/</link>
+      <pubDate>Tue, 21 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/current_crispr_gene_drive_systems_are_likely_to_be_highly_invasive_in_wild_populations_29020701/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
       <title>Resetting the yeast epigenome with human nucleosomes, bioRxiv, 2017-06-08</title>
       <link>https://carjed.github.io/audiences/reports/resetting_the_yeast_epigenome_with_human_nucleosomes_20896431/</link>
       <pubDate>Thu, 08 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>https://carjed.github.io/audiences/reports/resetting_the_yeast_epigenome_with_human_nucleosomes_20896431/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>DNA Fountain enables a robust and efficient storage architecture, bioRxiv, 2016-09-10</title>
+      <link>https://carjed.github.io/audiences/reports/dna_fountain_enables_a_robust_and_efficient_storage_architecture_11917593/</link>
+      <pubDate>Sat, 10 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/dna_fountain_enables_a_robust_and_efficient_storage_architecture_11917593/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Daisy-chain gene drives for the alteration of local populations, bioRxiv, 2016-06-08</title>
+      <link>https://carjed.github.io/audiences/reports/daisy-chain_gene_drives_for_the_alteration_of_local_populations_8538673/</link>
+      <pubDate>Wed, 08 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/daisy-chain_gene_drives_for_the_alteration_of_local_populations_8538673/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Rapidly evolving homing CRISPR barcodes, bioRxiv, 2016-05-28</title>
+      <link>https://carjed.github.io/audiences/reports/rapidly_evolving_homing_crispr_barcodes_8318049/</link>
+      <pubDate>Sat, 28 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/rapidly_evolving_homing_crispr_barcodes_8318049/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Continuous Genetic Recording with Self-Targeting CRISPR-Cas in Human Cells, bioRxiv, 2016-05-23</title>
+      <link>https://carjed.github.io/audiences/reports/continuous_genetic_recording_with_self-targeting_crispr-cas_in_human_cells_8054616/</link>
+      <pubDate>Mon, 23 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/continuous_genetic_recording_with_self-targeting_crispr-cas_in_human_cells_8054616/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>RNA-guided gene drives can efficiently and reversibly bias inheritance in wild yeast, bioRxiv, 2015-01-17</title>
+      <link>https://carjed.github.io/audiences/reports/rna-guided_gene_drives_can_efficiently_and_reversibly_bias_inheritance_in_wild_yeast_3076267/</link>
+      <pubDate>Sat, 17 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/rna-guided_gene_drives_can_efficiently_and_reversibly_bias_inheritance_in_wild_yeast_3076267/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Highly-efficient Cas9-mediated transcriptional programming, bioRxiv, 2014-12-21</title>
+      <link>https://carjed.github.io/audiences/reports/highly-efficient_cas9-mediated_transcriptional_programming_3002966/</link>
+      <pubDate>Sun, 21 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/highly-efficient_cas9-mediated_transcriptional_programming_3002966/</guid>
       <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     

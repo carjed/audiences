@@ -411,6 +411,10 @@ compile_follower_data <- function(datadir, article_id, user_data, high_followers
       for(user in unique(user_data$screen_name)){
         
         cat(paste0(user, " (", i , "/", nrow(user_data), ")..."))
+        if(user %in% c("RZRPhoenix1", "CalifQuail1969", "xkrxoqd")){
+          next
+        }
+        
         # pull from cache if user exists in high-follower database
         if(user %in% high_followers$account){
           
@@ -591,7 +595,7 @@ run_report <- function(doi, outdir, datadir,
   
   article_id <- article_df$altmetric_id
   
-  title <- gsub("\"|/|:", "", cr_data$title)
+  title <- gsub("\"|/|:|\\$", "", cr_data$title)
   nb_prefix <- paste0(gsub(" ", "_", title), "_", article_id)
   
 
@@ -599,7 +603,7 @@ run_report <- function(doi, outdir, datadir,
   nb_title <- paste0(title, ", ",
                      article_df$journal, ", ", cr_data$created)
   
-  if(grepl("10.1011", doi)){
+  if(grepl("10.1101", doi)){
     nb_desc <- gsub("</*jats:[A-z]*>", "", cr_data$abstract)
   } else {
     nb_desc <- html_nodes(page, css="#Abs1-section :nth-child(1)") %>% html_text("p") %>% tail(1) 
@@ -911,15 +915,15 @@ cat(paste0("loaded data for ", nrow(high_followers), " total users\n"))
 # - in the future, this will be purely DOI-based
 # - can also pull in list of popular bioRxiv papers using the Rxivist API
 #-----------------------------------------------------------------------------
-check_file <- FALSE
+check_file <- TRUE
 report <- TRUE
 # skip <- 535
-skip <- 6
+skip <- 658
 
 # group of DOIs to analyze
 # doi_group <- "select"
-# doi_group <- "biorxiv"
-doi_group <- "nature"
+doi_group <- "biorxiv"
+# doi_group <- "nature"
 
 # list of DOIs to skip because they lack enough tweets or are missing metadata
 banned_dois <- c("10.1101/397067", "10.1101/501494", "10.1101/066803", "10.1101/461004",
@@ -961,6 +965,12 @@ if (doi_group=="select") {
     api_url3 <- "https://api.rxivist.org/v1/papers?metric=twitter&page_size=250&timeframe=alltime&page=2"
     api_url4 <- "https://api.rxivist.org/v1/papers?metric=twitter&page_size=250&timeframe=alltime&page=3"
     
+    # api_url1 <- "https://api.rxivist.org/v1/papers?metric=downloads&page_size=250&timeframe=alltime"
+    # api_url2 <- "https://api.rxivist.org/v1/papers?metric=downloads&page_size=250&timeframe=alltime&page=1"
+    # api_url3 <- "https://api.rxivist.org/v1/papers?metric=downloads&page_size=250&timeframe=alltime&page=2"
+    # api_url4 <- "https://api.rxivist.org/v1/papers?metric=downloads&page_size=250&timeframe=alltime&page=3"
+    
+    
     cat_json1 <- fromJSON(api_url1)
     cat_json2 <- fromJSON(api_url2)
     cat_json3 <- fromJSON(api_url3)
@@ -969,7 +979,8 @@ if (doi_group=="select") {
                          data.frame(cat_json2$results),
                          data.frame(cat_json3$results),
                          data.frame(cat_json4$results)) %>%
-      dplyr::filter(metric>=70 & metric <1500) %>% as_tibble() %>%
+      # dplyr::filter(metric>=70 & metric <1500) %>% 
+      as_tibble() %>%
       dplyr::filter(!doi %in% banned_dois)
   }
 
@@ -1005,8 +1016,19 @@ if (doi_group=="select") {
     
     cat("\n=== getting altmetric metadata ===\n")
     
-    article_am <- altmetrics(doi = doi)
+    article_am <- try(altmetrics(doi = doi))
+    if(inherits(article_am, "try-error")){
+      cat(paste0(doi, ": not indexed by Altmetric\n"))
+      next
+    }
+    
     article_df <- altmetric_data(article_am)
+    
+    if(is.null(article_df$cited_by_tweeters_count)){
+      cat(paste0(doi, ": not enough tweets indexed\n"))
+      next
+    }
+    
     article_id <- article_df$altmetric_id
     
     if(i==0){
@@ -1023,7 +1045,7 @@ if (doi_group=="select") {
     
     cr_data <- cr_works(doi = doi)$data
     
-    title <- gsub("\"|/|:", "", cr_data$title)
+    title <- gsub("\"|/|:|\\$", "", cr_data$title)
     nb_prefix <- paste0(gsub(" ", "_", title), "_", article_id)
     
     nb_file <- paste0(nb_prefix, ".html")
@@ -1039,9 +1061,10 @@ if (doi_group=="select") {
     }
     
     
-    cat("\n=== querying crossref event data ===\n")
+    cat("\n=== querying event data ===\n")
     
     method <- "altmetric"
+    # method <- "crossref"
     
     if (method == "crossref"){
       cr_event_url <- paste0("https://api.eventdata.crossref.org/v1/",
@@ -1107,6 +1130,9 @@ if (doi_group=="select") {
     
     cat("done\n")
     
+    if(length(unique(events$names))<50){
+      next
+    }
     
     cat("\n=== getting follower lists for users ===\n")
     
@@ -1241,7 +1267,7 @@ if (doi_group=="select") {
     
     cr_data <- cr_works(doi = doi_it)$data
     
-    title <- gsub("\"|/|:", "", cr_data$title)
+    title <- gsub("\"|/|:|\\$", "", cr_data$title)
     nb_prefix <- paste0(gsub(" ", "_", title), "_", article_id)
     
     nb_file <- paste0(nb_prefix, ".html")
