@@ -6,7 +6,7 @@
   <link rel="stylesheet" href='https://carjed.github.io/audiences/css/bootstrap.min.css'>
   <link rel="stylesheet" href='https://carjed.github.io/audiences/css/mondrian.css'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.52" />
+  <meta name="generator" content="Hugo 0.68.3" />
   
 
 <style>
@@ -43,7 +43,7 @@
 
 
 
-<script src="https://carjed.github.io/audiences/js/bundle.min.f25ff27688046eb318bdc22977150cde493b69297eb61c33d467745adf840d358a2427ed01d7dc1e0bd54c4d5831f1ed5e9bc1e1f7187533a24e36d63659607f.js" integrity="sha512-8l/ydogEbrMYvcIpdxUM3kk7aSl&#43;thwz1Gd0Wt&#43;EDTWKJCftAdfcHgvVTE1YMfHtXpvB4fcYdTOiTjbWNllgfw=="></script>
+<script src="https://carjed.github.io/audiences/js/bundle.min.95d2483cd3c5d2bf47c1f36307a456787d60ad958c5efe44db9afc47012b1b05b8e1f64f6ac291650439322a6c38e86eb7cd6254255516d857c23f299fb0e666.js" integrity="sha512-ldJIPNPF0r9HwfNjB6RWeH1grZWMXv5E25r8RwErGwW44fZPasKRZQQ5MipsOOhut81iVCVVFthXwj8pn7DmZg=="></script>
 
   <style></style>
   
@@ -61,10 +61,6 @@
         <a class="text-light" href="https://carjed.github.io/audiences/reports" title="">reports</a>
       </li>
     
-      <li class="p-2">
-        <a class="text-light" href="https://carjed.github.io/audiences/search" title="">search</a>
-      </li>
-    
   </nav>
 </header>
 
@@ -74,73 +70,46 @@
     <h1>About</h1>  
     <small>Thursday, Jun 6, 2019</small>
     <div id="content" class="pt-3">
-      
-
-<!--![](/title.png)-->
-
-<!--![](/audiences.gif)-->
-
+      <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h3 id="background">Background</h3>
-
 <p>Audiences is a framework for exploring the various audiences that are engaging with academic publications on Twitter.</p>
-
-<p>Paper metadata and associated Twitter data was collected using APIs from [Crossref](), [Altmetric](), <a href="https://rxivist.org">Rxivist</a>, and [Twitter]().</p>
-
-<p>The code for Audiences is written in R, and this site was generated with Hugo, with a modified version of the [Mondrian]() template.</p>
-
+<p>Paper metadata and associated Twitter data was collected using APIs from <a href="">Crossref</a>, <a href="">Altmetric</a>, <a href="https://rxivist.org">Rxivist</a>, and <a href="">Twitter</a>.</p>
+<p>The code for Audiences is written in R, and this site was generated with Hugo, with a modified version of the <a href="">Mondrian</a> template.</p>
 <p>All code used in these analyses is available on <a href="http://github.com/carjed/audiences">Github</a>.</p>
-
 <h3 id="setup">Setup</h3>
-
 <h4 id="prerequisites-and-dependencies">Prerequisites and dependencies</h4>
-
 <p>You will need a recent version of RStudio if you wish to use the interactive notebook capabilities.</p>
-
 <p>Audiences requires the following R packages to run:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#f92672">library</span>(RCurl)
-<span style="color:#f92672">library</span>(rtweet)
-<span style="color:#f92672">library</span>(tweetscores)
-<span style="color:#f92672">library</span>(knitr)
-<span style="color:#f92672">library</span>(markdown)
-<span style="color:#f92672">library</span>(rmarkdown)
-<span style="color:#f92672">library</span>(rAltmetric)
-<span style="color:#f92672">library</span>(rvest)
-<span style="color:#f92672">library</span>(rcrossref)
-<span style="color:#f92672">library</span>(tidyverse)
-<span style="color:#f92672">library</span>(yaml)
-<span style="color:#f92672">library</span>(anytime)
-<span style="color:#f92672">library</span>(here)
-<span style="color:#f92672">library</span>(jsonlite)</code></pre></div>
-<h4 id="twitter-api-access">Twitter API access</h4>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-r" data-lang="r"><span style="color:#a6e22e">library</span>(RCurl)
+<span style="color:#a6e22e">library</span>(rtweet)
+<span style="color:#a6e22e">library</span>(tweetscores)
+<span style="color:#a6e22e">library</span>(knitr)
+<span style="color:#a6e22e">library</span>(markdown)
+<span style="color:#a6e22e">library</span>(rmarkdown)
+<span style="color:#a6e22e">library</span>(rAltmetric)
+<span style="color:#a6e22e">library</span>(rvest)
+<span style="color:#a6e22e">library</span>(rcrossref)
+<span style="color:#a6e22e">library</span>(tidyverse)
+<span style="color:#a6e22e">library</span>(yaml)
+<span style="color:#a6e22e">library</span>(anytime)
+<span style="color:#a6e22e">library</span>(here)
+<span style="color:#a6e22e">library</span>(jsonlite)
+</code></pre></div><h4 id="twitter-api-access">Twitter API access</h4>
 <p>Once you have a developer account set up, copy and paste the API keys into <code>config.yaml</code></p>
-
 <h3 id="running-audiences">Running Audiences</h3>
-
 <p><code>render_reports.R</code> is a wrapper script to generate the reports for a list of papers. <code>report_template.rmd</code> is an R Markdown-formatted template.</p>
-
 <h3 id="serving-as-a-webpage">Serving as a webpage</h3>
-
 <p>The reports are formatted as interactive HTML documents, making them ideal to share with others on a website. Each report is a self-contained .html file, so you can simply to your own personal website. (e.g., if you have a list of your lab&rsquo;s papers on your website, you can generate a report for each and add a link to the corresponding .html)</p>
-
 <p>Alternatively, if you have forked the Audiences Github repository, you can use Github pages to host the reports.</p>
-
 <p>I am using Hugo with the hugrid template to create a simple static landing page with tiles that link to <code>static/reports/report.html</code>. The website files are hosted in <code>docs</code>, and the Github project page is set up to point to this directory.</p>
-
 <h3 id="setup-twitter-api">Setup Twitter API</h3>
-
 <p>To reproduce these analyses or run Audiences on your own paper(s), you will first need to set up a Twitter developer account for access to the Twitter API. Documentation for setting up a Twitter dev account is available <a href="https://rtweet.info/articles/auth.html">here</a>. Once completed, copy and paste the app name, consumer keys, and access keys into the appropriate fields of <code>config.yaml</code>.</p>
-
 <h3 id="generate-reports">Generate reports</h3>
-
 <p>Running <code>render_reports.R</code> will generate a separate report for each of the papers listed in <code>papers.txt</code> by their Altmetric URLs (one per line). Reports are based on the <code>report_template.rmd</code> RMarkdown template.</p>
-
 <h4 id="output">Output</h4>
-
 <p>As each report runs, data scraped from the Twitter API will be cached to <code>article_data/</code> to . Subsequent runs will look for the appropriate <code>.rds</code> files in this directory</p>
-
 <p>Reports will be written to <code>output/reports/</code> and thumbnail images for each report to <code>output/figures/</code>.</p>
-
 <h3 id="build-site">Build site</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># generate data/items.toml, containing the links to reports to include in landing page</span>
 python generate_links.py
@@ -156,7 +125,8 @@ mkdocs build -d docs
 <span style="color:#75715e"># copy the reports &amp; thumbnails into docs/static/</span>
 rsync -r output/ docs/static
 
-<span style="color:#75715e"># push changes to github and the documentation will be available at https://carjed.github.io/audiences/</span></code></pre></div>
+<span style="color:#75715e"># push changes to github and the documentation will be available at https://carjed.github.io/audiences/</span>
+</code></pre></div>
     </div>
   </div>
 </main>

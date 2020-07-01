@@ -18,6 +18,8 @@ output:
       before_body: header.html
       after_body: footer.html
     # toc_float: true
+editor_options: 
+  chunk_output_type: console
 ---
 
 <style type="text/css">
@@ -244,10 +246,12 @@ lda_gammas_count <- bios_lda_gamma %>%
   mutate(pct=n/sum(n)) %>%
   dplyr::select(topic, top_10, n, pct)
 
+id_score <- 0
+
 ```
 
 
-```{r get_id_score, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE, results="asis"}
+```{r get_id_score, eval=FALSE, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE, results="asis"}
 
 #-----------------------------------------------------------------------------
 # define topics

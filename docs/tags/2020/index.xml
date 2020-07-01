@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2020 on audiences</title>
@@ -210,15 +210,6 @@
     </item>
     
     <item>
-      <title>Genomic and protein structure modelling analysis depicts the origin and infectivity of 2019-nCoV, a new coronavirus which caused a pneumonia outbreak in Wuhan, China, bioRxiv, 2020-01-22</title>
-      <link>https://carjed.github.io/audiences/reports/genomic_and_protein_structure_modelling_analysis_depicts_the_origin_and_infectivity_of_2019-ncov_a_new_coronavirus_which_caused_a_pneumonia_outbreak_in_wuhan_china_74728787/</link>
-      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://carjed.github.io/audiences/reports/genomic_and_protein_structure_modelling_analysis_depicts_the_origin_and_infectivity_of_2019-ncov_a_new_coronavirus_which_caused_a_pneumonia_outbreak_in_wuhan_china_74728787/</guid>
-      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
-    </item>
-    
-    <item>
       <title>High-resolution cryo-EM using beam-image shift at 200 keV, bioRxiv, 2020-01-22</title>
       <link>https://carjed.github.io/audiences/reports/high-resolution_cryo-em_using_beam-image_shift_at_200_kev_75300299/</link>
       <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
@@ -260,7 +251,7 @@
       <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://carjed.github.io/audiences/reports/a_mathematical_model_for_simulating_the_transmission_of_wuhan_novel_coronavirus_74254422/</guid>
-      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+      <description>report_template.utf8            code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
     </item>
     
     <item>

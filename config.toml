@@ -8,8 +8,8 @@ Paginate = 6
 publishDir = "docs"
 # RelativeURLs = true
 CanonifyURLs = true
-ignoreFiles = [ "reports/_.*" ]
-# ignorefiles = [ "reports/*" ]
+# ignoreFiles = [ "reports/_.*" ]
+ignoreFiles = [ "reports/*" ]
 
 
 [taxonomies]
@@ -30,10 +30,10 @@ ignoreFiles = [ "reports/_.*" ]
     name= "reports"
     url = "https://carjed.github.io/audiences/reports"
     weight = 2
-  [[menu.main]]
-    name = "search"
-     url = "https://carjed.github.io/audiences/search"
-    weight = 3
+  # [[menu.main]]
+  #   name = "search"
+  #   url = "https://carjed.github.io/audiences/search"
+  #   weight = 3
  # [[menu.main]]
  #   name = "test"
  #   url = "/test"

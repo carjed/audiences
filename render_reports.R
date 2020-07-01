@@ -44,15 +44,8 @@ hf_path <- keys$hf_path
 outdir <- paste0(datadir, "/content/reports")
 dir.create(outdir, recursive=TRUE, showWarnings = FALSE)
 
-# handles of training data
-td_handles <- c("vdare", "charlesmurray", "Steve_Sailer", "drdavidduke", "richardbspencer", 
-                "aim_america", "lauren_southern", "laurenroseultra", "realitycalls8", "ramzpaul", 
-                "stefanmolyneux", "themaddimension", "tooedit", "UnzReview", "dissidentright", 
-                "PolNewsupdates", "FaithGoldy", "CassandraRules", "LanaLokteff", "NewRightAmerica", 
-                "pastramimachine", "johnhawks", "aaronquinlan", "jenniferraff", "mbeisen", 
-                "dgmacarthur", "erlichya", "PardisSabeti", "sexchrlab", "CT_Bergstrom", 
-                "tuuliel", "obahcall", "michaelhoffman", "graham_coop", "rhskraus", 
-                "jkpritch", "NeilShubin", "kwbroman", "lpachter", "girlscientist")
+# handles of training data 
+td_handles <- read.table("~/td_handles.txt") %>% pull
 
 # biorxiv categories, excluding scicomm and clinical trials
 categories_trim <- c("animal-behavior-and-cognition", 
@@ -276,7 +269,7 @@ dd_sim <- function(topic, category, sim_scores){
 #-----------------------------------------------------------------------------
 # get list of follower files from generated reports
 #-----------------------------------------------------------------------------
-update_follower_files <- function(){
+update_follower_files <- function(datadir){
   follower_files_details <- file.info(
     paste0(datadir, "/article_data/", 
            list.files(path=paste0(datadir, "/article_data"),
@@ -396,7 +389,7 @@ compile_follower_data <- function(datadir, article_id, user_data, high_followers
     
     
     # scrape new data if out of date or partially complete
-    if(nrow(follower_lists_cache)/nrow(user_data)<0.9){
+    if(length(unique(follower_lists_cache$account))/nrow(user_data)<0.95){
       
       # get follower metadata from Twitter API
       # sleep interval--if more than 15 API calls will be required,
@@ -823,14 +816,12 @@ cat("done\n")
 
 
 #-----------------------------------------------------------------------------
-# read reference data from scientist/WN classifications
+# read ref panel
 #-----------------------------------------------------------------------------
 cat("\n=== loading training data ===\n")
 
 if(!exists("training_data_full")){
-  # basic data frame containing curated usernames of WN
 
-  # extended data frame containing user metadata & follower lists
   training_data_full_fh <- paste0(datadir, "/training_data/training_data_full2.rds")
   
   force_update_training <- FALSE
@@ -884,7 +875,7 @@ if(!exists("high_followers")){
     
   }
   
-  files_to_scan <- update_follower_files()
+  files_to_scan <- update_follower_files(datadir)
   
   high_followers <- files_to_scan %>%
     map_dfr(readRDS) %>%
@@ -915,19 +906,23 @@ cat(paste0("loaded data for ", nrow(high_followers), " total users\n"))
 # - in the future, this will be purely DOI-based
 # - can also pull in list of popular bioRxiv papers using the Rxivist API
 #-----------------------------------------------------------------------------
-check_file <- TRUE
+check_file <- FALSE
 report <- TRUE
 # skip <- 535
-skip <- 658
+skip <- 4
+metric <- "twitter"
+# metric <- "downloads"
+select_dois <- c("10.1101/509315")
 
 # group of DOIs to analyze
 # doi_group <- "select"
-doi_group <- "biorxiv"
+# doi_group <- "biorxiv"
 # doi_group <- "nature"
+doi_group <- "covid19"
 
 # list of DOIs to skip because they lack enough tweets or are missing metadata
 banned_dois <- c("10.1101/397067", "10.1101/501494", "10.1101/066803", "10.1101/461004",
-                 "10.1101/460899", "10.1101/234799", "10.1101/233007", "10.1101/556019") #?)
+                 "10.1101/460899", "10.1101/234799", "10.1101/233007", "10.1101/556019", "10.1101/718395") #?)
 
 if (doi_group=="select") {
   dois <- scan(paste0(datadir, "/papers.txt"), what="", sep="\n")
@@ -960,37 +955,55 @@ if (doi_group=="select") {
     # new version--scrape using rxivist API
     cat("(API)...")
     
-    api_url1 <- "https://api.rxivist.org/v1/papers?metric=twitter&page_size=250&timeframe=alltime"
-    api_url2 <- "https://api.rxivist.org/v1/papers?metric=twitter&page_size=250&timeframe=alltime&page=1"
-    api_url3 <- "https://api.rxivist.org/v1/papers?metric=twitter&page_size=250&timeframe=alltime&page=2"
-    api_url4 <- "https://api.rxivist.org/v1/papers?metric=twitter&page_size=250&timeframe=alltime&page=3"
+    # api_url1 <- paste0("https://api.rxivist.org/v1/papers?metric=", metric, "&page_size=250&timeframe=alltime&page=", 
+    # api_url2 <- "https://api.rxivist.org/v1/papers?metric=twitter&page_size=250&timeframe=alltime&page=1"
+    # api_url3 <- "https://api.rxivist.org/v1/papers?metric=twitter&page_size=250&timeframe=alltime&page=2"
+    # api_url4 <- "https://api.rxivist.org/v1/papers?metric=twitter&page_size=250&timeframe=alltime&page=3"
+    # api_url5 <- "https://api.rxivist.org/v1/papers?metric=twitter&page_size=250&timeframe=alltime&page=4"
+    # api_url6 <- "https://api.rxivist.org/v1/papers?metric=twitter&page_size=250&timeframe=alltime&page=5"
+    # api_url7 <- "https://api.rxivist.org/v1/papers?metric=twitter&page_size=250&timeframe=alltime&page=6"
+    # api_url8 <- "https://api.rxivist.org/v1/papers?metric=twitter&page_size=250&timeframe=alltime&page=7"
+
     
-    # api_url1 <- "https://api.rxivist.org/v1/papers?metric=downloads&page_size=250&timeframe=alltime"
-    # api_url2 <- "https://api.rxivist.org/v1/papers?metric=downloads&page_size=250&timeframe=alltime&page=1"
-    # api_url3 <- "https://api.rxivist.org/v1/papers?metric=downloads&page_size=250&timeframe=alltime&page=2"
-    # api_url4 <- "https://api.rxivist.org/v1/papers?metric=downloads&page_size=250&timeframe=alltime&page=3"
+    api_urls <- paste0("https://api.rxivist.org/v1/papers?metric=", metric, "&page_size=250&timeframe=alltime&page=", seq(0,10))
     
+    json_data <- lapply(api_urls, fromJSON)
     
-    cat_json1 <- fromJSON(api_url1)
-    cat_json2 <- fromJSON(api_url2)
-    cat_json3 <- fromJSON(api_url3)
-    cat_json4 <- fromJSON(api_url4)
-    dois_df <- bind_rows(data.frame(cat_json1$results),
-                         data.frame(cat_json2$results),
-                         data.frame(cat_json3$results),
-                         data.frame(cat_json4$results)) %>%
-      # dplyr::filter(metric>=70 & metric <1500) %>% 
+    dois_df <- bind_rows(lapply(json_data, function(x){data.frame(x$results)})) %>%
       as_tibble() %>%
       dplyr::filter(!doi %in% banned_dois)
+    
+    if(length(select_dois) > 0){
+      dois_df <- dois_df %>%
+        dplyr::filter(doi %in% select_dois)
+    }
+    
+    # # api_url1 <- "https://api.rxivist.org/v1/papers?metric=downloads&page_size=250&timeframe=alltime"
+    # # api_url2 <- "https://api.rxivist.org/v1/papers?metric=downloads&page_size=250&timeframe=alltime&page=1"
+    # # api_url3 <- "https://api.rxivist.org/v1/papers?metric=downloads&page_size=250&timeframe=alltime&page=2"
+    # # api_url4 <- "https://api.rxivist.org/v1/papers?metric=downloads&page_size=250&timeframe=alltime&page=3"
+    # 
+    # 
+    # cat_json1 <- fromJSON(api_url5)
+    # cat_json2 <- fromJSON(api_url6)
+    # cat_json3 <- fromJSON(api_url7)
+    # cat_json4 <- fromJSON(api_url8)
+    # dois_df <- bind_rows(data.frame(cat_json1$results),
+    #                      data.frame(cat_json2$results),
+    #                      data.frame(cat_json3$results),
+    #                      data.frame(cat_json4$results)) %>%
+    #   # dplyr::filter(metric>=70 & metric <1500) %>% 
+    #   as_tibble() %>%
+    #   dplyr::filter(!doi %in% banned_dois)
   }
 
   dois <- dois_df$doi
   cat("done\n")
   
   # for (i in (1+skip):nrow(dois_df)) {
-  for (i in skip:nrow(dois_df)) {
+  for (i in skip+1:nrow(dois_df)) {
     
-    if(i==0){
+    if(i==-1){
       doi_it <- "10.1126/science.aat7693"
       doi <- doi_it
       category <- "genetics"
@@ -1001,10 +1014,12 @@ if (doi_group=="select") {
       doi <- doi_it
       category <- paper_it$category
     }
+    
+    cat(paste0("\n===", article_title, " ", doi, " ===\n"))
 
     cat("\n=== caching high-follower accounts ===\n")
     
-    files_to_scan <- update_follower_files()
+    files_to_scan <- update_follower_files(datadir)
     high_followers <- get_follower_cache(high_followers, files_to_scan, files_scanned)
     files_scanned <- files_to_scan
     
@@ -1017,6 +1032,7 @@ if (doi_group=="select") {
     cat("\n=== getting altmetric metadata ===\n")
     
     article_am <- try(altmetrics(doi = doi))
+    
     if(inherits(article_am, "try-error")){
       cat(paste0(doi, ": not indexed by Altmetric\n"))
       next
@@ -1174,7 +1190,194 @@ if (doi_group=="select") {
     
   }
   
-} else if(doi_group=="nature") {
+} else if (doi_group=="covid19") {
+  ncov_json <- rjson::fromJSON(file="audiences/covid19_twitter.json")
+  ncov_df <- do.call(rbind, lapply(ncov_json$rels, as.data.frame))
+  
+  for (i in 1:nrow(ncov_df)) {
+    # for (i in 1:2) {
+    
+    paper_it <- ncov_df[i,]
+    article_title <- paper_it$rel_title
+    doi_it <- paper_it$rel_doi
+    doi <- doi_it
+    category <- "covid19"
+    
+    cat(paste0("\n===", article_title, " ", doi, " ===\n"))
+    
+    cat("\n=== caching high-follower accounts ===\n")
+    
+    files_to_scan <- update_follower_files(datadir)
+    high_followers <- get_follower_cache(high_followers, files_to_scan, files_scanned)
+    files_scanned <- files_to_scan
+    
+    cat(paste0("done. ", length(files_scanned), " additional files scanned for high-follower users.\n"))
+    
+    
+    # cat(paste0("\n=== Scraping data for '", paper_it$title, "' (", doi_it, ") ===\n")) 
+    
+    
+    cat("\n=== getting altmetric metadata ===\n")
+    
+    article_am <- try(altmetrics(doi = doi))
+    
+    if(inherits(article_am, "try-error")){
+      cat(paste0(doi, ": not indexed by Altmetric\n"))
+      next
+    }
+    
+    article_df <- altmetric_data(article_am)
+    
+    if(is.null(article_df$cited_by_tweeters_count)){
+      cat(paste0(doi, ": not enough tweets indexed\n"))
+      next
+    }
+    
+    article_id <- article_df$altmetric_id
+    
+    if(i==0){
+      subdomain <- "www"
+    } else {
+      subdomain <- "biorxiv"
+    }
+    article_full_url <- paste0("https://", subdomain, ".altmetric.com/details/", article_id)
+    
+    cat("done\n")
+    
+    
+    cat("\n=== getting paper metadata from crossref ===\n")
+    
+    cr_data <- cr_works(doi = doi)$data
+    
+    title <- gsub("\"|/|:|\\$", "", cr_data$title)
+    nb_prefix <- paste0(gsub(" ", "_", title), "_", article_id)
+    
+    nb_file <- paste0(nb_prefix, ".html")
+    nb_title <- paste0(title, ", ",
+                       article_df$journal, ", ", cr_data$created)
+    
+    cat("done\n")
+    
+    
+    if(file.exists(paste0(outdir, "/", nb_file)) & check_file){
+      cat(paste0("report for ", nb_file, " already exists\n"))
+      next
+    }
+    
+    
+    cat("\n=== querying event data ===\n")
+    
+    method <- "altmetric"
+    # method <- "crossref"
+    
+    if (method == "crossref"){
+      cr_event_url <- paste0("https://api.eventdata.crossref.org/v1/",
+                             "events?source=twitter&rows=10000&from-occurred-date=2010-10-01&obj-id=", doi)
+      
+      req <- httr::RETRY("GET", cr_event_url, pause_min=0.1, pause_base=0.1, pause_cap=3, times=60, httr::timeout(3))
+      stop_for_status(req)
+      warn_for_status(req)
+      message_for_status(req)
+      
+      e2 <- fromJSON(jsonlite::prettify(rawToChar(req$content)), flatten=TRUE)
+      status <- e2$status
+      
+      events <- e2$message$events %>% 
+        data.frame() %>%
+        dplyr::select(names = subj.author.url, 
+                      timestamps = timestamp, 
+                      status = subj_id) %>%
+        mutate(names=gsub("http://www.twitter.com/", "", names),
+               status=gsub("http://twitter.com/.*statuses/", "", status)) %>%
+        mutate(names=gsub("twitter://user\\?screen_name=", "", names),
+               status=gsub("twitter://status\\?id=", "", status))
+      
+      handles <- unique(events$names) 
+    } else if (method == "altmetric"){
+      
+      events <- events_from_altmetric(article_full_url)
+      handles <- unique(events$names)
+      
+    }
+    
+    cat("done\n")
+    
+    
+    cat("\n=== getting user and event metadata from twitter API ===\n")
+    
+    skip_langs <- c("ar", "ja", "zh-CN", "ko")
+    
+    user_data <- lookup_users(handles) %>%
+      dplyr::filter(!(account_lang %in% skip_langs) & protected==FALSE)
+    
+    tweets <- lookup_tweets(events$status) %>%
+      dplyr::select(names=screen_name, 
+                    tweets=text, 
+                    retweet_screen_name, 
+                    status=status_id)
+    
+    events <- events %>%
+      left_join(tweets)
+    
+    # separate data by original tweets and RTs
+    original <- events %>% 
+      dplyr::filter(is.na(retweet_screen_name)) %>% 
+      group_by(names, tweets) %>% 
+      count %>% 
+      arrange(desc(n))
+    
+    rts <- events %>% 
+      dplyr::filter(!is.na(retweet_screen_name)) %>% 
+      group_by(retweet_screen_name, tweets) %>% 
+      count %>% 
+      arrange(desc(n))
+    
+    cat("done\n")
+    
+    if(length(unique(events$names))<50){
+      next
+    }
+    
+    cat("\n=== getting follower lists for users ===\n")
+    
+    follower_lists_full <- compile_follower_data(datadir, 
+                                                 article_id, 
+                                                 user_data, 
+                                                 high_followers)
+    cat("done\n")
+    
+    
+    cat("\n=== getting follower bios ===\n")
+    
+    follower_bios_full <- compile_follower_bios(datadir, 
+                                                article_id, 
+                                                follower_lists_full)
+    
+    cat("done\n")
+    
+    
+    if(report){
+      cat("\n=== generating report ===\n")
+      
+      run_report(doi=doi_it, outdir=outdir, datadir=datadir,
+                 article_df=article_df, cr_data=cr_data,
+                 user_data=user_data, events=events,
+                 follower_lists_full=follower_lists_full, 
+                 follower_bios_full=follower_bios_full,
+                 category)
+      
+      cat("done\n")
+      
+      
+      cat("\n=== updating summary ===\n")
+      
+      run_summary(datadir)
+      
+      cat("done\n")
+    }
+    
+  }
+} else if (doi_group=="nature") {
   
   #-----------------------------------------------------------------------------
   # peer-reviewed journal family reports
@@ -1223,7 +1426,7 @@ if (doi_group=="select") {
     doi_it <- dois[i]
     cat("\n=== caching high-follower accounts ===\n")
     
-    files_to_scan <- update_follower_files()
+    files_to_scan <- update_follower_files(datadir)
     high_followers <- get_follower_cache(high_followers, files_to_scan, files_scanned)
     files_scanned <- files_to_scan
     
