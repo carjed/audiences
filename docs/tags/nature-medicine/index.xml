@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nature Medicine on audiences</title>
+    <link>https://carjed.github.io/audiences/tags/nature-medicine/</link>
+    <description>Recent content in Nature Medicine on audiences</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 13 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://carjed.github.io/audiences/tags/nature-medicine/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Identifying facial phenotypes of genetic disorders using deep learning, Nature Medicine, 2018-12-13</title>
+      <link>https://carjed.github.io/audiences/reports/identifying_facial_phenotypes_of_genetic_disorders_using_deep_learning_53588150/</link>
+      <pubDate>Thu, 13 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/identifying_facial_phenotypes_of_genetic_disorders_using_deep_learning_53588150/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Cold-induced epigenetic programming of the sperm enhances brown adipose tissue activity in the offspring, Nature Medicine, 2018-07-06</title>
+      <link>https://carjed.github.io/audiences/reports/cold-induced_epigenetic_programming_of_the_sperm_enhances_brown_adipose_tissue_activity_in_the_offspring_44730679/</link>
+      <pubDate>Fri, 06 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/cold-induced_epigenetic_programming_of_the_sperm_enhances_brown_adipose_tissue_activity_in_the_offspring_44730679/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+  </channel>
+</rss>

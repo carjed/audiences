@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html><head>
+  
+  <title>0-100-users | audiences</title>
+  
+  <link rel="stylesheet" href='https://carjed.github.io/audiences/css/bootstrap.min.css'>
+  <link rel="stylesheet" href='https://carjed.github.io/audiences/css/mondrian.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.68.3" />
+  
+
+<style>
+
+  #grid .list-item.page:hover {
+    background: white;
+  }
+  main.single.page h1 {
+    border-color: white;
+  }
+
+  #grid .list-item.reports:hover {
+    background: gold;
+  }
+  main.single.reports h1 {
+    border-color: gold;
+  }
+
+  #grid .list-item.summary:hover {
+    background: limegreen;
+  }
+  main.single.summary h1 {
+    border-color: limegreen;
+  }
+
+</style>
+  
+
+
+
+
+
+
+
+
+
+<script src="https://carjed.github.io/audiences/js/bundle.min.95d2483cd3c5d2bf47c1f36307a456787d60ad958c5efe44db9afc47012b1b05b8e1f64f6ac291650439322a6c38e86eb7cd6254255516d857c23f299fb0e666.js" integrity="sha512-ldJIPNPF0r9HwfNjB6RWeH1grZWMXv5E25r8RwErGwW44fZPasKRZQQ5MipsOOhut81iVCVVFthXwj8pn7DmZg=="></script>
+
+  <style></style>
+  
+  
+</head>
+<body>
+  <div class="container-fluid h-100 d-flex flex-column">
+<header class="row flex-shrink-0 justify-content-center justify-content-md-start">
+  <ul class="nav px-2">
+    <li class="p-2">
+      <a class="text-muted text-decoration-none" href="https://carjed.github.io/audiences/">audiences</a>
+    </li>
+    
+      <li class="p-2">
+        <a class="text-light" href="https://carjed.github.io/audiences/reports" title="">reports</a>
+      </li>
+    
+  </nav>
+</header>
+
+<main id="grid" class="row list flex-wrap h-99 text-center">
+  
+    <div class="list-item d-flex lead justify-content-center align-items-center reports">
+      <div>
+        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/nucleotide_sequence_and_dnasei_sensitivity_are_predictive_of_3d_chromatin_architecture_15876791/">
+          <h4 class="font-weight-bold">Nucleotide sequence and DNaseI sensitivity are predictive of 3D chromatin architecture, bioRxiv, 2017-01-28</h4>
+          <p>AbstractRecently, Hi-C has been used to probe the 3D chromatin architecture of multiple organisms and cell types. The resulting collections of pairwise contacts across the genome have connected chromatin architecture to many cellular phenomena, including replication timing and gene regulation. However, high resolution (10 kb or finer) contact maps remain scarce due to the expense and time required for collection. A computational method for predicting pairwise contacts without the need to run a Hi-C experiment would be invaluable in understanding the role that 3D chromatin architecture plays in genome biology. We describe Rambutan, a deep convolutional neural network that predicts Hi-C contacts at 1 kb resolution using nucleotide sequence and DNaseI assay signal as inputs. Specifically, Rambutan identifies locus pairs that engage in high confidence contacts according to Fit-Hi-C, a previously described method for assigning statistical confidence estimates to Hi-C contacts. We first demonstrate Rambutan’s performance across chromosomes at 1 kb resolution in the GM12878 cell line. Subsequently, we measure Rambutan’s performance across six cell types. In this setting, the model achieves an area under the receiver operating characteristic curve between 0.7662 and 0.8246 and an area under the precision-recall curve between 0.3737 and 0.9008. We further demonstrate that the predicted contacts exhibit expected trends relative to histone modification ChlP-seq data, replication timing measurements, and annotations of functional elements such as promoters and enhancers. Finally, we predict Hi-C contacts for 53 human cell types and show that the predictions cluster by cellular function. [NOTE After our original submission we discovered an error in our calling of statistically significant contacts. Briefly, when calculating the prior probability of a contact, we used the number of contacts at a certain genomic distance in a chromosome but divided by the total number of bins in the full genome. When we corrected this mistake we noticed that the Rambutan model, as it curently stands, did not outperform simply using the GM12878 contact map that Rambutan was trained on as the predictor in other cell types. While we investigate these new results, we ask that readers treat this manuscript skeptically.]</p>
+        </a>
+        
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/biorxiv">biorxiv</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/bioinformatics">bioinformatics</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/0-100-users">0-100-users</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/2017">2017</a>
+          
+        
+      </div>
+    </div>
+  
+    <div class="list-item d-flex lead justify-content-center align-items-center reports">
+      <div>
+        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/heritability_enrichment_of_specifically_expressed_genes_identifies_disease-relevant_tissues_and_cell_types_15810378/">
+          <h4 class="font-weight-bold">Heritability enrichment of specifically expressed genes identifies disease-relevant tissues and cell types, bioRxiv, 2017-01-26</h4>
+          <p>ABSTRACTGenetics can provide a systematic approach to discovering the tissues and cell types relevant for a complex disease or trait. Identifying these tissues and cell types is critical for following up on non-coding allelic function, developing ex-vivo models, and identifying therapeutic targets. Here, we analyze gene expression data from several sources, including the GTEx and PsychENCODE consortia, together with genome-wide association study (GWAS) summary statistics for 48 diseases and traits with an average sample size of 169,331, to identify disease-relevant tissues and cell types. We develop and apply an approach that uses stratified LD score regression to test whether disease heritability is enriched in regions surrounding genes with the highest specific expression in a given tissue. We detect tissue-specific enrichments at FDR &amp;lt; 5% for 34 diseases and traits across a broad range of tissues that recapitulate known biology. In our analysis of traits with observed central nervous system enrichment, we detect an enrichment of neurons over other brain cell types for several brain-related traits, enrichment of inhibitory over excitatory neurons for bipolar disorder but excitatory over inhibitory neurons for schizophrenia and body mass index, and enrichments in the cortex for schizophrenia and in the striatum for migraine. In our analysis of traits with observed immunological enrichment, we identify enrichments of T cells for asthma and eczema, B cells for primary biliary cirrhosis, and myeloid cells for Alzheimer&#39;s disease, which we validated with independent chromatin data. Our results demonstrate that our polygenic approach is a powerful way to leverage gene expression data for interpreting GWAS signal.</p>
+        </a>
+        
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/biorxiv">biorxiv</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/genetics">genetics</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/0-100-users">0-100-users</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/2017">2017</a>
+          
+        
+      </div>
+    </div>
+  
+    <div class="list-item d-flex lead justify-content-center align-items-center reports">
+      <div>
+        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/dna-dependent_rna_cleavage_by_the_natronobacterium_gregoryi_argonaute_15616406/">
+          <h4 class="font-weight-bold">DNA-dependent RNA cleavage by the Natronobacterium gregoryi Argonaute, bioRxiv, 2017-01-21</h4>
+          <p>AbstractWe show here that, unlike most other prokaryotic Argonaute (Ago) proteins, which are DNA-guided endonucleases, the Natronobacterium gregoryi-derived Ago (NgAgo) can function as a DNA-guided endoribonuclease, cleaving RNA, rather than DNA, in a targeted manner. The NgAgo protein, in complex with 5’-hydroxylated or 5’-phosphrylated oligodeoxyribonucleotides (ODNs) of variable lengths, split RNA targets into two or more fragments in vitro, suggesting its physiological role in bacteria and demonstrating a potential for degrading RNA molecules such as mRNA or lncRNA in eukaryotic cells in a targeted manner.</p>
+        </a>
+        
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/biorxiv">biorxiv</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/biochemistry">biochemistry</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/0-100-users">0-100-users</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/2017">2017</a>
+          
+        
+      </div>
+    </div>
+  
+    <div class="list-item d-flex lead justify-content-center align-items-center reports">
+      <div>
+        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/modern_human_origins_multiregional_evolution_of_autosomes_and_east_asia_origin_of_y_and_mtdna_15578594/">
+          <h4 class="font-weight-bold">Modern human origins multiregional evolution of autosomes and East Asia origin of Y and mtDNA, bioRxiv, 2017-01-19</h4>
+          <p>AbstractThe neutral theory has been used as a null model for interpreting nature and produced the Recent Out of Africa model of anatomically modern humans. Recent studies, however, have established that genetic diversities are mostly at maximum saturation levels maintained by selection, therefore challenging the explanatory power of the neutral theory and rendering the present molecular model of human origins untenable. Using improved methods and public data, we have revisited human evolution and found sharing of genetic variations among racial groups to be largely a result of parallel mutations rather than recent common ancestry and admixture as commonly assumed. We derived an age of 1.86-1.92 million years for the first split in modern human populations based on autosomal diversity data. We found evidence of modern Y and mtDNA originating in East Asia and dispersing via hybridization with archaic humans. Analyses of autosomes, Y and mtDNA all suggest that Denisovan and Neanderthal were archaic Africans with Eurasian admixtures and ancestors of South Asia Negritos and Aboriginal Australians. Verifying our model, we found more ancestry of Southern Chinese from Hunan in Africans relative to other East Asian groups examined. These results suggest multiregional evolution of autosomes and replacements of archaic Y and mtDNA by modern ones originating in East Asia, thereby leading to a coherent account of modern human origins.</p>
+        </a>
+        
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/biorxiv">biorxiv</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/evolutionary-biology">evolutionary-biology</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/0-100-users">0-100-users</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/2017">2017</a>
+          
+        
+      </div>
+    </div>
+  
+    <div class="list-item d-flex lead justify-content-center align-items-center reports">
+      <div>
+        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/untangling_intelligence_psychopathy_antisocial_personality_disorder__conduct_problems_a_meta-analytic_review_15551039/">
+          <h4 class="font-weight-bold">Untangling intelligence, psychopathy, antisocial personality disorder, &amp; conduct problems A meta-analytic review, bioRxiv, 2017-01-18</h4>
+          <p>AbstractSubstantial research has investigated the association between intelligence and psychopathic traits. The findings to date have been inconsistent and have not always considered the multi-dimensional nature of psychopathic traits. Moreover, there has been a tendency to confuse psychopathy with other closely related, clinically significant disorders. The current study represents a meta-analysis conducted to evaluate the direction and magnitude of the association of intelligence with global psychopathy, as well as its factors and facets, and related disorders (Antisocial Personality Disorder, Conduct Disorder, and Oppositional Defiant Disorder). Our analyses revealed a small, significant, negative relationship between intelligence and total psychopathy (r = -.07, p = .001). Analysis of factors and facets found differential associations, including both significant positive (e.g., interpersonal facet) and negative (e.g., affective facet) associations, further affirming that psychopathy is a multi-dimensional construct. Additionally, intelligence was negatively associated with Antisocial Personality Disorder (r = -.13, p = .001) and Conduct Disorder (r = -.11, p = .001), but positively with Oppositional Defiant Disorder (r = .06, p = .001). There was significant heterogeneity across studies for most effects, but the results of moderator analyses were inconsistent. Finally, bias analyses did not find significant evidence for publication bias or outsized effects of outliers.</p>
+        </a>
+        
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/biorxiv">biorxiv</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/neuroscience">neuroscience</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/0-100-users">0-100-users</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/2017">2017</a>
+          
+        
+      </div>
+    </div>
+  
+    <div class="list-item d-flex lead justify-content-center align-items-center reports">
+      <div>
+        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/evaluation_of_oxford_nanopore_miniontm_sequencing_for_16s_rrna_microbiome_characterization_15420480/">
+          <h4 class="font-weight-bold">Evaluation of Oxford Nanopore MinIONTM Sequencing for 16S rRNA Microbiome Characterization, bioRxiv, 2017-01-13</h4>
+          <p>AbstractIn this manuscript we evaluate the potential for microbiome characterization by sequencing of near-full length 16S rRNA gene region fragments using the Oxford Nanopore MinION (hereafter ‘Nanopore’) sequencing platform. We analyzed pure-culture E. coli and P. fluorescens, as well as a low-diversity mixed community sample from hydraulic fracturing produced water. Both closed and open reference operational taxonomic unit (OTU) picking failed, necessitating the direct use of sequences without OTU picking. The Ribosomal Database Project classifier against the Green Genes database was found to be the optimal annotation approach, with average pure-culture annotation accuracies of 93.8% and 82.0% at the phyla and genus levels, respectively. Comparative analysis of an environmental sample using Nanopore and Illumina MiSeq sequencing identified high taxonomic similarity when using a weighted metric (Bray-Curtis), and significantly reduced similarity when using an unweighted metric (Jaccard). These results highlight the great potential of Nanopore sequencing to analyze broad microbial community trends, and the challenge of applying Nanopore sequencing to discern rare taxa in mixed microbial communities. Finally, we observed that between-run carryover following washes on the same flowcell accounted for &amp;gt;10% of sequence reads, necessitating future development to either prevent carryover or filter sequences of interest (e.g. barcoding).</p>
+        </a>
+        
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/biorxiv">biorxiv</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/microbiology">microbiology</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/0-100-users">0-100-users</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/2017">2017</a>
+          
+        
+      </div>
+    </div>
+  
+</main>
+<br>
+<main>
+  
+
+
+<nav aria-label="page navigation">
+    <ul class="pagination">
+        
+        
+        <li class="page-item"><a href="https://carjed.github.io/audiences/tags/0-100-users/" rel="first" class="page-link">« First</a></li>
+        
+
+        
+        <li class="page-item"><a href="https://carjed.github.io/audiences/tags/0-100-users/page/109/" rel="prev" class="page-link">‹ Prev</a></li>
+        
+
+        
+             
+            
+            <li class="page-item disabled"><a class="page-link">...</a></li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+             
+            <li class="page-item"><a href="https://carjed.github.io/audiences/tags/0-100-users/page/106/" class="page-link">106</a></li>
+            
+        
+            
+             
+            <li class="page-item"><a href="https://carjed.github.io/audiences/tags/0-100-users/page/107/" class="page-link">107</a></li>
+            
+        
+            
+             
+            <li class="page-item"><a href="https://carjed.github.io/audiences/tags/0-100-users/page/108/" class="page-link">108</a></li>
+            
+        
+            
+             
+            <li class="page-item"><a href="https://carjed.github.io/audiences/tags/0-100-users/page/109/" class="page-link">109</a></li>
+            
+        
+             
+            <li class="page-item active"><a href="https://carjed.github.io/audiences/tags/0-100-users/page/110/" class="page-link">110</a></li>
+            
+        
+            
+             
+            <li class="page-item"><a href="https://carjed.github.io/audiences/tags/0-100-users/page/111/" class="page-link">111</a></li>
+            
+        
+            
+             
+            <li class="page-item"><a href="https://carjed.github.io/audiences/tags/0-100-users/page/112/" class="page-link">112</a></li>
+            
+        
+            
+             
+            <li class="page-item"><a href="https://carjed.github.io/audiences/tags/0-100-users/page/113/" class="page-link">113</a></li>
+            
+        
+            
+             
+            <li class="page-item"><a href="https://carjed.github.io/audiences/tags/0-100-users/page/114/" class="page-link">114</a></li>
+            
+        
+             
+            
+            <li class="page-item disabled"><a class="page-link">...</a></li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+
+        
+        <li class="page-item"><a href="https://carjed.github.io/audiences/tags/0-100-users/page/111/" rel="next" class="page-link">Next ›</a></li>
+        
+
+        
+        
+        <li class="page-item"><a href="https://carjed.github.io/audiences/tags/0-100-users/page/123/" rel="last" class="page-link">Last »</a></li>
+        
+    </ul>
+</nav>
+
+
+</main>
+
+&nbsp;
+<hr />
+<p style="text-align: center;">Created with the <a href="https://github.com/carjed/audiences">audiences framework </a> by <a href="https://github.com/carjed/">Jedidiah Carlson</a></p>
+<p style="text-align: center;">Powered by <a href="https://gohugo.io/">Hugo </a></p>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<p style="text-align: center;">
+    <a href="https://twitter.com/JedMSP?lang=en" class="fa fa-twitter"></a>
+    <a href="https://github.com/carjed/" class="fa fa-github"></a>
+</p>
+
+&nbsp;
+
+</div>
+  
+</body>
+</html>

@@ -1,0 +1,982 @@
+---
+params: 
+  title: ""
+  abstract: ""
+  doi: ""
+  article_id: ""
+  datadir: ""
+title: ""
+# title: "`r params$title`"
+output: 
+  html_document:
+    self_contained: no
+    theme: flatly
+    highlight: zenburn
+    toc: true
+    code_folding: "hide"
+    includes:
+      before_body: header.html
+      after_body: footer.html
+    # toc_float: true
+editor_options: 
+  chunk_output_type: console
+---
+
+<style type="text/css">
+div.main-container {
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, .h1, {
+    margin-top: 84px;
+}
+
+</style>
+
+```{r, eval=FALSE, echo=FALSE}
+params <- list("datadir" = datadir,
+               "title" = "test",
+               "abstract" = " ",
+               "article_id" = "30486047",
+               "doi" = "10.1101/234112")
+```
+
+
+```{r load_libs, echo=FALSE, message=FALSE, warning=FALSE}
+
+datadir <- params$datadir
+article_id <- params$article_id
+# datadir <- "."
+
+library(devtools)
+library(anytime)
+
+# devtools::install_github("pablobarbera/twitter_ideology/pkg/tweetscores")
+# devtools::install_github("geoffjentry/twitteR")
+# devtools::install_github("mkearney/rtweet")
+# devtools::install_github("ropensci/rAltmetric")
+
+library(tidyverse)
+
+# API stuff
+library(rAltmetric)
+library(rvest)
+library(crevents)
+
+# Analysis
+library(umap)
+library(dbscan)
+library(tidytext)
+library(topicmodels)
+library(ldatuning)
+library(tm)
+library(qlcMatrix)
+
+# plotting stuff
+library(ggrepel)
+library(ggridges)
+library(RColorBrewer)
+library(htmlwidgets)
+library(plotly)
+# library(ggdendro)
+# library(dendextend)
+library(kableExtra)
+
+cols <- c(brewer.pal(9, "Set1"), brewer.pal(9, "Set3"))
+
+hf_handles_fh <- paste0(datadir, "/training_data/high_follower_handles.rds")
+
+saveRDS(high_followers$account, hf_handles_fh)
+```
+
+# Paper Info
+
+Report generated on `r Sys.Date()`.
+
+```{r, results="asis", echo=FALSE}
+tg <- function (link, text){
+  paste0("<a href='", link, "'>", text, "</a>")
+}
+
+cat("doi:", params$doi)
+cat("<br>")
+cat(tg(paste0("https://dx.doi.org/", params$doi), "View paper on journal site"))
+cat("<br>")
+cat(tg(article_full_url, "View paper on Altmetric"))
+cat("<br>")
+```
+
+
+# LDA topic modeling analysis {.tabset .tabset-fade .tabset-pills}
+
+We obtained a list of tweets/RTs referencing the specified article by querying the Crossref Event Data API. For each unique user that has (re-)tweeted the article, we then collected the user names and bios of their followers using the Twitter API (limited to the 10,000 most recent followers. We compiled these bios into a single "document" per account.
+
+We next generated a document term matrix, enumerating the frequencies of every term that occurs 10 or more times in each document, excluding common stop words (e.g., "a", "of", "is"). Note that because emoji and hashtags are commonly used to convey semantic meaning in a user's bio, we included these as unique "words".
+
+```{r clean_follower_bios, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE}
+# convert emoji and hashtags to text, collapse follower bios
+bios_fh <- paste0(datadir, "/article_data/bios_dtm_", article_id, ".rds")
+
+if(file.exists(bios_fh)){
+  bios_dtm <- readRDS(bios_fh)
+} else {
+  bios <- follower_bios_full %>%
+    # dplyr::filter(lang=="en") %>%
+    dplyr::select(account, bio=description, name) %>%
+    # mutate(bio=ifelse(nchar(bio)!=0, bio, "missingbio")) %>%
+    # unite(description, c(name, bio), sep=" ") %>%
+    mutate(description= paste0(name, " ", bio)) %>%
+    mutate(description = emoji_to_text(description)) %>%
+    mutate(description = gsub("-|\\.", "", description)) %>%
+    mutate(description = gsub("#", "hashtag", description)) %>%
+    group_by(account) %>%
+    summarise(doc=paste(description, collapse = " ")) %>%
+    mutate(doc=iconv(doc, 'utf-8', 'ascii', sub=''))
+  
+  # tokenize, dropping stopwords
+  bios_tokenized <- bios %>%
+    unnest_tokens(word, doc)
+  
+  rm(bios)
+  
+  # apply default stopword list and count frequencies
+  word_counts <- bios_tokenized %>%
+    count(account, word, sort = TRUE) %>%
+    anti_join(stop_words) %>%
+    dplyr::filter(!(word %in% custom_stopwords)) %>%
+    dplyr::filter(n>=10)
+  
+  rm(bios_tokenized)
+  
+  invisible(gc())
+  
+  #-----------------------------------------------------------------------------
+  # TESTING use 2-word tokens
+  #-----------------------------------------------------------------------------
+  # bios_tokenized2 <- bios %>%
+  #   unnest_tokens(ngram, doc, token = "ngrams", n = 2) %>%
+  #   dplyr::filter(!(grepl(paste(custom_stopwords, collapse="|"), ngram)))
+  # 
+  # ngram_counts <- bios_tokenized2 %>%
+  #   count(account, ngram, sort = TRUE) %>%
+  #   dplyr::filter(n>=5) %>%
+  #   separate(ngram, c("word", "word2"), sep = " ") %>%
+  #   anti_join(stop_words) %>%
+  #   dplyr::rename(word1=word, word=word2) %>%
+  #   anti_join(stop_words) %>%
+  #   unite(word, c("word1", "word"), sep=" ")
+
+  # 2-word tokens only
+  # bios_dtm <- ngram_counts %>%
+  #   cast_dtm(account, word, n)
+  
+  # single words + 2-word tokens
+  # bios_dtm <- bind_rows(word_counts, ngram_counts) %>%
+  #   cast_dtm(account, word, n)
+
+    
+  #-----------------------------------------------------------------------------
+  # run over entire dataset
+  #-----------------------------------------------------------------------------
+  bios_dtm <- word_counts %>%
+    cast_dtm(account, word, n)
+  
+  saveRDS(bios_dtm, bios_fh)
+}
+
+```
+
+```{r run_lda, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE}
+
+# This code chunk runs the Latent Dirichlet Allocation (LDA) model to represent the corpus of documents as a mixture of K "topics." Each topic is represented by a different set of words/terms that frequently co-occur. The gamma values are interpreted as the fraction of each document corresponding to each of the K topics. 
+
+bios_lda6 <- LDA(bios_dtm, k = 12, control = list(alpha=0.1, seed = 5678), method="VEM")
+bios_lda_td <- tidy(bios_lda6)
+
+top_terms <- bios_lda_td %>%
+  group_by(topic) %>%
+  top_n(30, beta) %>%
+  ungroup() %>%
+  arrange(topic, -beta) %>% 
+  mutate(term = text_to_emoji(term)) %>%
+  mutate(term = gsub("hashtag", "#", term))
+
+topics_terms <- top_terms %>% 
+  dplyr::select(-beta) %>% 
+  # mutate(topic=paste0("t", topic)) %>%
+  group_by(topic) %>% 
+  summarise(top_10=paste(term, collapse=", ")) %>% 
+  ungroup()
+
+topics_terms_levels <- paste0(topics_terms$topic, ": ", topics_terms$top_10)
+
+bios_lda_gamma <- tidy(bios_lda6, matrix = "gamma") %>%
+  rowwise() %>%
+  mutate(gamma=gamma+runif(1,0,0.0001))
+
+docs_order <- bios_lda_gamma %>%
+  group_by(document) %>%
+  arrange(topic, -gamma) %>%
+  top_n(1, gamma) %>%
+  rename(topic_group = topic) %>%
+  dplyr::select(-gamma)
+
+
+# top topic per user
+lda_gammas <- bios_lda_gamma %>%
+  ungroup() %>%
+  mutate(document=factor(document, levels=docs_order$document)) %>%
+  left_join(topics_terms, by="topic") %>%
+  mutate(topic=paste0(topic, ": ", top_10)) %>%
+  mutate(topic=factor(topic, levels=topics_terms_levels)) %>%
+  group_by(document) %>%
+  arrange(topic, -gamma) %>%
+  top_n(1, gamma) %>%
+  rename(account=document)
+
+lda_gammas_count <- bios_lda_gamma %>% 
+  group_by(topic) %>% 
+  summarise(n=sum(gamma)) %>%
+  left_join(topics_terms, by="topic") %>%
+  mutate(topic=paste0(topic, ": ", top_10)) %>%
+  mutate(topic=factor(topic, levels=topics_terms_levels)) %>%
+  ungroup() %>%
+  mutate(pct=n/sum(n)) %>%
+  dplyr::select(topic, top_10, n, pct)
+
+id_score <- 0
+
+```
+
+
+```{r get_id_score, eval=FALSE, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE, results="asis"}
+
+#-----------------------------------------------------------------------------
+# define topics
+# in production, will be topics containing keywords: phd, university, and professor
+# potentially filter to set #
+#-----------------------------------------------------------------------------
+
+wiki_cat <- cat_match %>%
+  dplyr::filter(categories_trim==category) %>%
+  dplyr::select(categories_wiki) %>%
+  as.character()
+
+get_best_match <- function(keywords, lword_counts, target_category){
+  
+  keywords_split <- unlist(strsplit(keywords, " "))
+  
+  score <- lword_counts %>%
+    dplyr::filter(tolower(article_title)==target_category) %>%
+    mutate(cc=strsplit(content_clean, " ")) %>%
+    rowwise() %>%
+    mutate(score=sum(unlist(cc[1:100]) %in% keywords_split)) %>%
+    # arrange(desc(score)) %>%
+    # head(1) %>%
+    # dplyr::select(article_title) %>%
+    # as.character()
+    dplyr::select(score) %>%
+    as.numeric()
+  
+  
+  # lword
+  
+  return(score)
+}
+
+
+acad_topics <- bios_lda_td %>%
+  group_by(topic) %>%
+  top_n(30, beta) %>%
+  # mutate(beta=ceiling(beta*100)) %>%
+  # uncount(beta) %>%
+  ungroup() %>%
+  arrange(topic, -beta) %>%
+  mutate(term = text_to_emoji(term)) %>%
+  mutate(term = gsub("hashtag", "#", term)) %>% 
+  # dplyr::select(-beta) %>% 
+  # mutate(topic=paste0("t", topic)) %>%
+  group_by(topic) %>% 
+  summarise(top_10=paste(term, collapse=" ")) %>% 
+  ungroup() %>%
+  dplyr::filter(grepl("phd|md|dr", top_10)) %>%
+  dplyr::filter(grepl("university|institute|universidad|lab|college", top_10)) %>%
+  dplyr::filter(grepl("student|estudiante|postdoc|professor|profesor|prof", top_10)) %>%
+  mutate(top_10 = gsub("phd|university|uni|professor|research|student|studying|lab|scientist|dr|doctor|candidate|postdoc|fellow|prof|school|grad|institute|director|lecturer|assistant|author|teacher|science|researcher|writer|music|chair|enthusiast|editor|associate|news|passionate", "", top_10)) %>%
+  mutate(content_clean=top_10) %>%
+  rowwise() %>%
+  mutate(score=get_best_match(content_clean, lword_counts, wiki_cat))
+
+topic_ids <- paste0("topic", acad_topics$topic)
+
+#-----------------------------------------------------------------------------
+# get topic x target category similarity matrix
+#-----------------------------------------------------------------------------
+
+# 1xT matrix of similarity scores between target category and T academic topics
+topic_cat_sim_scores <- get_sim_matrix(biorxiv_content %>% dplyr::filter(article_title==wiki_cat), acad_topics)
+names(topic_cat_sim_scores) <- topic_ids
+topic_cat_sim_scores$title <- wiki_cat #biorxiv_content$article_title
+
+ts2 <- topic_cat_sim_scores %>%
+  mutate(title = tolower(title)) %>%
+  dplyr::filter(title == wiki_cat) %>%
+  unique() %>%
+  gather(topic, tc_score, -title) %>%
+  dplyr::select(topic, target_cat=title, tc_score)
+
+#-----------------------------------------------------------------------------
+# get topic x discipline similarity matrix 
+#-----------------------------------------------------------------------------
+topic_sim_scores <- get_sim_matrix(lword_counts, acad_topics)
+# names(topic_sim_scores) <- paste0("topic", 1:nrow(acad_topics))
+names(topic_sim_scores) <- topic_ids
+topic_sim_scores$title <- lword_counts$article_title
+
+# topic_sim_scores2 <- get_sim_matrix(lword_counts, acad_topics)
+# # names(topic_sim_scores) <- paste0("topic", 1:nrow(acad_topics))
+# names(topic_sim_scores) <- topic_ids
+# topic_sim_scores$title <- lword_counts$article_title
+
+# sim_scores %>% arrange(desc(v3))
+# sim_scores %>% arrange(desc(v2))
+# sim_scores %>% arrange(desc(v1))
+
+# get top matching field for each topic
+top_fields <- topic_sim_scores %>%
+  unique() %>%
+  gather(topic, td_score, -title) %>% 
+  group_by(topic) %>% 
+  top_n(1) %>% 
+  group_by(topic) %>%
+  dplyr::select(topic, best_match=title, td_score) %>%
+  dplyr::filter(td_score>0.1)
+
+#-----------------------------------------------------------------------------
+# calculate id score based on inferred topics
+# change ddsim arg to biorxiv category
+#-----------------------------------------------------------------------------
+
+match_scores <- top_fields %>%
+  left_join(lda_gammas_count %>% 
+              mutate(topic=paste0("topic", gsub(":.*", "", topic))) %>%
+              dplyr::select(topic, top_terms=top_10, n_users=n, pct),
+            by="topic") %>%
+  left_join(ts2, by="topic") %>%
+  # dplyr::filter(best_match %in% biorxiv_sim_scores$title) %>%
+  dplyr::filter(!is.na(n_users)) %>%
+  ungroup() %>%
+  mutate(pct_acad = n_users/sum(n_users)) %>%
+  rowwise() %>%
+  # dd_score is the cosine similarity between the best-matching discipline and target category,
+  # found by looking up in the discipline x category matrix
+  # mutate(dd_score = dd_sim(best_match, category, biorxiv_sim_scores)) %>% 
+  # mutate(score_wt = dd_score*pct_acad) %>%
+  mutate(score_wt2 = tc_score*pct_acad) %>%
+  # mutate(numerator = score*dd_score, denominator=score) %>%
+  ungroup() #%>%
+  # summarise(num_sum=sum(numerator), denom_sum=sum(denominator)) %>%
+  # mutate(ID_score=1-num_sum/denom_sum) %>%
+  
+# id_score <- match_scores %>%
+#   summarise(ID_score = 1-sum(score_wt)) %>%
+#   dplyr::select(ID_score) %>% as.numeric
+
+id_score <- match_scores %>%
+  summarise(ID_score = 1-sum(score_wt2)) %>%
+  dplyr::select(ID_score) %>% as.numeric
+
+```
+
+
+## Inference of academic audience sectors
+
+The table below lists the audience topics inferred by the LDA model, their top 30 keywords, and the fraction of users associated with that topic.
+
+Topics that are associated with academic audiences (having at least one keyword in each of the following 3 keyword sets: `["phd", "md", "dr"]`, `["university", "institute", "universidad", "lab"]`, and `["student", "estudiante", "postdoc", "professor", "profesor", "prof"]`) are indicated with a "🎓" emoji in the `topic` column. For each topic, we calculate the cosine similarity between the top 30 keywords for that topic and the top 100 most common words found in the Wikipedia article for `r category`.
+
+
+each of the Wikipedia articles for `r nrow(links)` [academic disciplines](https://en.wikipedia.org/wiki/Outline_of_academic_disciplines). The discipline found to have the highest cosine similarity with a given topic is indicated in the `best_match` column and the corresponding topic x discipline cosine similarity score is indicated in the `td_score` column.
+
+For each of the matching disciplines, we then calculate a discipline x discipline cosine similarity score between that discipline and the paper's main topical area, indicated in the cos() column.
+
+Among the $D$ academic topics (each assigned to discipline $d$), we calculate an aggregate interdisciplinary score as a weighted average of the similarity scores between each topic and the paper's category, where the weights, $w_d$ (indicated in the `pct_acad` column) are the fraction of the academic audience associated with that topic:
+
+$ID_{score} = 1- \sum_{d \in D} w_d \times cos(\vec{d}, \vec{d}_{home})$ = `r id_score`.
+
+
+```{r table}
+tf_table <- full_join( 
+                      lda_gammas_count %>% 
+                        mutate(topic=paste0("topic", gsub(":.*", "", topic))) %>%
+                        dplyr::select(topic, top_terms=top_10, n_users=n, pct_total=pct),
+                      top_fields,
+                      by="topic") %>%
+  ungroup() %>%
+  # full_join(acad_topics2, by="topic") %>%
+  mutate(topic_lab=topic) %>%
+  # mutate(topic=factor(topic, levels=unique(lda_gammas_count$topic))) %>%
+  # arrange(topic_lab) %>%
+  # mutate(topic=factor(topic, levels=paste0("topic", 1:12))) %>%
+  full_join(match_scores) %>%
+  mutate(topic=cell_spec(topic, "html", 
+                         color="black", align = "c",
+                         background=c(cols[as.numeric(gsub("topic", "", topic))]))) %>%
+  mutate(topic=ifelse(topic_lab %in% topic_ids, paste0(topic, "🎓"), topic)) %>%
+  # dplyr::select(-c(topic_lab, pct, target_cat, score_wt, score_wt2)) %>%
+  dplyr::select(topic, top_terms, n_users, pct_total, pct_acad, tc_score, best_match, td_score) %>%
+  mutate(n_users=round(n_users),
+         pct_total=round(pct_total, 3),
+         pct_acad=round(pct_acad, 3),
+         td_score=round(td_score, 3),
+         tc_score=round(tc_score, 3)) %>%
+  dplyr::rename("Number of users (estimated)" = "n_users",
+                "Top 30 Terms" = "top_terms", 
+                "Fraction of total audience" = "pct_total",
+                "Fraction of academic audience" = "pct_acad",
+                "Best matching discipline" = "best_match",
+                "cos(t, d<sub>best</sub>)" = "td_score",
+                "cos(t, d<sub>target</sub>)" = "tc_score")
+  
+
+knitr::kable(tf_table, format="html", escape=F) %>%
+  column_spec(2, width_max = "200em; display: inline-block;") %>%
+  kable_styling("striped", full_width = F) %>%
+  scroll_box(width = "100%", height = "600px")
+```
+
+
+## Paper topics in field space
+
+To visualize the interdisciplinarity of the article, we calculate the cosine similarity between each pair of academic discipline keyword sets, producing an NxN matrix. We then apply PCA + UMAP to this matrix, producing a two-dimensional embedding of the relationship between academic disciplines.
+
+The inferred academic audience disciplines for this paper are highlighted and labeled. If the paper has a more interdisciplinary audience, the highlighted points will tend to be further apart from each other.
+
+```{r plot_field_structure, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
+
+tf2 <- top_fields %>%
+  dplyr::select(topic, flag_title=best_match)
+
+ms_df <- data.frame(ms_umap$layout, title=lword_counts$article_title) %>%
+  mutate(flag_title=ifelse(title %in% top_fields$best_match, title, NA)) %>%
+  left_join(tf2) %>%
+  mutate(topic=factor(topic, levels=unique(tf2$topic)))
+
+p_fields <- ggplot()+
+  geom_point(data=ms_df[is.na(ms_df$flag_title),], aes(x=X1, y=X2, label=title), colour="grey80", alpha=0.4)+
+  geom_point(data=ms_df[!is.na(ms_df$flag_title),], aes(x=X1, y=X2, label=title, colour=topic), size=3, alpha=0.8)+
+  scale_colour_manual(values=c(cols[as.numeric(gsub("topic", "", top_fields$topic))]))+
+  theme_classic()+
+  theme(legend.position="none")
+
+ggplotly(p_fields) %>%
+  add_annotations(x = ms_df[!is.na(ms_df$flag_title),]$X1,
+                  y = ms_df[!is.na(ms_df$flag_title),]$X2,
+                  text = ms_df[!is.na(ms_df$flag_title),]$flag_title)
+
+
+# in development—custom data layer to link to wikipedia articles when clicking points
+# plot_embedding_wiki <- function(ms_df){
+#   
+#   p_fields <- ggplot()+
+#     geom_point(data=ms_df[is.na(ms_df$flag_title),], aes(x=X1, y=X2, label=title), colour="grey80", alpha=0.4)+
+#     geom_point(data=ms_df[!is.na(ms_df$flag_title),], aes(x=X1, y=X2, label=title, colour=topic), size=3, alpha=0.8)+
+#     scale_colour_manual(values=c(cols[as.numeric(gsub("topic", "", top_fields$topic))]))+
+#     theme_classic()+
+#     theme(legend.position="none")
+#   
+#   ply <- ggplotly(p_fields) %>%
+#     add_annotations(x = ms_df[!is.na(ms_df$flag_title),]$X1,
+#                     y = ms_df[!is.na(ms_df$flag_title),]$X2,
+#                     text = ms_df[!is.na(ms_df$flag_title),]$flag_title)
+#   
+#   # Clickable points link to profile URL using onRender: https://stackoverflow.com/questions/51681079
+#   for(i in 1:12){
+#     ply$x$data[[i]]$customdata <- plotdat[grepl(paste0("^", i, ": "), plotdat$topic),]$urls
+#   }
+#     #pp  <- add_markers(pp, customdata = ~url)
+#   plyout <- onRender(ply, "
+#                      function(el, x) {
+#                      el.on('plotly_click', function(d) {
+#                      var url = d.points[0].customdata;
+#                      //url
+#                      window.open(url);
+#                      });
+#                      }
+#                      ")
+# 
+#   plyout
+# }
+
+# htmlwidgets::saveWidget(plot_embedding(umap_plotdat), 
+#                         file=paste0(datadir, "/figs/homophily_ratio_", article_id, ".html"),
+#                         title=paste0("homophily_ratio_", article_id))
+
+# plot_embedding2(dmp_df2)
+
+```
+
+
+## Plot topic breakdown by user
+
+This plot shows the topic probabilities (gammas) for each user account according to the frequencies of each of the K topics inferred from the bios of their followers. Each stack of bars indicates a unique user that (re-)tweeted the article, and the height of the bar segment indicates the fraction of that user document that is associated with a given topic. Topics inferred to be associated with academic audiences are indicated with a "🎓" emoji in the legend. Click on a user to open their Twitter profile in a new window. Click on a topic in the legend to toggle it off/on in the plot.
+
+```{r plot_topic_structure, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
+
+
+plot_embedding_bars <- function(plotdat, docs_order){
+  
+  plotdat <- plotdat %>%
+    mutate(topic_lab=paste0("topic", topic)) %>%
+    ungroup() %>%
+    mutate(document=factor(document, levels=docs_order$document)) %>%
+    left_join(topics_terms, by="topic") %>%
+    mutate(topic=paste0(topic, ": ", top_10)) %>%
+    mutate(topic=ifelse(topic_lab %in% topic_ids, paste0("🎓", topic), topic)) #%>%
+    
+    # mutate(urls=paste0("https://twitter.com/", document))
+  
+  p <- plotdat %>%
+    mutate(topic=factor(topic, levels=unique(plotdat$topic))) %>%
+    ggplot(aes(x=document, y=gamma, fill=topic))+
+    geom_bar(stat="identity", position="stack")+
+    scale_fill_manual(values=cols)+
+    scale_y_continuous(expand = c(0,0))+
+    scale_x_discrete(position = "top")+ 
+    xlab("Account")+
+    theme(legend.position="bottom",
+          axis.title.y=element_blank(),
+          axis.text.x=element_blank(),
+          axis.text.y=element_blank(),
+          axis.ticks.y=element_blank())+
+    guides(fill=guide_legend(ncol=1))
+
+  ply <- ggplotly(p) %>%
+    layout(legend = list(orientation = "v",   # show entries horizontally
+                       xanchor = "center",  # use center of legend as anchor
+                       yanchor = "bottom",
+                       x = 0, y=-1))
+  # Clickable points link to profile URL using onRender: https://stackoverflow.com/questions/51681079
+  for(i in 1:12){
+    ply$x$data[[i]]$customdata <- paste0("https://twitter.com/", docs_order$document)
+  }
+    #pp  <- add_markers(pp, customdata = ~url)
+  plyout <- onRender(ply, "
+                     function(el, x) {
+                     el.on('plotly_click', function(d) {
+                     var url = d.points[0].customdata;
+                     //url
+                     window.open(url);
+                     });
+                     }
+                     ")
+
+  plyout
+}
+
+# htmlwidgets::saveWidget(plot_embedding(umap_plotdat), 
+#                         file=paste0(datadir, "/figs/homophily_ratio_", article_id, ".html"),
+#                         title=paste0("homophily_ratio_", article_id))
+
+plot_embedding_bars(bios_lda_gamma, docs_order)
+
+# p2
+
+# wrapper <- function(x, ...) paste(strwrap(x, ...), collapse = "\n")
+# 
+# p_thumb <- p +
+#   ggplot2::annotate("text", x=0, y=0.5, hjust=0, label=wrapper(article_df$title, width = 30), size=6)+
+#   theme(legend.position="none", axis.ticks.x=element_blank(), axis.title.x=element_blank())
+# 
+# ggsave(paste0(datadir, "/output/figures/", gsub(".html", ".png", nb_file)), 
+#        plot=p_thumb, width = 4, height=2, dpi=125)
+
+# htmlwidgets::saveWidget(p2, 
+#                         file=paste0(datadir, "/figs/topic_breakdown_by_user_", article_id, ".html"),
+#                         title=paste0("topic_breakdown_by_user_", article_id))
+
+```
+
+
+# Network homophily analysis {.tabset .tabset-fade .tabset-pills}
+
+Many of the papers we analyzed were inferred to have audience topics that are strongly suggestive of affiliation with white nationalism and other right-wing ideologies. According to the principle of network homophily, we would expect these users' followers to substantially overlap the follower bases of prominent white nationalists. 
+
+These results show that most papers exhibit a continuous gradient between their affiliation with academic communities and their affiliation with white nationalist communities. Some users have up to 40% of their followers who also follow prominent white nationalist accounts and <1% who follow prominent scientist accounts, corresponding to a ~100-fold enrichment of white nationalists among their follower base.
+
+Using a curated a set of 20 white nationalist accounts and 20 scientist accounts, we calculated the network homophily between each of these 40 accounts and each of the N users that have tweeted the paper, producing an Nx40 similarity matrix. We then applied PCA+UMAP to this matrix to reduce the dimensionality to Nx2.
+
+```{r homophily_umap, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE}
+#-----------------------------------------------------------------------------
+# Generate follower overlap matrix: 
+# 1 row per test account, i, 1 column per reference account, j
+# each cell contains fraction of i's followers that also follow j
+#-----------------------------------------------------------------------------
+sim_matrix_fh <- paste0(datadir, "/article_data/sim_matrix_", article_id, ".rds")
+
+# if(file.exists(sim_matrix_fh)){
+#   sim_matrix <- readRDS(sim_matrix_fh)
+# } else {
+sim_matrix <- follower_lists_full %>%
+  dplyr::filter(length(followers)>=10) %>%
+  group_by(account) %>%
+  nest() %>% 
+  mutate(test=map(data, ~match_followers(.$followers))) %>% unnest(test)
+
+saveRDS(sim_matrix, sim_matrix_fh)
+# }
+
+# apply PCA to count matrix
+sim_matrix_pca <- sim_matrix %>%
+  dplyr::select(-data) %>%
+  mutate(sum = rowSums(.[2:41])) %>% 
+  dplyr::filter(sum!=0) %>%
+  dplyr::select(-sum) %>%
+  mutate_if(is.numeric, ~jitter(., 0.00001)) %>%
+  nest() %>%
+  mutate(pca = purrr::map(data, ~prcomp(.x %>% dplyr::select(-account), center = TRUE, scale = TRUE)), 
+         pca_tidy = purrr::map2(pca, data, ~broom::augment(.x, data = .y)))
+
+# apply UMAP to PCA data
+sim_matrix_umap <- sim_matrix_pca[[3]][[1]] %>% 
+  dplyr::select(.fittedPC1:.fittedPC40) %>%
+  data.frame() %>%
+  umap(n_neighbors=30, random_state=36262643)
+
+```
+
+
+## Plot UMAP homophily embedding
+
+This plot shows the 2D embedding of accounts according to their homophily with the two reference groups. We typically see a gradient from strong scientist homophily (blue) to strong white nationalist homophily (red), but the extent of these differences can vary. A paper that is exposed primarily to academic audiences will have mostly blue points, papers exposed to white nationalist audiences will have more red points.
+
+```{r homophily_umap_plot, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
+
+umap_plotdat <- bind_cols(sim_matrix_pca[[3]][[1]], data.frame(sim_matrix_umap$layout)) %>%
+  left_join(user_data %>% dplyr::rename(account=screen_name),
+            by="account") %>%
+  mutate(wn_mean=rowMeans(dplyr::select(.,vdare:NewRightAmerica), na.rm = TRUE),
+         sc_mean=rowMeans(dplyr::select(.,pastramimachine:girlscientist), na.rm = TRUE)) %>%
+  mutate(affiliation=log10(wn_mean/(sc_mean+0.001))) %>%
+  dplyr::filter(sc_mean != 0 & wn_mean != 0) %>%
+  mutate(urls=paste0("https://twitter.com/", account))
+
+# plotdat2 <- plotdat
+hdb_clust <- umap_plotdat %>%
+  dplyr::select(X1:X2) %>%
+  as.matrix() %>%
+  hdbscan(x=., minPts=10)
+
+umap_plotdat$cluster <- as.character(hdb_clust$cluster)
+
+plot_embedding <- function(plotdat){
+  
+  p <- plotdat %>% # merge with user_data to get followers_count + other info
+    ggplot(aes(x=X1, y=X2, label=account, colour=affiliation))+
+    geom_point(aes(size=log(followers_count)), alpha=0.8)+
+    scale_colour_gradientn("WN:Scientist Follower Ratio", 
+                           colors=rev(brewer.pal(9, "RdBu")), 
+                           breaks=seq(-3,3),
+                           labels=c("1:1000", "1:100", "1:10","1:1","10:1","100:1","1000:1"),
+                           limits=c(-3,3))+
+    xlab("UMAP1")+
+    ylab("UMAP2")+
+    theme_classic()
+  
+  ply <- ggplotly(p)
+  
+  # Clickable points link to profile URL using onRender: https://stackoverflow.com/questions/51681079
+  ply$x$data[[1]]$customdata <- plotdat$urls
+  #pp  <- add_markers(pp, customdata = ~url)
+  plyout <- onRender(ply, "
+                     function(el, x) {
+                     el.on('plotly_click', function(d) {
+                     var url = d.points[0].customdata;
+                     //url
+                     window.open(url);
+                     });
+                     }
+                     ")
+
+  plyout
+}
+
+# htmlwidgets::saveWidget(plot_embedding(umap_plotdat), 
+#                         file=paste0(datadir, "/figs/homophily_ratio_", article_id, ".html"),
+#                         title=paste0("homophily_ratio_", article_id))
+
+plot_embedding(umap_plotdat)
+
+```
+
+
+# Cosine similarity analysis {.tabset .tabset-fade .tabset-pills}
+
+As a sanity-check for the LDA model, we can also examine how users cluster in other ways. Here we calculate the cosine similarity between the follower bios of each pair of users and apply hierarchical clustering and PCA+UMAP to explore these relationships. Using the document term matrix, we calculate a distance matrix between each pair of users, where the M_i,j entry indicates the cosine similarity score (ranging from 0-1) between the follower bios of user i and user j.
+
+```{r dtm_cosine, echo=FALSE, error=FALSE, message=FALSE, warning=FALSE}
+m <- as.matrix(bios_dtm)
+# distMatrix <- dist(m, method="euclidean")
+
+sim <- m / sqrt(rowSums(m * m))
+sim <- sim %*% t(sim)
+distMatrix <- as.dist(1 - sim)
+
+rm(m)
+invisible(gc())
+```
+
+## UMAP embedding by cosine similarity
+
+This is analogous to performing PCA on SNPs within a population—it tells us how closely "related" different groups of users are, according to pairwise similarity between their followers' bios. 
+
+```{r umap_cosine, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
+dmp <- prcomp(as.matrix(distMatrix), center=TRUE, scale=TRUE)
+
+dmp_df <- dmp$x %>%
+  as_tibble(rownames="account") %>%
+  inner_join(lda_gammas, by="account")
+
+dmp_umap <- dmp$x %>% as.data.frame() %>%
+    umap(n_neighbors=20, random_state=36262643)
+
+dmp_df2 <- dmp_umap$layout %>%
+  as_tibble(rownames="account") %>%
+  inner_join(lda_gammas, by="account") %>%
+  left_join(umap_plotdat, by="account") %>%
+  arrange(topic) %>%
+  mutate(topic=factor(topic, levels=topics_terms_levels)) %>%
+  mutate(urls=paste0("https://twitter.com/", account))
+
+
+
+# htmlwidgets::saveWidget(ggplotly(p2), 
+#                         file=paste0(datadir, "/figs/cosine_umap_", article_id, ".html"),
+#                         title=paste0("cosine_umap_", article_id))
+
+# ggplotly(p2)
+
+plot_embedding2 <- function(plotdat){
+  
+  p <- plotdat %>% 
+    ggplot(aes(x=V1, y=V2, label=account, colour=topic))+
+    geom_point(aes(size=wn_mean), alpha=0.8)+
+    scale_colour_manual(values=cols)+
+    scale_size(limits=c(0,0.5))+
+    xlab("UMAP1")+
+    ylab("UMAP2")+
+    theme_classic()+
+    theme(legend.position="none")
+  
+  ply <- ggplotly(p)
+  
+  # Clickable points link to profile URL using onRender: https://stackoverflow.com/questions/51681079
+  # if(length(ply$x$data==12)){
+    # for(i in 1:12){
+  for(i in 1:length(ply$x$data)){
+    query_topic <- unique(gsub(".*topic: ", "", ply$x$data[[i]]$text))
+    
+    ply$x$data[[i]]$customdata <- plotdat[plotdat$topic==query_topic,]$urls
+  }
+    
+  # }
+    #pp  <- add_markers(pp, customdata = ~url)
+  plyout <- onRender(ply, "
+                     function(el, x) {
+                     el.on('plotly_click', function(d) {
+                     var url = d.points[0].customdata;
+                     //url
+                     window.open(url);
+                     });
+                     }
+                     ")
+
+  plyout
+}
+
+# htmlwidgets::saveWidget(plot_embedding(umap_plotdat), 
+#                         file=paste0(datadir, "/figs/homophily_ratio_", article_id, ".html"),
+#                         title=paste0("homophily_ratio_", article_id))
+
+plot_embedding2(dmp_df2)
+
+# plot PCA
+# p5 <- dmp_df %>%
+#   # mutate(topic_num=gsub(":.*", "", topic)) %>%
+#   ggplot(aes(x=PC1, y=PC2, colour=topic, label=account))+
+#   geom_point()+
+#   scale_colour_manual(values=cols)+
+#   theme(legend.position="none")+
+#   guides(colour=guide_legend(ncol=1))
+# 
+# p5_ply <- ggplotly(p5) %>%
+#   layout(legend = list(orientation = "v",   # show entries horizontally
+#                      xanchor = "center",  # use center of legend as anchor
+#                      yanchor = "bottom",
+#                      x = 0, y=-1))
+# 
+# htmlwidgets::saveWidget(p5_ply, 
+#                         file=paste0(datadir, "/figs/cosine_pca_", article_id, ".html"),
+#                         title=paste0("cosine_pca_", article_id))
+# 
+# p5_ply
+
+```
+
+# Retweet timeline analysis {.tabset .tabset-fade .tabset-pills}
+
+The following plot shows the accumulation of (re-)tweets referencing the article over time.
+
+Each point along the x-axis indicates a unique tweet referencing the article, with the timestamp indicated along the x-axis. Subsequent retweets of each tweet are connected by a line, with the cumulative number of retweets at time T indicated on the y-axis. Points are colored and sized as before, indicating the predominant topic inferred by the LDA model and the level of homophily with white nationalists, respectively.
+
+## Timeline plot
+
+```{r timeline, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
+# p_times <- events %>% 
+rt_dat <- events %>% 
+  rename(account=names, rt=retweet_screen_name) %>% 
+  left_join(dmp_df2 %>% dplyr::select(account, rt_topic=topic, wn_mean), by="account") %>% 
+  mutate(rt=ifelse(is.na(rt), account, rt)) %>%
+  left_join(dmp_df2 %>% dplyr::select(rt=account, source_topic=topic), by="rt") %>%
+  mutate(tweets=paste0(rt, ": ", tweets)) %>%
+  group_by(tweets) %>% 
+  arrange(timestamps) %>% 
+  mutate(order=row_number(), n=n()) %>% 
+  # dplyr::filter(n>3) %>%
+  ungroup() #%>%
+
+# rt_dat %>% dplyr::select(account, rt, tweets, timestamps, source_topic, rt_topic, wn_mean) %>% group_by(tweets, source_topic) %>% count(rt_topic)
+
+rt_dat_plot <- rt_dat %>%
+  ggplot(aes(x=timestamps, y=order, group=tweets, label=account))+
+    geom_line(colour="grey80")+
+    geom_point(aes(colour=rt_topic, size=wn_mean), alpha=0.5)+
+    scale_size(limits=c(0,0.5))+
+    scale_colour_manual(values=cols)+
+    scale_y_log10()+
+    scale_x_discrete(breaks=events$timestamps[seq(1, nrow(events), 10)])+
+    ylab("Retweet Number")+
+    theme_classic()+
+    theme(axis.title.x=element_blank(),
+      axis.text.x=element_text(size=6, angle=45, hjust=1),
+          legend.position="none")
+
+# htmlwidgets::saveWidget(ggplotly(p_times), 
+#                         file=paste0(datadir, "/figs/timeline_", article_id, ".html"),
+#                         title=paste0("timeline_", article_id))
+
+ggplotly(rt_dat_plot)
+
+```
+
+
+# Missing data analysis {.tabset .tabset-fade .tabset-pills}
+
+The LDA topic model described above is applied to the Twitter biographies of each user's followers. However, having a biography is not mandatory and many users opt to leave their bio blank. Here we explore if these patterns of missingness systematically differ among the topic groups.
+
+
+```{r calc_missing, echo=FALSE, error=FALSE, warning=FALSE, message=FALSE}
+bios_m <- follower_bios_full %>%
+  # dplyr::filter(account_lang=="en") %>%
+  dplyr::select(account, bio=description, name) %>%
+  mutate(bio=ifelse(nchar(bio)!=0, 0, 1)) %>% 
+  # unite(description, c(name, bio), sep=" ") %>%
+  group_by(account) %>%
+  summarise(tot=n(), nmissing=sum(bio), pct=nmissing/tot) %>% #dim
+  # dplyr::rename("document"="account") %>%
+  inner_join(lda_gammas, by="account") %>%
+  inner_join(umap_plotdat, by="account") %>%
+  arrange(topic)
+
+rm(follower_bios_full)
+invisible(gc())
+```
+
+## Plot missingness distributions by group
+
+This plot shows the distribution of fraction of missing bios for each of the K topics.
+
+```{r missing_data, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
+
+
+p4 <- bios_m %>%
+  ungroup() %>%
+  mutate(topic_num=gsub(":.*", "", topic)) %>%
+  mutate(topic=factor(topic, levels=topics_terms_levels)) %>%
+  ggplot(aes(x=topic, y=pct, colour=topic, label=account))+
+  geom_jitter(size=3, alpha=0.6)+
+  geom_boxplot(outlier.shape=NA, fill=NA)+
+  scale_colour_manual(values=cols)+
+  theme(legend.position="bottom",
+        axis.title.y=element_blank(),
+        axis.text.x=element_blank())+
+  guides(colour=guide_legend(ncol=1))
+
+p4_ply <- ggplotly(p4) %>%
+  layout(legend = list(orientation = "v",   # show entries horizontally
+                     xanchor = "center",  # use center of legend as anchor
+                     yanchor = "bottom",
+                     x = 0, y=-1))
+
+# htmlwidgets::saveWidget(p4_ply, 
+#                         file=paste0(datadir, "/figs/missing_dist_", article_id, ".html"),
+#                         title=paste0("missing_dist_", article_id))
+
+p4_ply
+
+```
+
+## Correlation between missing data and WN homophily
+
+This plot investigates how patterns of missingness among follower bios are associated with patterns of white nationalist homophily described above. In many of the papers analyzed, we often see a positive correlation between proportion of followers with missing bios and homophily with prominent white nationalists, but only within a subset of topical groups inferred by the LDA model. This suggests that missingness within bios is itself a common feature of WN communities or WN-adjacent communities on Twitter. This also explains why some users have strong network homophily with known white nationalists, but do not show a strong topical association in the LDA model—essentially, the followers that drive WN network homophily are systematically contributing less information to the LDA model and skewing some users to look more like other topics.
+
+```{r missing_data_homophily, error=FALSE, warning=FALSE, fig.height=9, fig.width=18}
+p4a <- bios_m %>%
+  # mutate(topic_num=gsub(":.*", "", topic)) %>%
+  mutate(topic=factor(topic, levels=topics_terms_levels)) %>%
+  dplyr::filter(pct<0.5) %>%
+  ggplot(aes(x=pct, y=wn_mean, group=topic, colour=topic, label=account))+
+  geom_point()+
+  geom_smooth(method="lm", se=F)+
+  scale_colour_manual(values=cols)+
+  # facet_wrap(~topic_num, scales="free")+
+  xlab("Fraction of followers with missing bios")+
+  ylab("WN Homophily")+
+  theme(legend.position="bottom")+
+  guides(colour=guide_legend(ncol=1))
+
+p4a_ply <- ggplotly(p4a) %>%
+  layout(legend = list(orientation = "v",   # show entries horizontally
+                     xanchor = "center",  # use center of legend as anchor
+                     yanchor = "bottom",
+                     x = 0, y=-1))
+
+# htmlwidgets::saveWidget(p4a_ply, 
+#                         file=paste0(datadir, "/figs/missing_homophily_cor_", article_id, ".html"),
+#                         title=paste0("missing_homophily_cor_", article_id))
+
+p4a_ply
+
+```
+
+``` {r summary_data, echo=FALSE, error=FALSE, warning=FALSE}
+article_am <- altmetrics(doi = doi)
+article_df <- altmetric_data(article_am)
+am_cohorts <- article_df %>% dplyr::select(matches("cohorts"))
+
+out_dat <- list("doi"=doi, 
+                "categories"=category, 
+                "topics"=lda_gammas_count, 
+                "am_cohorts"=am_cohorts, 
+                "id_score"=id_score, 
+                "homophily"=umap_plotdat, 
+                "title"=params$title)
+
+out_dat_fh <- paste0(datadir, "/article_data/summary_data_", article_id, ".rds")
+
+saveRDS(out_dat, out_dat_fh)
+
+```
+

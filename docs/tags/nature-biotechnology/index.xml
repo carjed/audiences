@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nature Biotechnology on audiences</title>
+    <link>https://carjed.github.io/audiences/tags/nature-biotechnology/</link>
+    <description>Recent content in Nature Biotechnology on audiences</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 04 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://carjed.github.io/audiences/tags/nature-biotechnology/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Resistance gene cloning from a wild crop relative by sequence capture and association genetics, Nature Biotechnology, 2019-02-04</title>
+      <link>https://carjed.github.io/audiences/reports/resistance_gene_cloning_from_a_wild_crop_relative_by_sequence_capture_and_association_genetics_54941534/</link>
+      <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/resistance_gene_cloning_from_a_wild_crop_relative_by_sequence_capture_and_association_genetics_54941534/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+  </channel>
+</rss>

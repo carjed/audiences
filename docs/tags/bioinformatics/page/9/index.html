@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html><head>
+  
+  <title>bioinformatics | audiences</title>
+  
+  <link rel="stylesheet" href='https://carjed.github.io/audiences/css/bootstrap.min.css'>
+  <link rel="stylesheet" href='https://carjed.github.io/audiences/css/mondrian.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.68.3" />
+  
+
+<style>
+
+  #grid .list-item.page:hover {
+    background: white;
+  }
+  main.single.page h1 {
+    border-color: white;
+  }
+
+  #grid .list-item.reports:hover {
+    background: gold;
+  }
+  main.single.reports h1 {
+    border-color: gold;
+  }
+
+  #grid .list-item.summary:hover {
+    background: limegreen;
+  }
+  main.single.summary h1 {
+    border-color: limegreen;
+  }
+
+</style>
+  
+
+
+
+
+
+
+
+
+
+<script src="https://carjed.github.io/audiences/js/bundle.min.95d2483cd3c5d2bf47c1f36307a456787d60ad958c5efe44db9afc47012b1b05b8e1f64f6ac291650439322a6c38e86eb7cd6254255516d857c23f299fb0e666.js" integrity="sha512-ldJIPNPF0r9HwfNjB6RWeH1grZWMXv5E25r8RwErGwW44fZPasKRZQQ5MipsOOhut81iVCVVFthXwj8pn7DmZg=="></script>
+
+  <style></style>
+  
+  
+</head>
+<body>
+  <div class="container-fluid h-100 d-flex flex-column">
+<header class="row flex-shrink-0 justify-content-center justify-content-md-start">
+  <ul class="nav px-2">
+    <li class="p-2">
+      <a class="text-muted text-decoration-none" href="https://carjed.github.io/audiences/">audiences</a>
+    </li>
+    
+      <li class="p-2">
+        <a class="text-light" href="https://carjed.github.io/audiences/reports" title="">reports</a>
+      </li>
+    
+  </nav>
+</header>
+
+<main id="grid" class="row list flex-wrap h-99 text-center">
+  
+    <div class="list-item d-flex lead justify-content-center align-items-center reports">
+      <div>
+        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/accelerating_sequence_alignment_to_graphs_61175973/">
+          <h4 class="font-weight-bold">Accelerating Sequence Alignment to Graphs, bioRxiv, 2019-05-28</h4>
+          <p>AbstractAligning DNA sequences to an annotated reference is a key step for genotyping in biology. Recent scientific studies have demonstrated improved inference by aligning reads to a variation graph, i.e., a reference sequence augmented with known genetic variations. Given a variation graph in the form of a directed acyclic string graph, the sequence to graph alignment problem seeks to find the best matching path in the graph for an input query sequence. Solving this problem exactly using a sequential dynamic programming algorithm takes quadratic time in terms of the graph size and query length, making it difficult to scale to high throughput DNA sequencing data. In this work, we propose the first parallel algorithm for computing sequence to graph alignments that leverages multiple cores and single-instruction multiple-data (SIMD) operations. We take advantage of the available inter-task parallelism, and provide a novel blocked approach to compute the score matrix while ensuring high memory locality. Using a 48-core Intel Xeon Skylake processor, the proposed algorithm achieves peak performance of 317 billion cell updates per second (GCUPS), and demonstrates near linear weak and strong scaling on up to 48 cores. It delivers significant performance gains compared to existing algorithms, and results in run-time reduction from multiple days to three hours for the problem of optimally aligning high coverage long (PacBioONT) or short (Illumina) DNA reads to an MHC human variation graph containing 10 million vertices.AvailabilityThe implementation of our algorithm is available at &lt;jatsext-link xmlnsxlink=httpwww.w3.org1999xlink ext-link-type=uri xlinkhref=httpsgithub.comParBLiSSPaSGAL&gt;httpsgithub.comParBLiSSPaSGAL&lt;jatsext-link&gt;. Data sets used for evaluation are accessible using &lt;jatsext-link xmlnsxlink=httpwww.w3.org1999xlink ext-link-type=uri xlinkhref=httpsalurulab.cc.gatech.eduPaSGAL&gt;httpsalurulab.cc.gatech.eduPaSGAL&lt;jatsext-link&gt;.</p>
+        </a>
+        
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/biorxiv">biorxiv</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/bioinformatics">bioinformatics</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/100-200-users">100-200-users</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/2019">2019</a>
+          
+        
+      </div>
+    </div>
+  
+    <div class="list-item d-flex lead justify-content-center align-items-center reports">
+      <div>
+        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/rnaseqr_an_r_package_for_automated_two-group_rna-seq_analysis_workflow_61184522/">
+          <h4 class="font-weight-bold">RNASeqR an R package for automated two-group RNA-Seq analysis workflow, bioRxiv, 2019-05-28</h4>
+          <p>RNA-Seq analysis has revolutionized researchers&#39; understanding of the transcriptome in biological research. Assessing the differences in transcriptomic profiles between tissue samples or patient groups enables researchers to explore the underlying biological impact of transcription. RNA-Seq analysis requires multiple processing steps and huge computational capabilities. There are many well-developed R packages for individual steps; however, there are few RBioconductor packages that integrate existing software tools into a comprehensive RNA-Seq analysis and provide fundamental end-to-end results in pure R environment so that researchers can quickly and easily get fundamental information in big sequencing data. To address this need, we have developed the open source RBioconductor package, RNASeqR. It allows users to run an automated RNA-Seq analysis with only six steps, producing essential tabular and graphical results for further biological interpretation. The features of RNASeqR include six-step analysis, comprehensive visualization, background execution version, and the integration of both R and command-line software. RNASeqR provides fast, light-weight, and easy-to-run RNA-Seq analysis pipeline in pure R environment. It allows users to efficiently utilize popular software tools, including both RBioconductor and command-line tools, without predefining the resources or environments. RNASeqR is freely available for Linux and macOS operating systems from Bioconductor (httpsbioconductor.orgpackagesreleasebiochtmlRNASeqR.html).</p>
+        </a>
+        
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/biorxiv">biorxiv</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/bioinformatics">bioinformatics</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/100-200-users">100-200-users</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/2019">2019</a>
+          
+        
+      </div>
+    </div>
+  
+    <div class="list-item d-flex lead justify-content-center align-items-center reports">
+      <div>
+        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/the_advantages_and_disadvantages_of_short-_and_long-read_metagenomics_to_infer_bacterial_and_eukaryotic_community_composition_61155939/">
+          <h4 class="font-weight-bold">The advantages and disadvantages of short- and long-read metagenomics to infer bacterial and eukaryotic community composition, bioRxiv, 2019-05-27</h4>
+          <p>AbstractBackgroundThe first step in understanding ecological community diversity and dynamics is quantifying community membership. An increasingly common method for doing so is through metagenomics. Because of the rapidly increasing popularity of this approach, a large number of computational tools and pipelines are available for analysing metagenomic data. However, the majority of these tools have been designed and benchmarked using highly accurate short read data (i.e. illumina), with few studies benchmarking classification accuracy for long error-prone reads (PacBio or Oxford Nanopore). In addition, few tools have been benchmarked for non-microbial communities.ResultsHere we use simulated error prone Oxford Nanopore and high accuracy Illumina read sets to systematically investigate the effects of sequence length and taxon type on classification accuracy for metagenomic data from both microbial and non-microbial communities. We show that very generally, classification accuracy is far lower for non-microbial communities, even at low taxonomic resolution (e.g. family rather than genus).ConclusionsWe then show that for two popular taxonomic classifiers, long error-prone reads can significantly increase classification accuracy, and this is most pronounced for non-microbial communities. This work provides insight on the expected accuracy for metagenomic analyses for different taxonomic groups, and establishes the point at which read length becomes more important than error rate for assigning the correct taxon.</p>
+        </a>
+        
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/biorxiv">biorxiv</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/bioinformatics">bioinformatics</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/100-200-users">100-200-users</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/2019">2019</a>
+          
+        
+      </div>
+    </div>
+  
+    <div class="list-item d-flex lead justify-content-center align-items-center reports">
+      <div>
+        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/algorithms_for_efficiently_collapsing_reads_with_unique_molecular_identifiers_61056743/">
+          <h4 class="font-weight-bold">Algorithms for efficiently collapsing reads with Unique Molecular Identifiers, bioRxiv, 2019-05-25</h4>
+          <p>AbstractBackgroundUnique Molecular Identifiers (UMI) are used in many experiments to find and remove PCR duplicates. Although there are many tools for solving the problem of deduplicating reads based on their finding reads with the same alignment coordinates and UMIs, many tools either cannot handle substitution errors, or require expensive pairwise UMI comparisons that do not efficiently scale to larger datasets.ResultsWe formulate the problem of deduplicating UMIs in a manner that enables optimizations to be made, and more efficient data structures to be used. We implement our data structures and optimizations in a tool called UMICollapse, which is able to deduplicate over one million unique UMIs of length 9 at a single alignment position in around 26 seconds.ConclusionsWe present a new formulation of the UMI deduplication problem, and show that it can be solved faster, with more sophisticated data structures.</p>
+        </a>
+        
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/biorxiv">biorxiv</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/bioinformatics">bioinformatics</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/100-200-users">100-200-users</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/2019">2019</a>
+          
+        
+      </div>
+    </div>
+  
+    <div class="list-item d-flex lead justify-content-center align-items-center reports">
+      <div>
+        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/episcanpy_integrated_single-cell_epigenomic_analysis_61069578/">
+          <h4 class="font-weight-bold">EpiScanpy integrated single-cell epigenomic analysis, bioRxiv, 2019-05-25</h4>
+          <p>ABSTRACTEpigenetic single-cell measurements reveal a layer of regulatory information not accessible to single-cell transcriptomics, however single-cell-omics analysis tools mainly focus on gene expression data. To address this issue, we present epiScanpy, a computational framework for the analysis of single-cell DNA methylation and single-cell ATAC-seq data. EpiScanpy makes the many existing RNA-seq workflows from scanpy available to large-scale single-cell data from other -omics modalities. We introduce and compare multiple feature space constructions for epigenetic data and show the feasibility of common clustering, dimension reduction and trajectory learning techniques. We benchmark epiScanpy by interrogating different single-cell brain mouse atlases of DNA methylation, ATAC-seq and transcriptomics. We find that differentially methylated and differentially open markers between cell clusters enrich transcriptome-based cell type labels by orthogonal epigenetic information.</p>
+        </a>
+        
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/biorxiv">biorxiv</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/bioinformatics">bioinformatics</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/0-100-users">0-100-users</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/2019">2019</a>
+          
+        
+      </div>
+    </div>
+  
+    <div class="list-item d-flex lead justify-content-center align-items-center reports">
+      <div>
+        <a class="text-decoration-none" href="https://carjed.github.io/audiences/reports/novel_rhabdovirus_and_an_almost_complete_drain_fly_transcriptome_recovered_from_two_independent_contaminations_of_clinical_samples_60978515/">
+          <h4 class="font-weight-bold">Novel Rhabdovirus and an almost complete drain fly transcriptome recovered from two independent contaminations of clinical samples, bioRxiv, 2019-05-24</h4>
+          <p>AbstractMetagenomic approaches enable an open exploration of microbial communities without requiring a priori knowledge of a sample’s composition by shotgun sequencing the total RNA or DNA of the sample. Such an approach is valuable for exploratory diagnostics of novel pathogens in clinical practice. Yet, one may also identify surprising off-target findings. Here we report a mostly complete transcriptome from a drain fly (likely Psychoda alternata) as well as a novel Rhabdovirus-like virus recovered from two independent contaminations of RNA sequencing libraries from clinical samples of cerebral spinal fluid (CSF) and serum, out of a total of 724 libraries sequenced at the same laboratory during a 2-year time span. This drain fly genome shows a considerable divergence from previously sequenced insects, which may obscure common clinical metagenomic analyses not expecting such contaminations. The classification of these contaminant sequences allowed us to identify infected drain flies as the likely origin of the novel Rhabdovirus-like sequence, which could have been erroneously linked to human pathology, had they been ignored.</p>
+        </a>
+        
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/biorxiv">biorxiv</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/bioinformatics">bioinformatics</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/0-100-users">0-100-users</a>
+          
+            <a class="text-body text-decoration-none border-bottom border-dark" href="https://carjed.github.io/audiences/tags/2019">2019</a>
+          
+        
+      </div>
+    </div>
+  
+</main>
+<br>
+<main>
+  
+
+
+<nav aria-label="page navigation">
+    <ul class="pagination">
+        
+        
+        <li class="page-item"><a href="https://carjed.github.io/audiences/tags/bioinformatics/" rel="first" class="page-link">« First</a></li>
+        
+
+        
+        <li class="page-item"><a href="https://carjed.github.io/audiences/tags/bioinformatics/page/8/" rel="prev" class="page-link">‹ Prev</a></li>
+        
+
+        
+             
+            
+            <li class="page-item disabled"><a class="page-link">...</a></li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+             
+            <li class="page-item"><a href="https://carjed.github.io/audiences/tags/bioinformatics/page/5/" class="page-link">5</a></li>
+            
+        
+            
+             
+            <li class="page-item"><a href="https://carjed.github.io/audiences/tags/bioinformatics/page/6/" class="page-link">6</a></li>
+            
+        
+            
+             
+            <li class="page-item"><a href="https://carjed.github.io/audiences/tags/bioinformatics/page/7/" class="page-link">7</a></li>
+            
+        
+            
+             
+            <li class="page-item"><a href="https://carjed.github.io/audiences/tags/bioinformatics/page/8/" class="page-link">8</a></li>
+            
+        
+             
+            <li class="page-item active"><a href="https://carjed.github.io/audiences/tags/bioinformatics/page/9/" class="page-link">9</a></li>
+            
+        
+            
+             
+            <li class="page-item"><a href="https://carjed.github.io/audiences/tags/bioinformatics/page/10/" class="page-link">10</a></li>
+            
+        
+            
+             
+            <li class="page-item"><a href="https://carjed.github.io/audiences/tags/bioinformatics/page/11/" class="page-link">11</a></li>
+            
+        
+            
+             
+            <li class="page-item"><a href="https://carjed.github.io/audiences/tags/bioinformatics/page/12/" class="page-link">12</a></li>
+            
+        
+            
+             
+            <li class="page-item"><a href="https://carjed.github.io/audiences/tags/bioinformatics/page/13/" class="page-link">13</a></li>
+            
+        
+             
+            
+            <li class="page-item disabled"><a class="page-link">...</a></li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+
+        
+        <li class="page-item"><a href="https://carjed.github.io/audiences/tags/bioinformatics/page/10/" rel="next" class="page-link">Next ›</a></li>
+        
+
+        
+        
+        <li class="page-item"><a href="https://carjed.github.io/audiences/tags/bioinformatics/page/46/" rel="last" class="page-link">Last »</a></li>
+        
+    </ul>
+</nav>
+
+
+</main>
+
+&nbsp;
+<hr />
+<p style="text-align: center;">Created with the <a href="https://github.com/carjed/audiences">audiences framework </a> by <a href="https://github.com/carjed/">Jedidiah Carlson</a></p>
+<p style="text-align: center;">Powered by <a href="https://gohugo.io/">Hugo </a></p>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<p style="text-align: center;">
+    <a href="https://twitter.com/JedMSP?lang=en" class="fa fa-twitter"></a>
+    <a href="https://github.com/carjed/" class="fa fa-github"></a>
+</p>
+
+&nbsp;
+
+</div>
+  
+</body>
+</html>

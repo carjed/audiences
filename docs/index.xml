@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>audiences</title>
+    <link>https://carjed.github.io/audiences/</link>
+    <description>Recent content on audiences</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 06 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://carjed.github.io/audiences/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://carjed.github.io/audiences/about/</link>
+      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/about/</guid>
+      <description>Background Audiences is a framework for exploring the various audiences that are engaging with academic publications on Twitter.
+Paper metadata and associated Twitter data was collected using APIs from Crossref, Altmetric, Rxivist, and Twitter.
+The code for Audiences is written in R, and this site was generated with Hugo, with a modified version of the Mondrian template.
+All code used in these analyses is available on Github.
+Setup Prerequisites and dependencies You will need a recent version of RStudio if you wish to use the interactive notebook capabilities.</description>
+    </item>
+    
+    <item>
+      <title>Summary</title>
+      <link>https://carjed.github.io/audiences/summary/</link>
+      <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/summary/</guid>
+      <description>Summary of papers analyzed</description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>https://carjed.github.io/audiences/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/search/</guid>
+      <description>Search for individual reports.</description>
+    </item>
+    
+  </channel>
+</rss>

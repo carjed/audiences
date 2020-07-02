@@ -1,0 +1,14 @@
+# example config file for Twitter API access
+email: "your email address"
+
+# path to directory containing
+hf_path: "~"
+pythonpath: "/opt/anaconda/anaconda3/bin/python"
+
+# You will need to set up a Twitter developer account 
+# to generate API keys
+app_name: "name_of_twitter_app"
+consumer_key: "XXXXXXXXXXXXXXXXXX"
+consumer_secret: "XXXXXXXXXXXXXXXXXX"
+access_token: "XXXXXXXXXXXXXXXXXX"
+access_secret: "XXXXXXXXXXXXXXXXXX"

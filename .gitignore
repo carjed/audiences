@@ -1,0 +1,13 @@
+_config.yaml
+.httr-oauth
+twitter_token.rds
+*.nb.html
+*.fuse*
+.ipynb_checkpoints/**
+archive/**
+content/**
+output/**
+resources/**
+resources1/**
+article_data/**
+figs/**

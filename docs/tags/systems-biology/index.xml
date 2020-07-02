@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Systems Biology on audiences</title>
+    <link>https://carjed.github.io/audiences/tags/systems-biology/</link>
+    <description>Recent content in Systems Biology on audiences</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://carjed.github.io/audiences/tags/systems-biology/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A mathematical model for simulating the transmission of Wuhan novel Coronavirus, bioRxiv, 2020-01-20</title>
+      <link>https://carjed.github.io/audiences/reports/a_mathematical_model_for_simulating_the_transmission_of_wuhan_novel_coronavirus_74254422/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/a_mathematical_model_for_simulating_the_transmission_of_wuhan_novel_coronavirus_74254422/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Dual Proteome-scale Networks Reveal Cell-specific Remodeling of the Human Interactome, bioRxiv, 2020-01-20</title>
+      <link>https://carjed.github.io/audiences/reports/dual_proteome-scale_networks_reveal_cell-specific_remodeling_of_the_human_interactome_74254429/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/dual_proteome-scale_networks_reveal_cell-specific_remodeling_of_the_human_interactome_74254429/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Drug mechanism-of-action discovery through the integration of pharmacological and CRISPR screens, bioRxiv, 2020-01-15</title>
+      <link>https://carjed.github.io/audiences/reports/drug_mechanism-of-action_discovery_through_the_integration_of_pharmacological_and_crispr_screens_74033007/</link>
+      <pubDate>Wed, 15 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/drug_mechanism-of-action_discovery_through_the_integration_of_pharmacological_and_crispr_screens_74033007/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Prokaryotic Single-Cell RNA Sequencing by In Situ Combinatorial Indexing, bioRxiv, 2019-12-06</title>
+      <link>https://carjed.github.io/audiences/reports/prokaryotic_single-cell_rna_sequencing_by_in_situ_combinatorial_indexing_72333206/</link>
+      <pubDate>Fri, 06 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/prokaryotic_single-cell_rna_sequencing_by_in_situ_combinatorial_indexing_72333206/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Undulating changes in human plasma proteome across lifespan are linked to disease, bioRxiv, 2019-09-01</title>
+      <link>https://carjed.github.io/audiences/reports/undulating_changes_in_human_plasma_proteome_across_lifespan_are_linked_to_disease_65759452/</link>
+      <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/undulating_changes_in_human_plasma_proteome_across_lifespan_are_linked_to_disease_65759452/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Gene networks with transcriptional bursting recapitulate rare transient coordinated expression states in cancer, bioRxiv, 2019-07-17</title>
+      <link>https://carjed.github.io/audiences/reports/gene_networks_with_transcriptional_bursting_recapitulate_rare_transient_coordinated_expression_states_in_cancer_63645752/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/gene_networks_with_transcriptional_bursting_recapitulate_rare_transient_coordinated_expression_states_in_cancer_63645752/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Longitudinal single cell transcriptomics reveals Krt8&#43; alveolar epithelial progenitors in lung regeneration, bioRxiv, 2019-07-17</title>
+      <link>https://carjed.github.io/audiences/reports/longitudinal_single_cell_transcriptomics_reveals_krt8&#43;_alveolar_epithelial_progenitors_in_lung_regeneration_63670247/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/longitudinal_single_cell_transcriptomics_reveals_krt8&#43;_alveolar_epithelial_progenitors_in_lung_regeneration_63670247/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Mapping Vector Field of Single Cells, bioRxiv, 2019-07-09</title>
+      <link>https://carjed.github.io/audiences/reports/mapping_vector_field_of_single_cells_63332694/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/mapping_vector_field_of_single_cells_63332694/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Aging is associated with a systemic length-driven transcriptome imbalance, bioRxiv, 2019-07-04</title>
+      <link>https://carjed.github.io/audiences/reports/aging_is_associated_with_a_systemic_length-driven_transcriptome_imbalance_63103929/</link>
+      <pubDate>Thu, 04 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/aging_is_associated_with_a_systemic_length-driven_transcriptome_imbalance_63103929/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Single-cell mass-spectrometry quantifies the emergence of macrophage heterogeneity, bioRxiv, 2019-06-10</title>
+      <link>https://carjed.github.io/audiences/reports/single-cell_mass-spectrometry_quantifies_the_emergence_of_macrophage_heterogeneity_61883494/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/single-cell_mass-spectrometry_quantifies_the_emergence_of_macrophage_heterogeneity_61883494/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Chromatinization of Escherichia coli with archaeal histones, bioRxiv, 2019-06-04</title>
+      <link>https://carjed.github.io/audiences/reports/chromatinization_of_escherichia_coli_with_archaeal_histones_61507230/</link>
+      <pubDate>Tue, 04 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/chromatinization_of_escherichia_coli_with_archaeal_histones_61507230/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>A reference map of the human protein interactome, bioRxiv, 2019-04-11</title>
+      <link>https://carjed.github.io/audiences/reports/a_reference_map_of_the_human_protein_interactome_58852789/</link>
+      <pubDate>Thu, 11 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/a_reference_map_of_the_human_protein_interactome_58852789/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Metabolic activity affects response of single cells to a nutrient switch in structured populations, bioRxiv, 2019-03-18</title>
+      <link>https://carjed.github.io/audiences/reports/metabolic_activity_affects_response_of_single_cells_to_a_nutrient_switch_in_structured_populations_57196911/</link>
+      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/metabolic_activity_affects_response_of_single_cells_to_a_nutrient_switch_in_structured_populations_57196911/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Ion beam subcellular tomography, bioRxiv, 2019-02-23</title>
+      <link>https://carjed.github.io/audiences/reports/ion_beam_subcellular_tomography_55924043/</link>
+      <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/ion_beam_subcellular_tomography_55924043/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Subcellular localization of drug distribution by super-resolution ion beam imaging, bioRxiv, 2019-02-22</title>
+      <link>https://carjed.github.io/audiences/reports/subcellular_localization_of_drug_distribution_by_super-resolution_ion_beam_imaging_55904025/</link>
+      <pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/subcellular_localization_of_drug_distribution_by_super-resolution_ion_beam_imaging_55904025/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Full-length mRNA sequencing reveals principles of poly(A) tail length control, bioRxiv, 2019-02-12</title>
+      <link>https://carjed.github.io/audiences/reports/full-length_mrna_sequencing_reveals_principles_of_polya_tail_length_control_55318571/</link>
+      <pubDate>Tue, 12 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/full-length_mrna_sequencing_reveals_principles_of_polya_tail_length_control_55318571/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Short-range interactions govern cellular dynamics in microbial multi-genotype systems, bioRxiv, 2019-01-27</title>
+      <link>https://carjed.github.io/audiences/reports/short-range_interactions_govern_cellular_dynamics_in_microbial_multi-genotype_systems_54544166/</link>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/short-range_interactions_govern_cellular_dynamics_in_microbial_multi-genotype_systems_54544166/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Statistical physics of liquid brains, bioRxiv, 2018-11-27</title>
+      <link>https://carjed.github.io/audiences/reports/statistical_physics_of_liquid_brains_51780511/</link>
+      <pubDate>Tue, 27 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/statistical_physics_of_liquid_brains_51780511/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Lineage tracing on transcriptional landscapes links state to fate during differentiation, bioRxiv, 2018-11-11</title>
+      <link>https://carjed.github.io/audiences/reports/lineage_tracing_on_transcriptional_landscapes_links_state_to_fate_during_differentiation_51070913/</link>
+      <pubDate>Sun, 11 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/lineage_tracing_on_transcriptional_landscapes_links_state_to_fate_during_differentiation_51070913/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Charting a tissue from single-cell transcriptomes, bioRxiv, 2018-10-30</title>
+      <link>https://carjed.github.io/audiences/reports/charting_a_tissue_from_single-cell_transcriptomes_50502918/</link>
+      <pubDate>Tue, 30 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/charting_a_tissue_from_single-cell_transcriptomes_50502918/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>A deep proteome and transcriptome abundance atlas of 29 healthy human tissues, bioRxiv, 2018-06-27</title>
+      <link>https://carjed.github.io/audiences/reports/a_deep_proteome_and_transcriptome_abundance_atlas_of_29_healthy_human_tissues_44207978/</link>
+      <pubDate>Wed, 27 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/a_deep_proteome_and_transcriptome_abundance_atlas_of_29_healthy_human_tissues_44207978/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Transcriptional burst initiation and polymerase pause release are key control points of transcriptional regulation, bioRxiv, 2018-03-03</title>
+      <link>https://carjed.github.io/audiences/reports/transcriptional_burst_initiation_and_polymerase_pause_release_are_key_control_points_of_transcriptional_regulation_33862336/</link>
+      <pubDate>Sat, 03 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/transcriptional_burst_initiation_and_polymerase_pause_release_are_key_control_points_of_transcriptional_regulation_33862336/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>The interaction landscape between transcription factors and the nucleosome, bioRxiv, 2017-12-29</title>
+      <link>https://carjed.github.io/audiences/reports/the_interaction_landscape_between_transcription_factors_and_the_nucleosome_31012336/</link>
+      <pubDate>Fri, 29 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/the_interaction_landscape_between_transcription_factors_and_the_nucleosome_31012336/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>The null additivity of multi-drug combinations, bioRxiv, 2017-12-26</title>
+      <link>https://carjed.github.io/audiences/reports/the_null_additivity_of_multi-drug_combinations_30901769/</link>
+      <pubDate>Tue, 26 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/the_null_additivity_of_multi-drug_combinations_30901769/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>A deep mutational scan of an acidic activation domain, bioRxiv, 2017-12-09</title>
+      <link>https://carjed.github.io/audiences/reports/a_deep_mutational_scan_of_an_acidic_activation_domain_30164194/</link>
+      <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/a_deep_mutational_scan_of_an_acidic_activation_domain_30164194/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Thanatotranscriptome genes actively expressed after organismal death, bioRxiv, 2016-06-11</title>
+      <link>https://carjed.github.io/audiences/reports/thanatotranscriptome_genes_actively_expressed_after_organismal_death_8651558/</link>
+      <pubDate>Sat, 11 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/thanatotranscriptome_genes_actively_expressed_after_organismal_death_8651558/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Massively parallel clonal analysis using CRISPRCas9 induced genetic scars, bioRxiv, 2016-06-02</title>
+      <link>https://carjed.github.io/audiences/reports/massively_parallel_clonal_analysis_using_crisprcas9_induced_genetic_scars_8425528/</link>
+      <pubDate>Thu, 02 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/massively_parallel_clonal_analysis_using_crisprcas9_induced_genetic_scars_8425528/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+    <item>
+      <title>Revised estimates for the number of human and bacteria cells in the body, bioRxiv, 2016-01-07</title>
+      <link>https://carjed.github.io/audiences/reports/revised_estimates_for_the_number_of_human_and_bacteria_cells_in_the_body_4964232/</link>
+      <pubDate>Thu, 07 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://carjed.github.io/audiences/reports/revised_estimates_for_the_number_of_human_and_bacteria_cells_in_the_body_4964232/</guid>
+      <description>report_template.utf8             code{white-space: pre;} a.sourceLine { display: inline-block; line-height: 1.25; } a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; } a.sourceLine:empty { height: 1.2em; } .sourceCode { overflow: visible; } code.sourceCode { white-space: pre; position: relative; } div.sourceCode { margin: 1em 0; } pre.sourceCode { margin: 0; } @media screen { div.sourceCode { overflow: auto; } } @media print { code.</description>
+    </item>
+    
+  </channel>
+</rss>

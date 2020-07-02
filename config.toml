@@ -1,0 +1,46 @@
+baseURL = "https://carjed.github.io/audiences/"
+languageCode = "en"
+title = "audiences"
+theme = "mondrian"
+pygmentsCodeFences = true   # Enable triple backtick 'code fence' markdown
+pygmentsUseClasses = false  # Add inline styles, no need to compile extra CSS
+Paginate = 6
+publishDir = "docs"
+# RelativeURLs = true
+CanonifyURLs = true
+# ignoreFiles = [ "reports/_.*" ]
+ignoreFiles = [ "reports/*" ]
+
+
+[taxonomies]
+  tag = "tags"
+
+[params]
+  showHeader = true
+  showTags = true
+  debug = false
+  [params.colors]
+#    test = "orangered"
+    reports = "gold"
+    summary = "limegreen"
+    page = "white"
+
+[menu]
+  [[menu.main]]
+    name= "reports"
+    url = "https://carjed.github.io/audiences/reports"
+    weight = 2
+  # [[menu.main]]
+  #   name = "search"
+  #   url = "https://carjed.github.io/audiences/search"
+  #   weight = 3
+ # [[menu.main]]
+ #   name = "test"
+ #   url = "/test"
+ #   weight = 3
+
+
+[outputs]
+  home = ["HTML", "JSON", "RSS"]
+#  page = ["HTML", "JSON", "RSS"]
+
