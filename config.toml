@@ -8,8 +8,8 @@ Paginate = 6
 publishDir = "docs"
 # RelativeURLs = true
 CanonifyURLs = true
-# ignoreFiles = [ "reports/_.*" ]
-ignoreFiles = [ "reports/*" ]
+ignoreFiles = [ "reports/_.*" ]
+# ignorefiles = [ "reports/*" ]
 
 
 [taxonomies]

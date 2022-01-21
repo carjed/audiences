@@ -8,14 +8,14 @@ library(dplyr)
 # url <- "http://apps.timwhitlock.info/emoji/tables/unicode"
 
 # using a local copy due to connection issues with the above url
-url <- paste0(datadir, "/Emoji unicode characters for use on the web.html")
+url <- paste0("~/projects/audiences", "/Emoji unicode characters for use on the web.html")
 
 # get emoticons
 emoticons <- url %>%
     read_html() %>%
     html_nodes(xpath='/html/body/div[2]/div/div/table[1]') %>%
     html_table()
-# emoticons <- data.frame(emoticons[[1]]$Native, emoticons[[1]]$Unicode, emoticons[[1]]$Bytes, 
+# emoticons <- data.frame(emoticons[[1]]$Native, emoticons[[1]]$Unicode, emoticons[[1]]$Bytes,
 #                            emoticons[[1]]$Description, stringsAsFactors = FALSE)
 # names(emoticons) <- c("Native", "Unicode", "Bytes", "Description")
 
@@ -24,7 +24,7 @@ addemoticons <- url %>%
     read_html() %>%
     html_nodes(xpath='/html/body/div[2]/div/div/table[6]') %>%
     html_table()
-# addemoticons <- data.frame(addemoticons[[1]]$Native, addemoticons[[1]]$Bytes, 
+# addemoticons <- data.frame(addemoticons[[1]]$Native, addemoticons[[1]]$Bytes,
 #                               addemoticons[[1]]$Description, stringsAsFactors = FALSE)
 # names(addemoticons) <- c("Native", "Bytes", "Description")
 
@@ -33,7 +33,7 @@ dingbats <- url %>%
     read_html() %>%
     html_nodes(xpath='/html/body/div[2]/div/div/table[2]') %>%
     html_table()
-# dingbats <- data.frame(dingbats[[1]]$Native, dingbats[[1]]$Bytes, 
+# dingbats <- data.frame(dingbats[[1]]$Native, dingbats[[1]]$Bytes,
 #                           dingbats[[1]]$Description, stringsAsFactors = FALSE)
 # names(dingbats) <- c("Native", "Bytes", "Description")
 
@@ -86,4 +86,4 @@ addothers <- url %>%
 alltogether <- bind_rows(list(emoticons[[1]], addemoticons[[1]], dingbats[[1]], transport[[1]], 
                               addtransport[[1]], enclosed[[1]], uncategorized[[1]], addothers[[1]]))
 
-names(alltogether) <- c("Native", "Apple", "Android", "Symbola", "Twitter", "Unicode", "Bytes", "Description")
+names(alltogether) <- c("Native", "Apple", "Android", "Android2", "Symbola", "Twitter", "Unicode", "Bytes", "Description")

@@ -34,7 +34,7 @@ options(timeout = 600)
 
 # set relative path for calling external files from within this script
 # datadir <- dirname(sys.frame(1)$ofile)
-datadir <- paste0(getwd(), "/audiences")
+datadir <- paste0(getwd(), "/projects/audiences")
 
 # Twitter oauth keys, email, other private data (e.g., hf_path)
 keys <- yaml.load_file(paste0(datadir, "/_config.yaml"))
@@ -45,7 +45,7 @@ outdir <- paste0(datadir, "/content/reports")
 dir.create(outdir, recursive=TRUE, showWarnings = FALSE)
 
 # handles of training data 
-td_handles <- read.table("~/td_handles.txt") %>% pull
+td_handles <- readRDS(paste0(datadir, "/training_data/training_data_handles.rds")) %>% pull(account)
 
 # biorxiv categories, excluding scicomm and clinical trials
 categories_trim <- c("animal-behavior-and-cognition", 
@@ -877,8 +877,10 @@ if(!exists("high_followers")){
   
   files_to_scan <- update_follower_files(datadir)
   
+  readRDS_safe <- possibly(readRDS, otherwise = tibble())
+  
   high_followers <- files_to_scan %>%
-    map_dfr(readRDS) %>%
+    map_dfr(readRDS_safe) %>%
     rowwise() %>% 
     mutate(nfollowers = length(followers)) %>% 
     arrange(desc(nfollowers)) %>% 
