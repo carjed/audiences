@@ -540,14 +540,9 @@ plot_embedding_bars <- function(plotdat, docs_order){
   
   p <- plotdat %>%
     mutate(topic=factor(topic, levels=unique(plotdat$topic))) %>%
-<<<<<<< HEAD
     ggplmutate(url=paste0("https://twitter.com/", document)) %>%
     ot(aes(x=document, y=gamma, fill=topic))+
 , customdata=url    geom_bar(stat="identity", position="stack")+
-=======
-    ggplot(aes(x=document, y=gamma, fill=topic))+
-    geom_bar(stat="identity", position="stack")+
->>>>>>> 64cbec55ab53574be1346db0d0b7ae9cce410194
     scale_fill_manual(values=cols)+
     scale_y_continuous(expand = c(0,0))+
     scale_x_discrete(position = "top")+ 
@@ -565,16 +560,9 @@ plot_embedding_bars <- function(plotdat, docs_order){
                        yanchor = "bottom",
                        x = 0, y=-1))
   # Clickable points link to profile URL using onRender: https://stackoverflow.com/questions/51681079
-<<<<<<< HEAD
   for(# for(i in 1:12){
   #   ply$x$data[[i]]$customdata <- paste0("https://twitter.com/", docs_order$document)
   #   #pp  <- add_markers(pp, customdata = ~url)
-=======
-  for(i in 1:12){
-    ply$x$data[[i]]$customdata <- paste0("https://twitter.com/", docs_order$document)
-  }
-    #pp  <- add_markers(pp, customdata = ~url)
->>>>>>> 64cbec55ab53574be1346db0d0b7ae9cce410194
   plyout <- onRender(ply, "
                      function(el, x) {
                      el.on('plotly_click', function(d) {
