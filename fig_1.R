@@ -61,6 +61,7 @@ for(panel in 1:4){
     rowwise() %>%
     mutate(gamma=gamma+runif(1,0,0.0001))
   
+<<<<<<< HEAD
   userlookup <- lookup_users(unique(bios_lda_gamma$document))
 
   fig_dat <- left_join(bios_lda_gamma, userlookup %>% 
@@ -70,6 +71,8 @@ for(panel in 1:4){
   
   write_tsv(fig_dat, paste0("audiences/paper_data/fig1", letters[panel], ".txt"))
   
+=======
+>>>>>>> 64cbec55ab53574be1346db0d0b7ae9cce410194
   docs_order <- bios_lda_gamma %>%
     group_by(document) %>%
     arrange(topic, -gamma) %>%
